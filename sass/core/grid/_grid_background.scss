@@ -1,0 +1,10 @@
+.grid_12_col_background {
+	background: url(/axle/images/12_col.gif);
+	margin-bottom: 20px;
+	float: left;	
+}
+
+.grid_12_col_background_shift {
+	@extend .grid_12_col_background;
+	background-position: -10px 0 !important;	
+}

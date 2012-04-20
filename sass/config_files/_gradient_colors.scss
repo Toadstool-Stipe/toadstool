@@ -1,0 +1,94 @@
+/////// gradient color mixins ////////
+// ----------------------------------------------
+
+// In some cases variables were created to represent gradient scales
+// this was done as not to repeat the gradient scale when replying for second use case
+// See @mixin linear_gradient_bkgimage
+// /styles/sass/imports/gradients/_linear_gradient_bkgimage.scss
+
+
+$alpha_color_gradient_var_w3c: #{$echo_color_bravo 0%,$echo_color_charlie 11%,$echo_color_delta 100%};
+$alpha_color_gradient_var_legacy_safari: #{color-stop(0%,$echo_color_bravo), color-stop(11%,$echo_color_charlie), color-stop(100%,$echo_color_delta)};
+
+@mixin alpha_color_gradient {
+  @include linear_gradient_w3c ($echo_color_bravo, $alpha_color_gradient_var_w3c);
+  @include linear_gradient_legacy_safari ($alpha_color_gradient_var_legacy_safari);
+  @include linear_gradient_legacy_ie ($echo_color_delta, $echo_color_delta);
+}
+
+//-
+
+$bravo_gradient_alpha: scale-color($echo_color_bravo, $lightness: 10%);
+$bravo_gradient_bravo: scale-color($echo_color_charlie, $lightness: 20%);
+$bravo_gradient_charlie: scale-color($echo_color_delta, $lightness: 10%);
+
+$bravo_color_gradient_var_w3c: #{$bravo_gradient_alpha 0%,$bravo_gradient_bravo 11%,$bravo_gradient_charlie 100%};
+$bravo_color_gradient_var_legacy_safari: #{color-stop(0%,$bravo_gradient_alpha), color-stop(11%,$bravo_gradient_bravo), color-stop(100%,$bravo_gradient_charlie)};
+
+@mixin bravo_color_gradient {
+  @include linear_gradient_w3c ($echo_color_bravo, $bravo_color_gradient_var_w3c);
+  @include linear_gradient_legacy_safari ($bravo_color_gradient_var_legacy_safari);
+  @include linear_gradient_legacy_ie ($echo_color_delta, $echo_color_delta);
+}
+
+//-
+
+$charlie_color_gradient_var_w3c: #{$echo_color_delta 0%,$echo_color_charlie 89%,$echo_color_bravo 100%};
+$charlie_color_gradient_var_legacy_safari: #{color-stop(0%,$echo_color_delta), color-stop(89%,$echo_color_charlie), color-stop(100%,$echo_color_bravo)};
+
+@mixin charlie_color_gradient {
+  @include linear_gradient_w3c ($echo_color_delta, $charlie_color_gradient_var_w3c);
+  @include linear_gradient_legacy_safari ($charlie_color_gradient_var_legacy_safari);
+  @include linear_gradient_legacy_ie ($echo_color_delta, $echo_color_delta);
+}
+
+//-
+
+@mixin delta_color_gradient {
+  @include linear_gradient_w3c ($white, #{$fox_grey 0%,$delta_grey 100%});
+  @include linear_gradient_legacy_safari (#{color-stop(0%,$fox_grey), color-stop(100%,$delta_grey)});
+  @include linear_gradient_legacy_ie ($fox_grey, $delta_grey);
+}
+
+//-
+
+$echo_gradient_alpha: scale-color($fox_gray, $lightness: 30%);
+$echo_gradient_bravo: scale-color($delta_gray, $lightness: 30%);
+
+@mixin echo_color_gradient {
+  @include linear_gradient_w3c ($white, #{$echo_gradient_alpha 0%,$echo_gradient_bravo 100%});
+  @include linear_gradient_legacy_safari (#{color-stop(0%,$echo_gradient_alpha), color-stop(100%,$echo_gradient_bravo)});
+  @include linear_gradient_legacy_ie ($echo_gradient_alpha, $echo_gradient_bravo);
+}
+
+//-
+
+@mixin fox_color_gradient {
+  @include linear_gradient_w3c ($white, #{$delta_grey 0%,$fox_grey 100%});
+  @include linear_gradient_legacy_safari (#{color-stop(0%,$delta_grey), color-stop(100%,$fox_grey)});
+  @include linear_gradient_legacy_ie ($delta_grey, $fox_grey);
+}
+
+//-
+
+@mixin golf_color_gradient {
+  @include linear_gradient_w3c ($bravo_color_bravo, #{$bravo_color_charlie 0%,$bravo_color 100%});
+  @include linear_gradient_legacy_safari (#{color-stop(0%,$bravo_color_charlie), color-stop(100%,$bravo_color)});
+  @include linear_gradient_legacy_ie ($bravo_color_charlie, $bravo_color);
+}
+
+//-
+
+@mixin hotel_color_gradient {
+  @include linear_gradient_legacy_safari (#{color-stop(0%,scale-color($bravo_color_charlie, $lightness: 2%)), color-stop(100%,scale-color($bravo_color, $lightness: 5%))});
+  @include linear_gradient_w3c ($bravo_color_bravo, #{scale-color($bravo_color_charlie, $lightness: 2%) 0%,scale-color($bravo_color, $lightness: 5%) 100%});
+  @include linear_gradient_legacy_ie (scale-color($bravo_color_charlie, $lightness: 2%), scale-color($bravo_color, $lightness: 5%));
+}
+
+//-
+
+@mixin india_color_gradient {
+  @include linear_gradient_w3c ($bravo_color, #{$bravo_color 0%,$bravo_color_charlie 100%});
+  @include linear_gradient_legacy_safari (#{color-stop(0%,$bravo_color), color-stop(100%,$bravo_color_charlie)});
+  @include linear_gradient_legacy_ie ($bravo_color, $bravo_color_charlie);
+}

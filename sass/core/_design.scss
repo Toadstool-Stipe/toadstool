@@ -1,0 +1,51 @@
+
+// a standardized border radius
+// ----------------------------
+@mixin standard_rounded_border ($standard_round_corner, $standard_border_style, $standard_corner_width, $standard_border_color) {
+	@include border_radius(#{$standard_round_corner / $em}rem);
+	border: $standard_corner_width $standard_border_style $standard_border_color;
+}
+
+
+// This mixin is used for a linear layout of LIs versus using floats
+// -----------------------------------------------------------------
+@mixin ul_flexbox ($width :100%, $height: auto, $text_align :center) {
+  ul {
+    @include flexbox (horizontal, center, stretch, $width, $height);
+  }
+  li {
+    @include flex(1);
+    text-align: $text_align;
+    height: $height;
+    line-height: $height;
+  }
+}
+
+
+// standard block clear and default spacing
+@mixin standard_block_spacing ($default_block_spacing: 20) {
+	@include clearfix;
+	margin-bottom: #{$default_block_spacing / $em}em;
+}
+
+@mixin standard_hr ($standard_border_style, $standard_hr_width, $standard_hr_spacing, $standard_hr_color){
+	border-bottom: $standard_hr_width $standard_border_style $standard_hr_color;
+	padding-bottom: #{$standard_hr_spacing / $em}rem;
+	margin-bottom: #{$standard_hr_spacing / $em}rem;
+}
+
+@mixin primary_text_shadow ($h-shadow, $v-shadow, $blur ) {
+	@include text_shadow ($shadow_color, #{$h-shadow / $em}em #{$v-shadow / $em}em #{$blur / $em}em);
+}
+
+@mixin disabled_text_shadow ($h-shadow, $v-shadow, $blur ) {
+	@include text_shadow (fade-out($shadow_color, 0.5), #{$h-shadow / $em}em #{$v-shadow / $em}em #{$blur / $em}em);
+}
+
+@mixin primary_box_shadow ($h-shadow, $v-shadow, $blur ) {
+	@include box_shadow ($shadow_color, #{$h-shadow / $em}em #{$v-shadow / $em}em #{$blur / $em}em);
+}
+
+@mixin disabled_box_shadow ($h-shadow, $v-shadow, $blur ) {
+	@include box_shadow (fade-out($shadow_color, 0.4), #{$h-shadow / $em}em #{$v-shadow / $em}em #{$blur / $em}em);
+}

@@ -1,0 +1,51 @@
+////////// Primary button values ////////////
+// --------------------------------------- //
+@mixin primary_button_color {
+	@include golf_color_gradient;
+}
+
+@mixin primary_button_hover {
+	@include hotel_color_gradient;
+}
+
+@mixin primary_button_active {
+	@include india_color_gradient;
+}
+
+@mixin primary_button_border {
+	border: 1px solid $primary_button_border_color;
+}
+
+
+////////// Secondary button values ////////////
+// ----------------------------------------- //
+@mixin secondary_button_color {
+	@include delta_color_gradient;
+}
+	
+@mixin secondary_button_hover {
+	@include echo_color_gradient;
+}
+
+@mixin secondary_button_active {
+	@include fox_color_gradient;
+}
+
+
+
+////////// Icon button values ////////////
+// ------------------------------------ //
+@mixin icon_button_color {
+	@include delta_color_gradient;
+}
+	
+@mixin icon_button_hover {
+	@include echo_color_gradient;
+}
+
+@mixin icon_button_active {
+	@include fox_color_gradient;
+}
+
+
+

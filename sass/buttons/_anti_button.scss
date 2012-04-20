@@ -1,0 +1,30 @@
+@mixin anti_button() {
+	button, input[type=submit], input[type=button], a.button {
+ 		font-size: inherit;
+ 		font-weight: normal;
+ 		color: $alpha_grey;
+		padding: 0;
+ 		height: auto;
+ 		display: inline-block;
+ 		line-height: 1em;
+ 		@include border_radius(0px);
+ 		background: $white;
+ 		@include box_shadow($white, 0px 0px 0px);
+ 		text-decoration: none;
+ 		margin: 0;
+ 		width: auto;
+ 		outline: none;
+ 		
+		&:hover {
+			background: $white;
+		}
+			
+		&:active {
+			background: $white;
+		}
+			
+		&[disabled] {
+			background: $white;
+		}
+	}
+}

@@ -1,0 +1,18 @@
+/////// alternate buttons ///////////
+
+// edit your variables //
+// ---------------------------------------//
+@mixin XXX {
+	@include XXX;
+	@extend XXX;
+}
+
+
+
+
+// This is your button //
+// ---------------------------------------//
+@mixin alternate_button {
+	button, input[type=submit], input[type=button], a.button {
+	}
+} 

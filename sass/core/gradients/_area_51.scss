@@ -1,0 +1,51 @@
+/////// this doc is an experimental idea for a better gradient writing process //////////
+
+
+// example class using all mixins to support all browsers
+//.gradient_box {
+//	@include linear_gradient_legacy_safari (#{color-stop(0%,$alpha_color), color-stop(100%,$bravo_color)});
+//	@include linear_gradient_w3c ($alpha_color, #{$alpha_color 0%,$bravo_color 100%});
+//	@include linear_gradient_legacy_ie ($alpha_color, $bravo_color);
+//
+//}
+
+
+// requires that color values are written using #{} interpolation syntax
+// example .....
+// @include linear_gradient_w3c ($alpha_color, #{$alpha_color 0%,$bravo_color 100%}); 
+// ---------------------------------------------------------------------------------------
+@mixin linear_gradient_w3c ($default_color, $color_values, $prefixes: $prefix_defaults) {
+	// default fallback //
+	background: $default_color;
+	background: -webkit-linear-gradient(top, $color_values);
+	background: -moz-linear-gradient(top, $color_values);
+	background: -o-linear-gradient(top, $color_values);
+	background: -ms-linear-gradient(top, $color_values);
+}
+
+
+
+
+
+// requires that color values are written using #{} interpolation syntax
+// example .....
+// @include linear_gradient_legacy_safari (#{color-stop(0%,$alpha_color), color-stop(100%,$bravo_color)}); 
+// ---------------------------------------------------------------------------------------
+@mixin linear_gradient_legacy_safari ($color_values) {
+	background: -webkit-gradient(linear, left top, left bottom, #{$color_values});
+}
+
+
+
+
+// this is pretty old skool here, think you can figure it out
+// -----------------------------------------------------------
+@mixin linear_gradient_legacy_ie ($start_color, $end_color) {
+	// IE6 & 7 //
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#{ie_hex_str($start_color)}', endColorstr='#{ie_hex_str($end_color)}');
+	// IE8 & 9 //
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie_hex_str($start_color)}', endColorstr='#{ie_hex_str($end_color)}')";
+}
+
+
+// -------------------------------------------------------------------------------------------

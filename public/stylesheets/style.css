@@ -1,0 +1,56 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, menu, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; background: transparent; }
+
+body { line-height: 1; font-size: 100%; -webkit-font-smoothing: antialiased; }
+
+article, aside, figure, footer, header, hgroup, nav, section { display: block; }
+
+img, object, embed { max-width: 100%; }
+
+img { border-style: none; border-color: transparent; border-width: 0; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after { content: ''; content: none; }
+
+q:before, q:after { content: ''; content: none; }
+
+a { margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+a:focus { text-decoration: underline; outline: none; }
+
+del { text-decoration: line-through; }
+
+pre { white-space: pre-wrap; word-wrap: break-word; }
+
+input[type="radio"] { vertical-align: text-bottom; }
+
+input, textarea, select, button { font-family: inherit; font-weight: inherit; background-color: #fff; border: 0; padding: 0; margin: 0; }
+
+table { font-size: inherit; font: 100%; }
+
+sub { font-size: 75%; line-height: 0; position: relative; }
+
+sup { font-size: 75%; line-height: 0; position: relative; top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+.clickable, label { cursor: pointer; }
+
+input[type=button], input[type=submit] { cursor: pointer; }
+
+button { cursor: pointer; margin: 0; width: auto; overflow: visible; }
+
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+a:link { -webkit-tap-highlight-color: #324fce; }
+
+ins { background-color: #ffff87; color: black; text-decoration: none; }
+
+mark { background-color: #ffff87; color: black; font-style: italic; font-weight: bold; }
+
+::selection { background: #ffff87; color: #1a1a1a; }
+
+::-moz-selection { background: #ffff87; color: #1a1a1a; }

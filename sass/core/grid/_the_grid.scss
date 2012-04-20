@@ -1,0 +1,60 @@
+// 'the_grid' determines width by taking column count, calculates gutter count
+@mixin the_grid($col_count, $col_width, $grid_uom, $grid_padding, $grid_border, $child, $col_gutter) {
+	
+	$col_gutter_width: ($col_count - 1) * $col_gutter + ($col_count * $col_width);
+	
+	@include grid_placement($grid_uom, $child, $margin: $col_gutter / 2);
+	
+	@if $grid_uom == em {
+		$grid_width: #{$col_gutter_width / $em}em;
+		padding: {
+			left: #{$grid_padding / $em}em;
+			right: #{$grid_padding / $em}em;
+		}
+		width: $grid_width;
+		
+		// fallback for unsupported browsers
+		$grid_width_fallback: $col_gutter_width - (($grid_padding * 2) + ($grid_border * 2));
+		
+		@if $grid_width_fallback < $col_gutter_width {
+			.ie7 &, .msie7 & {
+		   	width: #{$grid_width_fallback / $em}em;
+		   }
+		}
+	}	
+
+	@else if $grid_uom == percent {
+		$grid_width: $col_gutter_width / $grid_960;
+		padding: {
+			left: $grid_padding / $grid_960;
+			right: $grid_padding / $grid_960;
+		}
+		width: $grid_width;
+		
+		// fallback for unsupported browsers
+		$grid_width_fallback: ($col_gutter_width - ($grid_padding * 2));
+		
+		@if $grid_width_fallback < $col_gutter_width {
+			.ie7 &, .msie7 & {
+		   	width: $grid_width_fallback / $grid_960;
+		   }
+		}
+	}
+	@else if $grid_uom == combo {
+		$grid_width: $col_gutter_width / $grid_960;
+		padding: {
+			left: #{$grid_padding / $em}em;
+			right: #{$grid_padding / $em}em;
+		}
+		width: $grid_width;
+		
+		// fallback for unsupported browsers
+		$grid_width_fallback: ($col_gutter_width - ($grid_padding * 2));
+		
+		@if $grid_width_fallback < $col_gutter_width {
+			.ie7 &, .msie7 & {
+		   	width: $grid_width_fallback / $grid_960;
+		   }
+		}
+	}
+}

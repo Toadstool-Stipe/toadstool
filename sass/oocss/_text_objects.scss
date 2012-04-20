@@ -1,0 +1,145 @@
+//
+// Standardized text objects.  NOT to be used as classes appended to a block in the HTML.
+// Preferred uses include @extend .class; or repurpose the mixin within the class.
+//
+
+
+/* Text classes */
+/* ------------ */
+.headings_1 {
+	@include heading($heading_font_size: $heading_1, $family: lubalin, $letter_spacing: -1px, $margin_bottom: 10);
+}
+
+.headings_2 {
+	@include heading($heading_font_size: $heading_2);
+}
+
+.headings_2_lubalin {
+	@include heading($heading_font_size: $heading_2, $family: lubalin);
+}
+
+.headings_3 {
+	@include heading($heading_font_size: $heading_3);
+}
+
+.headings_3_lubalin {
+	@include heading($heading_font_size: $heading_3, $family: lubalin);
+}
+
+.headings_4 {
+	@include heading($heading_font_size: $heading_4);
+}
+
+.headings_4_lubalin {
+	@include heading($heading_font_size: $heading_4, $family: lubalin);
+}
+
+.subheader_alpha {
+	@include subheader($color: $white);
+}
+
+.subheader_bravo {
+	@include subheader($color: $charlie_grey_alpha, $background: $echo_grey);
+}
+
+.subheader_charlie {
+	@include subheader($background: $echo_grey);
+}
+
+
+.xx_small {
+ 	@include xx_small;
+}
+ 
+.x_small {
+	@include x_small;
+}
+
+.small {
+	@include small;
+}
+
+.medium {
+	@include medium;
+}
+
+.large {
+	@include large;
+}
+
+.x_large {
+ 	@include x_large;
+}
+ 
+.xx_large {
+	@include xx_large;
+}
+
+.xxx_large {
+	@include xxx_large;
+}
+
+.xxxx_large {
+	@include xxxx_large;
+}
+
+
+
+
+
+/* Font family classes */
+/* ------------------- */
+.primary_font_family {
+	font-family: $primary_font_family;
+}
+
+.secondary_font_family {
+	font-family: $secondary_font_family;
+}
+
+.heading_font_family {
+	font-family: $heading_font_family;
+}
+
+
+
+
+
+/* text-transform objects */
+/* ---------------------- */
+.uppercase {
+	@include uppercase;
+}
+.lowercase {
+	@include lowercase;
+}
+.capitalize {
+	@include capitalize;
+}
+
+/* Hide Text, Kellum Method */
+/* ------------------------ */
+.hide_text {
+	@include hide_text;
+}
+
+
+
+
+/* standard content block styling */
+/* ------------------------------ */
+.bulleted_list {
+	@include bulleted_list;
+}
+
+.content_block {
+	@extend .standard_block_spacing;
+	float: left;
+	@extend .bulleted_list;
+	h2, h3 {
+      @extend .headings_3_lubalin;
+    }
+}
+
+
+

@@ -1,0 +1,44 @@
+
+
+/* Generic global UI objects */
+/* ------------------------- */
+.clearfix {
+	@include clearfix;
+}
+
+.standard_block_spacing {
+	@include standard_block_spacing;
+}
+
+.standard_hr {
+	@include standard_hr;
+}
+
+.standard_rounded_borders {
+	@include standard_rounded_border;
+}
+
+// Standardized uses for box and text shadows //
+/* text shadows */
+/* ------------ */
+.primary_text_shadow {
+	@include primary_text_shadow;
+}
+.disabled_text_shadow {
+	@include disabled_text_shadow;
+}
+
+/* box shadows */
+/* ----------- */
+.primary_box_shadow {
+	@include primary_box_shadow;
+}
+.disabled_box_shadow {
+	@include disabled_box_shadow;
+}
+
+/* default alert panel */
+/* ------------------- */
+.default_alert_panel {
+	@include alert_boxes ($alert_background_color, 10, 14, 10);
+}

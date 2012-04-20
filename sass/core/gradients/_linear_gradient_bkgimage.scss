@@ -1,0 +1,38 @@
+// The following gradients are designed with variable color stops and supports background images
+// It is recommended to use these to build reusable objects in the SCSS
+// -------------------------------------------------------------------------------------
+// four color stop linear gradient with color stops and images set as variable 
+// --------------------------------------------------------------- 
+// NOTE:  Place url path on single quotes, i.e. '../../images/image.png'
+
+@mixin linear_gradient_bkgimage ($image, $position, $start_color, $color_values, $prefixes: $prefix_defaults) {
+	// default fallback //
+	background: $start_color;
+	background: url(#{$image}) no-repeat $position, -moz-linear-gradient(top, #{$color_values});
+	background: url(#{$image}) no-repeat $position, -webkit-linear-gradient(top, #{$color_values});
+	background: url(#{$image}) no-repeat $position, -o-linear-gradient(top, #{$color_values});
+	background: url(#{$image}) no-repeat $position, -ms-linear-gradient(top, #{$color_values});
+
+
+	// IE6 - 9 //
+	// ms crappy filters cannot be used with background images
+	// IE specific UIs will need to be engineered in the widget sass
+}
+//////// gradient arguments /////////
+
+
+
+
+// requires that color values are written using #{} interpolation syntax
+// example .....
+// @include linear_gradient_bkgimage_legacy_safari (#{color-stop(0%,$alpha_color), color-stop(100%,$bravo_color)}); 
+// ---------------------------------------------------------------------------------------
+// NOTE:  Place url path on single quotes, i.e. '../../images/image.png'
+@mixin linear_gradient_bkgimage_legacy_safari ($image, $position, $color_values) {
+	background: url(#{$image}) no-repeat $position, -webkit-gradient(linear, left top, left bottom, #{$color_values});
+}
+
+
+
+
+

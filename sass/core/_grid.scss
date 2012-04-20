@@ -1,0 +1,92 @@
+// ...............
+// 960 GRID SYSTEM
+// ...............
+// 
+// Created by Nathan Smith. See the official site for more info: http://960.gs/
+// 
+// GPL license:
+// http://www.gnu.org/licenses/gpl.html
+// 
+// MIT license:
+// http://www.opensource.org/licenses/mit-license.php
+// ---------------------------------------------------------------------------
+
+// .................
+// Axle Grid System
+// .................
+//
+// Created by Dale Sande
+//
+// ---------------------------------------------------------------------------
+
+// Establishes default vaules that should never be edited
+@import "grid/base_values";
+// the_grid calculates all the variables to define with width of the grid column
+@import "grid/the_grid";
+// grid_placement based on $child will define alpha or omega placement
+@import "grid/grid_placement";
+// grid_margin applies $margin_calc from grid_placement
+@import "grid/grid_margin";
+// Logic supoprt for Push, Pull, Prefix and Suffix
+@import "grid/push_logic";
+
+
+
+///////// 12/16 col 960 grid system ///////////
+// ----------------------------------------
+// use example for a 12 col layout, 4 col width, conversion to %, add left/right padding and 1px border
+// @include grid(12, 4, $grid_padding: 36, $grid_border: 1);
+//
+// All values are entered as integers and conversion math is done in the mixin. 
+// Do not enter combination values such as '36em'
+
+@mixin grid($type, $col_count, $grid_uom: $default_grid_uom, $grid_padding:0, $grid_border:0, $child: none, $col_gutter:$col_gutter) {  
+	@if $type == 12 {
+		$col_width: 80 - $col_gutter;
+		@include the_grid($col_count, $col_width, $grid_uom, $grid_padding, $grid_border, $child, $col_gutter);
+	}
+	@else if $type == 16 {
+		$col_width: 60 - $col_gutter;
+		@include the_grid($col_count, $col_width, $grid_uom, $grid_padding, $grid_border, $child, $col_gutter);
+	}
+}
+
+
+///////// prefix value accounts for a full column in the grid ////////////
+// -----------------------------------------------------------------------
+@mixin prefix($type, $col_count, $grid_uom: $default_grid_uom, $move: prefix) {
+	@include ppps ($type, $col_count, $grid_uom, $move);
+}
+
+///////// suffix value accounts for a full column in the grid ////////////
+// -----------------------------------------------------------------------
+
+@mixin suffix($type, $col_count, $grid_uom: $default_grid_uom, $move: suffix) {
+	@include ppps ($type, $col_count, $grid_uom, $move);
+}
+
+///////// push value accounts for a full column in the grid ////////////
+// -----------------------------------------------------------------------
+
+@mixin push($type, $col_count, $grid_uom: $default_grid_uom, $move: push) {
+	@include ppps ($type, $col_count, $grid_uom, $move);
+	position: relative;
+}
+
+///////// pull value accounts for a full column in the grid ////////////
+// -----------------------------------------------------------------------
+
+@mixin pull($type, $col_count, $grid_uom: $default_grid_uom, $move: pull) {
+	@include ppps ($type, $col_count, $grid_uom, $move);
+	position: relative;
+}
+
+/////////// `Grid >> Children (Alpha ~ First, Omega ~ Last) ///////////
+// --------------------------------------------------------------------
+@mixin alpha() {
+	margin-left: 0;
+}
+
+@mixin omega() {
+	margin-right: 0;
+}

@@ -1,0 +1,51 @@
+// Sass math that will determine the width of the push, pull, prefix and suffix and write appropiate CSS
+// ---------------------------- //
+@mixin push_logic ($col_count, $grid_uom, $move, $width_gutter) {
+	@if $grid_uom == em {
+		$padding_width: #{($width_gutter * $col_count) / $em}em;
+		@if $move == suffix {
+			padding-right: $padding_width;
+		}
+		@else if $move == prefix {
+			padding-left: $padding_width;
+		}
+		@else if $move == push {
+			left: #{($width_gutter * $col_count) / $em}em;
+		}
+		@else if $move == pull {
+			right: #{($width_gutter * $col_count) / $em}em;
+		}
+	}
+	@else if $grid_uom == percent {
+		$grid_width: ($width_gutter * $col_count) / $grid_960;
+		@if $move == suffix {
+			padding-right: $padding_width;
+		}
+		@else if $move == prefix {
+			padding-left: $padding_width;
+		}
+		@else if $move == push {
+			left: ($width_gutter * $col_count) / $grid_960;
+		}
+		@else if $move == pull {
+			right: ($width_gutter * $col_count) / $grid_960;
+		}
+	}
+	@include box_sizing(content-box);
+}
+
+
+// Push, Pull, Prefix, Suffix logic 
+// Paired down reusable logic, based on $type will determine width + gutter and 
+// send values to the push_logic mixin to determine the value of the Push, Pull, Prefix or Suffix
+// ------------------------------------------------------------------ //
+@mixin ppps ($type, $col_count, $grid_uom, $move) {
+	@if $type == 12 {
+		$width_gutter: 80;
+		@include push_logic ($col_count, $grid_uom, $move, $width_gutter);
+	}
+	@else if $type == 16 {
+		$width_gutter: 60;
+		@include push_logic ($col_count, $grid_uom, $move, $width_gutter);
+	}
+}
