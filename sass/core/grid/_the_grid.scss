@@ -1,5 +1,7 @@
 // 'the_grid' determines width by taking column count, calculates gutter count
-@mixin the_grid($col_count, $col_width, $grid_uom, $grid_padding, $grid_border, $child, $col_gutter) {
+// default setting for grid is ``em`` this is specified in ``_config.scss``
+
+@mixin the_grid($col_count, $col_width, $grid_uom, $grid_padding_lr, $grid_padding_tb, $grid_border, $child, $col_gutter) {
 	
 	$col_gutter_width: ($col_count - 1) * $col_gutter + ($col_count * $col_width);
 	
@@ -7,52 +9,81 @@
 	
 	@if $grid_uom == em {
 		$grid_width: #{$col_gutter_width / $em}em;
-		padding: {
-			left: #{$grid_padding / $em}em;
-			right: #{$grid_padding / $em}em;
+		@if $grid_padding_lr > 0 {
+			padding: {
+				left: #{$grid_padding_lr / $em}em;
+				right: #{$grid_padding_lr / $em}em;
+			}
+		}
+		@if $grid_padding_tb > 0 {
+			padding: {
+				top: #{$grid_padding_tb / $em}em;
+				bottom: #{$grid_padding_tb / $em}em;
+			}
 		}
 		width: $grid_width;
 		
 		// fallback for unsupported browsers
-		$grid_width_fallback: $col_gutter_width - (($grid_padding * 2) + ($grid_border * 2));
+		$grid_width_fallback: $col_gutter_width - (($grid_padding_lr * 2) + ($grid_border * 2));
 		
 		@if $grid_width_fallback < $col_gutter_width {
-			.ie7 &, .msie7 & {
-		   	width: #{$grid_width_fallback / $em}em;
+			.ie7 & {
+		   	// width: #{$grid_width_fallback / $em}em;
+		   	width: #{$grid_width_fallback}px;
 		   }
 		}
 	}	
 
 	@else if $grid_uom == percent {
+		@if $grid_border > 0 {
+			border: #{$grid_border}px $standard_border_style $border_color;
+		}
+		
 		$grid_width: $col_gutter_width / $grid_960;
-		padding: {
-			left: $grid_padding / $grid_960;
-			right: $grid_padding / $grid_960;
+		@if $grid_padding_lr > 0 {
+			padding: {
+				left: $grid_padding_lr / $grid_960;
+				right: $grid_padding_lr / $grid_960;
+			}
+		}
+		@if $grid_padding_tb > 0 {
+			padding: {
+				top: $grid_padding_tb / $grid_960;
+				bottom: $grid_padding_tb / $grid_960;
+			}
 		}
 		width: $grid_width;
 		
 		// fallback for unsupported browsers
-		$grid_width_fallback: ($col_gutter_width - ($grid_padding * 2));
+		$grid_width_fallback: $col_gutter_width - (($grid_padding_lr * 2) + ($grid_border * 2));
 		
 		@if $grid_width_fallback < $col_gutter_width {
-			.ie7 &, .msie7 & {
+			.ie7 & {
 		   	width: $grid_width_fallback / $grid_960;
 		   }
 		}
 	}
 	@else if $grid_uom == combo {
 		$grid_width: $col_gutter_width / $grid_960;
-		padding: {
-			left: #{$grid_padding / $em}em;
-			right: #{$grid_padding / $em}em;
+		@if $grid_padding_lr > 0 {
+			padding: {
+				left: #{$grid_padding_lr / $em}em;
+				right: #{$grid_padding_lr / $em}em;
+			}
+		}
+		@if $grid_padding_tb > 0 {
+			padding: {
+				top: #{$grid_padding_tb / $em}em;
+				bottom: #{$grid_padding_tb / $em}em;
+			}
 		}
 		width: $grid_width;
 		
 		// fallback for unsupported browsers
-		$grid_width_fallback: ($col_gutter_width - ($grid_padding * 2));
+		$grid_width_fallback: $col_gutter_width - (($grid_padding_lr * 2) + ($grid_border * 2));
 		
 		@if $grid_width_fallback < $col_gutter_width {
-			.ie7 &, .msie7 & {
+			.ie7 & {
 		   	width: $grid_width_fallback / $grid_960;
 		   }
 		}

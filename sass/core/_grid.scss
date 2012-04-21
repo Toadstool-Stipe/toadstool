@@ -45,35 +45,36 @@
 // All values are entered as integers and conversion math is done in the mixin. 
 // Do not enter combination values such as '36em'
 
-@mixin grid($type, $col_count, $grid_uom: $default_grid_uom, $grid_padding:0, $grid_border:0, $child: none, $col_gutter:$col_gutter) {  
-	@if $type == 12 {
+@mixin grid($col_count, $grid_child, $grid_padding_lr, $grid_padding_tb, $grid_border, $grid_uom, $col_gutter, $grid_type) { 
+
+	@if $grid_type == 12 {
 		$col_width: 80 - $col_gutter;
-		@include the_grid($col_count, $col_width, $grid_uom, $grid_padding, $grid_border, $child, $col_gutter);
+		@include the_grid($col_count, $col_width, $grid_uom, $grid_padding_lr, $grid_padding_tb, $grid_border, $grid_child, $col_gutter);
 	}
-	@else if $type == 16 {
+	@else if $grid_type == 16 {
 		$col_width: 60 - $col_gutter;
-		@include the_grid($col_count, $col_width, $grid_uom, $grid_padding, $grid_border, $child, $col_gutter);
+		@include the_grid($col_count, $col_width, $grid_uom, $grid_padding_lr, $grid_padding_tb, $grid_border, $grid_child, $col_gutter);
 	}
 }
 
 
 ///////// prefix value accounts for a full column in the grid ////////////
 // -----------------------------------------------------------------------
-@mixin prefix($type, $col_count, $grid_uom: $default_grid_uom, $move: prefix) {
+@mixin prefix($grid_type, $col_count, $grid_uom: $default_grid_uom, $move: prefix) {
 	@include ppps ($type, $col_count, $grid_uom, $move);
 }
 
 ///////// suffix value accounts for a full column in the grid ////////////
 // -----------------------------------------------------------------------
 
-@mixin suffix($type, $col_count, $grid_uom: $default_grid_uom, $move: suffix) {
+@mixin suffix($grid_type, $col_count, $grid_uom: $default_grid_uom, $move: suffix) {
 	@include ppps ($type, $col_count, $grid_uom, $move);
 }
 
 ///////// push value accounts for a full column in the grid ////////////
 // -----------------------------------------------------------------------
 
-@mixin push($type, $col_count, $grid_uom: $default_grid_uom, $move: push) {
+@mixin push($grid_type, $col_count, $grid_uom: $default_grid_uom, $move: push) {
 	@include ppps ($type, $col_count, $grid_uom, $move);
 	position: relative;
 }
@@ -81,7 +82,7 @@
 ///////// pull value accounts for a full column in the grid ////////////
 // -----------------------------------------------------------------------
 
-@mixin pull($type, $col_count, $grid_uom: $default_grid_uom, $move: pull) {
+@mixin pull($grid_type, $col_count, $grid_uom: $default_grid_uom, $move: pull) {
 	@include ppps ($type, $col_count, $grid_uom, $move);
 	position: relative;
 }

@@ -1,11 +1,13 @@
 // Grid background for column view
-@import "core/grid/grid_background";
+// @import "core/grid/grid_background";
 
 
 ///////// global //////////
 
 
 
-
-
+// grid arguments ($col_count, $grid_child, $grid_padding_lr, $grid_padding_tb, $grid_border, $grid_uom, $col_gutter, $grid_type)
+.block {
+	@include grid(6);
+}
 
