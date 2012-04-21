@@ -1,11 +1,11 @@
+// Toadstool core v0.0.0.1
+// This document is not to be edited as it will be versioned
+// -----------------------------------------------------------------
+
+
 // All google font includes are placed in the RESET.SCSS file
 // -----------------------------------------------------------
 @import "../config_files/text";
-
-
-//// $em always == $font-size ////
-$em: $font_size;
-
 
 
 //////// heading text mixins //////////
@@ -16,6 +16,9 @@ $em: $font_size;
 	line-height: $line_height;
 	font-weight: $font_weight;
 	margin-bottom: #{$margin_bottom / $heading_font_size}em;
+	
+	
+	/// FUCK!!!!  Can't do this in core.  Need solution to better manage custom font application like this
 	@if $family == lubalin {
 		font-family: $webfont_alpha;
 		.ja & {

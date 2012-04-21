@@ -1,3 +1,7 @@
+// The config file is intended to allow users to quickly redefine core elements of the design
+// that will cascade throughout the css to get your design up and running FAST!
+
+
 /////////////// Config dependencies ////////////////
 // -------------------------------------------------------
 @import "config_files/not_set_colors";
@@ -7,12 +11,17 @@
 
 
 ///// default image directory /////
-$imgDir: "images/";
+// In Sinatra, the images folder resides in the public directory.  This directory is not made publically accessible,
+// so simply referencing the images directory will be fine.
+$imgDir: "/images/";
 
 
 
 /////// OOCSS generic color blocks ////////
 // ----------------------------------------------
+// Red, green, yellow, blue, accent and black is not law, but a common theme in most designs.  
+// Using Toadstool, all you need to do is edit these 6 hex values and everything else is created
+// by magic, unicorns and fairy dust!
   $alpha_primary:		#ec0036;		// red
   $bravo_primary:		#299505;		// green
 $charlie_primary:		#ffff87;		// yellow
@@ -23,6 +32,7 @@ $charlie_primary:		#ffff87;		// yellow
 
 
 // Based on object colors, the following imports will create the color scales
+// Edit these color config files if you wish to have other then default color math
 @import "config_files/generic_color_math";
 @import "config_files/generic_grayscale_math";
 

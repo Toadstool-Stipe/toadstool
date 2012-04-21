@@ -1,9 +1,10 @@
-// This document is to house Axle's dynamic mixins with arguments
-// These mixins are not intended to be application specific
+// Toadstool core v0.0.0.1
+// This document is not to be edited as it will be versioned
 // -----------------------------------------------------------------
 
 
-
+// This document is to house Toadstools dynamic mixins with arguments
+// These mixins are not intended to be application specific
 
 
 // required default value to for vendor prefix support
@@ -86,9 +87,6 @@ $inset_shadow: #{$ih-shadow / $em}em #{$iv-shadow / $em}em #{$iblur / $em}em;
 
 
 
-
-
-
 /////////// image with gradient background ////////////
 // ------------------------------------------------- //
 
@@ -116,13 +114,6 @@ $inset_shadow: #{$ih-shadow / $em}em #{$iv-shadow / $em}em #{$iblur / $em}em;
 // 		$ie_stop: $echo_color_delta);
 // 	}
 // }
-
-
-
-
-
-
-
 
 
 
@@ -291,3 +282,13 @@ $inset_shadow: #{$ih-shadow / $em}em #{$iv-shadow / $em}em #{$iblur / $em}em;
 	line-height: $line-height;
 }
 /////// center text trick	/////////
+
+
+
+
+// a standardized border radius
+// ----------------------------
+@mixin standard_rounded_border ($standard_round_corner, $standard_border_style, $standard_corner_width, $standard_border_color) {
+	@include border_radius(#{$standard_round_corner / $em}rem);
+	border: $standard_corner_width $standard_border_style $standard_border_color;
+}
