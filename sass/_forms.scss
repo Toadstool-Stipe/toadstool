@@ -1,28 +1,6 @@
 //////// buttons ////////
 // ----------------------------------------------
 
-// This will auto concatenate a primary button with a secondary button
-// --------------------------------------------------------------------
-button, a.button {
-	@include primary_button;
-	&:nth-child(n+2) {
-		@include secondary_button_core;	
-	}
-}
-
-
-a.button {
-	display: inline-block;
-}
-
-.icon_buttons {
-	button, a.button  {
-		@include icon_button;
-	}
-}
-////// buttons ////////
-
-
 //////// inputs ////////
 // ---------------------
 
