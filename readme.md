@@ -10,4 +10,15 @@ To-do's ...
 * Get better at code documentation - readme files at every directory
 * Distill /core down to a point where it makes sense to make it a gem
 
+##To run the app
+
+Toadstool is built using ``Sinatra``, but you can run the app using ``shotgun``
+
+To run, ``$ cd toadstool/`` then ``shotgun toadstool.rb -o 0.0.0.0 -p 3000`` This will allow you to view the app at localhost:3000
+
+##Sass / Compass
+The app is using Compass to process the CSS. At ``$ cd toadstool/`` run ``compass watch``.  The CSS is gitignored. 
+
+
+###Please don't mind the mess ...
 This is a work in progress, if you are following along at home, pull master a lot :D
