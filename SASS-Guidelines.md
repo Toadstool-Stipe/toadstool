@@ -91,7 +91,7 @@ Just because you are using Sass doesn't mean that you should toss all CSS and OO
 
 ### Declaration best practice
 
-It is best practice to list your parent specific declarations directly under the class selector and then list the indented child selectors to keep readability as a maximum.  
+It is best practice to list your parent specific declarations directly under the class selector and then list the indented child selectors to keep readability at a maximum.  
 
 Example of a parent class selector with nested selectors:
 
@@ -118,9 +118,9 @@ I personally use underscore delimited lowercase selectors. Why? I can double cli
 
 A partial in Sass is a document with an underscore preceding the name.  Example, `_widget.scss`. Using this convention, when processed, Sass will not output a standalone CSS file. A partial is simply a resource file that other docs can consume and use. This is essential for managing large libraries of Sass logic, element and widget styles. 
 
-I have found that the simplest way to manage your Sass files is via a core.scss file consisting of imported partials and a logical grouping of sub files. With Sass @import works and it works really well, unlike standard CSS. It is encouraged to break your files into smaller manageable chunks of code. 
+I have found that the simplest way to manage your Sass files is via a core.scss file consisting of imported partials and a logical grouping of sub files. With Sass, @import works and it works really well, unlike standard CSS. It is encouraged to break your files into smaller manageable chunks of code. 
 
-If you can't decide to use either Sass or SCSS, the good news is that you don't. Sass and SCSS files can live together in perfect harmony. So if you have a reason for using one syntax over another for specific use cases, this is acceptable. For example, some like to use SCSS for logic building and then use Sass for design building. You do not need to state either SCSS or Sass with the @import function, just the path to the partial.
+If you can't decide whether to use Sass or SCSS, the good news is that you don't. Sass and SCSS files can live together in perfect harmony. So if you have a reason for using one syntax over another for specific use cases, this is acceptable. For example, some like to use SCSS for logic building and then use Sass for design building. You do not need to state either SCSS or Sass with the @import function, just the path to the partial.
 
 
 ## Dynamic and reusable code
