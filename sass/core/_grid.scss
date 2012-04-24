@@ -45,15 +45,15 @@
 // All values are entered as integers and conversion math is done in the mixin. 
 // Do not enter combination values such as '36em'
 
-@mixin grid($col_count, $grid_child, $grid_padding_lr, $grid_padding_tb, $grid_border, $grid_uom, $col_gutter, $grid_type) { 
+@mixin grid($col_count, $grid_child, $grid_padding_lr, $grid_padding_tb, $grid_border, $grid_uom, $col_gutter, $grid_type, $grid_align) { 
 
 	@if $grid_type == 12 {
 		$col_width: 80 - $col_gutter;
-		@include the_grid($col_count, $col_width, $grid_uom, $grid_padding_lr, $grid_padding_tb, $grid_border, $grid_child, $col_gutter);
+		@include the_grid($col_count, $col_width, $grid_uom, $grid_padding_lr, $grid_padding_tb, $grid_border, $grid_child, $col_gutter, $grid_align);
 	}
 	@else if $grid_type == 16 {
 		$col_width: 60 - $col_gutter;
-		@include the_grid($col_count, $col_width, $grid_uom, $grid_padding_lr, $grid_padding_tb, $grid_border, $grid_child, $col_gutter);
+		@include the_grid($col_count, $col_width, $grid_uom, $grid_padding_lr, $grid_padding_tb, $grid_border, $grid_child, $col_gutter, $grid_align);
 	}
 }
 

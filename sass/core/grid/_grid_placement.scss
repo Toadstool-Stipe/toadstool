@@ -1,56 +1,63 @@
 // supporting mixin for @mixin the_grid
 // 'grid_placement' sets display, float and margin for the block
-@mixin grid_placement($grid_uom, $child, $margin) {
-	float: left;
+@mixin grid_placement($grid_align, $grid_uom, $grid_child, $margin) {
+	
 	@include box_sizing;
 	
-	@if $child == alpha {
-		@if $grid_uom == em {
-			$margin_calc: #{$margin / $em}em;
-			@include grid_margin($child, $margin_calc);
-		}
-		@else if $grid_uom == combo {
-			$margin_calc: #{$margin / $em}em;
-			@include grid_margin($child, $margin_calc);
-		}
-		@else if $grid_uom == percent {
-			$margin_calc: #{$margin / $grid_960};
-			@include grid_margin($child, $margin_calc);
-		}
+	@if $grid_align == center {
+		margin: 0 auto;
 	}
 	
-	@else if $child == omega {
-		@if $grid_uom == em {
-			$margin_calc: #{$margin / $em}em;
-			@include grid_margin($child, $margin_calc);
+	@else {
+		@if $grid_child == alpha {
+			@if $grid_uom == em {
+				$margin_calc: #{$margin / $em}em;
+				@include grid_margin($grid_child, $margin_calc);
+			}
+			@else if $grid_uom == combo {
+				$margin_calc: #{$margin / $em}em;
+				@include grid_margin($grid_child, $margin_calc);
+			}
+			@else if $grid_uom == percent {
+				$margin_calc: #{$margin / $grid_960};
+				@include grid_margin($grid_child, $margin_calc);
+			}
 		}
-		@else if $grid_uom == combo {
-			$margin_calc: #{$margin / $em}em;
-			@include grid_margin($child, $margin_calc);
+		
+		@else if $grid_child == omega {
+			@if $grid_uom == em {
+				$margin_calc: #{$margin / $em}em;
+				@include grid_margin($grid_child, $margin_calc);
+			}
+			@else if $grid_uom == combo {
+				$margin_calc: #{$margin / $em}em;
+				@include grid_margin($grid_child, $margin_calc);
+			}
+			@else if $grid_uom == percent {
+				$margin_calc: #{$margin / $grid_960};
+				@include grid_margin($grid_child, $margin_calc);
+			}
 		}
-		@else if $grid_uom == percent {
-			$margin_calc: #{$margin / $grid_960};
-			@include grid_margin($child, $margin_calc);
+		
+		@else if $grid_child == none {
+			@if $grid_uom == em {
+				$margin_calc: #{$margin / $em}em;
+				@include grid_margin($grid_child, $margin_calc);
+			}
+			@else if $grid_uom == combo {
+				$margin_calc: #{$margin / $em}em;
+				@include grid_margin($grid_child, $margin_calc);
+			}
+			@else if $grid_uom == percent {
+				$margin_calc: #{$margin / $grid_960};
+				@include grid_margin($grid_child, $margin_calc);
+			}
 		}
-	}
-	
-	@else if $child == none {
-		@if $grid_uom == em {
-			$margin_calc: #{$margin / $em}em;
-			@include grid_margin($child, $margin_calc);
+		
+		@else if $grid_child == alphaomega {
+			margin-left: 0;
+			margin-right: 0;
 		}
-		@else if $grid_uom == combo {
-			$margin_calc: #{$margin / $em}em;
-			@include grid_margin($child, $margin_calc);
-		}
-		@else if $grid_uom == percent {
-			$margin_calc: #{$margin / $grid_960};
-			@include grid_margin($child, $margin_calc);
-		}
-	}
-	
-	@else if $child == alphaomega {
-		margin-left: 0;
-		margin-right: 0;
-	}
+
+	}	
 }

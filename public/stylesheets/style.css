@@ -121,11 +121,44 @@ mark {
   background: #ffff87;
   color: #1a1a1a; }
 
-.block {
-  float: left;
+html {
+  font: 0.75em/1.5em Arial, sans-serif;
+  color: #1a1a1a; }
+
+p {
+  margin-bottom: 1em;
+  text-indent: 0; }
+  p:last-child {
+    margin-bottom: 0; }
+
+b:after {
+  content: " "; }
+
+a:link {
+  color: #2c46b7;
+  text-decoration: none; }
+a:hover, a:active {
+  text-decoration: underline; }
+a:visited {
+  color: #2c46b7; }
+
+.main_content {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  margin: 0 auto;
+  width: 40em;
+  background: orange; }
+  @media only screen and (max-width: 1024px) {
+    .main_content {
+      background: blue !important;
+      width: 50%; } }
+
+.block {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
   margin-left: 1.042%;
   margin-right: 1.042%;
   width: 47.917%; }

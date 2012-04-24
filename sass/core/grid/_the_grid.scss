@@ -1,13 +1,17 @@
 // 'the_grid' determines width by taking column count, calculates gutter count
 // default setting for grid is ``em`` this is specified in ``_config.scss``
 
-@mixin the_grid($col_count, $col_width, $grid_uom, $grid_padding_lr, $grid_padding_tb, $grid_border, $child, $col_gutter) {
+@mixin the_grid($col_count, $col_width, $grid_uom, $grid_padding_lr, $grid_padding_tb, $grid_border, $grid_child, $col_gutter, $grid_align) {
 	
 	$col_gutter_width: ($col_count - 1) * $col_gutter + ($col_count * $col_width);
 	
-	@include grid_placement($grid_uom, $child, $margin: $col_gutter / 2);
+	@include grid_placement($grid_align, $grid_uom, $grid_child, $margin: $col_gutter / 2);
 	
 	@if $grid_uom == em {
+		@if $grid_border > 0 {
+			border: #{$grid_border}px $standard_border_style $border_color;
+		}
+		
 		$grid_width: #{$col_gutter_width / $em}em;
 		@if $grid_padding_lr > 0 {
 			padding: {
@@ -22,6 +26,11 @@
 			}
 		}
 		width: $grid_width;
+		@media only screen and (max-width: 1024px) {
+			background: blue !important;
+			$grid_width: $col_gutter_width / $grid_960;
+			width: $grid_width;
+		}
 		
 		// fallback for unsupported browsers
 		$grid_width_fallback: $col_gutter_width - (($grid_padding_lr * 2) + ($grid_border * 2));

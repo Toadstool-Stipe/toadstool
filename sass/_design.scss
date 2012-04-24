@@ -6,7 +6,17 @@
 
 
 
-// grid arguments ($col_count, $grid_child, $grid_padding_lr, $grid_padding_tb, $grid_border, $grid_uom, $col_gutter, $grid_type)
+// grid arguments ($col_count, $grid_child, $grid_padding_lr, $grid_padding_tb, $grid_border, $grid_uom, $col_gutter, $grid_type, $grid_align)
+@mixin main_content($main_col_count, $grid_align: center) {
+	$col_count: $main_col_count + 0.25;
+	@include grid($col_count, $grid_align: center, $grid_uom: em);
+}
+
+.main_content {
+	@include main_content(6);
+	background: orange;
+}
+
 .block {
 	@include grid(6);
 }
