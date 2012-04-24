@@ -13,6 +13,15 @@ $prefix_defaults: -moz- -webkit- -o- -ms- '';
 $webkit_support: -webkit- '';
 $moz_webkit_support: -moz- -webkit- '';
 
+/////////// main content dusplay box //////////////
+// -----------------------------------------------
+@mixin main_content($main_col_count, $grid_align: center) {
+	$col_count: $main_col_count + 0.25;  // additional value compensates for not having 10px margin
+	@include grid($col_count, $grid_align: center, $grid_uom: em);
+}
+
+
+
 
 /////// text arguments //////////
 // -----------------------------

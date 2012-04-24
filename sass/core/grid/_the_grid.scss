@@ -12,7 +12,6 @@
 			border: #{$grid_border}px $standard_border_style $border_color;
 		}
 		
-		$grid_width: #{$col_gutter_width / $em}em;
 		@if $grid_padding_lr > 0 {
 			padding: {
 				left: #{$grid_padding_lr / $em}em;
@@ -25,11 +24,15 @@
 				bottom: #{$grid_padding_tb / $em}em;
 			}
 		}
+		$grid_width: #{$col_gutter_width / $em}em;
 		width: $grid_width;
+		
+		// this query only happens when using ems as spacial values
+		// the rule is that at a breakpoint, all hard values are converted to percentages
 		@media only screen and (max-width: 1024px) {
-			background: blue !important;
 			$grid_width: $col_gutter_width / $grid_960;
 			width: $grid_width;
+			background: blue;
 		}
 		
 		// fallback for unsupported browsers
