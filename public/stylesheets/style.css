@@ -124,6 +124,15 @@ mark {
 html {
   font: 0.75em/1.5em Arial, sans-serif;
   color: #1a1a1a; }
+  @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1) and (orientation : portrait) {
+    html {
+      font-size: 3em; } }
+  @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1) and (orientation : landscape) {
+    html {
+      font-size: 2.25em; } }
+  @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : landscape) {
+    html {
+      font-size: 1.125em; } }
 
 p {
   margin-bottom: 1em;
@@ -148,11 +157,15 @@ a:visited {
   box-sizing: border-box;
   margin: 0 auto;
   width: 40em;
-  background: orange; }
+  background: orange;
+  text-align: center; }
   @media only screen and (max-width: 1024px) {
     .main_content {
       width: 50%;
       background: blue; } }
+  @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1) {
+    .main_content {
+      background: yellow !important; } }
 
 .block {
   -moz-box-sizing: border-box;

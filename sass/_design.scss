@@ -8,9 +8,16 @@
 
 // grid arguments ($col_count, $grid_child, $grid_padding_lr, $grid_padding_tb, $grid_border, $grid_uom, $col_gutter, $grid_type, $grid_align)
 
+
+
 .main_content {
 	@include main_content(6);
 	background: orange;
+	text-align: center;
+	@media #{$low_res_phone} {
+		background: yellow !important;
+	}
+	
 }
 
 .block {

@@ -5,6 +5,15 @@
 
 html {
 	font: #{$font_size / 16 * 1em}/$line_height $primary_font_family;
+	@media #{$low_res_phone_portrait} {
+		font-size: #{($font_size * 4) / 16 * 1em};
+	}
+	@media #{$low_res_phone_landscape} {
+		font-size: #{($font_size * 3) / 16 * 1em};
+	}
+	@media #{$low_res_tablet_landscape} {
+		font-size: #{($font_size * 1.5) / 16 * 1em};
+	}
 	color: $primary_text;
 }
 
