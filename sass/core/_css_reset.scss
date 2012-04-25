@@ -1,0 +1,5 @@
+@mixin foobar {
+	@import "css_resets/_toadstool";
+}
+
+@inlcude foobar;
