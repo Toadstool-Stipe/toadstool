@@ -19,7 +19,7 @@ To run, ``$ cd toadstool/`` then ``shotgun toadstool.rb -o 0.0.0.0 -p 3000`` Thi
 The app is using Compass to process the CSS. At ``$ cd toadstool/`` run ``compass watch``.  The CSS is gitignored. 
 
 ##Toadstool custom mixins
-On the shoulders of giants, Toadstool is also a series of Sass Mixins to make your life better, your UI more consistent and code easier to manage.  Of course there is to much to go over here, so please read about [Toadstool's mixins]() here. 
+On the shoulders of giants, Toadstool is also a series of Sass Mixins to make your life better, your UI more consistent and code easier to manage.  Of course there is to much to go over here, so please read about [Toadstool's mixins](/blackfalcon/toadstool/blob/master/readme/mixin_directory.md) here. 
 
 
 ###Please don't mind the mess ...
