@@ -12,13 +12,18 @@
 @import "config_files/button_config";
 
 
-// Common use reset CSS, updated with Axle references //
-@import "core/reset";
-
-
 // Sets core text sizes/values and writes CSS for standard text elements
 // ----------------------------------------------------------------------
 @import "config_files/text";
+
+
+
+
+// Options for CSS resets
+// ---------------------------------------------
+@import "config_files/reset";
+
+
 
 
 // The following are required to be in this sequence //
