@@ -1,177 +1,80 @@
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, menu, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  vertical-align: baseline;
-  background: transparent; }
+/*
+Syntax error: File to import not found or unreadable: core/reset.
+              Load paths:
+                /home/mbreo/pro_projects/toadstool/sass
+                /home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/frameworks/blueprint/stylesheets
+                /home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/frameworks/compass/stylesheets
+                Compass::SpriteImporter
+        on line 16 of /home/mbreo/pro_projects/toadstool/sass/style.scss
 
-body {
-  line-height: 1;
-  font-size: 100%;
-  -webkit-font-smoothing: antialiased; }
-
-article, aside, figure, footer, header, hgroup, nav, section {
-  display: block; }
-
-img, object, embed {
-  max-width: 100%; }
-
-img {
-  border-style: none;
-  border-color: transparent;
-  border-width: 0; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after {
-  content: '';
-  content: none; }
-
-q:before, q:after {
-  content: '';
-  content: none; }
-
-a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent; }
-  a:focus {
-    text-decoration: underline;
-    outline: none; }
-
-del {
-  text-decoration: line-through; }
-
-pre {
-  white-space: pre-wrap;
-  word-wrap: break-word; }
-
-input[type="radio"] {
-  vertical-align: text-bottom; }
-
-input, textarea, select, button {
-  font-family: inherit;
-  font-weight: inherit;
-  background-color: #fff;
-  border: 0;
-  padding: 0;
-  margin: 0; }
-
-table {
-  font-size: inherit;
-  font: 100%; }
-
-sub {
-  font-size: 75%;
-  line-height: 0;
-  position: relative; }
-
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  top: -0.5em; }
-
-sub {
-  bottom: -0.25em; }
-
-pre, code, kbd, samp {
-  font-family: monospace, sans-serif; }
-
-.clickable, label {
-  cursor: pointer; }
-
-input[type=button], input[type=submit] {
-  cursor: pointer; }
-
-button {
-  cursor: pointer;
-  margin: 0;
-  width: auto;
-  overflow: visible; }
-
-.ie7 img {
-  -ms-interpolation-mode: bicubic; }
-
-a:link {
-  -webkit-tap-highlight-color: #324fce; }
-
-ins {
-  background-color: #ffff87;
-  color: black;
-  text-decoration: none; }
-
-mark {
-  background-color: #ffff87;
-  color: black;
-  font-style: italic;
-  font-weight: bold; }
-
-::selection {
-  background: #ffff87;
-  color: #1a1a1a; }
-
-::-moz-selection {
-  background: #ffff87;
-  color: #1a1a1a; }
-
-html {
-  font: 0.75em/1.5em Arial, sans-serif;
-  color: #1a1a1a; }
-  @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1) and (orientation : portrait) {
-    html {
-      font-size: 3em; } }
-  @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1) and (orientation : landscape) {
-    html {
-      font-size: 2.25em; } }
-  @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : landscape) {
-    html {
-      font-size: 1.125em; } }
-
-p {
-  margin-bottom: 1em;
-  text-indent: 0; }
-  p:last-child {
-    margin-bottom: 0; }
-
-b:after {
-  content: " "; }
-
-a:link {
-  color: #2c46b7;
-  text-decoration: none; }
-a:hover, a:active {
-  text-decoration: underline; }
-a:visited {
-  color: #2c46b7; }
-
-.main_content {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0 auto;
-  width: 40em;
-  background: orange;
-  text-align: center; }
-  @media only screen and (max-width: 1024px) {
-    .main_content {
-      width: 50%;
-      background: blue; } }
-  @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1) {
-    .main_content {
-      background: yellow !important; } }
-
-.block {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-  margin-left: 1.042%;
-  margin-right: 1.042%;
-  width: 47.917%; }
+Backtrace:
+/home/mbreo/pro_projects/toadstool/sass/style.scss:16
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.0.alpha.101/lib/sass/tree/import_node.rb:64:in `rescue in import'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.0.alpha.101/lib/sass/tree/import_node.rb:42:in `import'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.0.alpha.101/lib/sass/tree/import_node.rb:25:in `imported_file'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.0.alpha.101/lib/sass/tree/visitors/perform.rb:149:in `rescue in visit_import'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.0.alpha.101/lib/sass/tree/visitors/perform.rb:154:in `visit_import'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.0.alpha.101/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.0.alpha.101/lib/sass/tree/visitors/perform.rb:20:in `visit'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.0.alpha.101/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.0.alpha.101/lib/sass/tree/visitors/base.rb:53:in `map'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.0.alpha.101/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.0.alpha.101/lib/sass/tree/visitors/perform.rb:29:in `block in visit_children'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.0.alpha.101/lib/sass/tree/visitors/perform.rb:41:in `with_environment'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.0.alpha.101/lib/sass/tree/visitors/perform.rb:28:in `visit_children'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.0.alpha.101/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.0.alpha.101/lib/sass/tree/visitors/perform.rb:49:in `visit_root'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.0.alpha.101/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.0.alpha.101/lib/sass/tree/visitors/perform.rb:20:in `visit'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.0.alpha.101/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.0.alpha.101/lib/sass/tree/root_node.rb:20:in `render'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.0.alpha.101/lib/sass/engine.rb:308:in `_render'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.0.alpha.101/lib/sass/engine.rb:255:in `render'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/lib/compass/compiler.rb:126:in `timed'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/lib/compass/compiler.rb:139:in `block in compile'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/lib/compass/logger.rb:45:in `red'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/lib/compass/compiler.rb:138:in `compile'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/lib/compass/compiler.rb:118:in `compile_if_required'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/lib/compass/compiler.rb:103:in `block (2 levels) in run'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/lib/compass/compiler.rb:101:in `each'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/lib/compass/compiler.rb:101:in `block in run'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/lib/compass/compiler.rb:126:in `timed'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/lib/compass/compiler.rb:100:in `run'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/lib/compass/commands/watch_project.rb:147:in `recompile'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/fssm-0.2.7/lib/fssm/path.rb:73:in `call'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/fssm-0.2.7/lib/fssm/path.rb:73:in `run_callback'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/fssm-0.2.7/lib/fssm/path.rb:55:in `callback_action'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/fssm-0.2.7/lib/fssm/path.rb:35:in `update'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/fssm-0.2.7/lib/fssm/state/directory.rb:39:in `block in modified'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/fssm-0.2.7/lib/fssm/state/directory.rb:37:in `each'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/fssm-0.2.7/lib/fssm/state/directory.rb:37:in `modified'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/fssm-0.2.7/lib/fssm/state/directory.rb:18:in `refresh'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/fssm-0.2.7/lib/fssm/backends/inotify.rb:12:in `block in add_handler'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/rb-inotify-0.8.8/lib/rb-inotify/notifier.rb:200:in `call'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/rb-inotify-0.8.8/lib/rb-inotify/notifier.rb:200:in `block in watch'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/rb-inotify-0.8.8/lib/rb-inotify/watcher.rb:41:in `[]'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/rb-inotify-0.8.8/lib/rb-inotify/watcher.rb:41:in `callback!'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/rb-inotify-0.8.8/lib/rb-inotify/event.rb:128:in `callback!'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/rb-inotify-0.8.8/lib/rb-inotify/notifier.rb:233:in `block in process'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/rb-inotify-0.8.8/lib/rb-inotify/notifier.rb:233:in `each'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/rb-inotify-0.8.8/lib/rb-inotify/notifier.rb:233:in `process'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/rb-inotify-0.8.8/lib/rb-inotify/notifier.rb:216:in `run'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/fssm-0.2.7/lib/fssm/backends/inotify.rb:20:in `run'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/fssm-0.2.7/lib/fssm/monitor.rb:26:in `run'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/fssm-0.2.7/lib/fssm.rb:20:in `monitor'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/lib/compass/commands/watch_project.rb:87:in `perform'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/lib/compass/commands/base.rb:18:in `execute'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/lib/compass/commands/project_base.rb:19:in `execute'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/bin/compass:29:in `block in <top (required)>'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/bin/compass:43:in `call'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/bin/compass:43:in `<top (required)>'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/bin/compass:19:in `load'
+/home/mbreo/.rvm/gems/ruby-1.9.3-p0/bin/compass:19:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: core/reset.\A               Load paths:\A                 /home/mbreo/pro_projects/toadstool/sass\A                 /home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/frameworks/blueprint/stylesheets\A                 /home/mbreo/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.12.1/frameworks/compass/stylesheets\A                 Compass::SpriteImporter\A         on line 16 of /home/mbreo/pro_projects/toadstool/sass/style.scss"; }
