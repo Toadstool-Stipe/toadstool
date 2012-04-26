@@ -7,6 +7,9 @@
 	@if $grid_align == center {
 		margin: 0 auto;
 	}
+	@else if $grid_align == left {
+		margin: 0;
+	}
 	
 	@else {
 		@if $grid_child == alpha {
