@@ -12,7 +12,8 @@
 
 .main_content {
 	@include main_content(12, $main_grid_align: left, $main_grid_uom: em);
-	background: orange;
+	background: blue;
+	color: $white;
 	text-align: center;
 	@media #{$low_res_phone} {
 		background: yellow !important;

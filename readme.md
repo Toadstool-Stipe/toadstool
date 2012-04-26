@@ -11,12 +11,12 @@ To-do's ...
 * Distill /core down to a point where it makes sense to make it a gem
 
 ##To run the app
-Toadstool is built using ``Sinatra``, but you can run the app using ``shotgun``
+Toadstool is built using ``Sinatra``, but you can run the app using ``shotgun`` if you prefer.
 
-To run, ``$ cd toadstool/`` then ``shotgun toadstool.rb -o 0.0.0.0 -p 3000`` This will allow you to view the app at localhost:3000
+**To run** ``ruby toadstool.rb`` will start the app. If you are running a VM you may need to run ``ruby toadstool.rb -o 0.0.0.0``.  If you are so inclined, feel free to reset the port like so ``ruby toadstool.rb -o 0.0.0.0 -p 3000``
 
 ##Sass / Compass
-The app is using Compass to process the CSS. At ``$ cd toadstool/`` run ``compass watch``.  The CSS is gitignored. 
+Config included in toadstool.rb, no need to run as a separate process. 
 
 ##Toadstool custom mixins
 On the shoulders of giants, Toadstool is also a series of Sass Mixins to make your life better, your UI more consistent and code easier to manage.  Of course there is to much to go over here, so please read about [Toadstool's mixins](/blackfalcon/toadstool/blob/master/readme/mixin_directory.md) here. 
