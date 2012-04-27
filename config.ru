@@ -1,4 +1,4 @@
-require 'toadstool'
+require './toadstool'
 
 ## There is no need to set directories here anymore;
 ## Just run the application
