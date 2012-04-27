@@ -2,3 +2,4 @@
 .bundle
 .sass-cache/*
 public/stylesheets/*
+sass/.sass-cache/
