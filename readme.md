@@ -1,8 +1,10 @@
 #Welcome to Toadstool
 
-Toadstool is the next evolution of the Axle Styleguide framework.  Concepts are simple, build in the abstract and apply to the semantic. 
+Toadstool is a Styleguide framework. Concepts are simple, build in the abstract and apply to the semantic. 
 
-Toadstool is currently developed as a Sinatra app using Sass (SCSS) and Compass. 
+Toadstool is currently developed as a Sinatra app using Sass (SCSS) and Compass.
+
+[View the demo](http://toadstool-app.herokuapp.com/) 
 
 To-do's ...
 * Create a list of completed features
@@ -16,6 +18,8 @@ Toadstool is built using ``Sinatra``, but you can run the app using ``shotgun`` 
 **To run** ``ruby toadstool.rb`` will start the app. If you are running a VM you may need to run ``ruby toadstool.rb -o 0.0.0.0``.  If you are so inclined, feel free to reset the port like so ``ruby toadstool.rb -o 0.0.0.0 -p 3000``
 
 ##Sass / Compass
+**(BLEEDING EDGE ALERT)** Toadstool is using ``3.2.0.alpha.103``
+
 Config included in toadstool.rb, no need to run as a separate process. 
 
 ##Toadstool custom mixins
