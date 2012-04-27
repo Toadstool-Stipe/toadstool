@@ -1,8 +1,10 @@
 #Welcome to Toadstool
 
-Toadstool is the next evolution of the Axle Styleguide framework.  Concepts are simple, build in the abstract and apply to the semantic. 
+Toadstool is a Styleguide framework. Concepts are simple, build in the abstract and apply to the semantic. 
 
-Toadstool is currently developed as a Sinatra app using Sass (SCSS) and Compass. 
+Toadstool is currently developed as a Sinatra app using Sass (SCSS) and Compass.
+
+[View the demo](http://toadstool-app.herokuapp.com/) 
 
 To-do's ...
 * Create a list of completed features
