@@ -9,7 +9,7 @@ require 'sinatra'
 
 
 configure do
-  Compass.add_project_configuration(File.join(Sinatra::Application.root, 'config.rb'))
+  Compass.add_project_configuration(File.join(Sinatra::Application.root, 'sass/config.rb'))
 end
 
 # at a minimum, the main sass file must reside within the ./views directory. here, we create a ./views/stylesheets directory where all of the sass files can safely reside.
