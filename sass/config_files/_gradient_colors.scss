@@ -45,9 +45,9 @@ $charlie_color_gradient_var_legacy_safari: #{color-stop(0%,$echo_color_delta), c
 //-
 
 @mixin delta_color_gradient {
-  @include linear_gradient_w3c ($white, #{$fox_grey 0%,$delta_grey 100%});
-  @include linear_gradient_legacy_safari (#{color-stop(0%,$fox_grey), color-stop(100%,$delta_grey)});
-  @include linear_gradient_legacy_ie ($fox_grey, $delta_grey);
+  @include linear_gradient_w3c ($white, #{$fox_gray 0%,$delta_gray 100%});
+  @include linear_gradient_legacy_safari (#{color-stop(0%,$fox_gray), color-stop(100%,$delta_gray)});
+  @include linear_gradient_legacy_ie ($fox_gray, $delta_gray);
 }
 
 //-
@@ -64,9 +64,9 @@ $echo_gradient_bravo: scale-color($delta_gray, $lightness: 30%);
 //-
 
 @mixin fox_color_gradient {
-  @include linear_gradient_w3c ($white, #{$delta_grey 0%,$fox_grey 100%});
-  @include linear_gradient_legacy_safari (#{color-stop(0%,$delta_grey), color-stop(100%,$fox_grey)});
-  @include linear_gradient_legacy_ie ($delta_grey, $fox_grey);
+  @include linear_gradient_w3c ($white, #{$delta_gray 0%,$fox_gray 100%});
+  @include linear_gradient_legacy_safari (#{color-stop(0%,$delta_gray), color-stop(100%,$fox_gray)});
+  @include linear_gradient_legacy_ie ($delta_gray, $fox_gray);
 }
 
 //-

@@ -153,27 +153,27 @@ If you are not using arguments in your mixin, you should consider using a CSS cl
 
 ```scss
 // Style class object
-.default_grey_border {
+.default_gray_border {
 	@include border-radius(25px);
-	border: 1px solid grey;
+	border: 1px solid gray;
 }  
 
 // Semantically names class
 .promoters_box {
-	@extend .default_grey_border;
+	@extend .default_gray_border;
 }
 ```
 
 This will produce the following best practice CSS
 
 ```scss
-.default_grey_border, promoters_box {
+.default_gray_border, promoters_box {
 	-webkit-border-radius: 25px;
 	-moz-border-radius: 25px;
 	-ms-border-radius: 25px;
 	-o-border-radius: 25px;
 	border-radius: 25px;
-	border: 1px solid grey;
+	border: 1px solid gray;
 }
 ```
 

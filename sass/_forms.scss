@@ -10,7 +10,7 @@ input[type=text], input[type=password], input[type="date"], select {
 	@include medium();
 	height: #{32 / $em}em;
 	@include grid(12,12,combo, $grid_padding:6);
-	@include placeholder ($delta_grey);
+	@include placeholder ($delta_gray);
 
 	@include field_focus;
 	color: $form_field_text;

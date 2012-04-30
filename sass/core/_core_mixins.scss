@@ -257,7 +257,7 @@ $inset_shadow: #{$ih-shadow / $em}em #{$iv-shadow / $em}em #{$iblur / $em}em;
 
 ///////// inset border /////////
 @mixin inset_border () {
-	@include box_shadow(inset 0 0 1px, $alpha_grey);
+	@include box_shadow(inset 0 0 1px, $alpha_gray);
 }
 ///////// inset border /////////
 
