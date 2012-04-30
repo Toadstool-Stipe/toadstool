@@ -20,7 +20,9 @@ Toadstool is built using ``Sinatra``, but you can run the app using ``shotgun`` 
 ##Sass / Compass
 **(BLEEDING EDGE ALERT)** Toadstool is using ``3.2.0.alpha.103``
 
-Config included in toadstool.rb, no need to run as a separate process. 
+The Compass config is included in toadstool.rb, no need to run as a separate process. 
+
+*Note:* Sinatra serves the rendered Sass from memory without generating actual CSS files. However, if you have CSS files in public/stylesheets, those will be served instead. If you edit your Sass, but don't see your changes in the browser, delete any CSS files in public/stylesheets. 
 
 ##Toadstool custom mixins
 On the shoulders of giants, Toadstool is also a series of Sass Mixins to make your life better, your UI more consistent and code easier to manage.  Of course there is to much to go over here, so please read about [Toadstool's mixins](/blackfalcon/toadstool/blob/master/readme/mixin_directory.md) here. 
