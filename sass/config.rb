@@ -2,8 +2,15 @@
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "public/stylesheets"
-sass_dir = "sass"
+
+if ENV['PWD'].end_with?('sass')
+  css_dir = "../public/stylesheets"
+  sass_dir = "."
+else
+  css_dir = "public/stylesheets"
+  sass_dir = "sass"
+end
+
 images_dir = "images"
 javascripts_dir = "javascripts"
 
