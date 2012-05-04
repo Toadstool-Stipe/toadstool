@@ -14,9 +14,19 @@
 
 
 
-// Options for CSS resets
-// ---------------------------------------------
-@import "config_files/reset";
+// Choose the CSS reset by selectively commenting/uncommenting the import files
+// -----------------------------------------------------------------------------
+
+   @import "core/resets/toadstool";        // Default toadstool reset
+// @import "core/resets/html5_reset";      // http://html5reset.org/ v2.0 converted to scss
+// @import "core/resets/normalize";        // https://github.com/necolas/normalize.css
+// @import "core/resets/eric_meyer";       // http://meyerweb.com/eric/tools/css/reset/reset.css
+// @import "compass/reset";                // Reset supported by the Compass gem
+
+// Don't want to use any of these? Kool, we can respect that
+// ----------------------------------------------------------
+// @import "myreset.scss";
+
 
 
 
