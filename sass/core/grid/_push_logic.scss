@@ -18,6 +18,7 @@
 	}
 	@else if $grid_uom == percent {
 		$grid_width: ($width_gutter * $col_count) / $grid_960;
+		$padding_width: #{($width_gutter * $col_count) / $grid_960};
 		@if $move == suffix {
 			padding-right: $padding_width;
 		}
