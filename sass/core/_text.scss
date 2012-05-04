@@ -10,27 +10,19 @@
 
 //////// heading text mixins //////////
 // ------------------------------------------------
-@mixin heading ($heading_font_size: $heading_1, $family: default, $line_height: 1em, $color: $primary_header_color, $font_weight: normal, $letter_spacing: 0, $margin_bottom: 20) {
+@mixin heading ($heading_font_size: $heading_1, $family: $primary_font_family, $line_height: 1em, $color: $primary_header_color, $font_weight: normal, $letter_spacing: 0, $margin_bottom: 20) {
 	font-size: #{$heading_font_size / $em}em;
 	color: $color;
 	line-height: $line_height;
 	font-weight: $font_weight;
 	margin-bottom: #{$margin_bottom / $heading_font_size}em;
-	
-	
-	/// FUCK!!!!  Can't do this in core.  Need solution to better manage custom font application like this
-	@if $family == lubalin {
-		font-family: $webfont_alpha;
-		.ja & {
-			font-family: $primary_font_family;
-		}
-	}
+	font-family: $family;
 	letter-spacing: $letter_spacing;
 }
 
 
 @mixin subheader ($font_size: $heading_4, $background: $charlie_gray, $color: $alpha_gray) {
-	@include heading($heading_font_size: $font_size, $family: lubalin, $line_height: 2em, $color: $color);
+	@include heading($heading_font_size: $font_size, $family: $heading_font_family, $line_height: 2em, $color: $color);
 	background: $background;
 	@include border_radius(#{3 / $font_size}em);
 	text-indent: #{10 / $font_size}em;

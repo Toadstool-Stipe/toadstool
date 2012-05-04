@@ -7,31 +7,19 @@
 /* Text classes */
 /* ------------ */
 .headings_1 {
-	@include heading($heading_font_size: $heading_1, $family: lubalin, $letter_spacing: -1px, $margin_bottom: 10);
+	@include heading($heading_font_size: $heading_1, $family: $primary_font_family, $letter_spacing: -1px, $margin_bottom: 10);
 }
 
 .headings_2 {
 	@include heading($heading_font_size: $heading_2);
 }
 
-.headings_2_lubalin {
-	@include heading($heading_font_size: $heading_2, $family: lubalin);
-}
-
 .headings_3 {
 	@include heading($heading_font_size: $heading_3);
 }
 
-.headings_3_lubalin {
-	@include heading($heading_font_size: $heading_3, $family: lubalin);
-}
-
 .headings_4 {
 	@include heading($heading_font_size: $heading_4);
-}
-
-.headings_4_lubalin {
-	@include heading($heading_font_size: $heading_4, $family: lubalin);
 }
 
 .subheader_alpha {
@@ -136,9 +124,6 @@
 	@extend .standard_block_spacing;
 	float: left;
 	@extend .bulleted_list;
-	h2, h3 {
-      @extend .headings_3_lubalin;
-    }
 }
 
 
