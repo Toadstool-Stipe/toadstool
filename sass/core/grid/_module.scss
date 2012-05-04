@@ -25,15 +25,19 @@
 // ---------------------------------------------------------------------------
 
 // Establishes default vaules that should never be edited
-@import "grid/mixins/base_values";
+@import "mixins/base_values";
+
 // the_grid calculates all the variables to define with width of the grid column
-@import "grid/mixins/the_grid";
+@import "mixins/the_grid";
+
 // grid_placement based on $child will define alpha or omega placement
-@import "grid/mixins/grid_placement";
+@import "mixins/grid_placement";
+
 // grid_margin applies $margin_calc from grid_placement
-@import "grid/mixins/grid_margin";
+@import "mixins/grid_margin";
+
 // Logic supoprt for Push, Pull, Prefix and Suffix
-@import "grid/mixins/push_logic";
+@import "mixins/push_logic";
 
 
 
@@ -96,3 +100,8 @@
 @mixin omega() {
 	margin-right: 0;
 }
+
+
+
+
+@import "oocss";
