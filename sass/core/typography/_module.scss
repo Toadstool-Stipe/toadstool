@@ -3,6 +3,7 @@
 // individual element styling will be addressed in element name spaced SCSS files
 // *-------------------------------------------------------------------------------
 
+@import "mixins";
 @import "oocss";
 
 html {
