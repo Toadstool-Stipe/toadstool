@@ -3,6 +3,8 @@
 // individual element styling will be addressed in element name spaced SCSS files
 // *-------------------------------------------------------------------------------
 
+@import "oocss";
+
 html {
 	font: #{$font_size / 16 * 1em}/$line_height $primary_font_family;
 	@media #{$low_res_phone_portrait} {
