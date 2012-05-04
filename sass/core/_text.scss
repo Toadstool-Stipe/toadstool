@@ -52,7 +52,7 @@
 }
 
 @mixin large ($margin: auto, $baseline_size: $large_point_size) {
-	@include font_baseline($margin, $baseline_size);
+	@include text_baseline($margin, $baseline_size);
 }
 
 //////// standard text mixins //////////

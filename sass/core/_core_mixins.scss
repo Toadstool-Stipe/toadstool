@@ -32,10 +32,10 @@ $moz_webkit_support: -moz- -webkit- '';
 // -----------------------------
 @mixin text_baseline ($margin, $baseline_size) {
 	font-size: #{$baseline_size / $em}em;
-	line-height: #{($baseline / $baseline_size) * ceil($baseline_size / $baseline)}em;
+	line-height: #{($line / $baseline_size) * ceil($baseline_size / $line)}em;
 
 	@if $margin == auto {
-		margin-bottom: #{$baseline / $baseline_size}em;
+		margin-bottom: #{$line / $baseline_size}em;
 	}
 	@else if $margin == 0 {
 		margin-bottom: 0;

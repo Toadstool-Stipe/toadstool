@@ -39,7 +39,7 @@
 }
 
 .subheader_bravo {
-	@include subheader($color: $charlie_gray_alpha, $background: $echo_gray);
+	@include subheader($color: $charlie_gray, $background: $echo_gray);
 }
 
 .subheader_charlie {
