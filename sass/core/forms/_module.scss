@@ -76,10 +76,6 @@ input[disabled], textarea[disabled], select[disabled], .disabled {
 	}
 }
 
-input[type=file], dl.horizontal_selectors, dl.vertical_selectors {
-	@include field_input_spacing;
-}
-
 //////// inputs ////////
 		
 
