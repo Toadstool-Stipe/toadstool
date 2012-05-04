@@ -30,6 +30,7 @@
 // Global design changes are to be addressed in these files //
 // These files will consume methods and information from _imports.scss //
 // @import "oocss/oocss";
+@import "core/gradients/module";
 @import "core/grid/module";
 @import "core/typography/module";
 @import "core/forms/module";
