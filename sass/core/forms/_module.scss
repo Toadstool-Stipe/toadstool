@@ -9,7 +9,7 @@ input[type=text], input[type=password], input[type="date"], select {
 	background: $form_field_background_color;
 	@include medium();
 	height: #{32 / $em}em;
-	@include grid(12,12,combo, $grid_padding:6);
+	@include grid(12,12,$grid_uom:combo, $grid_padding_lr:6);
 	@include placeholder ($delta_gray);
 
 	@include field_focus;
@@ -95,7 +95,7 @@ label {
 		font-weight: normal;
 	}
 	fieldset & {
-		@include grid (12,12, percent);
+		@include grid(12,12, $grid_uom:percent);
 	}
 }
 
