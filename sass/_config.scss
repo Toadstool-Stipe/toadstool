@@ -35,8 +35,8 @@ $charlie_primary:        #ffff87;        // yellow
 
 // Based on object colors, the following imports will create the color scales
 // Edit these color config files if you wish to have other then default color math
-@import "config_files/generic_color_math";
-@import "config_files/generic_grayscale_math";
+@import "core/color/generic_color_math";
+@import "core/color/generic_grayscale_math";
 
 // Gradient colors are needed here to be used semantically 
 @import "core/gradients/config";
