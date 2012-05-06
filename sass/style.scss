@@ -2,10 +2,6 @@
 // -------------------------------------------------------
 @import "config";
 
-// ------------ core app imports ------------ //
-// _imports is the aggregate file of all Toadstool methods //
-@import "core/imports";
-
 
 
 
@@ -35,6 +31,7 @@
 @import "core/typography/module";
 @import "core/forms/module";
 @import "core/buttons/module";
+@import "core/toadstool/module";
 //@import "design";
 
 
