@@ -1,0 +1,4 @@
+// The color module doesn't have any mixins yet, so it doesn't fully fit the modular pattern. 
+// But to maintain consistency, we'll import the OOCSS through an otherwise empty module file.
+
+@import "oocss";
