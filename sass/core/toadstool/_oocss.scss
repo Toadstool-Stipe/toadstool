@@ -36,9 +36,3 @@
 .disabled_box_shadow {
 	@include disabled_box_shadow;
 }
-
-/* default alert panel */
-/* ------------------- */
-.default_alert_panel {
-	@include alert_boxes ($alert_background_color, 10, 14, 10);
-}

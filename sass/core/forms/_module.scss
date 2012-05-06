@@ -114,3 +114,11 @@ label {
 	line-height: 1.3em;
 	margin-bottom: 1em;
 }
+
+
+
+/* default alert panel */
+/* ------------------- */
+.default_alert_panel {
+	@include alert_boxes ($alert_background_color, 10, 14, 10);
+}
