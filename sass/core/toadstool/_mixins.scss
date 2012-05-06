@@ -3,8 +3,309 @@
 // -----------------------------------------------------------------
 
 
+// This document is to house Toadstools dynamic mixins with arguments
+// These mixins are not intended to be application specific
 
-// This document is to contain design centric tools to aid in the design of your site
+
+// required default value to for vendor prefix support
+// -----------------------------------------------------
+$prefix_defaults: -moz- -webkit- -o- -ms- '';
+$webkit_support: -webkit- '';
+$moz_webkit_support: -moz- -webkit- '';
+
+
+
+
+
+
+/////////// main content dusplay box //////////////
+// -----------------------------------------------
+@mixin main_content($main_col_count, $main_grid_align: center, $main_grid_uom: em) {
+	$col_count: $main_col_count + 0.25;  // additional value compensates for not having 10px margin
+	@include grid($col_count, $grid_align: $main_grid_align, $grid_uom: $main_grid_uom);
+}
+
+
+
+
+/////// text arguments //////////
+// -----------------------------
+@mixin text_baseline ($margin, $baseline_size) {
+	font-size: #{$baseline_size / $em}em;
+	line-height: #{($line / $baseline_size) * ceil($baseline_size / $line)}em;
+
+	@if $margin == auto {
+		margin-bottom: #{$line / $baseline_size}em;
+	}
+	@else if $margin == 0 {
+		margin-bottom: 0;
+	}
+}
+/////// text arguments //////////
+
+
+
+
+
+
+/////// shadow arguments /////////
+// -------------------------------
+$shadow: #{$h-shadow / $em}em #{$v-shadow / $em}em #{$blur / $em}em;
+$inset_shadow: #{$ih-shadow / $em}em #{$iv-shadow / $em}em #{$iblur / $em}em;
+
+@mixin box_shadow ($shadow_color, $shadow, $prefixes: $prefix_defaults) {
+	@each $prefix in $prefixes {
+		#{$prefix}box-shadow: $shadow_color $shadow;
+	}
+}
+
+@mixin dual_box_shadow ($shadow_color, $shadow, $inset_color, $inset_shadow, $prefixes: $prefix_defaults) {
+	@each $prefix in $prefixes {
+		#{$prefix}box-shadow: $shadow_color $shadow, inset $inset_color $inset_shadow;
+	}
+}
+
+@mixin text_shadow ($shadow_color, $shadow, $prefixes: $prefix_defaults) {
+	@each $prefix in $prefixes {
+		#{$prefix}text-shadow: $shadow_color $shadow;
+	}
+}
+/////// shadow arguments /////////
+
+
+
+
+
+/////// border-radius arguments	/////////
+// --------------------------------------
+@mixin border_radius ($border_radius, $prefixes: $webkit_support) {
+	@each $prefix in $prefixes {
+		#{$prefix}border-radius: $border_radius;
+	}
+}
+/////// border-radius arguments	/////////
+
+
+
+
+/////// box-sizing arguments	/////////
+// --------------------------------------
+@mixin box_sizing ($box_sizing: border-box, $prefixes: $moz_webkit_support) {
+	@each $prefix in $prefixes {
+		#{$prefix}box-sizing: $box_sizing;
+	}
+}
+/////// box-sizing arguments	/////////
+
+
+
+
+
+/////////// image with gradient background ////////////
+// ------------------------------------------------- //
+
+// This tool is pretty crazy and a little complex. Purpose is to simplify the creation of dual background assets that consist of an image and a gradient background. 
+// This tool also requires that a gradient object be created as variables. 
+// Known restrictions ... images must be .png, position of background is currently hard-coded
+
+@mixin icon_gradient_background($icon_image, $fallback_color, $w3c_color_spec, $safari_color_spec, $ie_start, $ie_stop) {
+	// w3c //: 
+	@include linear_gradient_bkgimage ('#{$imgDir}#{$icon_image}.png',5% 50%, $fallback_color, $w3c_color_spec);
+	// legacy safari //
+	@include linear_gradient_bkgimage_legacy_safari ('#{$imgDir}#{$icon_image}.png', 5% 50%, $safari_color_spec);
+	// IE suck
+	@include linear_gradient_legacy_ie ($ie_start, $ie_stop);
+}
+
+// Example using this mixin
+// .your_new_class {
+// 	@include icon_gradient_background(
+// 		$icon_image: play_icon, 
+// 		$fallback_color: $echo_color_bravo, 
+// 		$w3c_color_spec: $alpha_color_gradient_var_w3c, 
+// 		$safari_color_spec: $alpha_color_gradient_var_legacy_safari, 
+// 		$ie_start: $echo_color_delta, 
+// 		$ie_stop: $echo_color_delta);
+// 	}
+// }
+
+
+
+
+
+
+/////// column count arguments	/////////
+// --------------------------------------
+@mixin column_count($col_count, $col_gap, $prefixes: $prefix_defaults) {
+	@each $prefix in $prefixes {
+		#{$prefix}column-count: $col_count;
+		#{$prefix}column-gap: $col_gap;
+	}
+}
+
+/////// column count arguments	/////////
+
+
+
+///////// flexbox arguments	/////////
+// -----------------------------------
+@mixin flexbox ($width, $height, $orient: horizontal, $pack: center, $align: center, $prefixes: $prefix_defaults) {
+	@each $prefix in $prefixes {
+		display: #{$prefix}box;
+		#{$prefix}box-orient: $orient;
+		#{$prefix}box-pack: $pack;
+		#{$prefix}box-align: $align;
+	}
+	height: $height;
+	width: $width;
+}
+
+	
+@mixin flex ($value, $prefixes: $prefix_defaults) {
+	@each $prefix in $prefixes {
+		#{$prefix}box-flex: $value;
+	}
+}
+
+///////// flexbox arguments	/////////
+
+
+
+
+/////// transition arguments //////////
+// http://www.w3schools.com/css3/css3_pr_transition.asp
+
+@mixin transition ($property, $duration, $timing_function, $delay, $prefixes: $prefix_defaults) {
+	@each $prefix in $prefixes {
+		#{$prefix}transition: $property $duration $timing_function $delay;
+	}
+}
+
+/////// transition arguments //////////
+
+
+/////// transform arguments //////////
+// http://www.w3schools.com/css3/css3_pr_transform.asp
+
+@mixin transform ($function, $prefixes: $prefix_defaults) {
+	@each $prefix in $prefixes {
+		#{$prefix}transform: $function;
+	}
+}
+/////// transform arguments //////////
+
+
+
+
+
+////////// style placeholder text //////////
+@mixin placeholder_styles ($color) {
+	color: $color;
+}
+
+@mixin placeholder ($color) {
+	&::-webkit-input-placeholder {
+		@include placeholder_styles ($color);
+	}
+	&:-moz-placeholder {
+		@include placeholder_styles ($color);
+	}
+	&:-ms-input-placeholder {
+		@include placeholder_styles ($color);
+	}
+}
+////////// style placeholder text //////////
+
+
+
+
+////////////// hide text ////////////
+// Kellum Method
+// http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+@mixin hide_text {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+////////////// hide text ////////////
+
+
+
+
+
+
+/////// clearfix //////////
+@mixin clearfix () {
+	zoom: 1;
+	&:before {
+		content: "\0020";
+		display: block;
+		height: 0;
+		overflow: hidden;
+	}
+	&:after {
+		content: "\0020";
+		display: block;
+		height: 0;
+		overflow: hidden;
+		clear: both;
+	}
+}
+/////// clearfix //////////
+
+
+
+///////// inset border /////////
+@mixin inset_border () {
+	@include box_shadow(inset 0 0 1px, $alpha_gray);
+}
+///////// inset border /////////
+
+
+////////// Standard bulleted list //////////////
+// --------------------------------------------
+@mixin bulleted_list {
+	ul {
+		list-style: disc;
+		margin: 0 0 1.5em #{20 / $em}em;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	li {
+		float: none;
+		margin-bottom: 1em;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+////////// Standard bulleted list //////////////
+
+
+
+/////// center text trick	/////////
+// ---------------------------------
+// By setting the height of the block element and the line-height to the same value
+// this will typically center the text in the block.
+// If for some reason this needs adjustment, set a new value for the $line_height.
+//
+//
+@mixin center_text ($block_height, $line_height: $block_height) {
+	height: $block_height;
+	line-height: $line-height;
+}
+/////// center text trick	/////////
+
+
+
+
+// a standardized border radius
+// ----------------------------
+@mixin standard_rounded_border ($standard_round_corner, $standard_border_style, $standard_corner_width, $standard_border_color) {
+	@include border_radius(#{$standard_round_corner / $em}rem);
+	border: $standard_corner_width $standard_border_style $standard_border_color;
+}
 
 
 
