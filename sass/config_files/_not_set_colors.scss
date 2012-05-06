@@ -1,9 +1,0 @@
-// Items not set to a color will appear LIME when rendered
-// -------------------------------------------------------
-$not_set: #00FF00;
-
-@mixin not_set_gradient {
-  @include linear_gradient_w3c ($not_set, #{$not_set 0%,$not_set 100%});
-  @include linear_gradient_legacy_safari (#{color-stop(0%,$not_set), color-stop(100%,$not_set)});
-  @include linear_gradient_legacy_ie ($not_set, $not_set);
-}
