@@ -13,7 +13,7 @@
 // --------------------------------
 // In Sinatra, the images folder resides in the public directory.  This directory is not made publically accessible,
 // so simply referencing the images directory will be fine.
-$imgDir: "/images/";
+$imgDir: "/images/" !default;
 
 
 @import "core/color/config";
