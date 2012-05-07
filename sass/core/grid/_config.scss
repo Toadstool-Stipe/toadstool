@@ -1,12 +1,12 @@
 // setting default units of measurement for Toadstool grid solution
 // -----------------------------------------------------------------
-$grid_type:                  12;             // sets default column grid
-$grid_uom:                   percent;        // use either ``em`` or ``percent``
-$grid_padding_lr:            0;              // sets default left/right padding inside grid block
-$grid_padding_tb:            0;              // sets default top/bottom padding inside grid block
-$grid_border:                0;              // sets default border width on all grid blocks
-$grid_child:                 none;           // sets parent child relationship between grid blocks
-$grid_align:                 default;        // by default grids float left. Optional argument is ``center``
-$col_base:                   10;             // equal to 10px in the standard 960.gs
-$col_gutter:                 $col_base * 2;  // sets default grid gutter width                            
-$grid_960:                   960 / 100%;     // grid math for percentages
+$grid_type:                  12 !default;             // sets default column grid
+$grid_uom:                   percent !default;        // use either ``em`` or ``percent``
+$grid_padding_lr:            0 !default;              // sets default left/right padding inside grid block
+$grid_padding_tb:            0 !default;              // sets default top/bottom padding inside grid block
+$grid_border:                0 !default;              // sets default border width on all grid blocks
+$grid_child:                 none !default;           // sets parent child relationship between grid blocks
+$grid_align:                 default !default;        // by default grids float left. Optional argument is ``center``
+$col_base:                   10 !default;             // equal to 10px in the standard 960.gs
+$col_gutter:                 $col_base * 2 !default;  // sets default grid gutter width                            
+$grid_960:                   960 / 100% !default;     // grid math for percentages

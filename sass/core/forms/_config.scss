@@ -1,19 +1,19 @@
 // form colors
-$input_disabled:                       $bravo_gray;
-$input_disabled_bkg:                   lighten($input_disabled, 75%);
-$input_disabled_border:                lighten($input_disabled, 50%);
-$input_disabled_text:                  lighten($input_disabled, 50%);
+$input_disabled:                       $bravo_gray !default;
+$input_disabled_bkg:                   lighten($input_disabled, 75%) !default;
+$input_disabled_border:                lighten($input_disabled, 50%) !default;
+$input_disabled_text:                  lighten($input_disabled, 50%) !default;
 
-$form_field_background_color:          $white;
-$form_field_focus_color:               $white;
-$form_field_fail_bkg:                  $white;
+$form_field_background_color:          $white !default;
+$form_field_focus_color:               $white !default;
+$form_field_fail_bkg:                  $white !default;
 
-$form_field_border:                    $charlie_gray;
-$form_field_border_fail:               $alpha_color;
-$form_field_focus_border_color:        $charlie_gray;
+$form_field_border:                    $charlie_gray !default;
+$form_field_border_fail:               $alpha_color !default;
+$form_field_focus_border_color:        $charlie_gray !default;
 
-$form_field_text:                      $primary_text;
-$error_text:                           $alpha_color;
-$form_field_fail:                      $alpha_color;
-$form_field_text_fail:                 $alpha_color;
-$instructional_text:                   $charlie_gray;
+$form_field_text:                      $primary_text !default;
+$error_text:                           $alpha_color !default;
+$form_field_fail:                      $alpha_color !default;
+$form_field_text_fail:                 $alpha_color !default;
+$instructional_text:                   $charlie_gray !default;

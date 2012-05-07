@@ -2,6 +2,8 @@
 // -------------------------------------------------------
 @import "config";
 
+$font_size: 24;
+
 // Core Config
 // Don't touch this!
 // -------------------------------------------------------
@@ -46,3 +48,9 @@
 // ---------- Full screen styles ------------ //
 // Screen-view specific layout SCSS files //
 // @import "screens/screens";
+
+
+body {
+  font-size: $font-size;
+  em-size: $em;
+}
