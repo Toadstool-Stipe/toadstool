@@ -6,8 +6,11 @@
 //////// gradient arguments /////////
 // ----------------------------------
 
+
+@import "mixins/color_gradients";
+
 // This is where new magic may come from
-@import "mixins/area_51.scss";
+@import "mixins/area_51";
 @import "mixins/linear_gradient_bkgimage";
 
 @import "oocss";
