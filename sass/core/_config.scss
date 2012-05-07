@@ -19,6 +19,11 @@ $imgDir: "/images/" !default;
 @import "core/color/config";
 
 
+// SPLIT HERE--- Abstract above, semantic below. Separate files...
+// Split configuration into abstract and semantic. Then load app abstract before core; repeat with semantic.
+// Allows "overloading" semantic values with custom abstract values. Avoids issues using colors like $bravo_gray, which are defined in the abstract. E.g. allows using $charlie_gray instead.
+
+
 // Gradient colors are needed here to be used semantically 
 @import "core/gradients/config";
 
