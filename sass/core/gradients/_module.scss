@@ -11,24 +11,24 @@
 // /styles/sass/imports/gradients/_linear_gradient_bkgimage.scss
 
 
-$alpha_color_gradient_var_w3c: #{$echo_color_bravo 0%,$echo_color_charlie 11%,$echo_color_delta 100%};
-$alpha_color_gradient_var_legacy_safari: #{color-stop(0%,$echo_color_bravo), color-stop(11%,$echo_color_charlie), color-stop(100%,$echo_color_delta)};
+$alpha_color_gradient_var_w3c: #{$echo_color_bravo 0%,$echo_color_charlie 11%,$echo_color_delta 100%}  !default;
+$alpha_color_gradient_var_legacy_safari: #{color-stop(0%,$echo_color_bravo), color-stop(11%,$echo_color_charlie), color-stop(100%,$echo_color_delta)} !default;
 
 
-$bravo_gradient_alpha: scale-color($echo_color_bravo, $lightness: 10%);
-$bravo_gradient_bravo: scale-color($echo_color_charlie, $lightness: 20%);
-$bravo_gradient_charlie: scale-color($echo_color_delta, $lightness: 10%);
+$bravo_gradient_alpha: scale-color($echo_color_bravo, $lightness: 10%) !default;
+$bravo_gradient_bravo: scale-color($echo_color_charlie, $lightness: 20%) !default;
+$bravo_gradient_charlie: scale-color($echo_color_delta, $lightness: 10%) !default;
 
-$bravo_color_gradient_var_w3c: #{$bravo_gradient_alpha 0%,$bravo_gradient_bravo 11%,$bravo_gradient_charlie 100%};
-$bravo_color_gradient_var_legacy_safari: #{color-stop(0%,$bravo_gradient_alpha), color-stop(11%,$bravo_gradient_bravo), color-stop(100%,$bravo_gradient_charlie)};
+$bravo_color_gradient_var_w3c: #{$bravo_gradient_alpha 0%,$bravo_gradient_bravo 11%,$bravo_gradient_charlie 100%} !default;
+$bravo_color_gradient_var_legacy_safari: #{color-stop(0%,$bravo_gradient_alpha), color-stop(11%,$bravo_gradient_bravo), color-stop(100%,$bravo_gradient_charlie)} !default;
 
 
 $charlie_color_gradient_var_w3c: #{$echo_color_delta 0%,$echo_color_charlie 89%,$echo_color_bravo 100%};
-$charlie_color_gradient_var_legacy_safari: #{color-stop(0%,$echo_color_delta), color-stop(89%,$echo_color_charlie), color-stop(100%,$echo_color_bravo)};
+$charlie_color_gradient_var_legacy_safari: #{color-stop(0%,$echo_color_delta), color-stop(89%,$echo_color_charlie), color-stop(100%,$echo_color_bravo)} !default;
 
 
-$echo_gradient_alpha: scale-color($fox_gray, $lightness: 30%);
-$echo_gradient_bravo: scale-color($delta_gray, $lightness: 30%);
+$echo_gradient_alpha: scale-color($fox_gray, $lightness: 30%) !default;
+$echo_gradient_bravo: scale-color($delta_gray, $lightness: 30%) !default;
 
 
 //////// gradient arguments /////////
