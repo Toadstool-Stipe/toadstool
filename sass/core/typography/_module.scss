@@ -1,3 +1,30 @@
+// * ------------------
+// Type defaults
+// * ------------------
+// only need to edit default font size and family, magical SASS takes care of the rest
+$font_size:             12 !default;
+
+$heading_1:             46 !default;
+$heading_2:             32 !default;
+$heading_3:             28 !default;
+$heading_4:             18 !default;
+
+$small_point_size:      10 !default;
+$large_point_size:      14 !default;
+
+$line:                  $font_size * 1.5 !default;
+
+$primary_font_family:   #{Arial, sans-serif} !default;
+$secondary_font_family: #{Verdana, Arial, Helvetica, sans-serif} !default;
+$heading_font_family:   #{Arial, Helvetica, serif} !default;
+
+
+
+//// !do not edit! ////
+$em:          $font_size; // $em ALWAYS == $font-size
+$line_height: #{$line / $em}em;
+
+
 // *-------------------------------------------------------------------------------
 // intent of the 'text' SCSS is that all essential text elements for the application are placed here
 // individual element styling will be addressed in element name spaced SCSS files
@@ -34,12 +61,12 @@ h3 {
 	//font-size:  1.17em;  // user agent default
 	@extend .headings_3;
 }
-	
+
 h4 {
 	//font-size:  1em;  // user agent default
 	@extend .headings_4;
 }
-	
+
 // h5 {
 	//font-size:  0.83em;  // user agent default
 // }

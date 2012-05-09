@@ -4,6 +4,71 @@
 //
 
 
+/////// OOCSS generic color blocks ////////
+// ----------------------------------------------
+// Red, green, yellow, blue, accent and black is not law, but a common theme in most designs.  
+// Using Toadstool, all you need to do is edit these 6 hex values and everything else is created
+// by magic, unicorns and fairy dust!
+  $alpha_primary: #ec0036 !default;        // red
+  $bravo_primary: #299505 !default;        // green
+$charlie_primary: #ffff87 !default;        // yellow
+  $delta_primary: #2c46b7 !default;        // blue
+   $echo_primary: #fc6432 !default;        // accent
+                  
+     $alpha_gray: #000 !default;           //black
+
+
+
+
+// Based on object colors, the following imports will create the color scales
+// Edit these color config files if you wish to have other then default color math
+@import "core/color/generic_color_math";
+@import "core/color/generic_grayscale_math";
+
+
+
+
+/////// Toadstool's semantic combinations ////////
+// Semantic variables should always be matched up with abstract values, never semantic to semantic
+// ---------------------------------------------------------------------------------------------------
+// NEED TO FIND A BETTER PLACE TO PUT THESE -jf
+
+
+// abstract 'white' value to easily applied to semantic class objects
+$white:                 #fff;
+
+// default shadow colors
+$shadow_color:          fade-out($alpha_gray, 0.5);
+
+// primary header font color
+$primary_header_color:  $alpha_gray;
+
+// primary font color for the app
+$primary_text:          $bravo_gray;
+
+// default <a href="#"> link color
+$href_color:            $delta_color;
+$href_color_alt:        $delta_color_bravo;
+
+// used with the <ins> tag
+// http://www.w3schools.com/tags/tag_ins.asp
+$ins_color:             $charlie_color;
+
+// used with the <mark> tag
+// http://www.w3schools.com/html5/tag_mark.asp
+$mark_color:            $charlie_color;
+
+// webkit tap highlight color
+$webkit_tap_hightlight: $delta_color_bravo;
+
+// overrides the default content selection color in the browser
+$selection_color:       $charlie_color;
+$selection_text_color:  $primary_text;
+
+// default border color
+$border_color:          $charlie_gray;
+
+
 /////// OOCSS color blocks ////////
 // ----------------------------------------------
 
