@@ -54,7 +54,7 @@ select {
 }
 
 
-.fail {
+%fail {
 	border-color: $form_field_border_fail !important;
 	color: $form_field_text_fail !important;
 	input & {
@@ -78,12 +78,12 @@ select {
 	}
 }
 
-.notification_panel {
-	@extend .default_alert_panel;
+%notification_panel {
+	@extend %default_alert_panel;
 }
 
-.alert_panel {
-	@extend .default_alert_panel;
+%alert_panel {
+	@extend %default_alert_panel;
 	background: $alpha_color;
 	color: $white;
 	font-weight: bold;
@@ -119,18 +119,18 @@ label {
 
 /////////// form text support ///////////
 // -------------------------------------
-.instructional {
+%instructional {
 	color: $instructional_text;
 }
 
-.note {
-	@extend .instructional;
+%note {
+	@extend %instructional;
 	@include small;
 	margin-top: #{5 / $em}em;
 }
 
-.informational {
-	@extend .instructional;
+%informational {
+	@extend %instructional;
 	line-height: 1.3em;
 	margin-bottom: 1em;
 }
@@ -139,6 +139,6 @@ label {
 
 /* default alert panel */
 /* ------------------- */
-.default_alert_panel {
+%default_alert_panel {
 	@include alert_boxes ($alert_background_color, 10, 14, 10);
 }
