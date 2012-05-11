@@ -22,8 +22,8 @@ $charlie_primary: #ffff87 !default;        // yellow
 
 // Based on object colors, the following imports will create the color scales
 // Edit these color config files if you wish to have other then default color math
-@import "core/color/generic_color_math";
-@import "core/color/generic_grayscale_math";
+@import "color/generic_color_math";
+@import "color/generic_grayscale_math";
 
 
 

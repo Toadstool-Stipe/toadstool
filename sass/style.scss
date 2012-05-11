@@ -22,11 +22,11 @@
 // These files will consume methods and information from _imports.scss //
 @import "core/toadstool";
 @import "core/typography";
-// @import "core/color/module";
-// @import "core/gradients/module";
-// @import "core/grid/module";
-// @import "core/forms/module";
-// @import "core/buttons/module";
+@import "core/color";
+@import "core/gradients";
+@import "core/grid";
+@import "core/forms";
+@import "core/buttons";
 
 
 // ---------- Full screen styles ------------ //

@@ -35,10 +35,10 @@ $echo_gradient_bravo: scale-color($delta_gray, $lightness: 30%) !default;
 // ----------------------------------
 
 
-@import "mixins/color_gradients";
+@import "gradients/mixins/color_gradients";
 
 // This is where new magic may come from
-@import "mixins/area_51";
-@import "mixins/linear_gradient_bkgimage";
+@import "gradients/mixins/area_51";
+@import "gradients/mixins/linear_gradient_bkgimage";
 
-@import "oocss";
+@import "gradients/extends";
