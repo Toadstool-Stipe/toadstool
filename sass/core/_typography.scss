@@ -30,8 +30,8 @@ $line_height: #{$line / $em}em;
 // individual element styling will be addressed in element name spaced SCSS files
 // *-------------------------------------------------------------------------------
 
-@import "mixins";
-@import "oocss";
+@import "typography/mixins";
+@import "typography/extends";
 
 html {
 	font: #{$font_size / 16 * 1em}/$line_height $primary_font_family;
@@ -49,31 +49,31 @@ html {
 
 h1 {
 	//font-size: 2em;  // user agent default
-	@extend .headings_1;
+	@extend %headings_1;
 }
 
 h2 {
 	//font-size: 1.5em;  // user agent default
-	@extend .headings_2;
+	@extend %headings_2;
 }
 
 h3 {
 	//font-size:  1.17em;  // user agent default
-	@extend .headings_3;
+	@extend %headings_3;
 }
 
 h4 {
 	//font-size:  1em;  // user agent default
-	@extend .headings_4;
+	@extend %headings_4;
 }
 
-// h5 {
-	//font-size:  0.83em;  // user agent default
-// }
+h5 {
+ //font-size:  0.83em;  // user agent default
+}
 
-// h6 {
-	//font-size:  0.75em;  // user agent default
-// }
+h6 {
+ //font-size:  0.75em;  // user agent default
+}
 
 // Standard body text support
 // --------------------------------

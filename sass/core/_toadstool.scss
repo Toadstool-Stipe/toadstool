@@ -7,5 +7,5 @@ $line:                  $font_size * 1.5 !default;
 $em:          $font_size; // $em ALWAYS == $font-size
 $line_height: #{$line / $em}em;
 
-@import "mixins";
-@import "oocss";
+@import "toadstool/mixins";
+@import "toadstool/extends";

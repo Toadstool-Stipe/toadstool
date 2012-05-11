@@ -1,49 +1,51 @@
-//
-// Standardized text objects.  NOT to be used as classes appended to a block in the HTML.
-// Preferred uses include @extend .class; or repurpose the mixin within the class.
+// REWRITE NOTES!!!!!!!!!!!!!
+
+
+// Standardized text objects.  NOT to be used as classes appended to a block in the HTML%
+// Preferred uses include @extend %class; or repurpose the mixin within the class%
 //
 
 
 /* Text classes */
 /* ------------ */
-.headings_1 {
+%headings_1 {
 	@include heading($heading_font_size: $heading_1, $family: $primary_font_family, $letter_spacing: -1px, $margin_bottom: 10);
 }
 
-.headings_2 {
+%headings_2 {
 	@include heading($heading_font_size: $heading_2);
 }
 
-.headings_3 {
+%headings_3 {
 	@include heading($heading_font_size: $heading_3);
 }
 
-.headings_4 {
+%headings_4 {
 	@include heading($heading_font_size: $heading_4);
 }
 
-.subheader_alpha {
+%subheader_alpha {
 	@include subheader($color: $white);
 }
 
-.subheader_bravo {
+%subheader_bravo {
 	@include subheader($color: $charlie_gray, $background: $echo_gray);
 }
 
-.subheader_charlie {
+%subheader_charlie {
 	@include subheader($background: $echo_gray);
 }
 
 
-.small {
+%small {
 	@include small;
 }
 
-.medium {
+%medium {
 	@include medium;
 }
 
-.large {
+%large {
 	@include large;
 }
 
@@ -53,15 +55,15 @@
 
 /* Font family classes */
 /* ------------------- */
-.primary_font_family {
+%primary_font_family {
 	font-family: $primary_font_family;
 }
 
-.secondary_font_family {
+%secondary_font_family {
 	font-family: $secondary_font_family;
 }
 
-.heading_font_family {
+%heading_font_family {
 	font-family: $heading_font_family;
 }
 
@@ -71,19 +73,19 @@
 
 /* text-transform objects */
 /* ---------------------- */
-.uppercase {
+%uppercase {
 //	@include uppercase;
 }
-.lowercase {
+%lowercase {
 //	@include lowercase;
 }
-.capitalize {
+%capitalize {
 //	@include capitalize;
 }
 
 /* Hide Text, Kellum Method */
 /* ------------------------ */
-.hide_text {
+%hide_text {
 	@include hide_text;
 }
 
@@ -92,14 +94,14 @@
 
 /* standard content block styling */
 /* ------------------------------ */
-.bulleted_list {
+%bulleted_list {
 	@include bulleted_list;
 }
 
-.content_block {
-	@extend .standard_block_spacing;
+%content_block {
+	@extend %standard_block_spacing;
 	float: left;
-	@extend .bulleted_list;
+	@extend %bulleted_list;
 }
 
 
