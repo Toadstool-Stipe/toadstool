@@ -1,0 +1,11 @@
+// Base variables
+
+$font_size:             12 !default;
+$line:                  $font_size * 1.5 !default;
+
+//// !do not edit! ////
+$em:          $font_size; // $em ALWAYS == $font-size
+$line_height: #{$line / $em}em;
+
+@import "toadstool/mixins";
+@import "toadstool/extends";

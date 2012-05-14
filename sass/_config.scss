@@ -2,10 +2,23 @@
 // that will cascade throughout the css to get your design up and running FAST!
 
 
-/////////////// Config dependencies ////////////////
-// -------------------------------------------------------
-@import "config_files/not_set_colors";
-@import "config_files/text";
+///// Typography configuration /////
+// --------------------------------
+$font_size: 12;
+
+$heading_1: 46;
+$heading_2: 32;
+$heading_3: 28;
+$heading_4: 18;
+
+$line: $font_size * 1.5;
+
+$small_point_size: 10;
+$large_point_size: 14;
+
+$primary_font_family: #{Arial, sans-serif};
+$secondary_font_family: #{Verdana, Arial, Helvetica, sans-serif};
+$heading_font_family: #{Arial, Helvetica, serif};
 
 
 
@@ -18,45 +31,109 @@ $imgDir: "/images/";
 
 
 
-/////// OOCSS generic color blocks ////////
+/////// OOCSS generic base colors ////////
 // ----------------------------------------------
-// Red, green, yellow, blue, accent and black is not law, but a common theme in most designs.  
+// Red, green, yellow, blue, accent and black is not law, but a common theme in most designs.
 // Using Toadstool, all you need to do is edit these 6 hex values and everything else is created
 // by magic, unicorns and fairy dust!
-  $alpha_primary:        #ec0036;        // red
-  $bravo_primary:        #299505;        // green
-$charlie_primary:        #ffff87;        // yellow
-  $delta_primary:        #2c46b7;        // blue
-   $echo_primary:        #fc6432;        // accent
-   
-     $alpha_gray:        #000;           //black
+$alpha_primary:   #ec0036;        // red
+$bravo_primary:   #299505;        // green
+$charlie_primary: #ffff87;        // yellow
+$delta_primary:   #2c46b7;        // blue
+$echo_primary:    #fc6432;        // accent
+                 
+$alpha_gray:      #000;           //black
+
+
+/////// OOCSS generic color math ////////
+// ----------------------------------------------
+$alpha_color:$alpha_primary;
+$alpha_color_bravo:scale-color($alpha_color,$lightness:10%);
+$alpha_color_charlie:scale-color($alpha_color,$lightness:20%);
+$alpha_color_delta:scale-color($alpha_color,$lightness:30%);
+$alpha_color_echo:scale-color($alpha_color,$lightness:40%);
+$alpha_color_fox:scale-color($alpha_color,$lightness:50%);
+$alpha_color_golf:scale-color($alpha_color,$lightness:60%);
+$alpha_color_hotel:scale-color($alpha_color,$lightness:70%);
+$alpha_color_india:scale-color($alpha_color,$lightness:80%);
+$alpha_color_juliet:scale-color($alpha_color,$lightness:90%);
+
+$bravo_color:$bravo_primary;
+$bravo_color_bravo:scale-color($bravo_color,$lightness:10%);
+$bravo_color_charlie:scale-color($bravo_color,$lightness:20%);
+$bravo_color_delta:scale-color($bravo_color,$lightness:30%);
+$bravo_color_echo:scale-color($bravo_color,$lightness:40%);
+$bravo_color_fox:scale-color($bravo_color,$lightness:50%);
+$bravo_color_golf:scale-color($bravo_color,$lightness:60%);
+$bravo_color_hotel:scale-color($bravo_color,$lightness:70%);
+$bravo_color_india:scale-color($bravo_color,$lightness:80%);
+$bravo_color_juliet:scale-color($bravo_color,$lightness:90%);
+
+$charlie_color:$charlie_primary;
+$charlie_color_bravo:scale-color($charlie_color,$lightness:10%);
+$charlie_color_charlie:scale-color($charlie_color,$lightness:20%);
+$charlie_color_delta:scale-color($charlie_color,$lightness:30%);
+$charlie_color_echo:scale-color($charlie_color,$lightness:40%);
+$charlie_color_fox:scale-color($charlie_color,$lightness:50%);
+$charlie_color_golf:scale-color($charlie_color,$lightness:60%);
+$charlie_color_hotel:scale-color($charlie_color,$lightness:70%);
+$charlie_color_india:scale-color($charlie_color,$lightness:80%);
+$charlie_color_juliet:scale-color($charlie_color,$lightness:90%);
+
+$delta_color:$delta_primary;
+$delta_color_bravo:scale-color($delta_color,$lightness:10%);
+$delta_color_charlie:scale-color($delta_color,$lightness:20%);
+$delta_color_delta:scale-color($delta_color,$lightness:30%);
+$delta_color_echo:scale-color($delta_color,$lightness:40%);
+$delta_color_fox:scale-color($delta_color,$lightness:50%);
+$delta_color_golf:scale-color($delta_color,$lightness:60%);
+$delta_color_hotel:scale-color($delta_color,$lightness:70%);
+$delta_color_india:scale-color($delta_color,$lightness:80%);
+$delta_color_juliet:scale-color($delta_color,$lightness:90%);
+
+$echo_color:$echo_primary;
+$echo_color_bravo:scale-color($echo_color,$lightness:10%);
+$echo_color_charlie:scale-color($echo_color,$lightness:20%);
+$echo_color_delta:scale-color($echo_color,$lightness:30%);
+$echo_color_echo:scale-color($echo_color,$lightness:40%);
+$echo_color_fox:scale-color($echo_color,$lightness:50%);
+$echo_color_golf:scale-color($echo_color,$lightness:60%);
+$echo_color_hotel:scale-color($echo_color,$lightness:70%);
+$echo_color_india:scale-color($echo_color,$lightness:80%);
+$echo_color_juliet:scale-color($echo_color,$lightness:90%);
+
+
+/////// OOCSS generic grayscale math ////////
+// ----------------------------------------------
+$bravo_gray:scale-color($alpha_gray, $lightness: 10%);
+$charlie_gray:scale-color($alpha_gray, $lightness: 20%);
+$delta_gray:scale-color($alpha_gray, $lightness: 30%);
+$echo_gray:scale-color($alpha_gray, $lightness: 40%);
+$fox_gray:scale-color($alpha_gray, $lightness: 50%);
+$golf_gray:scale-color($alpha_gray, $lightness: 60%);
+$hotel_gray:scale-color($alpha_gray, $lightness: 70%);
+$india_gray:scale-color($alpha_gray, $lightness: 80%);
 
 
 
 
-// Based on object colors, the following imports will create the color scales
-// Edit these color config files if you wish to have other then default color math
-@import "config_files/generic_color_math";
-@import "config_files/generic_grayscale_math";
-
-// Gradient colors are needed here to be used semantically 
-@import "config_files/gradient_colors";
 
 
 
 
-// setting default units of measurement for Toadstool grid solution
+/////// Grid configuration ////////
 // -----------------------------------------------------------------
-$grid_type:                  12;             // sets default column grid
-$grid_uom:                   percent;        // use either ``em`` or ``percent``
-$grid_padding_lr:            0;              // sets default left/right padding inside grid block
-$grid_padding_tb:            0;              // sets default top/bottom padding inside grid block
-$grid_border:                0;              // sets default border width on all grid blocks
-$grid_child:                 none;           // sets parent child relationship between grid blocks
-$grid_align:                 default;        // by default grids float left. Optional argument is ``center``
-$col_base:                   10;             // equal to 10px in the standard 960.gs
-$col_gutter:                 $col_base * 2;  // sets default grid gutter width                            
-$grid_960:                   960 / 100%;     // grid math for percentages
+// setting default units of measurement for Toadstool grid solution
+// $grid_type:                  12;             // sets default column grid
+// $grid_uom:                   percent;        // use either ``em`` or ``percent``
+// $grid_padding_lr:            0;              // sets default left/right padding inside grid block
+// $grid_padding_tb:            0;              // sets default top/bottom padding inside grid block
+// $grid_border:                0;              // sets default border width on all grid blocks
+// $grid_child:                 none;           // sets parent child relationship between grid blocks
+// $grid_align:                 default;        // by default grids float left. Optional argument is ``center``
+// $col_base:                   10;             // equal to 10px in the standard 960.gs
+// $col_gutter:                 $col_base * 2;  // sets default grid gutter width                            
+// $grid_960:                   960 / 100%;     // grid math for percentages
 
 
 
@@ -99,25 +176,8 @@ $selection_text_color:                 $primary_text;
 // default border color
 $border_color:                         $charlie_gray;
 
-// form colors
-$input_disabled:                       $bravo_gray;
-$input_disabled_bkg:                   lighten($input_disabled, 75%);
-$input_disabled_border:                lighten($input_disabled, 50%);
-$input_disabled_text:                  lighten($input_disabled, 50%);
 
-$form_field_background_color:          $white;
-$form_field_focus_color:               $white;
-$form_field_fail_bkg:                  $white;
 
-$form_field_border:                    $charlie_gray;
-$form_field_border_fail:               $alpha_color;
-$form_field_focus_border_color:        $charlie_gray;
-
-$form_field_text:                      $primary_text;
-$error_text:                           $alpha_color;
-$form_field_fail:                      $alpha_color;
-$form_field_text_fail:                 $alpha_color;
-$instructional_text:                   $charlie_gray;
 
 
 // am I really using these values?
@@ -169,23 +229,3 @@ $low_res_phone_portrait: "screen and (max-device-width: 480px) and (-webkit-min-
 $low_res_phone_landscape: "screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1) and (orientation : landscape)";
 
 $low_res_tablet_landscape: "screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : landscape) ";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

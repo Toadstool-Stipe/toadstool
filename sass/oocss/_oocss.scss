@@ -11,12 +11,12 @@
 // Include @silent feature when made avialable
 // https://github.com/chriseppstein/sass/commit/52c9084c1e1258473d00274fbf210d6c44ae14ad
 
-@import "oocss/gradients";
-@import "oocss/grid";
-@import "oocss/color_blocks";
-@import "oocss/text_objects";
-@import "oocss/UI_objects";
-@import "oocss/semantic_button_color_blocks";
+//@import "core/gradients/oocss";
+//@import "core/grid/oocss";
+@import "core/color/oocss";
+//@import "oocss/UI_objects";
+//@import "core/buttons/oocss";
+//@import "core/typography/oocss";
 
 // ------------ widget styles --------------- //
 @import "../widgets/oocss_objects";

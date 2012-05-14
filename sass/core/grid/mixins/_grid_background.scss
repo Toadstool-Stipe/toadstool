@@ -5,6 +5,6 @@
 }
 
 .grid_12_col_background_shift {
-	@extend .grid_12_col_background;
+	@extend %grid_12_col_background;
 	background-position: -10px 0 !important;	
 }

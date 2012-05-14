@@ -1,0 +1,71 @@
+//
+// Standardized abstract gradient color objects.  NOT to be used as classes appended to a block in the HTML.
+// Preferred uses include @extend .class; or repurpose the mixin within the class.
+//
+
+/* primary buttons */
+/* --------------- */
+%primary_button_color {
+	@include primary_button_color;
+}
+
+%primary_button_hover {
+	@include primary_button_hover;
+}
+
+%primary_button_border {
+	@include primary_button_border;
+}
+
+%primary_button_active {
+	@include primary_button_active;
+}
+
+%primary_button_border_color {
+	background-color: $primary_button_border_color;
+}
+
+%secondary_button_color {
+	@include secondary_button_color;
+}
+
+%secondary_button_hover {
+	@include secondary_button_hover;
+}
+
+%secondary_button_active {
+	@include secondary_button_active;
+}
+
+//// ----
+
+
+///* big pull buttons with play icon option */ 
+///* -------------------------------------- */ 
+//.big_pill_buttons {
+//	@include big_pill_button();
+//}
+//
+//.l_big_pill_buttons {
+//	@include big_pill_button($font_size: large);
+//}
+//
+//.xl_big_pill_buttons {
+//	@include big_pill_button($font_size: x_large);
+//}
+//
+//.xxl_big_pill_buttons {
+//	@include big_pill_button($font_size: xx_large);
+//}
+//
+//.xxxl_big_pill_buttons {
+//	@include big_pill_button($font_size: xxx_large);
+//}
+//
+//.xxxxl_big_pill_buttons {
+//	@include big_pill_button($font_size: xxxx_large);
+//}
+//
+//.big_pill_play_icons {
+//	@include big_pill_button(play_icon);
+//}

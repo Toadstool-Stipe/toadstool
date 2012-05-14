@@ -9,39 +9,39 @@
 
 /* Gradient color objects */
 /* ----------------------- */
-.alpha_color_gradient {
+%alpha_color_gradient {
 	@include alpha_color_gradient;
 }
 
-.bravo_color_gradient {
+%bravo_color_gradient {
 	@include bravo_color_gradient;
 }
 
-.charlie_color_gradient {
+%charlie_color_gradient {
 	@include charlie_color_gradient;
 }
 
-.delta_color_gradient {
+%delta_color_gradient {
 	@include delta_color_gradient;
 }
 
-.echo_color_gradient {
+%echo_color_gradient {
 	@include echo_color_gradient;
 }
 
-.fox_color_gradient {
+%fox_color_gradient {
 	@include fox_color_gradient;
 }
 
-.golf_color_gradient {
+%golf_color_gradient {
 	@include golf_color_gradient;
 }
 
-.hotel_color_gradient {
+%hotel_color_gradient {
 	@include hotel_color_gradient;
 }
 
-.india_color_gradient {
+%india_color_gradient {
 	@include india_color_gradient;
 }
 

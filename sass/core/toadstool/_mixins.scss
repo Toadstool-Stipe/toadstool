@@ -305,3 +305,62 @@ $inset_shadow: #{$ih-shadow / $em}em #{$iv-shadow / $em}em #{$iblur / $em}em;
 	@include border_radius(#{$standard_round_corner / $em}rem);
 	border: $standard_corner_width $standard_border_style $standard_border_color;
 }
+
+
+
+// This mixin is used for a linear layout of LIs versus using floats
+// Build off of the ``flexbox`` mixin, this tool allows for quick 
+// development of a ul/li layout using flexbox
+// -----------------------------------------------------------------
+@mixin ul_flexbox ($width :100%, $height: auto, $text_align :center) {
+  ul {
+    @include flexbox (horizontal, center, stretch, $width, $height);
+  }
+  li {
+    @include flex(1);
+    text-align: $text_align;
+    height: $height;
+    line-height: $height;
+  }
+}
+
+
+// Standard block clear and default spacing
+// This tool is designed to be a standard spacing element between markup blocks.
+// The only value to be adjusted is the margin-bottom spacing.  This is an argument addressed 
+// in the ``_config.scss`` file
+@mixin standard_block_spacing ($default_block_spacing) {
+	@include clearfix;
+	margin-bottom: #{$default_block_spacing / $em}em;
+}
+
+
+
+
+// This mixin allows for quick application of a UI to the <hr> tag
+// All values are set in the ``_config.scss`` file
+@mixin standard_hr ($standard_border_style, $standard_hr_width, $standard_hr_spacing, $standard_hr_color){
+	border-bottom: $standard_hr_width $standard_border_style $standard_hr_color;
+	padding-bottom: #{$standard_hr_spacing / $em}rem;
+	margin-bottom: #{$standard_hr_spacing / $em}rem;
+}
+
+
+
+// This series of mixins sets default values for consistant use of text and box shadows
+// throughout your site.  Values are set in the ``_config.scss`` file
+@mixin primary_text_shadow ($h-shadow, $v-shadow, $blur ) {
+	@include text_shadow ($shadow_color, #{$h-shadow / $em}em #{$v-shadow / $em}em #{$blur / $em}em);
+}
+
+@mixin disabled_text_shadow ($h-shadow, $v-shadow, $blur ) {
+	@include text_shadow (fade-out($shadow_color, 0.5), #{$h-shadow / $em}em #{$v-shadow / $em}em #{$blur / $em}em);
+}
+
+@mixin primary_box_shadow ($h-shadow, $v-shadow, $blur ) {
+	@include box_shadow ($shadow_color, #{$h-shadow / $em}em #{$v-shadow / $em}em #{$blur / $em}em);
+}
+
+@mixin disabled_box_shadow ($h-shadow, $v-shadow, $blur ) {
+	@include box_shadow (fade-out($shadow_color, 0.4), #{$h-shadow / $em}em #{$v-shadow / $em}em #{$blur / $em}em);
+}

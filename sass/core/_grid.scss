@@ -6,12 +6,12 @@
 // ...............
 // 960 GRID SYSTEM
 // ...............
-// 
+//
 // Created by Nathan Smith. See the official site for more info: http://960.gs/
-// 
+//
 // GPL license:
 // http://www.gnu.org/licenses/gpl.html
-// 
+//
 // MIT license:
 // http://www.opensource.org/licenses/mit-license.php
 // ---------------------------------------------------------------------------
@@ -24,16 +24,35 @@
 //
 // ---------------------------------------------------------------------------
 
+
+// setting default units of measurement for Toadstool grid solution
+// -----------------------------------------------------------------
+$grid_type:       12 !default;             // sets default column grid
+$grid_uom:        percent !default;        // use either ``em`` or ``percent``
+$grid_padding_lr: 0 !default;              // sets default left/right padding inside grid block
+$grid_padding_tb: 0 !default;              // sets default top/bottom padding inside grid block
+$grid_border:     0 !default;              // sets default border width on all grid blocks
+$grid_child:      none !default;           // sets parent child relationship between grid blocks
+$grid_align:      default !default;        // by default grids float left. Optional argument is ``center``
+$col_base:        10 !default;             // equal to 10px in the standard 960.gs
+$col_gutter:      $col_base * 2 !default;  // sets default grid gutter width
+$grid_960:        960 / 100% !default;     // grid math for percentages
+
+
 // Establishes default vaules that should never be edited
-@import "grid/base_values";
+@import "grid/mixins/base_values";
+
 // the_grid calculates all the variables to define with width of the grid column
-@import "grid/the_grid";
+@import "grid/mixins/the_grid";
+
 // grid_placement based on $child will define alpha or omega placement
-@import "grid/grid_placement";
+@import "grid/mixins/grid_placement";
+
 // grid_margin applies $margin_calc from grid_placement
-@import "grid/grid_margin";
+@import "grid/mixins/grid_margin";
+
 // Logic supoprt for Push, Pull, Prefix and Suffix
-@import "grid/push_logic";
+@import "grid/mixins/push_logic";
 
 
 
@@ -42,10 +61,10 @@
 // use example for a 12 col layout, 4 col width, conversion to %, add left/right padding and 1px border
 // @include grid(12, 4, $grid_padding: 36, $grid_border: 1);
 //
-// All values are entered as integers and conversion math is done in the mixin. 
+// All values are entered as integers and conversion math is done in the mixin.
 // Do not enter combination values such as '36em'
 
-@mixin grid($col_count, $grid_child, $grid_padding_lr, $grid_padding_tb, $grid_border, $grid_uom, $col_gutter, $grid_type, $grid_align) { 
+@mixin grid($col_count, $grid_child, $grid_padding_lr, $grid_padding_tb, $grid_border, $grid_uom, $col_gutter, $grid_type, $grid_align) {
 
 	@if $grid_type == 12 {
 		$col_width: 80 - $col_gutter;
@@ -96,3 +115,8 @@
 @mixin omega() {
 	margin-right: 0;
 }
+
+
+
+
+@import "grid/extends";
