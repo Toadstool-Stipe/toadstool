@@ -10,18 +10,19 @@
 
 
 
-.main_content {
-	@include main_content(12, $main_grid_align: left, $main_grid_uom: em);
-	background: blue;
-	color: $white;
-	text-align: center;
-	@media #{$low_res_phone} {
-		background: yellow !important;
-	}
-	
-}
-
-.block {
-	@include grid(6);
-}
-
+// .main_content {
+// 	//@include main_content(12, $main_grid_align: center, $main_grid_uom: em);
+// 	@include grid(12);
+// 	background: blue;
+// 	color: $white;
+// 	text-align: center;
+// 	@media #{$low_res_phone} {
+// 		background: yellow !important;
+// 	}
+// 	
+// }
+// 
+// .block {
+// 	@include grid(6);
+// }
+// 

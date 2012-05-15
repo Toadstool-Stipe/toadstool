@@ -1,23 +1,15 @@
 //
 // Standardized abstract color objects.  NOT to be used as classes appended to a block in the HTML.
-// Preferred uses include @extend .class; or repurpose the mixin within the class.
+// Preferred uses include @extend %class; or repurpose the mixin within the class.
 //
 
-
-/////// OOCSS generic color blocks ////////
-// ----------------------------------------------
-// Red, green, yellow, blue, accent and black is not law, but a common theme in most designs.  
-// Using Toadstool, all you need to do is edit these 6 hex values and everything else is created
-// by magic, unicorns and fairy dust!
-  $alpha_primary: #ec0036 !default;        // red
-  $bravo_primary: #299505 !default;        // green
+$alpha_primary:   #ec0036 !default;        // red
+$bravo_primary:   #299505 !default;        // green
 $charlie_primary: #ffff87 !default;        // yellow
-  $delta_primary: #2c46b7 !default;        // blue
-   $echo_primary: #fc6432 !default;        // accent
-                  
-     $alpha_gray: #000 !default;           //black
-
-
+$delta_primary:   #2c46b7 !default;        // blue
+$echo_primary:    #fc6432 !default;        // accent
+               
+$alpha_gray:      #000 !default;           //black
 
 
 // Based on object colors, the following imports will create the color scales
@@ -26,268 +18,86 @@ $charlie_primary: #ffff87 !default;        // yellow
 @import "color/generic_grayscale_math";
 
 
-
-
-/////// Toadstool's semantic combinations ////////
+/////// axle's semantic combinations ////////
 // Semantic variables should always be matched up with abstract values, never semantic to semantic
 // ---------------------------------------------------------------------------------------------------
-// NEED TO FIND A BETTER PLACE TO PUT THESE -jf
-
 
 // abstract 'white' value to easily applied to semantic class objects
-$white:                 #fff;
+$white:                                #fff !default;
 
 // default shadow colors
-$shadow_color:          fade-out($alpha_gray, 0.5);
+$shadow_color:                         fade-out($alpha_gray, 0.5) !default;
 
 // primary header font color
-$primary_header_color:  $alpha_gray;
+$primary_header_color:                 $alpha_gray !default;
 
 // primary font color for the app
-$primary_text:          $bravo_gray;
+$primary_text:                         $bravo_gray !default;
 
 // default <a href="#"> link color
-$href_color:            $delta_color;
-$href_color_alt:        $delta_color_bravo;
+$href_color:                           $delta_color !default;
+$href_color_alt:                       $delta_color_bravo !default;
 
 // used with the <ins> tag
 // http://www.w3schools.com/tags/tag_ins.asp
-$ins_color:             $charlie_color;
+$ins_color:                            $charlie_color !default;
 
 // used with the <mark> tag
 // http://www.w3schools.com/html5/tag_mark.asp
-$mark_color:            $charlie_color;
+$mark_color:                           $charlie_color !default;
 
 // webkit tap highlight color
-$webkit_tap_hightlight: $delta_color_bravo;
+$webkit_tap_hightlight:                $delta_color_bravo !default;
 
 // overrides the default content selection color in the browser
-$selection_color:       $charlie_color;
-$selection_text_color:  $primary_text;
+$selection_color:                      $charlie_color !default;
+$selection_text_color:                 $primary_text !default;
 
 // default border color
-$border_color:          $charlie_gray;
-
-
-/////// OOCSS color blocks ////////
-// ----------------------------------------------
-
-/* grayscale color objects */
-/* ----------------------- */
-%white {
-	background-color: $white;
-}
-
-%alpha_gray {
-	background-color: $alpha_gray;
-}
-
-%bravo_gray {
-	background-color: $bravo_gray;
-}
-	
-%charlie_gray {
-	background-color: $charlie_gray;
-}
-
-%delta_gray {
-	background-color: $delta_gray;
-}
-	
-%echo_gray {
-	background-color: $echo_gray;
-}
-	
-%fox_gray {
-	background-color: $fox_gray;
-}
-
-%golf_gray {
-	background-color: $golf_gray;
-}
-
-%hotel_gray {
-	background-color: $hotel_gray;
-}
-
-%india_gray {
-	background-color: $india_gray;
-}
-
-
-
-/* Standard color objects */
-/* ---------------------- */
-%alpha_color {
-	background-color: $alpha_color;
-}
-%alpha_color_bravo {
-	background-color: $alpha_color_bravo;
-}
-%alpha_color_charlie {
-	background-color: $alpha_color_charlie;
-}
-%alpha_color_delta {
-	background-color: $alpha_color_delta;
-}
-%alpha_color_echo {
-	background-color: $alpha_color_echo;
-}
-%alpha_color_fox {
-	background-color: $alpha_color_fox;
-}
-%alpha_color_golf {
-	background-color: $alpha_color_golf;
-}
-%alpha_color_hotel {
-	background-color: $alpha_color_hotel;
-}
-%alpha_color_india {
-	background-color: $alpha_color_india;
-}
-%alpha_color_juliet {
-	background-color: $alpha_color_juliet;
-}
+$border_color:                         $charlie_gray !default;
 
 
 
 
 
-%bravo_color {
-	background-color: $bravo_color;
-}
-%bravo_color_bravo {
-	background-color: $bravo_color_bravo;
-}
-%bravo_color_charlie {
-	background-color: $bravo_color_charlie;
-}
-%bravo_color_delta {
-	background-color: $bravo_color_delta;
-}
-%bravo_color_echo {
-	background-color: $bravo_color_echo;
-}
-%bravo_color_fox {
-	background-color: $bravo_color_fox;
-}
-%bravo_color_golf {
-	background-color: $bravo_color_golf;
-}
-%bravo_color_hotel {
-	background-color: $bravo_color_hotel;
-}
-%bravo_color_india {
-	background-color: $bravo_color_india;
-}
-%bravo_color_juliet {
-	background-color: $bravo_color_juliet;
-}
+// am I really using these values?
+$primary_button_border_color:          $bravo_color !default;
+$secondary_button_border_color:        $bravo_gray !default;
+$button_text:                          $white !default;
+
+$alert_background_color:               $charlie_color !default;
 
 
+// Config defaults for ``standard_rounded_border`` mixin
+// -----------------------------------------------------------
+$standard_round_corner:                3 !default;                // sets default border radius
+$standard_corner_width:                1px !default;              // sets default border width
+$standard_border_color:                $border_color !default;    // sets default border color
+
+// Config defaults for ``standard_block_spacing`` mixin
+// -----------------------------------------------------------
+$default_block_spacing:                20 !default;               // sets margin-bottom
+
+// Config defaults for site border style
+// -----------------------------------------------------------
+$standard_border_style:                solid !default;
+
+// Config defaults for ``standard_hr`` mixin
+// -----------------------------------------------------------
+$standard_hr_spacing:                  40 !default;               // sets padding and margin bottom
+$standard_hr_color:                    $delta_gray !default;
+$standard_hr_width:                    1px !default;
+
+// Config values for all default shadows
+// -----------------------------------------------------------
+$h-shadow:                             0 !default;                // horizontal shadow settings
+$v-shadow:                             2 !default;                // vertical shaddow settings
+$blur:                                 3 !default;                // blur settings
+
+$inset_color:                          $shadow_color !default;    // for use with ``dual_box_shadow`` mixin
+$ih-shadow:                            0 !default;                // inset horizontal shadow settings
+$iv-shadow:                            2 !default;                // inset vertical shaddow settings
+$iblur:                                3 !default;                // inset blur settings
 
 
-
-	
-%charlie_color {
-	background-color: $charlie_color;
-}
-%charlie_color_bravo {
-	background-color: $charlie_color_bravo;
-}
-%charlie_color_charlie {
-	background-color: $charlie_color_charlie;
-}
-%charlie_color_delta {
-	background-color: $charlie_color_delta;
-}
-%charlie_color_echo {
-	background-color: $charlie_color_echo;
-}
-%charlie_color_fox {
-	background-color: $charlie_color_fox;
-}
-%charlie_color_golf {
-	background-color: $charlie_color_golf;
-}
-%charlie_color_hotel {
-	background-color: $charlie_color_hotel;
-}
-%charlie_color_india {
-	background-color: $charlie_color_india;
-}
-%charlie_color_juliet {
-	background-color: $charlie_color_juliet;
-}
-
-
-
-
-
-	
-%delta_color {
-	background-color: $delta_color;
-}
-%delta_color_bravo {
-	background-color: $delta_color_bravo;
-}
-%delta_color_charlie {
-	background-color: $delta_color_charlie;
-}
-%delta_color_delta {
-	background-color: $delta_color_delta;
-}
-%delta_color_echo {
-	background-color: $delta_color_echo;
-}
-%delta_color_fox {
-	background-color: $delta_color_fox;
-}
-%delta_color_golf {
-	background-color: $delta_color_golf;
-}
-%delta_color_hotel {
-	background-color: $delta_color_hotel;
-}
-%delta_color_india {
-	background-color: $delta_color_india;
-}
-%delta_color_juliet {
-	background-color: $delta_color_juliet;
-}
-
-
-
-
-
-	
-%echo_color {
-	background-color: $echo_color;
-}
-%echo_color_bravo {
-	background-color: $echo_color_bravo;
-}
-%echo_color_charlie {
-	background-color: $echo_color_charlie;
-}
-%echo_color_delta {
-	background-color: $echo_color_delta;
-}
-%echo_color_echo {
-	background-color: $echo_color_echo;
-}
-%echo_color_fox {
-	background-color: $echo_color_fox;
-}
-%echo_color_golf {
-	background-color: $echo_color_golf;
-}
-%echo_color_hotel {
-	background-color: $echo_color_hotel;
-}
-%echo_color_india {
-	background-color: $echo_color_india;
-}
-%echo_color_juliet {
-	background-color: $echo_color_juliet;
-}
+@import "core/color/extends";

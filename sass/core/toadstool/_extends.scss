@@ -1,7 +1,7 @@
 
 
-/* Generic global UI objects */
-/* ------------------------- */
+//* Generic global UI objects */
+//* ------------------------- */
 %clearfix {
 	@include clearfix;
 }
@@ -19,8 +19,8 @@
 }
 
 // Standardized uses for box and text shadows //
-/* text shadows */
-/* ------------ */
+//* text shadows */
+//* ------------ */
 %primary_text_shadow {
 	@include primary_text_shadow;
 }
@@ -28,8 +28,8 @@
 	@include disabled_text_shadow;
 }
 
-/* box shadows */
-/* ----------- */
+//* box shadows */
+//* ----------- */
 %primary_box_shadow {
 	@include primary_box_shadow;
 }

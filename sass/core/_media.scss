@@ -1,0 +1,5 @@
+$low_res_phone: "screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1)" !default;
+$low_res_phone_portrait: "screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1) and (orientation : portrait)" !default;
+$low_res_phone_landscape: "screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1) and (orientation : landscape)" !default;
+
+$low_res_tablet_landscape: "screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : landscape) " !default;

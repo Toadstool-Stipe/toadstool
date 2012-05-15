@@ -29,11 +29,12 @@
 		
 		// this query only happens when using ems as spacial values
 		// the rule is that at a breakpoint, all hard values are converted to percentages
-		@media only screen and (max-width: 1024px) {
-			$grid_width: $col_gutter_width / $grid_960;
-			width: $grid_width;
-			background: blue;
-		}
+		
+		// @media only screen and (max-width: 1024px) {
+		// 	$grid_width: $col_gutter_width / $grid_960;
+		// 	width: $grid_width;
+		// 	background: blue;
+		// }
 		
 		// fallback for unsupported browsers
 		$grid_width_fallback: $col_gutter_width - (($grid_padding_lr * 2) + ($grid_border * 2));

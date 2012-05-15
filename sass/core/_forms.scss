@@ -19,126 +19,19 @@ $form_field_text_fail:          $alpha_color !default;
 $instructional_text:            $charlie_gray !default;
 
 @import "forms/mixins";
+@import "forms/extends";
 
-//////// buttons ////////
-// ----------------------------------------------
 
-//////// inputs ////////
-// ---------------------
+// ---------------------------------------------------------------------------
 
 input[type=text], input[type=password], input[type="date"], select {
-	border: 1px solid $form_field_border;
-	background: $form_field_background_color;
-	@include medium();
-	height: #{32 / $em}em;
-	@include grid(12,12,$grid_uom:combo, $grid_padding_lr:6);
-	@include placeholder ($delta_gray);
-
-	@include field_focus;
-	color: $form_field_text;
-	+ .horizontal_selectors {
-		margin-top: -0.5em;
-	}
-}
-
-select {
-	.gecko &, .win.chrome &, .ie &, .msie & {
-		height: auto;
-		padding-top: 8px;
-		padding-bottom: 7px;
-	}
-	.win.safari & {
-		height: auto;
-		line-height: #{32 / $large_point_size}em;
-	}
-}
-
-
-%fail {
-	border-color: $form_field_border_fail !important;
-	color: $form_field_text_fail !important;
-	input & {
-		background: $form_field_fail_bkg;
-	}
-	&:focus {
-		background: $form_field_fail_bkg !important;
-	}
-	select, input[type="text"], input[type="date"] {
-		background: $form_field_fail_bkg;
-		border-color: $form_field_border_fail;
-		color: $form_field_text_fail;
-		@include placeholder($form_field_text_fail);
-		&:focus {
-			background: $form_field_fail_bkg;
-		}
-	}
-	&:after {
-		background: $form_field_fail_bkg;
-		border-color: $form_field_border_fail;
-	}
-}
-
-%notification_panel {
-	@extend %default_alert_panel;
-}
-
-%alert_panel {
-	@extend %default_alert_panel;
-	background: $alpha_color;
-	color: $white;
-	font-weight: bold;
+	
 }
 
 input[disabled], textarea[disabled], select[disabled], .disabled {
-	background-color: $input_disabled_bkg;
-	border-color: $input_disabled_border;
-	color: $input_disabled_text;
-	&:hover {
-		border-color: $input_disabled_border;
-	}
+	
 }
-
-//////// inputs ////////
-		
-
-//////// form layouts ////////
-// ---------------------------
 
 label {
-	display: block;
-	font-weight: bold;
-	line-height: #{20 / $em}em;
-	span {
-		padding-left: .25em;
-		font-weight: normal;
-	}
-	fieldset & {
-		@include grid(12,12, $grid_uom:percent);
-	}
-}
-
-/////////// form text support ///////////
-// -------------------------------------
-%instructional {
-	color: $instructional_text;
-}
-
-%note {
-	@extend %instructional;
-	@include small;
-	margin-top: #{5 / $em}em;
-}
-
-%informational {
-	@extend %instructional;
-	line-height: 1.3em;
-	margin-bottom: 1em;
-}
-
-
-
-/* default alert panel */
-/* ------------------- */
-%default_alert_panel {
-	@include alert_boxes ($alert_background_color, 10, 14, 10);
+	
 }
