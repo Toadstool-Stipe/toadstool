@@ -39,9 +39,6 @@ $col_gutter:      $col_base * 2 !default;  // sets default grid gutter width
 $grid_960:        960 / 100% !default;     // grid math for percentages
 
 
-// Establishes default vaules that should never be edited
-@import "grid/mixins/base_values";
-
 // the_grid calculates all the variables to define with width of the grid column
 @import "grid/mixins/the_grid";
 
