@@ -6,8 +6,8 @@
 //
 
 
-/* Text classes */
-/* ------------ */
+//* Text classes */
+//* ------------ */
 %headings_1 {
 	@include heading($heading_font_size: $heading_1, $family: $primary_font_family, $letter_spacing: -1px, $margin_bottom: 10);
 }
@@ -53,8 +53,8 @@
 
 
 
-/* Font family classes */
-/* ------------------- */
+//* Font family classes */
+//* ------------------- */
 %primary_font_family {
 	font-family: $primary_font_family;
 }
@@ -71,8 +71,8 @@
 
 
 
-/* text-transform objects */
-/* ---------------------- */
+//* text-transform objects */
+//* ---------------------- */
 %uppercase {
 //	@include uppercase;
 }
@@ -83,8 +83,8 @@
 //	@include capitalize;
 }
 
-/* Hide Text, Kellum Method */
-/* ------------------------ */
+//* Hide Text, Kellum Method */
+//* ------------------------ */
 %hide_text {
 	@include hide_text;
 }
@@ -92,8 +92,8 @@
 
 
 
-/* standard content block styling */
-/* ------------------------------ */
+//* standard content block styling */
+//* ------------------------------ */
 %bulleted_list {
 	@include bulleted_list;
 }
