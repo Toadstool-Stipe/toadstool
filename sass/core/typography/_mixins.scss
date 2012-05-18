@@ -80,3 +80,25 @@
 	}
 }
 /////// text arguments //////////
+
+
+
+////////// Standard bulleted list //////////////
+// --------------------------------------------
+@mixin bulleted_list {
+	ul {
+		list-style: disc;
+		margin: 0 0 1.5em #{20 / $em}em;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	li {
+		float: none;
+		margin-bottom: 1em;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+////////// Standard bulleted list //////////////

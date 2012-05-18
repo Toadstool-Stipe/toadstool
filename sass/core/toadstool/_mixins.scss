@@ -14,23 +14,12 @@ $moz_webkit_support: -moz- -webkit- '';
 
 
 
-
-
-
 /////////// main content dusplay box //////////////
 // -----------------------------------------------
 @mixin main_content($main_col_count, $main_grid_align: center, $main_grid_uom: em) {
 	$col_count: $main_col_count + 0.25;  // additional value compensates for not having 10px margin
 	@include grid($col_count, $grid_align: $main_grid_align, $grid_uom: $main_grid_uom);
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -60,8 +49,6 @@ $inset_shadow: #{$ih-shadow / $em}em #{$iv-shadow / $em}em #{$iblur / $em}em;
 
 
 
-
-
 /////// border-radius arguments	/////////
 // --------------------------------------
 @mixin border_radius ($border_radius, $prefixes: $webkit_support) {
@@ -70,7 +57,6 @@ $inset_shadow: #{$ih-shadow / $em}em #{$iv-shadow / $em}em #{$iblur / $em}em;
 	}
 }
 /////// border-radius arguments	/////////
-
 
 
 
@@ -85,15 +71,12 @@ $inset_shadow: #{$ih-shadow / $em}em #{$iv-shadow / $em}em #{$iblur / $em}em;
 
 
 
-
-
 /////////// image with gradient background ////////////
 // ------------------------------------------------- //
 
 // This tool is pretty crazy and a little complex. Purpose is to simplify the creation of dual background assets that consist of an image and a gradient background. 
 // This tool also requires that a gradient object be created as variables. 
 // Known restrictions ... images must be .png, position of background is currently hard-coded
-
 @mixin icon_gradient_background($icon_image, $fallback_color, $w3c_color_spec, $safari_color_spec, $ie_start, $ie_stop) {
 	// w3c //: 
 	@include linear_gradient_bkgimage ('#{$imgDir}#{$icon_image}.png',5% 50%, $fallback_color, $w3c_color_spec);
@@ -117,9 +100,6 @@ $inset_shadow: #{$ih-shadow / $em}em #{$iv-shadow / $em}em #{$iblur / $em}em;
 
 
 
-
-
-
 /////// column count arguments	/////////
 // --------------------------------------
 @mixin column_count($col_count, $col_gap, $prefixes: $prefix_defaults) {
@@ -128,7 +108,6 @@ $inset_shadow: #{$ih-shadow / $em}em #{$iv-shadow / $em}em #{$iblur / $em}em;
 		#{$prefix}column-gap: $col_gap;
 	}
 }
-
 /////// column count arguments	/////////
 
 
@@ -152,35 +131,29 @@ $inset_shadow: #{$ih-shadow / $em}em #{$iv-shadow / $em}em #{$iblur / $em}em;
 		#{$prefix}box-flex: $value;
 	}
 }
-
 ///////// flexbox arguments	/////////
-
 
 
 
 /////// transition arguments //////////
 // http://www.w3schools.com/css3/css3_pr_transition.asp
-
 @mixin transition ($property, $duration, $timing_function, $delay, $prefixes: $prefix_defaults) {
 	@each $prefix in $prefixes {
 		#{$prefix}transition: $property $duration $timing_function $delay;
 	}
 }
-
 /////// transition arguments //////////
+
 
 
 /////// transform arguments //////////
 // http://www.w3schools.com/css3/css3_pr_transform.asp
-
 @mixin transform ($function, $prefixes: $prefix_defaults) {
 	@each $prefix in $prefixes {
 		#{$prefix}transform: $function;
 	}
 }
 /////// transform arguments //////////
-
-
 
 
 
@@ -204,7 +177,6 @@ $inset_shadow: #{$ih-shadow / $em}em #{$iv-shadow / $em}em #{$iblur / $em}em;
 
 
 
-
 ////////////// hide text ////////////
 // Kellum Method
 // http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
@@ -214,9 +186,6 @@ $inset_shadow: #{$ih-shadow / $em}em #{$iv-shadow / $em}em #{$iblur / $em}em;
 	overflow: hidden;
 }
 ////////////// hide text ////////////
-
-
-
 
 
 
@@ -248,27 +217,6 @@ $inset_shadow: #{$ih-shadow / $em}em #{$iv-shadow / $em}em #{$iblur / $em}em;
 ///////// inset border /////////
 
 
-////////// Standard bulleted list //////////////
-// --------------------------------------------
-@mixin bulleted_list {
-	ul {
-		list-style: disc;
-		margin: 0 0 1.5em #{20 / $em}em;
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-	li {
-		float: none;
-		margin-bottom: 1em;
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-}
-////////// Standard bulleted list //////////////
-
-
 
 /////// center text trick	/////////
 // ---------------------------------
@@ -282,7 +230,6 @@ $inset_shadow: #{$ih-shadow / $em}em #{$iv-shadow / $em}em #{$iblur / $em}em;
 	line-height: $line-height;
 }
 /////// center text trick	/////////
-
 
 
 
@@ -320,7 +267,6 @@ $inset_shadow: #{$ih-shadow / $em}em #{$iv-shadow / $em}em #{$iblur / $em}em;
 	@include clearfix;
 	margin-bottom: #{$default_block_spacing / $em}em;
 }
-
 
 
 
