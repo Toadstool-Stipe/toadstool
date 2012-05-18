@@ -1,9 +1,7 @@
-// REWRITE NOTES!!!!!!!!!!!!!
-
-
-// Standardized text objects.  NOT to be used as classes appended to a block in the HTML%
-// Preferred uses include @extend %class; or repurpose the mixin within the class%
-//
+// Default silent classes. To use in your final CSS, use the following syntax:
+// .foo {
+//   @extend %silent_class;
+// }
 
 
 //* Text classes */
