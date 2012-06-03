@@ -2,6 +2,7 @@
 // that will cascade throughout the css to get your design up and running FAST!
 
 
+
 ///// Typography configuration /////
 // --------------------------------
 $font_size: 12;
@@ -16,10 +17,9 @@ $line: $font_size * 1.5;
 $small_point_size: 10;
 $large_point_size: 14;
 
-$primary_font_family: #{Arial, sans-serif};
-$secondary_font_family: #{Verdana, Arial, Helvetica, sans-serif};
-$heading_font_family: #{Arial, Helvetica, serif};
-
+$primary_font_family: #{"Helvetica Neue", Arial, Helvetica, sans-serif};
+$secondary_font_family: #{"Helvetica Neue", Arial, Helvetica, sans-serif};
+$heading_font_family: #{"Helvetica Neue", Arial, Helvetica, sans-serif};
 
 
 
@@ -229,3 +229,17 @@ $low_res_phone_portrait: "screen and (max-device-width: 480px) and (-webkit-min-
 $low_res_phone_landscape: "screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1) and (orientation : landscape)";
 
 $low_res_tablet_landscape: "screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : landscape) ";
+
+
+
+// Import Toadstool modules. This is where the magic happens!
+// If you don't want to use a module, simply comment it out.
+// The following are required to be in this sequence //
+// -------------------------------------------------------------
+@import "core/toadstool";
+@import "core/typography";
+@import "core/color";
+@import "core/gradients";
+@import "core/grid";
+@import "core/forms";
+@import "core/buttons";
