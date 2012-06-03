@@ -3,8 +3,10 @@
 @import "config";
 
 
+
 // Choose the CSS reset by selectively commenting/uncommenting the import files
 // -----------------------------------------------------------------------------
+
 @import "core/resets/toadstool";        // Default toadstool reset
 // @import "core/resets/html5_reset";      // http://html5reset.org/ v2.0 converted to scss
 // @import "core/resets/normalize";        // https://github.com/necolas/normalize.css
@@ -13,9 +15,20 @@
 
 // Don't want to use any of these? Kool, we can respect that
 // ----------------------------------------------------------
-// @import "reset.scss";
+// @import "reset";
 
 
-// The following are required to be in this sequence //
-@import "design";
-@import "typography";
+
+// This where you start building your own styles. 
+// For your convenience, the Toadstool default styles are included below. 
+// Feel free to remove default you don't need.
+
+// The following are required to be in this sequence
+// -------------------------------------------------------
+// @import "core/toadstool/default"; // Need to create default styles
+@import "core/typography/default";
+// @import "core/color/default"; // Need to create default styles
+// @import "core/gradients/default"; // Need to create default styles
+// @import "core/grid/default"; // Need to create default styles
+@import "core/forms/default";
+@import "core/buttons/default";

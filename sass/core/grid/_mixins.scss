@@ -18,7 +18,6 @@
 	}
 }
 
-
 ///////// prefix value accounts for a full column in the grid ////////////
 // -----------------------------------------------------------------------
 @mixin prefix($grid_type, $col_count, $grid_uom: $grid_uom, $move: prefix) {
@@ -57,7 +56,3 @@
 @mixin omega() {
 	margin-right: 0;
 }
-
-
-
-

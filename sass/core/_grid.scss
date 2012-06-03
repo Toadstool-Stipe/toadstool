@@ -48,7 +48,7 @@ $grid_960:        960 / 100% !default;     // grid math for percentages
 // grid_margin applies $margin_calc from grid_placement
 @import "grid/lib/grid_margin";
 
-// Logic supoprt for Push, Pull, Prefix and Suffix
+// Logic support for Push, Pull, Prefix and Suffix
 @import "grid/lib/push_logic";
 
 // The mixins that make this grid thing work
@@ -56,6 +56,3 @@ $grid_960:        960 / 100% !default;     // grid math for percentages
 
 // The extends that make it awesome
 @import "grid/extends";
-
-
-

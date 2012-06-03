@@ -66,3 +66,39 @@
 //////// text with background color mixins //////////
 
 
+/////// text arguments //////////
+// -----------------------------
+@mixin text_baseline ($margin, $baseline_size) {
+	font-size: #{$baseline_size / $em}em;
+	line-height: #{($line / $baseline_size) * ceil($baseline_size / $line)}em;
+
+	@if $margin == auto {
+		margin-bottom: #{$line / $baseline_size}em;
+	}
+	@else if $margin == 0 {
+		margin-bottom: 0;
+	}
+}
+/////// text arguments //////////
+
+
+
+////////// Standard bulleted list //////////////
+// --------------------------------------------
+@mixin bulleted_list {
+	ul {
+		list-style: disc;
+		margin: 0 0 1.5em #{20 / $em}em;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	li {
+		float: none;
+		margin-bottom: 1em;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+////////// Standard bulleted list //////////////

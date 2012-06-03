@@ -1,13 +1,2 @@
 @import "buttons/mixins";
 @import "buttons/extends";
-
-// This will auto concatenate a primary button with a secondary button
-// --------------------------------------------------------------------
-button, a.button {
-}
-
-
-a.button {
-	// display: inline-block;
-}
-////// buttons ////////

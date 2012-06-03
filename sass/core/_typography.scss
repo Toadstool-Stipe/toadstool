@@ -14,12 +14,6 @@ $large_point_size:      14 !default;
 
 $line:                  $font_size * 1.5 !default;
 
-$paragraph_margin:      1em !default;
-$last_paragraph:        0 !default;
-
-$link_decoration:       none !default;
-$link_hover_active:     underline !default;
-
 $primary_font_family:   #{Arial, sans-serif} !default;
 $secondary_font_family: #{Verdana, Arial, Helvetica, sans-serif} !default;
 $heading_font_family:   #{Arial, Helvetica, serif} !default;
@@ -38,55 +32,3 @@ $line_height: #{$line / $em}em;
 
 @import "typography/mixins";
 @import "typography/extends";
-
-html {
-	// font: #{$font_size / 16 * 1em}/$line_height $primary_font_family;
-	// color: $primary_text;
-}
-
-h1 {
-	// @extend %headings_1;
-}
-
-h2 {
-	// @extend %headings_2;
-}
-
-h3 {
-	// @extend %headings_3;
-}
-
-h4 {
-	// @extend %headings_4;
-}
-
-// Standard body text support
-// --------------------------------
-p {
-	// margin-bottom: $paragraph_margin;
-	// &:last-child {
-	// 	margin-bottom: $last_paragraph;
-	// }
-}
-
-b {
-	// &:after {
-	// 	content: " ";
-	// }
-}
-
-
-// :link Pseudo-class is totally not necessary as I can tell
-// code here to combat legacy code
-a {
-	// &:link {
-	// 	color: $href_color;
-	// 	text-decoration: $link_decoration;
-	// }
-	// &:hover, &:active {
-	// 	text-decoration: $link_hover_active;
-	// }
-	// &:visited {
-	// 	color: $href_color;
-	// }
-}

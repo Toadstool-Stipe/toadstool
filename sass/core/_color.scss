@@ -3,13 +3,13 @@
 // Preferred uses include @extend %class; or repurpose the mixin within the class.
 //
 
-$alpha_primary:   #ec0036 !default;        // red
-$bravo_primary:   #299505 !default;        // green
-$charlie_primary: #ffff87 !default;        // yellow
-$delta_primary:   #2c46b7 !default;        // blue
-$echo_primary:    #fc6432 !default;        // accent
-               
-$alpha_gray:      #000 !default;           //black
+$alpha_primary:   #ec0036 !default; // red
+$bravo_primary:   #299505 !default; // green
+$charlie_primary: #ffff87 !default; // yellow
+$delta_primary:   #2c46b7 !default; // blue
+$echo_primary:    #fc6432 !default; // accent
+          
+$alpha_gray:      #000 !default;    //black
 
 
 // Based on object colors, the following imports will create the color scales
@@ -18,86 +18,43 @@ $alpha_gray:      #000 !default;           //black
 @import "color/generic_grayscale_math";
 
 
-/////// axle's semantic combinations ////////
+/////// Toadstool's semantic combinations ////////
 // Semantic variables should always be matched up with abstract values, never semantic to semantic
 // ---------------------------------------------------------------------------------------------------
 
 // abstract 'white' value to easily applied to semantic class objects
-$white:                                #fff !default;
+$white:                 #fff !default;
 
 // default shadow colors
-$shadow_color:                         fade-out($alpha_gray, 0.5) !default;
+$shadow_color:          fade-out($alpha_gray, 0.5) !default;
 
 // primary header font color
-$primary_header_color:                 $alpha_gray !default;
+$primary_header_color:  $alpha_gray !default;
 
 // primary font color for the app
-$primary_text:                         $bravo_gray !default;
+$primary_text:          $bravo_gray !default;
 
 // default <a href="#"> link color
-$href_color:                           $delta_color !default;
-$href_color_alt:                       $delta_color_bravo !default;
+$href_color:            $delta_color !default;
+$href_color_alt:        $delta_color_bravo !default;
 
 // used with the <ins> tag
 // http://www.w3schools.com/tags/tag_ins.asp
-$ins_color:                            $charlie_color !default;
+$ins_color:             $charlie_color !default;
 
 // used with the <mark> tag
 // http://www.w3schools.com/html5/tag_mark.asp
-$mark_color:                           $charlie_color !default;
+$mark_color:            $charlie_color !default;
 
 // webkit tap highlight color
-$webkit_tap_hightlight:                $delta_color_bravo !default;
+$webkit_tap_hightlight: $delta_color_bravo !default;
 
 // overrides the default content selection color in the browser
-$selection_color:                      $charlie_color !default;
-$selection_text_color:                 $primary_text !default;
+$selection_color:       $charlie_color !default;
+$selection_text_color:  $primary_text !default;
 
 // default border color
-$border_color:                         $charlie_gray !default;
-
-
-
-
-
-// am I really using these values?
-$primary_button_border_color:          $bravo_color !default;
-$secondary_button_border_color:        $bravo_gray !default;
-$button_text:                          $white !default;
-
-$alert_background_color:               $charlie_color !default;
-
-
-// Config defaults for ``standard_rounded_border`` mixin
-// -----------------------------------------------------------
-$standard_round_corner:                3 !default;                // sets default border radius
-$standard_corner_width:                1px !default;              // sets default border width
-$standard_border_color:                $border_color !default;    // sets default border color
-
-// Config defaults for ``standard_block_spacing`` mixin
-// -----------------------------------------------------------
-$default_block_spacing:                20 !default;               // sets margin-bottom
-
-// Config defaults for site border style
-// -----------------------------------------------------------
-$standard_border_style:                solid !default;
-
-// Config defaults for ``standard_hr`` mixin
-// -----------------------------------------------------------
-$standard_hr_spacing:                  40 !default;               // sets padding and margin bottom
-$standard_hr_color:                    $delta_gray !default;
-$standard_hr_width:                    1px !default;
-
-// Config values for all default shadows
-// -----------------------------------------------------------
-$h-shadow:                             0 !default;                // horizontal shadow settings
-$v-shadow:                             2 !default;                // vertical shaddow settings
-$blur:                                 3 !default;                // blur settings
-
-$inset_color:                          $shadow_color !default;    // for use with ``dual_box_shadow`` mixin
-$ih-shadow:                            0 !default;                // inset horizontal shadow settings
-$iv-shadow:                            2 !default;                // inset vertical shaddow settings
-$iblur:                                3 !default;                // inset blur settings
+$border_color:          $charlie_gray !default;
 
 
 @import "core/color/extends";

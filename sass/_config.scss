@@ -2,33 +2,24 @@
 // that will cascade throughout the css to get your design up and running FAST!
 
 
+
 ///// Typography configuration /////
 // --------------------------------
-// $font_size:             12;
-// 
-// $heading_1:             46;
-// $heading_2:             32;
-// $heading_3:             28;
-// $heading_4:             18;
-// 
-// $small_point_size:      10;
-// $large_point_size:      14;
-// 
-// $line:                  $font_size * 1.5;
-// 
-// $paragraph_margin:      1em;
-// $last_paragraph:        0;
-// 
-// $link_decoration:       none;
-// $link_hover_active:     underline;
-// 
-// $primary_font_family:   #{Arial, sans-serif};
-// $secondary_font_family: #{Verdana, Arial, Helvetica, sans-serif};
-// $heading_font_family:   #{Arial, Helvetica, serif};
+$font_size: 12;
 
-// core defaults set
-// loc: sass/core/_typography.scss
+$heading_1: 46;
+$heading_2: 32;
+$heading_3: 28;
+$heading_4: 18;
 
+$line: $font_size * 1.5;
+
+$small_point_size: 10;
+$large_point_size: 14;
+
+$primary_font_family: #{"Helvetica Neue", Arial, Helvetica, sans-serif};
+$secondary_font_family: #{"Helvetica Neue", Arial, Helvetica, sans-serif};
+$heading_font_family: #{"Helvetica Neue", Arial, Helvetica, sans-serif};
 
 
 
@@ -36,10 +27,97 @@
 // --------------------------------
 // In Sinatra, the images folder resides in the public directory.  This directory is not made publically accessible,
 // so simply referencing the images directory will be fine.
-// $imgDir: "/images/";
+$imgDir: "/images/";
 
-// core defaults set
-// loc: sass/core/_toadstool.scss
+
+
+/////// OOCSS generic base colors ////////
+// ----------------------------------------------
+// Red, green, yellow, blue, accent and black is not law, but a common theme in most designs.
+// Using Toadstool, all you need to do is edit these 6 hex values and everything else is created
+// by magic, unicorns and fairy dust!
+$alpha_primary:   #ec0036;        // red
+$bravo_primary:   #299505;        // green
+$charlie_primary: #ffff87;        // yellow
+$delta_primary:   #2c46b7;        // blue
+$echo_primary:    #fc6432;        // accent
+                 
+$alpha_gray:      #000;           //black
+
+
+/////// OOCSS generic color math ////////
+// ----------------------------------------------
+$alpha_color:$alpha_primary;
+$alpha_color_bravo:scale-color($alpha_color,$lightness:10%);
+$alpha_color_charlie:scale-color($alpha_color,$lightness:20%);
+$alpha_color_delta:scale-color($alpha_color,$lightness:30%);
+$alpha_color_echo:scale-color($alpha_color,$lightness:40%);
+$alpha_color_fox:scale-color($alpha_color,$lightness:50%);
+$alpha_color_golf:scale-color($alpha_color,$lightness:60%);
+$alpha_color_hotel:scale-color($alpha_color,$lightness:70%);
+$alpha_color_india:scale-color($alpha_color,$lightness:80%);
+$alpha_color_juliet:scale-color($alpha_color,$lightness:90%);
+
+$bravo_color:$bravo_primary;
+$bravo_color_bravo:scale-color($bravo_color,$lightness:10%);
+$bravo_color_charlie:scale-color($bravo_color,$lightness:20%);
+$bravo_color_delta:scale-color($bravo_color,$lightness:30%);
+$bravo_color_echo:scale-color($bravo_color,$lightness:40%);
+$bravo_color_fox:scale-color($bravo_color,$lightness:50%);
+$bravo_color_golf:scale-color($bravo_color,$lightness:60%);
+$bravo_color_hotel:scale-color($bravo_color,$lightness:70%);
+$bravo_color_india:scale-color($bravo_color,$lightness:80%);
+$bravo_color_juliet:scale-color($bravo_color,$lightness:90%);
+
+$charlie_color:$charlie_primary;
+$charlie_color_bravo:scale-color($charlie_color,$lightness:10%);
+$charlie_color_charlie:scale-color($charlie_color,$lightness:20%);
+$charlie_color_delta:scale-color($charlie_color,$lightness:30%);
+$charlie_color_echo:scale-color($charlie_color,$lightness:40%);
+$charlie_color_fox:scale-color($charlie_color,$lightness:50%);
+$charlie_color_golf:scale-color($charlie_color,$lightness:60%);
+$charlie_color_hotel:scale-color($charlie_color,$lightness:70%);
+$charlie_color_india:scale-color($charlie_color,$lightness:80%);
+$charlie_color_juliet:scale-color($charlie_color,$lightness:90%);
+
+$delta_color:$delta_primary;
+$delta_color_bravo:scale-color($delta_color,$lightness:10%);
+$delta_color_charlie:scale-color($delta_color,$lightness:20%);
+$delta_color_delta:scale-color($delta_color,$lightness:30%);
+$delta_color_echo:scale-color($delta_color,$lightness:40%);
+$delta_color_fox:scale-color($delta_color,$lightness:50%);
+$delta_color_golf:scale-color($delta_color,$lightness:60%);
+$delta_color_hotel:scale-color($delta_color,$lightness:70%);
+$delta_color_india:scale-color($delta_color,$lightness:80%);
+$delta_color_juliet:scale-color($delta_color,$lightness:90%);
+
+$echo_color:$echo_primary;
+$echo_color_bravo:scale-color($echo_color,$lightness:10%);
+$echo_color_charlie:scale-color($echo_color,$lightness:20%);
+$echo_color_delta:scale-color($echo_color,$lightness:30%);
+$echo_color_echo:scale-color($echo_color,$lightness:40%);
+$echo_color_fox:scale-color($echo_color,$lightness:50%);
+$echo_color_golf:scale-color($echo_color,$lightness:60%);
+$echo_color_hotel:scale-color($echo_color,$lightness:70%);
+$echo_color_india:scale-color($echo_color,$lightness:80%);
+$echo_color_juliet:scale-color($echo_color,$lightness:90%);
+
+
+/////// OOCSS generic grayscale math ////////
+// ----------------------------------------------
+$bravo_gray:scale-color($alpha_gray, $lightness: 10%);
+$charlie_gray:scale-color($alpha_gray, $lightness: 20%);
+$delta_gray:scale-color($alpha_gray, $lightness: 30%);
+$echo_gray:scale-color($alpha_gray, $lightness: 40%);
+$fox_gray:scale-color($alpha_gray, $lightness: 50%);
+$golf_gray:scale-color($alpha_gray, $lightness: 60%);
+$hotel_gray:scale-color($alpha_gray, $lightness: 70%);
+$india_gray:scale-color($alpha_gray, $lightness: 80%);
+
+
+
+
+
 
 
 
@@ -57,138 +135,111 @@
 // $col_gutter:                 $col_base * 2;  // sets default grid gutter width                            
 // $grid_960:                   960 / 100%;     // grid math for percentages
 
-// core defaults set
-// loc: sass/core/_grid.scss
 
 
 
-/////// OOCSS generic base colors ////////
-// ----------------------------------------------
-// Red, green, yellow, blue, accent and black is not law, but a common theme in most designs.
-// Using Toadstool, all you need to do is edit these 6 hex values and everything else is created
-// by magic, unicorns and fairy dust!
-// $alpha_primary:      #ec0036;        // red
-// $bravo_primary:      #299505;        // green
-// $charlie_primary:    #ffff87;        // yellow
-// $delta_primary:      #2c46b7;        // blue
-// $echo_primary:       #fc6432;        // accent
-//                
-// $alpha_gray:         #000;           //black
-
-// core defaults set
-// loc: sass/core/_color.scss
-
-
-// When the core defaults are over-ridden, if this import is not here ... shit breaks.
-@import "core/color";
-
-
-
-/////// semantic combinations ////////
+/////// axle's semantic combinations ////////
 // Semantic variables should always be matched up with abstract values, never semantic to semantic
 // ---------------------------------------------------------------------------------------------------
 
 // abstract 'white' value to easily applied to semantic class objects
-// -----------------------------------------------------------
-// $white:                                #fff;
+$white:                                #fff;
 
 // default shadow colors
-// -----------------------------------------------------------
-// $shadow_color:                         fade-out($alpha_gray, 0.5);
+$shadow_color:                         fade-out($alpha_gray, 0.5);
 
 // primary header font color
-// -----------------------------------------------------------
-// $primary_header_color:                 $alpha_gray;
+$primary_header_color:                 $alpha_gray;
 
 // primary font color for the app
-// -----------------------------------------------------------
-// $primary_text:                         $bravo_gray;
+$primary_text:                         $bravo_gray;
 
 // default <a href="#"> link color
-// -----------------------------------------------------------
-// $href_color:                           $delta_color;
-// $href_color_alt:                       $delta_color_bravo;
+$href_color:                           $delta_color;
+$href_color_alt:                       $delta_color_bravo;
 
 // used with the <ins> tag
-// -----------------------------------------------------------
 // http://www.w3schools.com/tags/tag_ins.asp
-// $ins_color:                            $charlie_color;
+$ins_color:                            $charlie_color;
 
 // used with the <mark> tag
 // http://www.w3schools.com/html5/tag_mark.asp
-// -----------------------------------------------------------
-// $mark_color:                           $charlie_color;
+$mark_color:                           $charlie_color;
 
 // webkit tap highlight color
-// -----------------------------------------------------------
-// $webkit_tap_hightlight:                $delta_color_bravo;
+$webkit_tap_hightlight:                $delta_color_bravo;
 
 // overrides the default content selection color in the browser
-// -----------------------------------------------------------
-// $selection_color:                      $charlie_color;
-// $selection_text_color:                 $primary_text;
+$selection_color:                      $charlie_color;
+$selection_text_color:                 $primary_text;
 
 // default border color
-// -----------------------------------------------------------
-// $border_color:                         $charlie_gray;
+$border_color:                         $charlie_gray;
 
-// $primary_button_border_color:          $bravo_color;
-// $secondary_button_border_color:        $bravo_gray;
-// $button_text:                          $white;
 
-// $alert_background_color:               $charlie_color;
+
+
+
+// am I really using these values?
+$primary_button_border_color:          $bravo_color;
+$secondary_button_border_color:        $bravo_gray;
+$button_text:                          $white;
+
+$alert_background_color:               $charlie_color;
+
 
 // Config defaults for ``standard_rounded_border`` mixin
 // -----------------------------------------------------------
-// $standard_round_corner:                3;                // sets default border radius
-// $standard_corner_width:                1px;              // sets default border width
-// $standard_border_color:                $border_color;    // sets default border color
+$standard_round_corner:                3;                // sets default border radius
+$standard_corner_width:                1px;              // sets default border width
+$standard_border_color:                $border_color;    // sets default border color
 
 // Config defaults for ``standard_block_spacing`` mixin
 // -----------------------------------------------------------
-// $default_block_spacing:                20;               // sets margin-bottom
+$default_block_spacing:                20;               // sets margin-bottom
 
 // Config defaults for site border style
 // -----------------------------------------------------------
-// $standard_border_style:                solid;
+$standard_border_style:                solid;
 
 // Config defaults for ``standard_hr`` mixin
 // -----------------------------------------------------------
-// $standard_hr_spacing:                  40;               // sets padding and margin bottom
-// $standard_hr_color:                    $delta_gray;
-// $standard_hr_width:                    1px;
+$standard_hr_spacing:                  40;               // sets padding and margin bottom
+$standard_hr_color:                    $delta_gray;
+$standard_hr_width:                    1px;
 
 // Config values for all default shadows
 // -----------------------------------------------------------
-// $h-shadow:                             0;                // horizontal shadow settings
-// $v-shadow:                             2;                // vertical shaddow settings
-// $blur:                                 3;                // blur settings
+$h-shadow:                             0;                // horizontal shadow settings
+$v-shadow:                             2;                // vertical shaddow settings
+$blur:                                 3;                // blur settings
 
-// $inset_color:                          $shadow_color;    // for use with ``dual_box_shadow`` mixin
-// $ih-shadow:                            0;                // inset horizontal shadow settings
-// $iv-shadow:                            2;                // inset vertical shaddow settings
-// $iblur:                                3;                // inset blur settings
+$inset_color:                          $shadow_color;    // for use with ``dual_box_shadow`` mixin
+$ih-shadow:                            0;                // inset horizontal shadow settings
+$iv-shadow:                            2;                // inset vertical shaddow settings
+$iblur:                                3;                // inset blur settings
 
 
 
 
 /////////////// UI @media breakpoint defaults ////////////////
 // -------------------------------------------------------------
-// $low_res_phone: "screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1)";
-// $low_res_phone_portrait: "screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1) and (orientation : portrait)";
-// $low_res_phone_landscape: "screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1) and (orientation : landscape)";
-// 
-// $low_res_tablet_landscape: "screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : landscape) ";
+$low_res_phone: "screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1)";
+$low_res_phone_portrait: "screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1) and (orientation : portrait)";
+$low_res_phone_landscape: "screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1) and (orientation : landscape)";
 
-// core defaults set
-// loc: sass/core/_media.scss
+$low_res_tablet_landscape: "screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : landscape) ";
 
 
 
+// Import Toadstool modules. This is where the magic happens!
+// If you don't want to use a module, simply comment it out.
+// The following are required to be in this sequence //
+// -------------------------------------------------------------
 @import "core/toadstool";
 @import "core/typography";
+@import "core/color";
 @import "core/gradients";
 @import "core/grid";
 @import "core/forms";
 @import "core/buttons";
-@import "core/media";

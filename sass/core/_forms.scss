@@ -20,18 +20,3 @@ $instructional_text:            $charlie_gray !default;
 
 @import "forms/mixins";
 @import "forms/extends";
-
-
-// ---------------------------------------------------------------------------
-
-input[type=text], input[type=password], input[type="date"], select {
-	
-}
-
-input[disabled], textarea[disabled], select[disabled], .disabled {
-	
-}
-
-label {
-	
-}
