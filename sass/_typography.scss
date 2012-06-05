@@ -1,30 +1,52 @@
+// Import of default text bootstrap settings
+// Comment out if unwanted
+@import "stipe/typography/default";
+
+
+// Customize the following to fit your specifications
+// -----------------------------------------------------------------------
 html {
-	font: #{$font_size / 16 * 1em}/$line_height $primary_font_family;
-	color: $primary_text;
+	// font: #{$font_size / 16 * 1em}/$line_height $primary_font_family;
+	// color: $primary_text;
 }
 
 h1 {
+	// font-size: 2em;  // user agent default
 	// @extend %headings_1;
 }
 
 h2 {
+	// font-size: 1.5em;  // user agent default
 	// @extend %headings_2;
 }
 
 h3 {
+	// font-size:  1.17em;  // user agent default
 	// @extend %headings_3;
 }
 
 h4 {
+	// font-size:  1em;  // user agent default
 	// @extend %headings_4;
+}
+
+h5 {
+	// font-size:  0.83em;  // user agent default
+	// @extend %headings_5;
+}
+
+h6 {
+	 // font-size:  0.75em;  // user agent default
+	 // @extend %headings_6;
 }
 
 // Standard body text support
 // --------------------------------
 p {
-	// margin-bottom: $paragraph_margin;
+	// margin-bottom: 1em;
+	// text-indent: 0;
 	// &:last-child {
-	// 	margin-bottom: $last_paragraph;
+	// 	margin-bottom: 0;
 	// }
 }
 
@@ -40,10 +62,10 @@ b {
 a {
 	// &:link {
 	// 	color: $href_color;
-	// 	text-decoration: $link_decoration;
+	// 	text-decoration: none;
 	// }
 	// &:hover, &:active {
-	// 	text-decoration: $link_hover_active;
+	// 	text-decoration: underline;
 	// }
 	// &:visited {
 	// 	color: $href_color;
