@@ -17,3 +17,12 @@
 .beta {
 	@extend %grid_12_1;
 }
+
+.charlie {
+	font-size: em(12);
+}
+
+.delta {
+	@include text(16);
+	@include bulleted_list;
+}
