@@ -239,10 +239,10 @@ $low_res_tablet_landscape: "screen and (min-device-width: 768px) and (max-device
 // If you don't want to use a module, simply comment it out.
 // The following are required to be in this sequence //
 // -------------------------------------------------------------
-@import "core/toadstool";
-@import "core/typography";
-@import "core/color";
-@import "core/gradients";
-@import "core/grid";
-@import "core/forms";
-@import "core/buttons";
+@import "stipe/toadstool";
+@import "stipe/typography";
+@import "stipe/color";
+@import "stipe/gradients";
+@import "stipe/grid";
+@import "stipe/forms";
+@import "stipe/buttons";

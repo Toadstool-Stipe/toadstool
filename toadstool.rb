@@ -2,6 +2,8 @@ require 'rubygems'
 require 'compass'
 require 'sass'
 
+require 'stipe'
+
 # If you're using bundler, you will need to add this
 require 'bundler/setup'
 

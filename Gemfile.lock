@@ -1,3 +1,9 @@
+PATH
+  remote: ../stipe
+  specs:
+    stipe (0.0.1)
+      compass (>= 0.11)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -24,3 +30,4 @@ DEPENDENCIES
   compass
   sass (>= 3.2.0.alpha.244)
   sinatra
+  stipe (= 0.0.1)!
