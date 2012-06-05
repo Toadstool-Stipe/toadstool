@@ -5,21 +5,21 @@
 
 ///// Typography configuration /////
 // --------------------------------
-$font_size: 12;
-
-$heading_1: 46;
-$heading_2: 32;
-$heading_3: 28;
-$heading_4: 18;
-
-$line: $font_size * 1.5;
-
-$small_point_size: 10;
-$large_point_size: 14;
-
-$primary_font_family: #{"Helvetica Neue", Arial, sans-serif};
-$secondary_font_family: #{"Helvetica Neue", Arial, sans-serif};
-$heading_font_family: #{"Helvetica Neue", Arial, sans-serif};
+// $font_size: 12;
+// 
+// $heading_1: 46;
+// $heading_2: 32;
+// $heading_3: 28;
+// $heading_4: 18;
+// 
+// $line: $font_size * 1.5;
+// 
+// $small_point_size: 10;
+// $large_point_size: 14;
+// 
+// $primary_font_family: #{"Helvetica Neue", Arial, sans-serif};
+// $secondary_font_family: #{"Helvetica Neue", Arial, sans-serif};
+// $heading_font_family: #{"Helvetica Neue", Arial, sans-serif};
 
 
 
@@ -44,84 +44,13 @@ $echo_primary:    #fc6432;        // accent
                  
 $alpha_gray:      #000;           //black
 
+
+/////// Toadstool color math ////////
+// ----------------------------------------------
+// This is a bootstrap template for creating an array of colors
+// If this is not for you, feel free to edit Sass math as needed for your color scale
 @import "color/color_math";
 @import "color/grayscale_math";
-
-
-// /////// OOCSS generic color math ////////
-// // ----------------------------------------------
-// $alpha_color:$alpha_primary;
-// $alpha_color_bravo:scale-color($alpha_color,$lightness:10%);
-// $alpha_color_charlie:scale-color($alpha_color,$lightness:20%);
-// $alpha_color_delta:scale-color($alpha_color,$lightness:30%);
-// $alpha_color_echo:scale-color($alpha_color,$lightness:40%);
-// $alpha_color_fox:scale-color($alpha_color,$lightness:50%);
-// $alpha_color_golf:scale-color($alpha_color,$lightness:60%);
-// $alpha_color_hotel:scale-color($alpha_color,$lightness:70%);
-// $alpha_color_india:scale-color($alpha_color,$lightness:80%);
-// $alpha_color_juliet:scale-color($alpha_color,$lightness:90%);
-// 
-// $bravo_color:$bravo_primary;
-// $bravo_color_bravo:scale-color($bravo_color,$lightness:10%);
-// $bravo_color_charlie:scale-color($bravo_color,$lightness:20%);
-// $bravo_color_delta:scale-color($bravo_color,$lightness:30%);
-// $bravo_color_echo:scale-color($bravo_color,$lightness:40%);
-// $bravo_color_fox:scale-color($bravo_color,$lightness:50%);
-// $bravo_color_golf:scale-color($bravo_color,$lightness:60%);
-// $bravo_color_hotel:scale-color($bravo_color,$lightness:70%);
-// $bravo_color_india:scale-color($bravo_color,$lightness:80%);
-// $bravo_color_juliet:scale-color($bravo_color,$lightness:90%);
-// 
-// $charlie_color:$charlie_primary;
-// $charlie_color_bravo:scale-color($charlie_color,$lightness:10%);
-// $charlie_color_charlie:scale-color($charlie_color,$lightness:20%);
-// $charlie_color_delta:scale-color($charlie_color,$lightness:30%);
-// $charlie_color_echo:scale-color($charlie_color,$lightness:40%);
-// $charlie_color_fox:scale-color($charlie_color,$lightness:50%);
-// $charlie_color_golf:scale-color($charlie_color,$lightness:60%);
-// $charlie_color_hotel:scale-color($charlie_color,$lightness:70%);
-// $charlie_color_india:scale-color($charlie_color,$lightness:80%);
-// $charlie_color_juliet:scale-color($charlie_color,$lightness:90%);
-// 
-// $delta_color:$delta_primary;
-// $delta_color_bravo:scale-color($delta_color,$lightness:10%);
-// $delta_color_charlie:scale-color($delta_color,$lightness:20%);
-// $delta_color_delta:scale-color($delta_color,$lightness:30%);
-// $delta_color_echo:scale-color($delta_color,$lightness:40%);
-// $delta_color_fox:scale-color($delta_color,$lightness:50%);
-// $delta_color_golf:scale-color($delta_color,$lightness:60%);
-// $delta_color_hotel:scale-color($delta_color,$lightness:70%);
-// $delta_color_india:scale-color($delta_color,$lightness:80%);
-// $delta_color_juliet:scale-color($delta_color,$lightness:90%);
-// 
-// $echo_color:$echo_primary;
-// $echo_color_bravo:scale-color($echo_color,$lightness:10%);
-// $echo_color_charlie:scale-color($echo_color,$lightness:20%);
-// $echo_color_delta:scale-color($echo_color,$lightness:30%);
-// $echo_color_echo:scale-color($echo_color,$lightness:40%);
-// $echo_color_fox:scale-color($echo_color,$lightness:50%);
-// $echo_color_golf:scale-color($echo_color,$lightness:60%);
-// $echo_color_hotel:scale-color($echo_color,$lightness:70%);
-// $echo_color_india:scale-color($echo_color,$lightness:80%);
-// $echo_color_juliet:scale-color($echo_color,$lightness:90%);
-// 
-// 
-// /////// OOCSS generic grayscale math ////////
-// // ----------------------------------------------
-// $bravo_gray:scale-color($alpha_gray, $lightness: 10%);
-// $charlie_gray:scale-color($alpha_gray, $lightness: 20%);
-// $delta_gray:scale-color($alpha_gray, $lightness: 30%);
-// $echo_gray:scale-color($alpha_gray, $lightness: 40%);
-// $fox_gray:scale-color($alpha_gray, $lightness: 50%);
-// $golf_gray:scale-color($alpha_gray, $lightness: 60%);
-// $hotel_gray:scale-color($alpha_gray, $lightness: 70%);
-// $india_gray:scale-color($alpha_gray, $lightness: 80%);
-
-
-
-
-
-
 
 
 /////// Grid configuration ////////
@@ -239,10 +168,10 @@ $low_res_tablet_landscape: "screen and (min-device-width: 768px) and (max-device
 // If you don't want to use a module, simply comment it out.
 // The following are required to be in this sequence //
 // -------------------------------------------------------------
-@import "stipe/toadstool";
-@import "stipe/typography";
-@import "stipe/color";
-@import "stipe/gradients";
-@import "stipe/grid";
-@import "stipe/forms";
-@import "stipe/buttons";
+// @import "stipe/toadstool";
+// @import "stipe/typography";
+// @import "stipe/color";
+// @import "stipe/gradients";
+// @import "stipe/grid";
+// @import "stipe/forms";
+// @import "stipe/buttons";

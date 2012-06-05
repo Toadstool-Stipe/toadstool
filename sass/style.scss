@@ -1,34 +1,32 @@
-// App Config
-// -------------------------------------------------------
-@import "config";
-
+// App Config - this is where most of your magic will happen
+// ------------------------------------------------------------------------------
+@import "config";  // Editing defaults here will override any set in the Stipe gem
 
 
 // Choose the CSS reset by selectively commenting/uncommenting the import files
 // -----------------------------------------------------------------------------
-
-// @import "stipe/resets/toadstool";        // Default toadstool reset
+@import "stipe/resets/toadstool";           // Default toadstool reset
 // @import "stipe/resets/html5_reset";      // http://html5reset.org/ v2.0 converted to scss
 // @import "stipe/resets/normalize";        // https://github.com/necolas/normalize.css
 // @import "stipe/resets/eric_meyer";       // http://meyerweb.com/eric/tools/css/reset/reset.css
-// @import "compass/reset";                // Reset supported by the Compass gem
+// @import "compass/reset";                 // Reset supported by the Compass gem
 
 // Don't want to use any of these? Kool, we can respect that
 // ----------------------------------------------------------
 // @import "reset";
 
 
+// The following are required to be in this sequence
+// -------------------------------------------------------
+@import "stipe/toadstool";                   // Need to create default styles
+@import "stipe/typography";                  //
+// @import "stipe/color";                       // Need to create default styles
+// @import "stipe/gradients";                   // Need to create default styles
+@import "stipe/grid";                        // Need to create default styles
+// @import "stipe/forms";                       //
+// @import "stipe/buttons";                     //
 
 // This where you start building your own styles. 
 // For your convenience, the Toadstool default styles are included below. 
 // Feel free to remove default you don't need.
-
-// The following are required to be in this sequence
-// -------------------------------------------------------
-// @import "stipe/toadstool/default"; // Need to create default styles
-@import "stipe/typography/default";
-// @import "stipe/color/default"; // Need to create default styles
-// @import "stipe/gradients/default"; // Need to create default styles
-// @import "stipe/grid/default"; // Need to create default styles
-// @import "stipe/forms/default";
-// @import "stipe/buttons/default";
+@import "design";

@@ -10,19 +10,10 @@
 
 
 
-// .main_content {
-// 	//@include main_content(12, $main_grid_align: center, $main_grid_uom: em);
-// 	@include grid(12);
-// 	background: blue;
-// 	color: $white;
-// 	text-align: center;
-// 	@media #{$low_res_phone} {
-// 		background: yellow !important;
-// 	}
-// 	
-// }
-// 
-// .block {
-// 	@include grid(6);
-// }
-// 
+.alpha {
+	@include main_content(12, $main_grid_align: center, $main_grid_uom: em);
+}
+
+.beta {
+	@extend %grid_12_1;
+}
