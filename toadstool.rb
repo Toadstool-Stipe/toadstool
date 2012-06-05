@@ -2,7 +2,8 @@ require 'rubygems'
 require 'compass'
 require 'sass'
 
-require 'stipe'
+# require 'stipe'               # installed as a gem
+require '../stipe/lib/stipe.rb' # locally as a Compass extension
 
 # If you're using bundler, you will need to add this
 require 'bundler/setup'
