@@ -4,7 +4,7 @@
 
 
 // Choose the CSS reset by selectively commenting/uncommenting the import files
-// -----------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
 @import "stipe/resets/toadstool";           // Default toadstool reset
 // @import "stipe/resets/html5_reset";      // http://html5reset.org/ v2.0 converted to scss
 // @import "stipe/resets/normalize";        // https://github.com/necolas/normalize.css
@@ -12,22 +12,23 @@
 // @import "compass/reset";                 // Reset supported by the Compass gem
 
 // Don't want to use any of these? Kool, we can respect that
-// ----------------------------------------------------------
+// ------------------------------------------------------------------------------
 // @import "reset";
 
 
 // The following are required to be in this sequence
-// -------------------------------------------------------
+// ------------------------------------------------------------------------------
 @import "stipe/toadstool";                   // Need to create default styles
 @import "stipe/typography";                  //
 // @import "stipe/color";                       // Need to create default styles
 // @import "stipe/gradients";                   // Need to create default styles
-// @import "stipe/grid";                        // Need to create default styles
+@import "stipe/grid";                        // Need to create default styles
 // @import "stipe/forms";                       //
 // @import "stipe/buttons";                     //
 
 // This where you start building your own styles. 
 // For your convenience, the Toadstool default styles are included below. 
 // Feel free to remove default you don't need.
+// ------------------------------------------------------------------------------
 @import "design";
 @import "typography";

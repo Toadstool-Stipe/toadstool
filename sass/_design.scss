@@ -10,19 +10,38 @@
 
 
 
-// .alpha {
-// 	@include main_content(12, $main_grid_align: center, $main_grid_uom: em);
-// }
-// 
-// .beta {
-// 	@extend %grid_12_1;
-// }
-// 
-// .charlie {
-// 	font-size: em(12);
-// }
-// 
-// .delta {
-// 	@include text(16);
-// 	@include bulleted_list;
-// }
+.alpha {
+	// @include main_content(12, $main_grid_align: center, $main_grid_uom: em);
+}
+
+
+
+.charlie {
+	font-size: em(12);
+}
+
+.delta {
+	@include text(16);
+	// @include bulleted_list;
+}
+
+.beta {
+	@extend %grid_12_1;
+	background: orange;
+}
+
+.content_block {
+	@extend %content_block;
+}
+
+.beta_block {
+	@extend .content_block;
+}
+
+
+
+
+
+
+
+
