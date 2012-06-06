@@ -11,7 +11,7 @@
 
 
 .alpha {
-	// @include main_content(12, $main_grid_align: center, $main_grid_uom: em);
+	@extend %grid_full;
 }
 
 h1 {
