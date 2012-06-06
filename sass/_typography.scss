@@ -3,6 +3,16 @@
 // @import "stipe/typography/default";
 
 
+// Twitter's 'Font-Awesome' is installed in Toadstool
+// see http://goo.gl/x2oto for list of icon options
+// Stipe has all icon classes loaded as silent classes, to activate use the following example
+// -----------------------------------------------------------------------
+// .icon-glass {
+// 	@extend %icon-glass;
+// }
+
+
+
 // Customize the following to fit your specifications
 // -----------------------------------------------------------------------
 html {
