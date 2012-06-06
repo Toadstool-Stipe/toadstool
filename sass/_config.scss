@@ -4,7 +4,7 @@
 
 
 ///// Typography configuration /////
-// --------------------------------
+// -----------------------------------------------------------------------------
 // $font_size: 12;
 // 
 // $heading_1: 46;
@@ -23,42 +23,53 @@
 // $secondary_font_family: #{"Helvetica Neue", Arial, sans-serif};
 // $heading_font_family: #{"Helvetica Neue", Arial, sans-serif};
 
+
+
+///// Default webfont directory /////
+// -----------------------------------------------------------------------------
 // $webfont_directory: "/fonts/";
 
 
 
 ///// default image directory /////
-// --------------------------------
+// -----------------------------------------------------------------------------
 // In Sinatra, the images folder resides in the public directory.  This directory is not made publically accessible,
 // so simply referencing the images directory will be fine.
-$imgDir: "/images/";
+// $imgDir: "/images/";
 
 
 
 /////// OOCSS generic base colors ////////
-// ----------------------------------------------
+// -----------------------------------------------------------------------------
 // Red, green, yellow, blue, accent and black is not law, but a common theme in most designs.
 // Using Toadstool, all you need to do is edit these 6 hex values and everything else is created
 // by magic, unicorns and fairy dust!
-$alpha_primary:   #ec0036;        // red
-$bravo_primary:   #299505;        // green
-$charlie_primary: #ffff87;        // yellow
-$delta_primary:   #2c46b7;        // blue
-$echo_primary:    #fc6432;        // accent
-                 
-$alpha_gray:      #000;           //black
+// $alpha_primary:   #fc6432;        // red
+// $bravo_primary:   #299505;        // green
+// $charlie_primary: #ffff87;        // yellow
+// $delta_primary:   #2c46b7;        // blue
+// $echo_primary:    #fc6432;        // accent
+//                  
+// $alpha_gray:      #000;           //black
+
 
 
 /////// Toadstool color math ////////
-// ----------------------------------------------
+// -----------------------------------------------------------------------------
 // This is a bootstrap template for creating an array of colors
-// If this is not for you, feel free to edit Sass math as needed for your color scale
-@import "color/color_math";
-@import "color/grayscale_math";
+// If this is not for you, feel free to comment out
+@import "stipe/color/default_color_pallet";
+
+
+/////// Custom color math ////////
+// -----------------------------------------------------------------------------
+// Don't like Stipe's color pallet, no worries. Uncomment these lines and go for it!
+// @import "color/color_math";
+// @import "color/grayscale_math";
 
 
 /////// Grid configuration ////////
-// -----------------------------------------------------------------
+// -----------------------------------------------------------------------------
 // setting default units of measurement for Toadstool grid solution
 // $grid_type:                  12;             // sets default column grid
 // $grid_uom:                   percent;        // use either ``em`` or ``percent``
@@ -76,76 +87,74 @@ $alpha_gray:      #000;           //black
 
 /////// axle's semantic combinations ////////
 // Semantic variables should always be matched up with abstract values, never semantic to semantic
-// ---------------------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 
 // abstract 'white' value to easily applied to semantic class objects
-$white:                                #fff;
+// $white:                                #fff;
 
 // default shadow colors
-$shadow_color:                         fade-out($alpha_gray, 0.5);
+// $shadow_color:                         fade-out($alpha_gray, 0.5);
 
 // primary header font color
-$primary_header_color:                 $alpha_gray;
+// $primary_header_color:                 $alpha_gray;
 
 // primary font color for the app
-$primary_text:                         $bravo_gray;
+// $primary_text:                         $bravo_gray;
 
 // default <a href="#"> link color
-$href_color:                           $delta_color;
-$href_color_alt:                       $delta_color_bravo;
+// $href_color:                           $delta_color;
+// $href_color_alt:                       $delta_color_bravo;
 
 // used with the <ins> tag
 // http://www.w3schools.com/tags/tag_ins.asp
-$ins_color:                            $charlie_color;
+// $ins_color:                            $charlie_color;
 
 // used with the <mark> tag
 // http://www.w3schools.com/html5/tag_mark.asp
-$mark_color:                           $charlie_color;
+// $mark_color:                           $charlie_color;
 
 // webkit tap highlight color
-$webkit_tap_hightlight:                $delta_color_bravo;
+// $webkit_tap_hightlight:                $delta_color_bravo;
 
 // overrides the default content selection color in the browser
-$selection_color:                      $charlie_color;
-$selection_text_color:                 $primary_text;
+// $selection_color:                      $charlie_color;
+// $selection_text_color:                 $primary_text;
 
 // default border color
-$border_color:                         $charlie_gray;
+// $border_color:                         $charlie_gray;
 
 
 
 
 
-// am I really using these values?
+// Config defaults for buttons
+// -----------------------------------------------------------------------------
 $primary_button_border_color:          $bravo_color;
 $secondary_button_border_color:        $bravo_gray;
 $button_text:                          $white;
 
-$alert_background_color:               $charlie_color;
-
-
 // Config defaults for ``standard_rounded_border`` mixin
-// -----------------------------------------------------------
+// -----------------------------------------------------------------------------
 $standard_round_corner:                3;                // sets default border radius
 $standard_corner_width:                1px;              // sets default border width
 $standard_border_color:                $border_color;    // sets default border color
 
 // Config defaults for ``standard_block_spacing`` mixin
-// -----------------------------------------------------------
+// -----------------------------------------------------------------------------
 $default_block_spacing:                20;               // sets margin-bottom
 
 // Config defaults for site border style
-// -----------------------------------------------------------
+// -----------------------------------------------------------------------------
 $standard_border_style:                solid;
 
 // Config defaults for ``standard_hr`` mixin
-// -----------------------------------------------------------
+// -----------------------------------------------------------------------------
 $standard_hr_spacing:                  40;               // sets padding and margin bottom
 $standard_hr_color:                    $delta_gray;
 $standard_hr_width:                    1px;
 
 // Config values for all default shadows
-// -----------------------------------------------------------
+// -----------------------------------------------------------------------------
 $h-shadow:                             0;                // horizontal shadow settings
 $v-shadow:                             2;                // vertical shaddow settings
 $blur:                                 3;                // blur settings
@@ -159,7 +168,7 @@ $iblur:                                3;                // inset blur settings
 
 
 /////////////// UI @media breakpoint defaults ////////////////
-// -------------------------------------------------------------
+// -----------------------------------------------------------------------------
 $low_res_phone: "screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1)";
 $low_res_phone_portrait: "screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1) and (orientation : portrait)";
 $low_res_phone_landscape: "screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1) and (orientation : landscape)";
@@ -168,14 +177,12 @@ $low_res_tablet_landscape: "screen and (min-device-width: 768px) and (max-device
 
 
 
-// Import Toadstool modules. This is where the magic happens!
-// If you don't want to use a module, simply comment it out.
-// The following are required to be in this sequence //
-// -------------------------------------------------------------
-// @import "stipe/toadstool";
-// @import "stipe/typography";
-// @import "stipe/color";
-// @import "stipe/gradients";
-// @import "stipe/grid";
-// @import "stipe/forms";
-// @import "stipe/buttons";
+
+
+
+
+
+
+
+
+

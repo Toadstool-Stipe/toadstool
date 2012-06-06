@@ -2,7 +2,6 @@
 // ------------------------------------------------------------------------------
 @import "config";  // Editing defaults here will override any set in the Stipe gem
 
-@import "web_fonts";
 
 
 // Choose the CSS reset by selectively commenting/uncommenting the import files
@@ -16,19 +15,44 @@
 // @import "reset";
 
 
-// The following are required to be in this sequence
+
+// Want web fonts? We got those too.
+// ------------------------------------------------------------------------------
+@import "web_fonts";
+
+
+
+// Following sequence will load the necessary Stipe libraries
 // ------------------------------------------------------------------------------
 @import "stipe/toadstool";                   // Need to create default styles
 @import "stipe/typography";                  //
 @import "stipe/grid";                        // Need to create default styles
-// @import "stipe/color";                       // Need to create default styles
+@import "stipe/color";                       // Need to create default styles
 // @import "stipe/gradients";                   // Need to create default styles
 // @import "stipe/forms";                       //
 // @import "stipe/buttons";                     //
 
+
+
 // This where you start building your own styles. 
-// For your convenience, the Toadstool default styles are included below. 
-// Feel free to remove default you don't need.
 // ------------------------------------------------------------------------------
 @import "typography";
 @import "design";
+
+
+
+// Following sequence will load the necessary Stipe extends
+// ------------------------------------------------------------------------------
+@import "stipe/grid/extends";
+@import "stipe/color/extends";
+
+
+
+
+
+
+
+
+
+
+

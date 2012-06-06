@@ -4,46 +4,22 @@
 
 ///////// global //////////
 
-
-
-// grid arguments ($col_count, $grid_child, $grid_padding_lr, $grid_padding_tb, $grid_border, $grid_uom, $col_gutter, $grid_type, $grid_align)
-
-
-
-.alpha {
-	@extend %grid_full;
-}
-
 h1 {
-	font-family: 'FontAwesome';
+	color: $alpha_color;
 }
 
-.charlie {
-	font-size: em(12);
+.background_image {
+	background: url(#{$imgDir}app.png);
 }
 
-.delta {
-	@include text(16);
-	// @include bulleted_list;
+.extending_colors {
+	@extend %white;
 }
 
-.beta {
-	@extend %grid_12_1;
-	background: orange;
+.this_is_a_grid {
+	@extend %grid_12_6;
 }
 
-.content_block {
-	@extend %content_block;
+.this_is_a_grid_too {
+	@extend %grid_12_4;
 }
-
-.beta_block {
-	@extend .content_block;
-}
-
-
-
-
-
-
-
-

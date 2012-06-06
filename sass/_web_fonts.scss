@@ -1,8 +1,7 @@
-// Do not edit, needed to pull in necessary mixin
-// -----------------------------------------------------------
-@import "stipe/typography/mixins";
 
-$webfont_directory: "/fonts/" !default;
+// -----------------------------------------------------------
+@import "stipe/typography/mixins"; // Do not edit, needed to pull in necessary mixin
+$webfont_directory: "/fonts/" !default; // edit this directory in the '_config.scss' file if needed.
 
 
 
@@ -11,12 +10,13 @@ $webfont_directory: "/fonts/" !default;
 // in relation to the rendered CSS file
 // -----------------------------------------------------------
 // To activate 'zocial' uncomment both lines
-//@import "stipe/typography/web_fonts/zocial";
-//@import "stipe/typography/web_fonts/zocial_characters";
+// @import "stipe/typography/web_fonts/zocial";
+// @import "stipe/typography/web_fonts/zocial_characters";
 
 // To activate 'font_awesome' uncomment both lines
-//@import "stipe/typography/web_fonts/font_awesome";
-//@import "stipe/typography/web_fonts/font_awesome_pua";
+// @import "stipe/typography/web_fonts/font_awesome";
+// @import "stipe/typography/web_fonts/font_awesome_pua";
+
 
 
 // Install your own
@@ -24,6 +24,7 @@ $webfont_directory: "/fonts/" !default;
 //@font-face {
 //	@include font-face ($font_family: [name of family], $font-file:  [name of file], $font_weight: [value], $font_style: [value]);
 //}
+
 
 
 // Install google fonts

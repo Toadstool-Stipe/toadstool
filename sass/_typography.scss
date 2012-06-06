@@ -1,26 +1,31 @@
-// Import of default text bootstrap settings
-// Comment out if unwanted
-// @import "stipe/typography/default";
-
-
 // Twitter's 'Font-Awesome' is installed in Toadstool
 // see http://goo.gl/4JkBd for list of icon options
 // Stipe has all icon classes loaded as silent classes, to activate use the following example
 // -----------------------------------------------------------------------
-//.icon-glass {
-//	@extend %icon-glass;
-//}
+// .icon-glass {
+// 	@extend %icon-glass;
+// }
+
+
 
 // Zocial's icon font is installed in Toadstool
 // see http://goo.gl/t92t5 for list of icon options
 // Stipe has all icon classes loaded as silent classes, to activate use the following example
 // -----------------------------------------------------------------------
-//.zocial-amazon {
-//	@extend %zocial-amazon;
-//}
+// .zocial-amazon {
+// 	@extend %zocial-amazon;
+// }
+
+
+
+// Import of default text bootstrap settings
+// -----------------------------------------------------------------------
+@import "stipe/typography/default"; // Comment out if unwanted
+
 
 
 // Customize the following to fit your specifications
+// Commented out styles represent Toadstool's default bootstrap styles
 // -----------------------------------------------------------------------
 html {
 	// font: #{$font_size / 16 * 1em}/$line_height $primary_font_family;
