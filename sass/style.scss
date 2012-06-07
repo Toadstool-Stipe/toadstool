@@ -28,15 +28,16 @@
 @import "stipe/typography";                  //
 @import "stipe/grid";                        // Need to create default styles
 @import "stipe/color";                       // Need to create default styles
-// @import "stipe/gradients";                   // Need to create default styles
+@import "stipe/gradients";                   // Need to create default styles
 // @import "stipe/forms";                       //
-// @import "stipe/buttons";                     //
+@import "stipe/buttons";                     //
 
 
 
 // This where you start building your own styles. 
 // ------------------------------------------------------------------------------
 @import "typography";
+@import "buttons";
 @import "design";
 
 
@@ -45,6 +46,7 @@
 // ------------------------------------------------------------------------------
 @import "stipe/grid/extends";
 @import "stipe/color/extends";
+@import "stipe/buttons/extends";
 
 
 
