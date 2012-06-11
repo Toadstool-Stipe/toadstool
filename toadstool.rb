@@ -10,7 +10,10 @@ require 'bundler/setup'
 
 require 'sinatra'
 
-
+helpers do
+  include ERB::Util
+  alias_method :code, :html_escape
+end
 
 configure do
   Compass.add_project_configuration(File.join(Sinatra::Application.root, 'config.rb'))
@@ -25,9 +28,9 @@ end
 
 
 get '/' do
-  erb :index
+  erb :grid
 end
 
-get '/widgets' do
-  erb :"widgets/index"
+get %r{([\w\./_-]+)} do
+  erb :"#{params[:captures].first}"
 end
