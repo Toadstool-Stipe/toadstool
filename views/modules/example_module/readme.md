@@ -11,14 +11,14 @@ When developers subscribe to this enginering method, then the application of mod
 If you find yourself coding elemental and/or UI patterns within a module, this should be a smell to refactor. 
 
 ```html
-	<article class="information_panels">
-		<h2>Salvia high life sartorial</h2>
-		<div>
-			<h3>Quinoa echo park salvia high life sartorial</h3>
-			<p>Skateboard tattooed cliche 8-bit banh mi blog biodiesel, freegan locavore vice wayfarers salvia keytar yr. Mustache iphone mixtape, cliche keytar vegan blog etsy beard retro banh mi letterpress next level echo park.</p>
-		</div>
-		<div>
-			<h3>Quinoa echo park salvia high life sartorial</h3>
-			<p>Skateboard tattooed cliche 8-bit banh mi blog biodiesel, freegan locavore vice wayfarers salvia keytar yr. Mustache iphone mixtape, cliche keytar vegan blog etsy beard retro banh mi letterpress next level echo park.</p>
-		</div>
-	</article>
+<article class="information_panels">
+  <h2>Salvia high life sartorial</h2>
+  <div>
+    <h3>Quinoa echo park salvia high life sartorial</h3>
+    <p>Skateboard tattooed cliche 8-bit banh mi blog biodiesel, freegan locavore vice wayfarers salvia keytar yr. Mustache iphone mixtape, cliche keytar vegan blog etsy beard retro banh mi letterpress next level echo park.</p>
+  </div>
+  <div>
+    <h3>Quinoa echo park salvia high life sartorial</h3>
+    <p>Skateboard tattooed cliche 8-bit banh mi blog biodiesel, freegan locavore vice wayfarers salvia keytar yr. Mustache iphone mixtape, cliche keytar vegan blog etsy beard retro banh mi letterpress next level echo park.</p>
+  </div>
+</article>
