@@ -15,8 +15,8 @@ If you find yourself coding elemental and/or UI patterns within a module, this s
 
 ###Here is a simple example of a reusable module
 ```scss
-@mixin information_panel($col_width: 6, $grid_uom: em) {
-  @include grid(12, $grid_padding: 10, $grid_border: 1);
+@mixin information_panel($cols: 12, $grid_uom: em) {
+  @include grid(12, $col_width: $cols, $grid_padding: 10, $grid_border: 1, $grid_uom: $grid_uom);
   @include standard_rounded_border;
   padding-top: em(10);
   padding-bottom: em(10);
@@ -45,3 +45,50 @@ If you find yourself coding elemental and/or UI patterns within a module, this s
     margin-left: em(10);
   }
 }
+
+##Silent extends
+Silent extends are the perfect compliment to Sass mixins. Mixins are awesome, but their largest fault is that they copy all the CSS into the newly created selector. This has brought on a lot of criticism of Sass. The solution, silent extends. 
+
+The idea beind this tool is that you can creat static class from mixins and/or other CSS declarations and these new classes do not manifest themselves in the processed CSS until extended. 
+
+####Example Sass using silent extends
+````scss
+%kung {
+  background: green;
+  color: yellow;
+}
+
+%foo {
+  background: orange;
+  color: red;
+  font-size: 12px;
+}
+
+.foo_one {
+  @extend %foo;
+}
+
+.foo_two {
+  @extend %foo;
+}
+
+####Output CSS
+````css
+.foo_one, .foo_two {
+  background: orange;
+  color: red;
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
