@@ -44,7 +44,8 @@ If you find yourself coding elemental and/or UI patterns within a module, this s
   .sub_article_push {
     margin-left: em(10);
   }
-}```
+}
+```
 
 ##Silent extends
 Silent extends are the perfect compliment to Sass mixins. Mixins are awesome, but their largest fault is that they copy all the CSS into the newly created selector. This has brought on a lot of criticism of Sass. The solution, silent extends. 
@@ -70,7 +71,8 @@ The idea beind this tool is that you can creat static class from mixins and/or o
 
 .foo_two {
   @extend %foo;
-}```
+}
+```
 
 ####Output CSS
 ```css
@@ -78,7 +80,8 @@ The idea beind this tool is that you can creat static class from mixins and/or o
   background: orange;
   color: red;
   font-size: 12px;
-}```
+}
+```
 
 
 
