@@ -5,7 +5,7 @@ A well engineered SCSS module will allow for flexible application to the designa
 
 Each Sass module folder should contain a `mixins.scss` file and a `extends.scss` file. In `sass/_modules.scss` add your created mixins and extends in the appropriate list.
 
-##Definition a module
+##Definition of a module
 A module is a self-contained series of design elements and possibly UI patterns. Regardless of fixed, fluid or responsive experience, the module itself does not have a defined space. It should always take up 100% width and it's height dictated by the content contined within. 
 
 Every module will have an independent Sass file for UI constuction. 
@@ -50,7 +50,7 @@ If you find yourself coding elemental and/or UI patterns within a module, this s
 ##Silent extends
 Silent extends are the perfect compliment to Sass mixins. Mixins are awesome, but their largest fault is that they copy all the CSS into the newly created selector. This has brought on a lot of criticism of Sass. The solution, silent extends. 
 
-The idea beind this tool is that you can creat static class from mixins and/or other CSS declarations and these new classes do not manifest themselves in the processed CSS until extended. 
+The idea beind this tool is that you can create static class from mixins and/or other CSS declarations and these new classes do not manifest themselves in the processed CSS until extended. 
 
 ####Example Sass using silent extends
 ```scss
