@@ -164,13 +164,13 @@ $iblur:                                3;                // inset blur settings
 
 /////////////// UI @media breakpoint defaults ////////////////
 // -----------------------------------------------------------------------------
-$low_res_phone: "screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1)";
-$low_res_phone_portrait: "screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1) and (orientation : portrait)";
-$low_res_phone_landscape: "screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1) and (orientation : landscape)";
-
-$low_res_tablet_landscape: "screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : landscape) ";
-
-
+// $tablet:                    "screen and (max-width: 64em)";
+// $tablet_portrait:           "screen and (max-width: 50em) and (orientation: portrait)";
+// $tablet_landscape:          "screen and (max-width: 50em) and (orientation: landscape)";
+// 
+// $mobile:                    "screen and (max-width: 30em)";
+// $mobile_portrait:	          "screen and (max-width: 30em) and (orientation : portrait)";
+// $mobile_landscape:	        "screen and (max-width: 30em) and (orientation : landscape)"; 
 
 
 
