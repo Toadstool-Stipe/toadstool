@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="toadstool">
+<html>
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -12,7 +12,9 @@
 	<meta name="author" content="">
 	
 	<!--  Mobile Viewport Fix, use at own risk -->
-	<!-- <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=2.0;"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5 maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	
 	<!-- Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references -->
 	<link rel="shortcut icon" href="/images/favicon.ico">
@@ -25,15 +27,28 @@
 	<!--[if lte IE 8]>
 		<link rel="stylesheet" media="all" href="/styles/ie.css"/><![endif]-->
 		
-	<!-- script src="http://code.jquery.com/jquery-1.4.4.js"></script>
-	<script src="/scripts/modernizr-1.6.min.js"></script>
-	<script src="/scripts/application.js"></script -->	
+	<script src="http://code.jquery.com/jquery-1.4.4.js"></script>
+	<script src="http://modernizr.com/downloads/modernizr.js"></script>
+	<!-- script src="/scripts/application.js"></script -->	
 
 </head>
 
 <body>
 	<section class="main_content">
+		<header class="toadstool_main_header">
+			<h1>logo here</h1>
+			<form>
+				<select>
+					<option value="">Drop down for</option>
+					<option value="">switching functionality</option>
+				</select>
+			</form>	
+		</header>
+		<nav class="toadstool_nav"></nav>
+		
 		<%= yield %>
+		
+		<footer class="toadstool_main_footer">This is a site footer</footer>
 	</section>
 </body>
 </html>
