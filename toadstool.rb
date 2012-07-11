@@ -9,6 +9,9 @@ require '../stipe/lib/stipe.rb' # locally as a Compass extension
 require 'bundler/setup'
 
 require 'sinatra'
+require 'sinatra/partial'
+
+set :partial_template_engine, :erb
 
 helpers do
   include ERB::Util
@@ -32,5 +35,9 @@ get '/' do
 end
 
 get %r{([\w\./_-]+)} do
-  erb :"#{params[:captures].first}"
+  if File.exists?('views' + params[:captures].first.gsub(/.(\/)$/, '') + '/index.erb')
+    erb :"#{params[:captures].first.gsub(/.(\/)$/, '')}/index"
+  else
+    erb :"#{params[:captures].first}"
+  end
 end
