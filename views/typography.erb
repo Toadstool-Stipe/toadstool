@@ -2,6 +2,36 @@
 	<header class="toadstool_header">
 		<h1>typography</h1>
 	</header>
-	<h2>hello there</h2>
+	
+	<article class="toadstool_desc">
+		<h2>hello there</h2>
+		<p>This is some sample text for a module general description. </p>
+	</article>
+	
+	<article class="element_example">
+		<h1>what do I look like?</h1>
+	</article>
+	
+	<pre class="prettyprint">
+&lt;article&gt;
+  &lt;header class=&quot;toadstool_header&quot;&gt;
+    &lt;h1&gt;typography&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;h2&gt;hello there&lt;/h2&gt;
+  &lt;pre class=&quot;prettyprint&quot;&gt;
+  &lt;/pre&gt;
+  &lt;footer class=&quot;toadstool_footer&quot;&gt;&lt;/footer&gt;
+&lt;/article&gt;
+	</pre>
+	
+	<pre class="prettyprint">
+.toadstool_main_footer {
+  padding: em(10) 0;
+  border-top: 1px solid $border_color;
+  @include grid(12, $grid_align: center);
+  clear: both;
+}
+	</pre>
+	
 	<footer class="toadstool_footer"></footer>
 </article>
