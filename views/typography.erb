@@ -2,36 +2,96 @@
 	<header class="toadstool_header">
 		<h1>typography</h1>
 	</header>
-	
-	<article class="toadstool_desc">
-		<h2>hello there</h2>
-		<p>This is some sample text for a module general description. </p>
-	</article>
-	
-	<article class="element_example">
-		<h1>what do I look like?</h1>
-	</article>
-	
+
+	<section id="headings">
+		<header class="toadstool_subheader">
+			<h2>headings</h2>
+			<p>In Toadstool, presentation is 100% separated from content and markup, this goes for typography too. Heading styles are not beholden to heading tags, but applied via slient classes to the appropiate semantic markup or class as needed.  </p>
+		</header>
+		<article class="element_example">
+			<h1>@extend %headings_1;</h1>
+			<h2>@extend %headings_2;</h2>
+			<h3>@extend %headings_3;</h3>
+		</article>
+		
+		<div class="example_code">
 	<pre class="prettyprint">
-&lt;article&gt;
-  &lt;header class=&quot;toadstool_header&quot;&gt;
-    &lt;h1&gt;typography&lt;/h1&gt;
-  &lt;/header&gt;
-  &lt;h2&gt;hello there&lt;/h2&gt;
-  &lt;pre class=&quot;prettyprint&quot;&gt;
-  &lt;/pre&gt;
-  &lt;footer class=&quot;toadstool_footer&quot;&gt;&lt;/footer&gt;
+&lt;h1&gt;@extend %headings_1;&lt;/h1&gt;
+&lt;h2&gt;@extend %headings_2;&lt;/h2&gt;
+
+&lt;article class=&quot;nested_article&quot;&gt;
+  &lt;h1&gt;This is a nested header&lt;/h1&gt;
 &lt;/article&gt;
+
+&lt;div&gt;Copy in here will look like the headings 1 style&lt;/div&gt;
 	</pre>
-	
+			<p>example markup</p>	
+		</div>
+		
+		<div class="example_code">
 	<pre class="prettyprint">
-.toadstool_main_footer {
-  padding: em(10) 0;
-  border-top: 1px solid $border_color;
-  @include grid(12, $grid_align: center);
-  clear: both;
+// Here is a pretty standard example use
+h1 {
+  @extend %headings_1;
+}
+
+h2 {
+  @extend %headings_2;
+}
+
+// There may be times when you want a heading style on another selector
+.nested_article {
+  h1 {
+    @extend %headings_3;
+  }
+}
+
+div {
+  @extend %headings_1;
 }
 	</pre>
+			<p>example SCSS</p>
+		</div>
+	</section>
+	
+	<section id="body_copy">
+		<header class="toadstool_subheader">
+			<h2>body copy</h2>
+			<p>Edit values in the <code>_config.scss</code> file to update standard body copy UI.</p>
+		</header>
+		<article class="element_example">
+			<p>Sapiente enim fingerstache, etsy single-origin coffee truffaut sriracha cupidatat viral hella eiusmod whatever. Salvia deserunt terry richardson nostrud irure marfa. Portland sapiente authentic swag. Anim narwhal exercitation consectetur butcher. Pork belly yr banksy occupy twee consectetur. Sustainable cupidatat eiusmod tumblr pour-over brooklyn keffiyeh, DIY 8-bit ex brunch single-origin coffee duis seitan. Mixtape ea 8-bit ennui, viral voluptate authentic culpa aesthetic occaecat art party.</p>
+			<p>Master cleanse swag officia selvage ea. Laborum fingerstache non quinoa cliche skateboard aliquip, irony portland. Fixie nihil godard, quis incididunt lomo locavore non quinoa iphone excepteur. Aute mollit food truck, voluptate occupy sed gastropub nostrud banh mi. Narwhal fugiat gluten-free, thundercats ennui lo-fi DIY kale chips nisi. Reprehenderit ea scenester, minim exercitation pork belly ut odd future iphone nostrud nihil. Ethical voluptate seitan high life.</p>
+		</article>
+		
+		<div class="example_code">
+	<pre class="prettyprint">
+&lt;p&gt;Sapiente enim fingerstache, etsy single-origin coffee truffaut sriracha cupidatat viral hella eiusmod whatever. Salvia deserunt terry richardson nostrud irure marfa.&lt;/p&gt;
+	</pre>
+			<p>example markup</p>	
+		</div>
+
+		
+	</section>
+	
+	<section id="body_links">
+		<header class="toadstool_subheader">
+			<h2>body links</h2>
+			<p>Edit values in the <code>_config.scss</code> file to update standard links UI.</p>
+		</header>
+		<article class="element_example">
+			<p>Sapiente enim fingerstache, <a href="#">etsy single-origin</a> coffee truffaut sriracha cupidatat viral hella eiusmod whatever.</p>
+		</article>
+		
+		<div class="example_code">
+	<pre class="prettyprint">
+&lt;p&gt;Sapiente enim fingerstache, &lt;a href=&quot;#&quot;&gt;etsy single-origin&lt;/a&gt; coffee truffaut sriracha cupidatat viral hella eiusmod whatever.&lt;/p&gt;
+	</pre>
+			<p>example markup</p>	
+		</div>
+
+		
+	</section>
 	
 	<footer class="toadstool_footer"></footer>
 </article>

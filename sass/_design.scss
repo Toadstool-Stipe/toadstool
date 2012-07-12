@@ -4,17 +4,8 @@
 
 ///////// global //////////
 
-h1 {
-	color: $alpha_color;
-}
 
-.background_image {
-	background: url(#{$imgDir}app.png);
-}
 
-.extending_colors {
-	@extend %white;
-}
 
 // grid example
 // ------------------------------------------------------

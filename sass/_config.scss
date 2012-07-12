@@ -19,7 +19,7 @@
 // $small_point_size: 10;
 // $large_point_size: 14;
 // 
-// $primary_font_family: #{"Helvetica Neue", Arial, sans-serif};
+// $primary_font_family: #{Arial, sans-serif};
 // $secondary_font_family: #{"Helvetica Neue", Arial, sans-serif};
 // $heading_font_family: #{"Helvetica Neue", Arial, sans-serif};
 
@@ -124,9 +124,9 @@
 
 // Config defaults for buttons
 // -----------------------------------------------------------------------------
-$primary_button_border_color:          $bravo_color;
-$secondary_button_border_color:        $bravo_gray;
-$button_text:                          $white;
+// $primary_button_border_color:          $bravo_color;
+// $secondary_button_border_color:        $bravo_gray;
+// $button_text:                          $white;
 
 // Config defaults for ``standard_rounded_border`` mixin
 // -----------------------------------------------------------------------------
