@@ -10,6 +10,8 @@ This project is in rapid development so the core files, code names Stipe, are no
 projects
 	-- stipe
 	-- toadstool
+	
+To make use of the Stipe gem in it's interim state, there is a secondary `Gemfile.local` file that contains a route to the in-development Stipe library. Using Bundler, run this command `bundle --gemfile Gemfile.local`
 
 ##To run the app
 Toadstool is built using ``Sinatra``, but you can run the app using ``shotgun`` if you prefer.

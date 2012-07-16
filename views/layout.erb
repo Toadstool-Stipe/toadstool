@@ -36,21 +36,13 @@
 
 <body onload="prettyPrint()">
 	<section class="main_content">
-		<header class="toadstool_main_header">
-			<h1>logo here</h1>
-			<form>
-				<select>
-					<option value="">Drop down for</option>
-					<option value="">switching functionality</option>
-				</select>
-			</form>	
-		</header>
-		<nav class="toadstool_nav"></nav>
+		<%= partial :"shared/_main_header" %>
+		<%= partial :"shared/_main_nav" %>
 		
 		<%= yield %>
 		
-		<footer class="toadstool_main_footer">This is a site footer</footer>
-	</section>
+		<%= partial :"shared/_main_footer" %>
+		</section>
 </body>
 </html>
 
