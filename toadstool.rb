@@ -16,6 +16,21 @@ set :partial_template_engine, :erb
 helpers do
   include ERB::Util
   alias_method :code, :html_escape
+  
+  def link_to_unless_current(location, text )
+	  if request.path_info == location
+	    text
+	  else
+	    link_to location, text
+	  end
+	end
+  
+  def link_to(url,text=url,opts={})
+	  attributes = ""
+	  opts.each { |key,value| attributes << key.to_s << "=\"" << value << "\" "}
+	  "<a href=\"#{url}\" #{attributes}>#{text}</a>"
+	end
+
 end
 
 configure do
@@ -28,10 +43,8 @@ get '/stylesheets/:name.css' do
   scss(:"../sass/#{params[:name]}", Compass.sass_engine_options )
 end
 
-
-
 get '/' do
-  erb :grid
+  erb :typography
 end
 
 get %r{([\w\./_-]+)} do

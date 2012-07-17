@@ -1,4 +1,16 @@
-<nav class="toadstool_nav">
-	this is where the main nav will go			
+<nav class="toadstool_nav mobi_hidden">
+	<ol>
+		<li><%= link_to_unless_current '/', 'Typography' %> </li>
+		<li><%= link_to_unless_current '/grid', 'Grids' %> </li>
+		<li><%= link_to_unless_current '/abstract_colors', 'Abstract color palette' %> </li>
+		<li><%= link_to_unless_current '/semantic_colors', 'Semantic color palette' %> </li>
+		
+		<li><%= link_to_unless_current '/alerts', 'Alerts' %> </li>
+		<li><%= link_to_unless_current '/buttons', 'Buttons' %> </li>
+		<li><%= link_to_unless_current '/forms', 'Forms' %> </li>
+		<li><%= link_to_unless_current '/Patterns', 'Patterns' %> </li>
+		<li><%= link_to_unless_current '/Modules', 'Modules' %> </li>
+	</ol>		
 </nav>
+
 
