@@ -1,3 +1,5 @@
+# Those little ditties that Sinara needs to make the magic happen
+# -----------------------------------------------------------------------
 require 'rubygems'
 require 'compass'
 require 'sass'
@@ -13,26 +15,33 @@ require 'sinatra/partial'
 
 set :partial_template_engine, :erb
 
+
+# Helpers to add a new horn section to the band
+# -----------------------------------------------------------------------
 helpers do
   include ERB::Util
   alias_method :code, :html_escape
   
+  # write better links
   def link_to_unless_current(location, text )
-	  if request.path_info == location
-	    text
-	  else
-	    link_to location, text
-	  end
-	end
+    if request.path_info == location
+      text
+    else
+      link_to location, text
+    end
+  end
   
   def link_to(url,text=url,opts={})
-	  attributes = ""
-	  opts.each { |key,value| attributes << key.to_s << "=\"" << value << "\" "}
-	  "<a href=\"#{url}\" #{attributes}>#{text}</a>"
-	end
+    attributes = ""
+    opts.each { |key,value| attributes << key.to_s << "=\"" << value << "\" "}
+    "<a href=\"#{url}\" #{attributes}>#{text}</a>"
+  end
 
 end
 
+
+# It's like Sammy and Dino, but not really
+# -----------------------------------------------------------------------
 configure do
   Compass.add_project_configuration(File.join(Sinatra::Application.root, 'config.rb'))
 end
@@ -43,6 +52,9 @@ get '/stylesheets/:name.css' do
   scss(:"../sass/#{params[:name]}", Compass.sass_engine_options )
 end
 
+
+# Without this, there is no nav. No really, there is nothing.
+# -----------------------------------------------------------------------
 get '/' do
   erb :typography
 end
@@ -54,3 +66,6 @@ get %r{([\w\./_-]+)} do
     erb :"#{params[:captures].first}"
   end
 end
+
+
+
