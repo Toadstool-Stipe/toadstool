@@ -23,6 +23,8 @@
 // $secondary_font_family: #{"Helvetica Neue", Arial, sans-serif};
 // $heading_font_family: #{"Helvetica Neue", Arial, sans-serif};
 
+// $icon_font_alpha: #{'FontAwesome'};
+// $icon_font_bravo: #{'zocial'};
 
 
 ///// Default webfont directory /////
@@ -82,7 +84,7 @@
 
 
 
-/////// axle's semantic combinations ////////
+/////// Toadstool's semantic variables ////////
 // Semantic variables should always be matched up with abstract values, never semantic to semantic
 // -----------------------------------------------------------------------------
 
@@ -94,6 +96,9 @@
 
 // primary header font color
 // $primary_header_color:                 $alpha_gray;
+
+// default heading font weight
+// $heading_font_weight:                  normal;
 
 // primary font color for the app
 // $primary_text:                         $bravo_gray;

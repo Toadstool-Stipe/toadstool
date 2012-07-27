@@ -28,7 +28,8 @@
 // Commented out styles represent Toadstool's default bootstrap styles
 // -----------------------------------------------------------------------
 html {
-	// font: #{$font_size / 16 * 1em}/$line_height $primary_font_family;
+	// font: em($font_size, 16) $primary_font_family;
+	// line-height: baseline($font_size);
 	// color: $primary_text;
 }
 
@@ -65,11 +66,8 @@ h6 {
 // Standard body text support
 // --------------------------------
 p {
-	// margin-bottom: 1em;
+	// margin-bottom: baseline-margin($font_size);
 	// text-indent: 0;
-	// &:last-child {
-	// 	margin-bottom: 0;
-	// }
 }
 
 b {
