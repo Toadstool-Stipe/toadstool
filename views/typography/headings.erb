@@ -25,7 +25,7 @@
 &lt;h2&gt;@extend %headings_2;&lt;/h2&gt;
 
 &lt;article class=&quot;nested_article&quot;&gt;
-&lt;h1&gt;This is a nested header&lt;/h1&gt;
+  &lt;h1&gt;This is a nested header&lt;/h1&gt;
 &lt;/article&gt;
 
 &lt;div&gt;Copy in here will look like the headings 1 style&lt;/div&gt;
@@ -37,22 +37,22 @@
 <pre class="prettyprint">
 // Here is a pretty standard example use
 h1 {
-@extend %headings_1;
+  @extend %headings_1;
 }
 
 h2 {
-@extend %headings_2;
+  @extend %headings_2;
 }
 
 // There may be times when you want a heading style on another selector
 .nested_article {
-h1 {
-  @extend %headings_3;
-}
+  h1 {
+    @extend %headings_3;
+  }
 }
 
 div {
-@extend %headings_1;
+  @extend %headings_1;
 }
 </pre>
 		<p>example SCSS</p>

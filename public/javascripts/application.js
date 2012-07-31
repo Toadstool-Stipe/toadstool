@@ -25,6 +25,26 @@ $(document).ready(function() {
 		event.preventDefault();
 		$(".read_more_web_fonts").slideToggle("slow");
 	});
+	
+	
+	// will show em size of window on load of view
+	// I suck at javascript, need to get DRY
+	var windowWidth = $(window).width();
+	var bodyFontSize = $('body').css('font-size');
+	var bodyFontSizeWithoutPx = parseInt(bodyFontSize);
+	var emValue = windowWidth/bodyFontSizeWithoutPx;
+	$('.screen-width').text(' ' + emValue + 'em');
+});
+
+
+// will show em size of window on resize of view
+// I suck at javascript, need to get DRY
+$(window).resize(function() {
+	var windowWidth = $(window).width();
+	var bodyFontSize = $('body').css('font-size');
+	var bodyFontSizeWithoutPx = parseInt(bodyFontSize);
+	var emValue = windowWidth/bodyFontSizeWithoutPx;
+	$('.screen-width').text(' ' + emValue + 'em');
 });
 
 // forces mobile address bar to scroll up
