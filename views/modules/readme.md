@@ -1,6 +1,6 @@
 #What is a module
 
-In Toadstool's eyes, the module is the single most important things you can build. It is the final object that will be placed in the view to create the experience. But the module is not the starting point, but a distination. 
+In Toadstool's eyes, the module is the single most important things you can build. It is the final object that will be placed in the view to create the experience. But the module is not the starting point, but a destination. 
 
 Starting with the elemental building blocks of the UI, then depending on the size of the module you will either assemble the final module here or using a combination of elements and UI patterns will then assemble the module. 
 
