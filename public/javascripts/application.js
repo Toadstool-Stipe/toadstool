@@ -1,5 +1,11 @@
+var showEms = function(){
+  var em_value = $(window).width() / parseInt($('body').css('font-size'));
+  $('.screen-width').text(' ' + em_value + 'em');
+  return true;
+};
+
 // General UX interactions
-// This is not very DRY, need to refactor when I know what I am doing here
+// need to make better
 $(document).ready(function() {
 	
 	$(".nav_toggle").click(function () {
@@ -26,25 +32,14 @@ $(document).ready(function() {
 		$(".read_more_web_fonts").slideToggle("slow");
 	});
 	
+	showEms();
 	
-	// will show em size of window on load of view
-	// I suck at javascript, need to get DRY
-	var windowWidth = $(window).width();
-	var bodyFontSize = $('body').css('font-size');
-	var bodyFontSizeWithoutPx = parseInt(bodyFontSize);
-	var emValue = windowWidth/bodyFontSizeWithoutPx;
-	$('.screen-width').text(' ' + emValue + 'em');
 });
 
 
 // will show em size of window on resize of view
-// I suck at javascript, need to get DRY
 $(window).resize(function() {
-	var windowWidth = $(window).width();
-	var bodyFontSize = $('body').css('font-size');
-	var bodyFontSizeWithoutPx = parseInt(bodyFontSize);
-	var emValue = windowWidth/bodyFontSizeWithoutPx;
-	$('.screen-width').text(' ' + emValue + 'em');
+	showEms();
 });
 
 // forces mobile address bar to scroll up
