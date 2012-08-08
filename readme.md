@@ -5,14 +5,6 @@ Toadstool is a Styleguide framework. Concepts are simple, build in the abstract 
 
 Toadstool is currently developed as a Sinatra app using Sass (SCSS) and Compass. We have made recent updates that makes the core set of Sass functions into a Compass extension. 
 
-This project is in rapid development so the core files, code names Stipe, are not yet processed into a Gem. Until such time that we make the gem file, you need to clone the Stipe project into a sibling directory from the Toadstool project. 
-
-projects
-	-- stipe
-	-- toadstool
-	
-To make use of the Stipe gem in it's interim state, there is a secondary `Gemfile.local` file that contains a route to the in-development Stipe library. Using Bundler, run this command `bundle --gemfile Gemfile.local`
-
 ##To run the app
 Toadstool is built using ``Sinatra``, but you can run the app using ``shotgun`` if you prefer.
 
@@ -25,8 +17,18 @@ The Compass config is included in toadstool.rb, no need to run as a separate pro
 
 *Note:* Sinatra serves the rendered Sass from memory without generating actual CSS files. However, if you have CSS files in public/stylesheets, those will be served instead. If you edit your Sass, but don't see your changes in the browser, delete any CSS files in public/stylesheets. 
 
-##Stipe Compass extension, Toadstool's core library
-While developing this framework I realized that we are begining to build a core series of mixins. It is this core that is the constant between deployments of the Toadstool framework. To better maange this we are in the process of teating this library as a Compass extension and soon to be gem.
+#Stipe Compass Extension
+Stipe is the life blood of the Toadstool style guide framework. Consisting of a series of mixins, extends and defaults that give Toadstool that 'instant on' experience. 
+
+[Stipe](https://rubygems.org/gems/stipe)
+
+##To install
+`gem install stipe`
+
+##To use 
+To use the Stipe gem, using Bundler `gem 'stipe'`
+
+Stipe is a Compass Extension, so Compass is set as a depdency. You will need to include `require 'stipe'` in your config.rb file.
 
 
 ###Please don't mind the mess ...
