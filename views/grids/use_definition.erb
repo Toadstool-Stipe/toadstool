@@ -3,23 +3,10 @@
 		<h2>grid use definition</h2>
 		<article>
 			<p>To use grids in Toadstool, Stipe comes with some awesome Mixins for easy creation of custom grids as well as commonly used silent classes.</p>
-			<p>Stipe's grid system is based on the original 960.gs solution. Whereas there are concepts like columns, gutters and nesting. For the most part when framing a UI, simply extend already pre-defned <a href="http://goo.gl/W0QlA" target="_blank">silent classes</a> like <code>@extend %grid_4</code>. These pre-formatted silent classes already come with additional support and mobile devices. </p>
+			<p>Stipe's grid system is based on the original 960.gs solution. Whereas there are concepts like columns, gutters and nesting. For the most part when framing a UI, simply extend already pre-defned <a href="http://goo.gl/W0QlA" target="_blank">silent classes</a> like <code>@extend %grid_4</code>. These pre-formatted silent classes already come with additional support for mobile devices. </p>
 			<p>If you require more customization of a given grid, use <code>@include grid($col_count)</code> whareas you are replacing <code>$col_count</code> with the number of colums you need. </p>
 			<p>For nested grids, Stipe supports 'alpha' and 'omega' concepts. For added spice, if you want to remove both margins, 'alphaomega' works too. Example <code>@include grid(5, alpha)</code>.</p>
 			<p>Since Stipe's grid is pure math, you can pass in floating point numbers as well. Example, if using <code>@include grid(12, alphaomega)</code> this will remove the margin on the outside of the grid, but will not be 100% across. By adding a floating point <code>@include grid(12.25, alphaomega)</code> this will address the missing space. </p>
-			<p>Additional arguments can be passed into the grid mixin to include <code>$grid_padding_l, $grid_padding_r, $grid_padding_tb, $grid_border, $grid_uom, $col_gutter, $grid_type, $grid_align, $grid_context</code></p>
-			<ul>
-				<li><code>$grid_padding_l</code> => adds padding LEFT, takes intager value</li>
-				<li><code>$grid_padding_r</code> => adds padding RIGHT, takes intager value</li>
-				<li><code>$grid_padding_tb</code> => adds padding TOP and BOTTOM, takes intager value</li>
-				<li><code>$grid_border</code> => takes intager value, adds border using <code>$border_color</code> and <code>$standard_border_style</code> configs found in <code>_config.scss</code>.</li>
-				<li><code>$grid_uom</code> => set to percent by default, accepts <code>em</code> as argument.</li>
-				<li><code>$col_gutter</code> => takes intager to adjust col gutter</li>
-				<li><code>$grid_type</code> => set to 12 col by default, allows for on-the-fly adjustment to grid type <b>Feature us currently inoperable</b></li>
-				<li><code>$grid_align</code> => takes <code>center</code> as argument</li>
-				<li><code>$grid_context</code> => Adjusts column widths based on nested grid context. Necessary when calcuclating with percentages</li>
-			</ul>
-			<p>Stipe uses the <code>box-size</code> CSS property, but this is not supported by IE7. By entereing values like <code>$grid_padding_l, $grid_padding_r, $grid_border</code>, Stipe will calculate a width that IE7 can use.</p>
 		</article>
 	</header>
 </section>
