@@ -164,42 +164,42 @@ $alpha_gray:      #333;           //black
 
 // Config defaults for ``standard_rounded_border`` mixin
 // -----------------------------------------------------------------------------
-$standard_round_corner:                3;                // sets default border radius
-$standard_corner_width:                1px;              // sets default border width
-$standard_border_color:                $border_color;    // sets default border color
+// $standard_round_corner:                3;                // sets default border radius
+// $standard_corner_width:                1px;              // sets default border width
+// $standard_border_color:                $border_color;    // sets default border color
 
 
 
 // Config defaults for ``standard_block_spacing`` mixin
 // -----------------------------------------------------------------------------
-$default_block_spacing:                20;               // sets margin-bottom
+// $default_block_spacing:                20;               // sets margin-bottom
 
 
 
 // Config defaults for site border style
 // -----------------------------------------------------------------------------
-$standard_border_style:                solid;
+// $standard_border_style:                solid;
 
 
 
 // Config defaults for ``standard_hr`` mixin
 // -----------------------------------------------------------------------------
-$standard_hr_spacing:                  40;               // sets padding and margin bottom
-$standard_hr_color:                    $delta_gray;
-$standard_hr_width:                    1px;
+// $standard_hr_spacing:                  40;               // sets padding and margin bottom
+// $standard_hr_color:                    $delta_gray;
+// $standard_hr_width:                    1px;
 
 
 
 // Config values for all default shadows
 // -----------------------------------------------------------------------------
-$h-shadow:                             0;                // horizontal shadow settings
-$v-shadow:                             2;                // vertical shaddow settings
-$blur:                                 3;                // blur settings
+// $h-shadow:                             0;                // horizontal shadow settings
+// $v-shadow:                             2;                // vertical shaddow settings
+// $blur:                                 3;                // blur settings
 
-$inset_color:                          $shadow_color;    // for use with ``dual_box_shadow`` mixin
-$ih-shadow:                            0;                // inset horizontal shadow settings
-$iv-shadow:                            2;                // inset vertical shaddow settings
-$iblur:                                3;                // inset blur settings
+// $inset_color:                          $shadow_color;    // for use with ``dual_box_shadow`` mixin
+// $ih-shadow:                            0;                // inset horizontal shadow settings
+// $iv-shadow:                            2;                // inset vertical shaddow settings
+// $iblur:                                3;                // inset blur settings
 
 
 
