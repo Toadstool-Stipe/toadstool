@@ -1,6 +1,6 @@
 # Require any additional compass plugins here.
-require '../stipe/lib/stipe.rb' # locally as a Compass extension
-# require 'stipe'
+# require '../stipe/lib/stipe.rb' # locally as a Compass extension
+require 'stipe'
 
 #require 'stipe' # locally as a Compass extension
 

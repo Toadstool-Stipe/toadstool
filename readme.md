@@ -26,7 +26,7 @@ Stipe is the life blood of the Toadstool style guide framework. Consisting of a 
 ##To install
 `gem install stipe`
 
-Current gem version dependency => 0.0.2.8
+Current gem version dependency => 0.0.2.9
 
 ##To use 
 To use the Stipe gem, using Bundler `gem 'stipe'`
