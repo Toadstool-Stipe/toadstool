@@ -1,5 +1,5 @@
 #Welcome to Toadstool
-![toadstool logo](/blackfalcon/toadstool/raw/master/public/images/toadstool-logo.png "toadstool - put that in your styleguide")
+![toadstool logo](/Anotheruiguy/toadstool/blob/master/public/images/toadstool-logo.png "toadstool - put that in your styleguide")
 
 Toadstool is a Styleguide framework. Concepts are simple, build in the abstract and apply to the semantic. 
 
@@ -12,6 +12,7 @@ Toadstool is built using ``Sinatra``, but you can run the app using ``shotgun`` 
 
 ##Sass / Compass
 **(BLEEDING EDGE ALERT)** Toadstool is using ``3.2.0.alpha.*``
+For [reasons explained](/Anotheruiguy/toadstool/blob/master/doc-src/exploited-bug.md) please continue using the alpha gem and upgrading to Sass 3.2 will break Toadstool and Stipe. 
 
 The Compass config is included in toadstool.rb, no need to run as a separate process. 
 
