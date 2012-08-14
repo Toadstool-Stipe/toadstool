@@ -1,5 +1,5 @@
 #Welcome to Toadstool
-![toadstool logo](/Anotheruiguy/toadstool/blob/master/public/images/toadstool-logo.png "toadstool - put that in your styleguide")
+![toadstool logo](/Anotheruiguy/toadstool/raw/master/public/images/toadstool-logo.png "toadstool - put that in your styleguide")
 
 Toadstool is a Styleguide framework. Concepts are simple, build in the abstract and apply to the semantic. 
 
