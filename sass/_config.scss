@@ -19,7 +19,7 @@
 // $small_point_size: 10;
 // $large_point_size: 14;
 // 
-// $primary_font_family: #{Arial, sans-serif};
+$primary_font_family: #{"Helvetica Neue", Arial, sans-serif};
 // $secondary_font_family: #{"Helvetica Neue", Arial, sans-serif};
 // $heading_font_family: #{"Helvetica Neue", Arial, sans-serif};
 
@@ -46,22 +46,19 @@
 // Red, green, yellow, blue, accent and black is not law, but a common theme in most designs.
 // Using Toadstool, all you need to do is edit these 6 hex values and everything else is created
 // by magic, unicorns and fairy dust!
-$alpha_primary:   red;        // red
-$bravo_primary:   green;        // green
-$charlie_primary: yellow;        // yellow
-$delta_primary:   blue;        // blue
-$echo_primary:    orange;        // accent
-                 
-$alpha_gray:      #333;           //black
+// $alpha_primary:   #5a2e2e;        // red
+// $bravo_primary:   #3e4147;        // green
+// $charlie_primary: #fffedf;        // yellow
+// $delta_primary:   #2a2c31;        // blue
+// $echo_primary:    #dfba69;        // accent
+
+// $alpha_gray:      #333;           //black
 
 
 
 /////// Toadstool color math ////////
 // -----------------------------------------------------------------------------
 // This is a bootstrap template for creating an array of colors
-// If this is not for you, feel free to comment out
-@import "stipe/color/default_color_pallet";
-
 // Don't like Stipe's color pallet, no worries. Uncomment these lines and go for it!
 // @import "color/color_math";
 // @import "color/grayscale_math";
