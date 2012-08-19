@@ -25,13 +25,13 @@
 // Following sequence will load the necessary Stipe libraries
 // ------------------------------------------------------------------------------
 @import "stipe/media";
-@import "stipe/stipe";                       // Need to create default styles
-@import "stipe/typography";                  //
-@import "stipe/grid";                        // Need to create default styles
-@import "stipe/color";                       // Need to create default styles
-@import "stipe/gradients";                   // Need to create default styles
-@import "stipe/forms";                       //
-@import "stipe/buttons";                     //
+@import "stipe/stipe";
+@import "stipe/typography";
+@import "stipe/grid";
+@import "stipe/color";
+@import "stipe/gradients";
+@import "stipe/forms";
+@import "stipe/buttons";
 
 
 
@@ -42,23 +42,3 @@
 @import "buttons";
 @import "design";
 @import "modules";
-
-
-
-// Following sequence will load the necessary Stipe extends
-// ------------------------------------------------------------------------------
-// @import "stipe/grid/extends";
-// @import "stipe/color/extends";
-@import "stipe/buttons/extends";
-// @import "stipe/forms/extends";
-
-
-
-
-
-
-
-
-
-
-
