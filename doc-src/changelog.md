@@ -1,5 +1,9 @@
 # Toadstool Changelog
 
+## Aug. 30 2012
+* Moved color defaults to control under Toadstool style guide
+* Updates tempalte markup so that css is not leveraging generic tags. Corrected issues where styles were stomping on prototype views
+
 ## Aug, 13 2012
 * Updates required to meet specification of 0.0.2.8 Stipe gem update
 
