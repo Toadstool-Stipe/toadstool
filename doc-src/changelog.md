@@ -1,4 +1,8 @@
 # Toadstool Changelog
+## Aug. 31 2012
+* Added support for non-core modernizr features
+** boxsizing - necessary for grid solution
+** lastchild
 
 ## Aug. 30 2012
 * Moved color defaults to control under Toadstool style guide

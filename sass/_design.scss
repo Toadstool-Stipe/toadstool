@@ -14,8 +14,8 @@
 // }
 
 // establish main aside within the main contnet block
-// .main_aside {
-// 	@include grid(4, $grid_padding_lr: 10, $grid_padding_tb: 10, $grid_border: 1);
+// .tracer {
+// 	@include grid(4, $grid_padding_r: 10, $grid_padding_l: 10, $grid_border: 1);
 // }
 
 // stablish main article within the main content block
@@ -32,16 +32,3 @@
 	// 	@include grid(6, omega, $grid_context: 8);
 	// }
 //}
-
-
-
-
-
-
-
-
-
-
-
-
-
