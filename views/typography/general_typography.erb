@@ -4,13 +4,15 @@
 		<article>
 			<p>Much of your Typography has already been addressed with Toadstool. Simply use Toadstool's config file to address your <code>$font_size, $heading_1 - 6, $small_point_size and $large_point_size</code>. As well designate your  <code>$primary_font_family, $secondary_font_family and $heading_font_family</code> variables. </p>
 			<p>It should be noted that Toadstool DOES NOT USE PIXELS for any values. At any time you need use a width/height/size value, use Stipe's <a href="http://goo.gl/rK2Ae" target="_blank">em function</a>, for example: <code>font-size: em(12);</code>. </p>
-			<p><a href="#" class="click_more_typography">Read more ...</a>
-		</article>
-		
-		<article class="read_more_typography hidden">
-			<p>Stipe's em function takes two arguments, <code>$target</code> and <code>$context</code>. By default <code>$context</code> is set to the <code>$font-size</code> you set in the your <a href="http://goo.gl/PqQSK" target="_blank">config.scss</a> file. The function will take the value of the argument, devide it by the context and convert that to an em vlaue for the final output. </p> 
-			<p>But why the second argument? The gotcha of ems is it's parental relationship. If at any time you redefined the parent font size, you need to redefine the context of this function. For example, if the partent was changed to <code>font-size: em(18);</code> and you wanted a header inside to be 24px, by resetting the context you will get the correct em value, like so: <code>font-size: em(24, 18);</code>.</p>
-			<p>Stipe also has a rem funciton that works the same way, example: <code>font-size: rem(24);</code> whereas this function takes the initial argument and devides by the font-size set in the <code>&lt;html&gt;</code> selector. Read more on rem from <a href="http://goo.gl/85fhM">snook.ca</a>, but use with caution, no support for IE8 and below.</p>
+			
+			<p class="click_more"><a href="#">Read more ...</a></p>
+			
+			<div class="read_more hidden">
+				<p>Stipe's em function takes two arguments, <code>$target</code> and <code>$context</code>. By default <code>$context</code> is set to the <code>$font-size</code> you set in the your <a href="http://goo.gl/PqQSK" target="_blank">config.scss</a> file. The function will take the value of the argument, devide it by the context and convert that to an em vlaue for the final output. </p> 
+				<p>But why the second argument? The gotcha of ems is it's parental relationship. If at any time you redefined the parent font size, you need to redefine the context of this function. For example, if the partent was changed to <code>font-size: em(18);</code> and you wanted a header inside to be 24px, by resetting the context you will get the correct em value, like so: <code>font-size: em(24, 18);</code>.</p>
+				<p>Stipe also has a rem funciton that works the same way, example: <code>font-size: rem(24);</code> whereas this function takes the initial argument and devides by the font-size set in the <code>&lt;html&gt;</code> selector. Read more on rem from <a href="http://goo.gl/85fhM">snook.ca</a>, but use with caution, no support for IE8 and below.</p>
+			</div>
+			
 		</article>
 	
 	</header>

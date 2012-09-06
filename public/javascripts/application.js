@@ -12,25 +12,18 @@ $(document).ready(function() {
 		$(".toadstool_nav").slideToggle("slow");
 	});
 	
-	$(".click_more_headings").click(function () {
+
+	$(".click_more a").click(function () {
 		event.preventDefault();
-		$(".read_more_headings").slideToggle("slow");
+		$(this).parents("p").siblings(".read_more").slideToggle("slow");
+		//$(this).parents("p").children("a").text("Read less ...");
 	});
 	
-	$(".click_more_typography").click(function () {
+	$(".codeToggle a").click(function () {
 		event.preventDefault();
-		$(".read_more_typography").slideToggle("slow");
+		$(this).parents("p").siblings(".prettyprint").slideToggle("slow");
 	});
 	
-	$(".click_more_rhythm").click(function () {
-		event.preventDefault();
-		$(".read_more_rhythm").slideToggle("slow");
-	});
-	
-	$(".click_more_web_fonts").click(function () {
-		event.preventDefault();
-		$(".read_more_web_fonts").slideToggle("slow");
-	});
 	
 	showEms();
 	

@@ -3,13 +3,14 @@
 		<h2>headings</h2>
 		<article>
 			<p>In Toadstool, presentation is 100% separated from content and markup, this goes for typography too. Heading styles are not beholden to heading tags, but applied via slient classes to the appropiate semantic markup or class as needed.  </p>
-			<p><a href="#" class="click_more_headings">Read more ...</a>
-		</article>
-		
-		<article class="read_more_headings hidden">
-			<p>Heading styles, by default, use the settings that are formatted in Stipe's library. Semantic headings are styled using <a href="http://goo.gl/iJfy9" target="_blank">pre-made silent classes</a> from Stipe's <a href="http://goo.gl/V81v3" target="_blank">default typograhy</a>. To edit these defaults, use the <a href="http://goo.gl/d9yvC" target="_blank">typography.scss</a> file found in your Toadstool app.</p>
-			<p>The <a href="http://goo.gl/xdnQm" target="_blank">@mixin heading</a> allows for four arguments to be passed, <code>$heading_size, $heading_font_family, $heading_color, $heading_font_weight</code>. </p>
-			<p>Default values for headings are editable in <a href="http://goo.gl/PqQSK" target="_blank">Toadstool's config file</a>.</p>
+			
+			<p class="click_more"><a href="#">Read more ...</a></p>
+			
+			<div class="read_more hidden">
+				<p>Heading styles, by default, use the settings that are formatted in Stipe's library. Semantic headings are styled using <a href="http://goo.gl/iJfy9" target="_blank">pre-made silent classes</a> from Stipe's <a href="http://goo.gl/V81v3" target="_blank">default typograhy</a>. To edit these defaults, use the <a href="http://goo.gl/d9yvC" target="_blank">typography.scss</a> file found in your Toadstool app.</p>
+				<p>The <a href="http://goo.gl/xdnQm" target="_blank">@mixin heading</a> allows for four arguments to be passed, <code>$heading_size, $heading_font_family, $heading_color, $heading_font_weight</code>. </p>
+				<p>Default values for headings are editable in <a href="http://goo.gl/PqQSK" target="_blank">Toadstool's config file</a>.</p>
+			</div>
 		</article>
 	
 	</header>
@@ -19,8 +20,11 @@
 		<h3>@extend %headings_3;</h3>
 	</article>
 	
+	
+	
 	<div class="example_code">
-<pre class="prettyprint">
+	<p class="codeToggle"><a href="#">view</a></p>
+<pre class="prettyprint hidden">
 &lt;h1&gt;@extend %headings_1;&lt;/h1&gt;
 &lt;h2&gt;@extend %headings_2;&lt;/h2&gt;
 
@@ -34,7 +38,8 @@
 	</div>
 	
 	<div class="example_code">
-<pre class="prettyprint">
+	<p class="codeToggle"><a href="#">view</a></p>
+<pre class="prettyprint hidden">
 // Here is a pretty standard example use
 h1 {
   @extend %headings_1;
