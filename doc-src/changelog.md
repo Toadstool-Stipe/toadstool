@@ -4,6 +4,9 @@
 ** boxsizing - necessary for grid solution
 ** lastchild
 
+## Sept. 6 2012
+* Added .rvmrc - I know, should have done this a long time ago.
+
 ## Aug. 30 2012
 * Moved color defaults to control under Toadstool style guide
 * Updates tempalte markup so that css is not leveraging generic tags. Corrected issues where styles were stomping on prototype views
