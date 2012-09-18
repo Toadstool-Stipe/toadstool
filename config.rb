@@ -2,8 +2,6 @@
 # require '../stipe/lib/stipe.rb' # locally as a Compass extension
 require 'stipe'
 
-#require 'stipe' # locally as a Compass extension
-
 # Set this to the root of your project when deployed:
 http_path = "/"
 
