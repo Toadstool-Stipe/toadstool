@@ -32,3 +32,11 @@
 	// 	@include grid(6, omega, $grid_context: 8);
 	// }
 //}
+
+.block {
+  @include grid (5, $grid_uom: em, $grid_child: alpha, $grid_padding_r: 39, $grid_border: 1, $border_place: right);
+}
+
+/* Where we left off...
+_the_grid.scss needs to be updates so that when a $border_place arguemnt is passed
+it will not multiply the $grid_border value. */
