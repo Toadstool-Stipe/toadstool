@@ -1,42 +1,6 @@
 // Grid background for column view
-// @import "stipe/grid/grid_background";
+// @import "stipe/grid/debug";
 
 
 
 ///////// global //////////
-
-// grid example
-// ------------------------------------------------------
-
-// establish a 100% width block that floats center
-// .main_content {
-// 	@extend %grid_full_center;
-// }
-
-// establish main aside within the main contnet block
-// .tracer {
-// 	@include grid(4, $grid_padding_r: 10, $grid_padding_l: 10, $grid_border: 1);
-// }
-
-// stablish main article within the main content block
-// .main_section {
-	// @extend %grid_5; 
-	// .section_header {
-	// 	@include grid(8.25, alphaomega, $grid_context: 8);
-	// 	margin-bottom: em(20);
-	// }
-	// .section_aside {
-	// 	@include grid(2, alpha, $grid_context: 8);
-	// }
-	// .section_article {
-	// 	@include grid(6, omega, $grid_context: 8);
-	// }
-//}
-
-.block {
-  @include grid (5, $grid_uom: em, $grid_child: alpha, $grid_padding_r: 39, $grid_border: 1, $border_place: right);
-}
-
-/* Where we left off...
-_the_grid.scss needs to be updates so that when a $border_place arguemnt is passed
-it will not multiply the $grid_border value. */
