@@ -1,0 +1,10 @@
+<div class="example_code sassView">
+  <p class="codeToggle"><a href="#">view</a></p>
+  <pre class="prettyprint linenums hidden">
+<%= File.new(path).read() %>
+  </pre>
+  <p><%= path %></p>
+  <p class="mtime">
+    Last modified: <%= File.mtime(path) %>
+  </p>
+</div>

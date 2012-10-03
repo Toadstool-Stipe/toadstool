@@ -1,6 +1,6 @@
 # Require any additional compass plugins here.
-# require '../stipe/lib/stipe.rb' # locally as a Compass extension
-require 'stipe'
+require '../stipe/lib/stipe.rb' # locally as a Compass extension
+# require 'stipe'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
@@ -28,6 +28,12 @@ output_style = :expanded
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 line_comments = false
 
+# http://www.mobify.com/dev/sass-sleuth-debugging-sass-in-webkit-browsers/
+# compass watch --debug-info
+
+sass_options = {
+  :debug_info => true
+}
 
 # If you prefer the indented syntax, you might want to regenerate this
 # project again passing --syntax sass, or you can uncomment this:

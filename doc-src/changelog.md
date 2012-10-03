@@ -1,11 +1,16 @@
 # Toadstool Changelog
+## Oct. 3 2012
+* Updated js for em view calc to round up value and show px value too.
+* Removed form select menu
+* Updating views with better solution for showing code
+
+## Sept. 6 2012
+* Added .rvmrc - I know, should have done this a long time ago.
+
 ## Aug. 31 2012
 * Added support for non-core modernizr features
 ** boxsizing - necessary for grid solution
 ** lastchild
-
-## Sept. 6 2012
-* Added .rvmrc - I know, should have done this a long time ago.
 
 ## Aug. 30 2012
 * Moved color defaults to control under Toadstool style guide

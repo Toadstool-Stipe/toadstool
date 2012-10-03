@@ -3,6 +3,7 @@
 require 'rubygems'
 require 'compass'
 require 'sass'
+require 'net/http'
 
 require 'stipe'               # installed as a gem
 # require '../stipe/lib/stipe.rb' # locally as a Compass extension

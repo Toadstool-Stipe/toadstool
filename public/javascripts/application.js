@@ -1,9 +1,11 @@
 var showEms = function(){
-  var em_value = $(window).width() / parseInt($('body').css('font-size'));
-  $('.screen-width').text(' ' + em_value + 'em');
+  var em_value = $(window).width() / parseInt($('html').css('font-size'));
+  var px_value = $(window).width();
+  var em_value_rounded = Math.round(em_value);
+  $('.screen-width').text(' ' + em_value_rounded + 'em');
+  $('.screen-width-px').text(' ' + px_value + 'px');
   return true;
 };
-
 // General UX interactions
 // need to make better
 $(document).ready(function() {
