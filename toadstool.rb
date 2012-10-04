@@ -1,4 +1,4 @@
-# Those little ditties that Sinara needs to make the magic happen
+# Those little ditties that Sinatra needs to make the magic happen
 # -----------------------------------------------------------------------
 require 'rubygems'
 require 'compass'
@@ -67,6 +67,18 @@ get %r{([\w\./_-]+)} do
     erb :"#{params[:captures].first}"
   end
 end
+
+# get '/' do
+#   slim :typography
+# end
+
+# get %r{([\w\./_-]+)} do
+#   if File.exists?('views' + params[:captures].first.gsub(/.(\/)$/, '') + '/index.slim')
+#     erb :"#{params[:captures].first.gsub(/.(\/)$/, '')}/index"
+#   else
+#     erb :"#{params[:captures].first}"
+#   end
+# end
 
 
 
