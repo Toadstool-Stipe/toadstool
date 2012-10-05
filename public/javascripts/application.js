@@ -15,13 +15,13 @@ $(document).ready(function() {
 	});
 	
 
-	$(".click_more a").click(function () {
+	$(".click_more a").click(function (event) {
 		event.preventDefault();
 		$(this).parents("p").siblings(".read_more").slideToggle("slow");
 		//$(this).parents("p").children("a").text("Read less ...");
 	});
 	
-	$(".codeToggle a").click(function () {
+	$(".codeToggle a").click(function (event) {
 		event.preventDefault();
 		$(this).parents("p").siblings(".prettyprint").slideToggle("slow");
 	});
