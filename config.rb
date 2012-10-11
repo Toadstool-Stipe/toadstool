@@ -1,6 +1,6 @@
 # Require any additional compass plugins here.
-# require '../stipe/lib/stipe.rb' # locally as a Compass extension
-require 'stipe'
+require '../stipe/lib/stipe.rb' # locally as a Compass extension
+# require 'stipe'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
@@ -26,7 +26,7 @@ output_style = :expanded
 # relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
-line_comments = false
+line_comments = true
 
 # http://www.mobify.com/dev/sass-sleuth-debugging-sass-in-webkit-browsers/
 # compass watch --debug-info
