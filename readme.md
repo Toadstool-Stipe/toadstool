@@ -11,9 +11,6 @@ Toadstool is built using ``Sinatra``, but you can run the app using ``shotgun`` 
 **To run** ``ruby toadstool.rb`` will start the app. If you are running a VM you may need to run ``ruby toadstool.rb -o 0.0.0.0``.  If you are so inclined, feel free to reset the port like so ``ruby toadstool.rb -o 0.0.0.0 -p 3000``
 
 ##Sass / Compass
-**(BLEEDING EDGE ALERT)** Toadstool is using ``3.2.0.alpha.*``
-For [reasons explained](/Anotheruiguy/toadstool/blob/master/doc-src/exploited-bug.md) please continue using the alpha gem and upgrading to Sass 3.2 will break Toadstool and Stipe. 
-
 The Compass config is included in toadstool.rb, no need to run as a separate process. 
 
 *Note:* Sinatra serves the rendered Sass from memory without generating actual CSS files. However, if you have CSS files in public/stylesheets, those will be served instead. If you edit your Sass, but don't see your changes in the browser, delete any CSS files in public/stylesheets. 
