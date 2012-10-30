@@ -10,6 +10,8 @@ Toadstool is built using ``Sinatra``, but you can run the app using ``shotgun`` 
 
 **To run** ``ruby toadstool.rb`` will start the app. If you are running a VM you may need to run ``ruby toadstool.rb -o 0.0.0.0``.  If you are so inclined, feel free to reset the port like so ``ruby toadstool.rb -o 0.0.0.0 -p 3000``
 
+A `Rakefile` has been added to the project, simply running `rake server` will start the app. 
+
 ##Sass / Compass
 The Compass config is included in toadstool.rb, no need to run as a separate process. 
 

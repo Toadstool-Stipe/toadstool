@@ -4,6 +4,10 @@
 * Removed form select menu
 * Updating views with better solution for showing code
 
+## Oct. 30 2012
+* Added 24col grid view
+* Updated gemspec for Stipe 0.0.4.6
+
 ## Sept. 6 2012
 * Added .rvmrc - I know, should have done this a long time ago.
 
