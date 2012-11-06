@@ -4,6 +4,9 @@
 require "rubygems"
 require "thor"
 require "thor/group"
+require 'pathname'
+
+APP_PATH = File.expand_path('../../..', __FILE__)
 
 module Toadstool
   class Install < Thor::Group
@@ -13,7 +16,7 @@ module Toadstool
     argument :name
     
     def self.source_root
-      File.expand_path('../../..', __FILE__)
+      APP_PATH
     end
 
     def install_app
@@ -30,6 +33,67 @@ module Toadstool
       copy_file "toadstool.rb", "#{name}/toadstool.rb"
     end
   end
+  
+  class Server < Thor::Group   
+   def exec_script_rails!
+     cwd = Dir.pwd
+     return unless in_rails_application? || in_rails_application_subdirectory?
+     exec 'rackup', *ARGV if in_rails_application?
+     Dir.chdir("..") do
+       # Recurse in a chdir block: if the search fails we want to be sure
+       # the application is generated in the original working directory.
+       exec_script_rails! unless cwd == Dir.pwd
+     end
+   rescue SystemCallError
+     # could not chdir, no problem just return
+   end
+   
+   no_tasks do
+     def in_rails_application?
+       File.exists?('config.ru')
+     end
+   
+  
+     def in_rails_application_subdirectory?(path = Pathname.new(Dir.pwd))
+       File.exists?(File.join(path, 'config.ru')) || !path.root? && in_rails_application_subdirectory?(path.parent)
+     end
+   end
+  end
 end
 
-Toadstool::Install.start
+ARGV << '--help' if ARGV.empty?
+
+aliases = {
+  "i"  => "install",
+  "new"  => "install",
+  "s"  => "server"
+}
+
+
+help_message = <<-EOT
+Usage: toadstool COMMAND [ARGS]
+
+The most common rails commands are:
+ server      Start the Toadstool server (short-cut alias: "s")
+ new         Create a new Toadstool application. "toadstool new my_styleguide" creates a
+             new application in "./my_styleguide"
+
+All commands can be run with -h (or --help) for more information.
+EOT
+
+command = ARGV.shift
+command = aliases[command] || command
+
+case command
+when 'install'
+  Toadstool::Install.start
+when 'server'
+  Toadstool::Server.start
+else
+  puts "Error: Command '#{command}' not recognized"
+  if %x{rake #{command} --dry-run 2>&1 } && $?.success?
+    puts "Did you mean: `$ rake #{command}` ?\n\n"
+  end
+  puts help_message
+  exit(1)
+end

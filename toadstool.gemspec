@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.bindir      = 'lib/bin'
   
   s.executables        = ['toadstool']
-  s.files = Dir['config.*', 'doc-src/**/*', 'lib/**/*', 'public/**/*', 'Rakefile', 'readme.md', 'sass/**/*', 'toadstool.rb', 'views/**/*']
+  s.files = Dir['config.*', 'doc-src/**/*', 'Gemfile', 'lib/**/*', 'public/**/*', 'Rakefile', 'readme.md', 'sass/**/*', 'toadstool.rb', 'views/**/*']
 
   # Gem Bookkeeping
   s.rubygems_version = %q{1.3.6}
