@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+
+require "rubygems"
+require "thor"
+require "thor/group"
+
+module Toadstool
+  class Install < Thor::Group
+    include Thor::Actions
+
+    # Define arguments and options
+    argument :name
+    
+    def self.source_root
+      File.expand_path('../../..', __FILE__)
+    end
+
+    def install_app
+      directory "doc-src", "#{name}/doc-src"
+      directory "public", "#{name}/public"
+      directory "sass", "#{name}/sass"
+      directory "views", "#{name}/views"
+      
+      copy_file "config.rb", "#{name}/config.rb"
+      copy_file "config.ru", "#{name}/config.ru"
+      copy_file "Gemfile", "#{name}/Gemfile"
+      copy_file "Rakefile", "#{name}/Rakefile"
+      copy_file "readme.md", "#{name}/readme.md"
+      copy_file "toadstool.rb", "#{name}/toadstool.rb"
+    end
+  end
+end
+
+Toadstool::Install.start
