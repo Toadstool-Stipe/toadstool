@@ -24,7 +24,7 @@ Once the elemental foundation is complete, it's time to get to work. Unlike 'boo
 
 Within the view structure of Toadstool there is a directory for Modules. As modules are developed, each module should be placed within it's own directory. Each module directory should consist of a `view.erb` file that provides the document view for the style guide as well as the `.erb` file(s) needed for the module itself. 
 
-The module itself needs to be written from an abstract perspective. This module bay be a partial that can be placed anywhere in the site in any view. That's the important part. Regardless of how you received the visual spec for this module, that is only one representation of that module. It's width, always 100% of it's container. It's height always directed by the content witin. Think Responsive baby!
+The module itself needs to be written from an abstract perspective. This module bay be a partial that can be placed anywhere in the site in any view. That's the important part. Regardless of how you received the visual spec for this module, that is only one representation of that module. It's width, always 100% of it's container. It's height always directed by the content within. Think Responsive baby!
 
 The Sass is the skin for the module. Located in the Sass part of the style guide there is also a directory for modules and in there should be a Sass file named the same as the module .erb. This is the glue. This is the uniform structure that makes scaleability and modularity successful. 
 
@@ -32,7 +32,7 @@ The Sass is the skin for the module. Located in the Sass part of the style guide
 One can argue that any given module can be broken down into smaller repeatable UI patterns. This is a gray area and always subject to interpretation and the point of development. One easy distinction is that a UI pattern is more then an element, but less then a full blown module. Where those lines exist are up to your team. 
 
 ###The view
-The last part of the puzzle is the assembly of the modules into a view template or layout file. The number of view templates will vary greately depending on the size of the application. It is my best practice to namespace the view template with a class at the `html` or `body` tag. In the `views` directory will be a `layouts` directory. Correspondingly in the Sass directory will be a `layouts` directory as well. 
+The last part of the puzzle is the assembly of the modules into a view template or layout file. The number of view templates will vary greatly depending on the size of the application. It is my best practice to namespace the view template with a class at the `html` or `body` tag. In the `views` directory will be a `layouts` directory. Correspondingly in the Sass directory will be a `layouts` directory as well. 
 
 For the purpose of the style guide, it is suggested that the layout erb files contain no markup other then the structural containers needed to display the modules. The modules themselves would be pulled into the view via partials. This is necessary to reduce code duplication, increase maintainability and promote reusability of the engineered modules.
 
