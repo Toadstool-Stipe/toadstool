@@ -9,7 +9,7 @@ While bootstrap frameworks are all the rage, I feel that there are some things t
 After all, it is a 'bootstrap' framework, not a 'production' framework. This is where Toadstool comes in, a real life production framework, a framework, a guideline, a process to make really awesome production ready code.
 
 ##Stipe
-Stipe is a collection of commonly used Mixins and more-so a growing number of easily useable silent placeholder classes to make development quicker, easier and more flexible. Stipe and Toadstool, when used correctly can quickly become the foundational framework for all your development projects. Making it more accessible to new developers on your teams and ensures that returning to a legacy project is not a daunting task of relearning the UI code.  
+[Stipe](https://github.com/Anotheruiguy/stipe) is a collection of commonly used Mixins and more-so a growing number of easily useable silent placeholder classes to make development quicker, easier and more flexible. [Stipe](https://github.com/Anotheruiguy/stipe) and Toadstool, when used correctly can quickly become the foundational framework for all your development projects. Making it more accessible to new developers on your teams and ensures that returning to a legacy project is not a daunting task of relearning the UI code.  
 
 ##Element, module, view
 The process is simple, the ideas are basic and the process is tried and true. Toadstool is set up to support some basic concepts that help you build a solid UI foundation that will allow for greater team integration, promote quality code reuse and build solid consistency in your app.  
@@ -17,7 +17,7 @@ The process is simple, the ideas are basic and the process is tried and true. To
 ###The Element
 The root most part of your UI is the elements of the design. Every design can be broken down to these basic elements, typography, colors, grid, forms and buttons. As the UI developer, by coding these first, you will remove the necessity to revisit these later. 
 
-[Stipe](https://github.com/Anotheruiguy/stipe) helps with much of the heavy lifting and provides a great foundation to get started with. You as the UI developer, you simply have to update the values of your style guide [_config.scss](http://goo.gl/PqQSK) file. Toadstool and Stipe have been carefully engineered and updated with tender care with each project deployment to make this process as easy as possible to customize. 
+[Stipe](https://github.com/Anotheruiguy/stipe) helps with much of the heavy lifting and provides a great foundation to get started with. You as the UI developer, you simply have to update the values of your style guide [_config.scss](http://goo.gl/PqQSK) file. Toadstool and [Stipe](https://github.com/Anotheruiguy/stipe) have been carefully engineered and updated with tender care with each project deployment to make this process as easy as possible to customize. 
 
 ###The Module
 Once the elemental foundation is complete, it's time to get to work. Unlike 'bootstrap' frameworks, Toadstool comes with very little pre-written UI code. This is where you, the UI developer needs to get to work. What Toadstool provides is a good development structure in which to create your modules and document your code.
@@ -44,5 +44,4 @@ The Compass config is included in toadstool.rb, no need to run as a separate pro
 
 *Note:* Sinatra serves the rendered Sass from memory without generating actual CSS files. However, if you have CSS files in public/stylesheets, those will be served instead. If you edit your Sass, but don't see your changes in the browser, delete any CSS files in public/stylesheets. 
 
-#Stipe Compass Extension
-Stipe is the life blood of the Toadstool style guide framework. Consisting of a series of mixins, extends and defaults that give Toadstool that 'instant on' experience. 
+[Stipe](https://github.com/Anotheruiguy/stipe) is the life blood of the Toadstool style guide framework. Consisting of a series of mixins, extends and defaults that give Toadstool that 'instant on' experience. 
