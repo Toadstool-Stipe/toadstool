@@ -67,18 +67,3 @@ get %r{([\w\./_-]+)} do
     erb :"#{params[:captures].first}"
   end
 end
-
-# get '/' do
-#   slim :typography
-# end
-
-# get %r{([\w\./_-]+)} do
-#   if File.exists?('views' + params[:captures].first.gsub(/.(\/)$/, '') + '/index.slim')
-#     erb :"#{params[:captures].first.gsub(/.(\/)$/, '')}/index"
-#   else
-#     erb :"#{params[:captures].first}"
-#   end
-# end
-
-
-
