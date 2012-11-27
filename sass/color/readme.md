@@ -54,10 +54,10 @@ block {
 While this is perfectly acceptable, I would encourage you to create a semantically named variable and apply the abstract name as the value in the `_config.scss` file. 
 
 ##Why the abstraction?
-Some may ask, "*Why would you want to make these abstractions versus simply applying the hex value?*"
+Some may ask, "_Why would you want to make these abstractions versus simply applying the hex value?_"
 
 Even if you are creating a list of semantically names variables, not using this array of abstract values means that you will be applying repeated hex values to all your semantically named variables. Hex values are not names that easily roll off the tongue and can easily become confused.
 
-Using the abstract naming helps to give he color values personality and thus easier to discuss. It is easier to say, "*Please use alpha_color_charlie.*" versus saying, "*Please use #8C4747.*"
+Using the abstract naming helps to give he color values personality and thus easier to discuss. It is easier to say, "_Please use alpha_color_charlie._" versus saying, "_Please use #8C4747._"
 
 Another benefit is that all these abstract variables are gnerated by using Sass' color functions. This keeps all the color editing in one place. Then if at any time that the color palette needs to be updated, simply update the primary color hex values and then all your site's colors are updated in the cascading fashion they were applied. 
