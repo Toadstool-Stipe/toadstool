@@ -33,7 +33,7 @@ The `_config.scss` file serves as the core UI configuration for your new UI. In 
 * Breakpoints
 
 ###CSS reset
-Toadstool comes pre-set with a Toadstool specific CSS reset. This reset address the most common UI settings. Stipe comes pre-loaded with Eric Meyer's reset as well and since we are using Compass, if you want, you use that reset too. Simply address the lines below in your `_config.scss` file.
+Toadstool comes pre-set with a Toadstool specific CSS reset. This reset address the most common UI settings. Stipe comes pre-loaded with Eric Meyer's reset as well and since we are using Compass, if you want, you could use that reset as well. Simply address the lines below in your `_config.scss` file.
 
 If you have your own reset, you can use that too. Simply uncomment the local `@import "reset";` line and in the file structure of the style guide put your reset. 
 
@@ -117,7 +117,7 @@ Finally we have your styles included in the manifest.
 
 Elemental files include `typography`, `forms`, `buttons`, `design`. The Sass necessary for the site's design are to be edited directly in these files. 
 
-Collective manifest files include `ui_patterns`, `modules` and `layouts`. No Sass is ever to be written in these files. They are only to `@import` the various collection of individual UI Patterns and Modules of course. 
+Collective manifest files include `ui_patterns`, `modules` and `layouts`. No Sass is ever to be written in these files. They are only to `@import` the various UI Patterns, Modules and Layouts. 
 
 ##Typography
 Setting basic typography is a pretty simple task, so this is why I set out to make this a consistent pattern so I never have to do this again. Toadstool's typography pulls a lot of CSS rules from the Stipe gem. These rules are represented in your local Toadstool style guide, but the rules are commented out. 
@@ -126,7 +126,13 @@ Core typography settings for your style guide require little intervention. By si
 
 If these typography settings are unwanted, simply remove `@import "stipe/typography/default";` from the manifest file and populate the Sass file with the appropriate CSS rules. 
 
-It should also be noted that neither Toadstool or Stipe use pixles. EMs are the preferred way to draw relationships between elements in the UI. Again Toadstool/Stipe aim to make life easier, so deep in the Stipe core is a Sass function. Please read more about how [Stipe makes EMs fun again](http://goo.gl/g2sPk).
+It should also be noted that neither Toadstool or Stipe use pixles. EMs are the preferred way to draw relationships between elements in the UI. Again Toadstool/Stipe aim to make life easier, so deep in the Stipe's core are [typography functions](http://goo.gl/g2sPk) to address integer conversion to em value.
+
+```scss
+@function em($target, $context: $font_size) {
+  @return ($target / $context) * 1em;
+}
+```
 
 ##Forms
 Toadstool comes pre-loaded with the basic elements that make up a form UI. You will find very basic CSS rules in your version of the Toadstool style guide. 
