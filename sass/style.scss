@@ -24,14 +24,7 @@
 
 // Following sequence will load the necessary Stipe libraries
 // ------------------------------------------------------------------------------
-@import "stipe/media";
-@import "stipe/stipe";
-@import "stipe/typography";
-@import "stipe/grid";
-@import "stipe/color";
-@import "stipe/gradients";
-@import "stipe/forms";
-@import "stipe/buttons";
+@import "stipe/manifest";
 @import "color/extends";
 
 
@@ -42,4 +35,6 @@
 @import "forms";
 @import "buttons";
 @import "design";
-@import "modules";
+@import "ui_patterns";    // manifest files
+@import "modules";        // manifest files
+@import "layouts";        // manifest files

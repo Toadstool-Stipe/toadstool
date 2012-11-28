@@ -1,18 +1,24 @@
+// Custom form extends and mixins
+// -----------------------------------------------------------------------
+@import "forms/mixins";
+@import "forms/extends";
+
+
 input[type=text], input[type=password], input[type="date"], select {
-  @extend %input_fields;  // style comes from stipe/forms/_extends.scss 
+  @extend %input_fields;                // CSS rule comes from stipe/forms/_extends.scss 
 }
 
 input[type=text], input[type=password], input[type="date"] {
   @media #{$mobile} {
-    -webkit-appearance: none;  // this is to remove the default inner shadow
-    -moz-appearance: none; // if this ever works, Moz bug for over a year
+    -webkit-appearance: none;           // this is to remove the default inner shadow
+    -moz-appearance: none;              // if this ever works, Moz bug for over a year
   }
 }
 
 input[disabled], textarea[disabled], select[disabled], .disabled {
-  @extend %disabled_inputs; // style comes from stipe/forms/_extends.scss
+  @extend %disabled_inputs;             // style comes from stipe/forms/_extends.scss
 }
 
 label {
-  @extend %form_labels; // style comes from stipe/forms/_extends.scss
+  @extend %form_labels;                 // CSS rule comes from stipe/forms/_extends.scss
 }

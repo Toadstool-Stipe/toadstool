@@ -1,7 +1,7 @@
 // The config file is intended to allow users to quickly redefine core elements of the design
 // that will cascade throughout the css to get your design up and running FAST!
 
-// For instruction, please see ...
+// For instruction, please see https://github.com/Anotheruiguy/toadstool/blob/master/sass/doc-src/config.md
 
 /////// Typography configuration/////// 
 // -----------------------------------------------------------------------------
@@ -135,6 +135,9 @@
 // $instructional_text:            $charlie_gray;
 // $placeholder_text:              $hotel_gray;
 // $form_label_color:              $alpha_gray;
+// $form_label_weight:             bold;
+// $form_field_height:             3em;
+// $form_field_padding:            6;
 
 /////// Config defaults for buttons /////// 
 // -----------------------------------------------------------------------------
