@@ -1,5 +1,5 @@
 #Toadstool and Sass
-The Toadstool style guide framework makes heavy use of Sass as it's primary styling language. Primary features of Sass not only include the ability to modularize your UI code, but also engineer your UI code in an abstract manor that allwoes for infinate reuseability. 
+The Toadstool style guide framework makes heavy use of Sass as it's primary styling language. Primary features of Sass not only include the ability to modularize your UI code, but also engineer your UI code in an abstract manor that allows for infinite reusability. 
 
 The look of your Toadstool style guide is driven from the [Stipe](http://goo.gl/68RPd) gem. All the Sass files you see in this directory are to be used to generate the final CSS for your project. 
 
@@ -20,17 +20,17 @@ The `style.scss` on the other hand is the principal manifest of your generated C
 ```
 
 The `_config.scss` file serves as the core UI configuration for your new UI. In this document are a series of pre-set variables. Including, but not limited to the following. [Read more](http://goo.gl/iLR3o) about how the config file works.
-*Typography
-*Images directory
-*Color palette
-*Grid configuration
-*Semantic color variables
-*Form UI variables
-*Buttons
-*Borders
-*Spacing
-*Shadows
-*Breakpoints
+* Typography
+* Images directory
+* Color palette
+* Grid configuration
+* Semantic color variables
+* Form UI variables
+* Buttons
+* Borders
+* Spacing
+* Shadows
+* Breakpoints
 
 ###CSS reset
 Toadstool comes pre-set with a Toadstool specific CSS reset. This reset address the most common UI settings. Stipe comes pre-loaded with Eric Meyer's reset as well and since we are using Compass, if you want, you use that reset too. Simply address the lines below in your `_config.scss` file.
@@ -120,7 +120,7 @@ Elemental files include `typography`, `forms`, `buttons`, `design`. The Sass nec
 Collective manifest files include `ui_patterns`, `modules` and `layouts`. No Sass is ever to be written in these files. They are only to `@import` the various collection of individual UI Patterns and Modules of course. 
 
 ##Typography
-Setting basic typography is a pretty simple task, so this is why I set out to make this a consistent pattern so I never have to do this again. Toadstool's typograhy pulls a lot of CSS rules from the Stipe gem. These rules are represented in your local Toadstool style guide, but the rules are commented out. 
+Setting basic typography is a pretty simple task, so this is why I set out to make this a consistent pattern so I never have to do this again. Toadstool's typography pulls a lot of CSS rules from the Stipe gem. These rules are represented in your local Toadstool style guide, but the rules are commented out. 
 
 Core typography settings for your style guide require little intervention. By simply updating the correct variables in the `_config.scss` file, you can effect great change. But if needed, you can either edit the CSS rule directly with the selector or actually over-ride the extended silent placeholder that drives the UI for that block element. 
 
@@ -134,19 +134,3 @@ Toadstool comes pre-loaded with the basic elements that make up a form UI. You w
 ##Buttons
 
 ##The design dumping ground
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
