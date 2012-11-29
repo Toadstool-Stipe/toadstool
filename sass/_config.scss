@@ -60,8 +60,8 @@
 // setting default units of measurement for Toadstool grid solution
 // $grid_type:                  12;             // sets default column grid
 // $grid_uom:                   percent;        // use either ``em`` or ``percent``
-// $grid_padding_l:             0 !default;      // sets default left/right padding inside grid block
-// $grid_padding_r:             0 !default;      // sets default left/right padding inside grid block
+// $grid_padding_l:             0;      // sets default left/right padding inside grid block
+// $grid_padding_r:             0;      // sets default left/right padding inside grid block
 // $grid_padding_tb:            0;              // sets default top/bottom padding inside grid block
 // $grid_border:                0;              // sets default border width on all grid blocks
 // $grid_child:                 none;           // sets parent child relationship between grid blocks
@@ -122,22 +122,26 @@
 //                                 
 // $form_field_background_color:   $white;
 // $form_field_focus_color:        $white;
-// $form_field_fail_bkg:           $white;
-//                                 
+// $form_field_fail_bkg:           $alpha_color_juliet;
+                                
 // $form_field_border:             $charlie_gray;
-// $form_field_border_fail:        $alpha_color;
+// $form_field_border_fail:        $alpha_color_echo;
 // $form_field_focus_border_color: $charlie_gray;
-//                                 
+                                
 // $form_field_text:               $primary_text;
-// $error_text:                    $alpha_color;
-// $form_field_fail:               $alpha_color;
-// $form_field_text_fail:          $alpha_color;
-// $instructional_text:            $charlie_gray;
-// $placeholder_text:              $hotel_gray;
+// $form_field_text_fail:          $alpha_color_echo;
+
+// $form_field_height:             35;
+// $form_field_padding:            6;
+
 // $form_label_color:              $alpha_gray;
 // $form_label_weight:             bold;
-// $form_field_height:             3em;
-// $form_field_padding:            6;
+// $form_label_lineheight:         20;
+// $optional_field_text_color:     $delta_gray;
+
+// $instructional_text:            $charlie_gray;
+
+// $placeholder_text:              $hotel_gray;
 
 /////// Config defaults for buttons /////// 
 // -----------------------------------------------------------------------------

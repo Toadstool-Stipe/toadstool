@@ -3,16 +3,8 @@
 @import "forms/mixins";
 @import "forms/extends";
 
-
-input[type=text], input[type=password], input[type="date"], select {
+input[type=email], input[type=password], input[type=text], input[type=number] {
   @extend %input_fields;                // CSS rule comes from stipe/forms/_extends.scss 
-}
-
-input[type=text], input[type=password], input[type="date"] {
-  @media #{$mobile} {
-    -webkit-appearance: none;           // this is to remove the default inner shadow
-    -moz-appearance: none;              // if this ever works, Moz bug for over a year
-  }
 }
 
 input[disabled], textarea[disabled], select[disabled], .disabled {
@@ -21,4 +13,12 @@ input[disabled], textarea[disabled], select[disabled], .disabled {
 
 label {
   @extend %form_labels;                 // CSS rule comes from stipe/forms/_extends.scss
+}
+
+.instructional {
+  @extend %instructional;
+}
+
+.fail {
+  @extend %fail;
 }

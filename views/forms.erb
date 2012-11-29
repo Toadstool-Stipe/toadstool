@@ -2,11 +2,19 @@
 		<h1>form</h1>
 	</header>
 	
-	<section id="text_inputs">
+	<section id="text_input">
     <%= partial :'shared/_toadstool_subheader', :locals => { 
       :header => 'text inputs', :text => 'The following form input text types are supported <code>input[type=email]</code>, <code>input[type=password]</code>, <code>input[type=text]</code> and <code>input[type=number]</code>' 
     } %>
     <%= partial :'shared/_html_example', :locals => { :path => 'ui_patterns/forms/text_input.erb' } %>
+    <%= partial :'shared/_sass_example', :locals => { :path => 'sass/_forms.scss' } %>
+  </section>
+  
+  <section id="text_input_error">
+    <%= partial :'shared/_toadstool_subheader', :locals => { 
+      :header => 'text inputs', :text => 'The following form input text types are supported <code>input[type=email]</code>, <code>input[type=password]</code>, <code>input[type=text]</code> and <code>input[type=number]</code>' 
+    } %>
+    <%= partial :'shared/_html_example', :locals => { :path => 'ui_patterns/forms/text_input_error.erb' } %>
     <%= partial :'shared/_sass_example', :locals => { :path => 'sass/_forms.scss' } %>
   </section>
 	
