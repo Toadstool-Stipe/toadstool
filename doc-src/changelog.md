@@ -1,4 +1,8 @@
 # Toadstool Changelog
+## Nov. 29 2012
+* Updated a lot of the readme files
+* Continuing to improve the base installed form elements
+
 ## Oct. 3 2012
 * Updated js for em view calc to round up value and show px value too.
 * Removed form select menu

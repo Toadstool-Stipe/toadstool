@@ -1,18 +1,28 @@
+// Classes in the `_forms.scss` file take advantage of silent placeholder selectors written in Stipe.
+// The variable UI parts of these placeholders are managed via your `_config.scss` file.
+// 
+// If you desire to not use these predefined CSS rules, simply remove the extended placeholder.
+// If you wish to add design elements to these base styles, simply add the desired rules to the selectors.
+
+
 // Custom form extends and mixins
 // -----------------------------------------------------------------------
 @import "forms/mixins";
 @import "forms/extends";
 
+
+// Your styles
+// -----------------------------------------------------------------------
 input[type=email], input[type=password], input[type=text], input[type=number] {
-  @extend %input_fields;                // CSS rule comes from stipe/forms/_extends.scss 
+  @extend %input_fields; 
 }
 
 input[disabled], textarea[disabled], select[disabled], .disabled {
-  @extend %disabled_inputs;             // style comes from stipe/forms/_extends.scss
+  @extend %disabled_inputs;
 }
 
 label {
-  @extend %form_labels;                 // CSS rule comes from stipe/forms/_extends.scss
+  @extend %form_labels;
 }
 
 .instructional {
@@ -21,4 +31,8 @@ label {
 
 .fail {
   @extend %fail;
+}
+
+.inline_alert {
+  @extend %inline_alert;
 }
