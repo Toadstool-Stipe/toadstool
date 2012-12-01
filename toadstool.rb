@@ -38,6 +38,22 @@ helpers do
     "<a href=\"#{url}\" #{attributes}>#{text}</a>"
   end
 
+  def html_example(file)
+    file = File.new(File.join('views', file + '.erb'))
+    
+    partial :'shared/_html_example', :locals => { :content => file.read(), :mtime => file.mtime, :path => file.path }
+  end
+  
+  def sass_example(file)
+    file = File.new(File.join('sass', file + '.scss'))
+    
+    code_toggle file.read(), file.path, file.mtime
+  end
+
+  def code_toggle(content, path, mtime)    
+    partial :'shared/_code_toggle', :locals => { :content => content, :mtime => mtime, :path => path }
+  end
+  
 end
 
 

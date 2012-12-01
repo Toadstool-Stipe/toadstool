@@ -7,18 +7,18 @@
   <%= partial :'shared/_toadstool_subheader', :locals => { 
 :header => 'general typography', :text => "Toadstool's typograhy is mainly maintained via the <code>_config.scss</code> file. For more detailed information, see <a href='http://goo.gl/Hl8po' target='_blank'>Stipe's typography documentation.</a>"
 } %>
-  <%= partial :'shared/_html_example', :locals => { :path => 'ui_patterns/typography/_body_copy.erb' } %>
-  <%= partial :'shared/_sass_example', :locals => { :path => 'sass/_typography.scss' } %>
-  <%= partial :'shared/_sass_example', :locals => { :path => 'sass/_config.scss' } %>
+  <%= html_example 'ui_patterns/typography/_body_copy'  %>
+  <%= sass_example '_typography' %>
+  <%= sass_example '_config' %>
 </section>
 
 <section id="headings">
   <%= partial :'shared/_toadstool_subheader', :locals => { 
 :header => 'headings', :text => "In Toadstool, presentation is 100% separated from content and markup, this goes for typography too. Heading styles are not beholden to heading tags, but applied via slient classes to the appropriate semantic markup or class as needed."
 } %>
-  <%= partial :'shared/_html_example', :locals => { :path => 'ui_patterns/typography/_headings.erb' } %>
-  <%#= partial :'shared/_sass_example', :locals => { :path => 'sass/_typography.scss' } %>
-  <%#= partial :'shared/_sass_example', :locals => { :path => 'sass/_config.scss' } %>
+  <%= html_example 'ui_patterns/typography/_headings' %>
+  <%#= sass_example '_typography' %>
+  <%#= sass_example '_config' %>
 </section>
 
 

@@ -1,31 +1,34 @@
 <%# Returns the extension (the portion of file name in path after the period) %>
-<% extname = File.extname(path) %>
+<%# extname = File.extname(path) %>
 
 <%# Returns components of the filename, + last component of the filename sans the extension  %>
-<% fullPath = File.dirname(path) + '/' + File.basename(path, extname)%>
+<%# fullPath = File.dirname(path) + '/' + File.basename(path, extname)%>
 
 <%# Returns components of the filename, + last component of the filename w/the extension  %>
-<% fullPathExtname = File.dirname(path) + '/' + File.basename(path)%>
+<%# fullPathExtname = File.dirname(path) + '/' + File.basename(path)%>
 
 <%# prepends path to fullPathExtname %>
-<% mtime_path = 'views/' + fullPathExtname %>
+<%# mtime_path = 'views/' + fullPathExtname %>
 
 <%# wrapps fullPathExtname for display in the view %>
-<% file_path = '< File path: ' + fullPathExtname + ' ' + '>' %>
+<%# file_path = '< File path: ' + fullPathExtname + ' ' + '>' %>
 
 <%# ---------------------------------------------- %>
 
 <article class="element_example">
-<%= partial fullPath %>
+<%= content %>
 </article>
 
-<div class="example_code">
-  <p class="codeToggle"><a href="#">view</a></p>
-  <pre class="prettyprint linenums hidden">
-<%= code partial fullPath %>
-  </pre>
-  <p><%= path %></p>
-  <p class="mtime">
-    Last modified: <%= File.mtime(mtime_path) %>
-  </p>
-</div>
+<%= code_toggle content, path, mtime %>
+<%
+#<div class="example_code">
+#  <p class="codeToggle"><a href="#">view</a></p>
+#  <pre class="prettyprint linenums hidden">
+#<%= code partial fullPath % >
+#  </pre>
+#  <p><%= path % ></p>
+#  <p class="mtime">
+#    Last modified: <%= File.mtime(mtime_path) % >
+#  </p>
+#</div>
+%>
