@@ -7,5 +7,5 @@ gem 'sinatra-partial'
 gem 'rake'
 gem 'stipe'
 
-# Only use when in gem development
+# Only use when doing gem development
 # gem 'stipe', :path => '../stipe'
