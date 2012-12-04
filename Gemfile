@@ -5,7 +5,7 @@ gem 'sass'
 gem 'compass'
 gem 'sinatra-partial'
 gem 'rake'
-gem 'stipe'
+# gem 'stipe'
 
 # Only use when doing gem development
-# gem 'stipe', :path => '../stipe'
+gem 'stipe', :path => '../stipe'
