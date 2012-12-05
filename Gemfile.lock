@@ -18,7 +18,7 @@ GEM
       tilt (~> 1.3, >= 1.3.3)
     sinatra-partial (0.3.2)
       sinatra
-    stipe (0.0.5.1)
+    stipe (0.0.5.2)
       compass (>= 0.11)
       sass (>= 3.2.1)
     tilt (1.3.3)
