@@ -1,3 +1,18 @@
+PATH
+  remote: ../fontcustom
+  specs:
+    fontcustom (0.1.2)
+      json
+      listen
+      thor
+
+PATH
+  remote: ../stipe
+  specs:
+    stipe (0.0.5.2)
+      compass (>= 0.11)
+      sass (>= 3.2.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -7,6 +22,8 @@ GEM
       fssm (>= 0.2.7)
       sass (~> 3.1)
     fssm (0.2.9)
+    json (1.7.5)
+    listen (0.6.0)
     rack (1.4.1)
     rack-protection (1.2.0)
       rack
@@ -18,9 +35,7 @@ GEM
       tilt (~> 1.3, >= 1.3.3)
     sinatra-partial (0.3.2)
       sinatra
-    stipe (0.0.5.2)
-      compass (>= 0.11)
-      sass (>= 3.2.1)
+    thor (0.16.0)
     tilt (1.3.3)
 
 PLATFORMS
@@ -28,8 +43,9 @@ PLATFORMS
 
 DEPENDENCIES
   compass
+  fontcustom!
   rake
   sass
   sinatra
   sinatra-partial
-  stipe
+  stipe!

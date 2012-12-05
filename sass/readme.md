@@ -134,6 +134,27 @@ It should also be noted that neither Toadstool or Stipe use pixles. EMs are the 
 }
 ```
 
+###Adding web fonts
+It is very simple to include general web fonts for your design/typography. Located `sass/typography/_web_fonts.scss` file you will see a easy to follow template for adding font libraries and/or Google fonts as well. 
+
+To install your own, simply place the font files in the `public/fonts/` directory and add some Sass
+
+```scss
+@font-face {
+  @include font-face ($font_family: [name of family], $font-file:  [name of file], $font_weight: [value], $font_style: [value]);
+}
+```
+
+To add a Google font:
+
+```scss
+@import url(http://fonts.googleapis.com/css?family=Emblema+One);
+```
+
+###FontCustom.sass
+Toadstool fully supports a custom build of [FontCustom.scss](https://github.com/blackfalcon/fontcustom.sass). 
+
+
 ##Forms
 Toadstool comes pre-loaded with the basic elements that make up a form UI. You will find very basic CSS rules in your version of the Toadstool style guide. 
 
