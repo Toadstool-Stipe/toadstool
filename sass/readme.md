@@ -154,6 +154,9 @@ To add a Google font:
 ###FontCustom.sass
 Toadstool fully supports a custom build of [FontCustom.scss](https://github.com/blackfalcon/fontcustom.sass). 
 
+Just place your SVG or EPS icons in the `icons/` directory and run `fontcustom compile icons`. Your icon fonts will be placed in `public/fonts/` and `sass/typography/_fontcustom.scss` will be created or updated for you. 
+
+__NOTE:__ FontCustom is slow (really, really slow) with no indication that it is running. Be patient. 
 
 ##Forms
 Toadstool comes pre-loaded with the basic elements that make up a form UI. You will find very basic CSS rules in your version of the Toadstool style guide. 
