@@ -19,7 +19,10 @@
 // Want web fonts? We got those too.
 // ------------------------------------------------------------------------------
 @import "typography/web_fonts"; // edit this to add web font libraries
-@import "typography/fontcustom"; // auto-generated file from fontcustom application
+
+// Toadstool supports FontCustom.scss (http://goo.gl/cNQ7D)
+// To run, `fontcustom complie icons/` from the command line
+// @import "typography/fontcustom"; // auto-generated file from fontcustom application
 
 
 

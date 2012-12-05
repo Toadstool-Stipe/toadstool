@@ -6,7 +6,7 @@ gem 'compass'
 gem 'sinatra-partial'
 gem 'rake'
 gem 'stipe'
-gem 'fontcustom'
+gem 'fontcustomtoadstool'
 
 # Only use when doing gem development
 # gem 'stipe', :path => '../stipe'
