@@ -95,8 +95,11 @@ Just place your SVG or EPS icons in the `icons/` directory and run `fontcustom c
 
 __NOTE:__ FontCustom is slow (really, really slow) with no indication that it is running. Be patient. 
 
-##Forms
-Toadstool comes pre-loaded with the basic elements that make up a form UI. You will find very basic CSS rules in your version of the Toadstool style guide. 
+To include the generated Sass from FontCustom, simply comment these lines from the `style.scss` file
+
+```scss
+@import "typography/fontcustom"; // auto-generated file from fontcustom application
+```
 
 ###Using the Stipe gem
 The Stipe gem will be installed on your machine and the following line calles in the necessary libraries.
@@ -143,6 +146,9 @@ It should also be noted that neither Toadstool or Stipe use pixles. EMs are the 
   @return ($target / $context) * 1em;
 }
 ```
+
+##Forms
+Toadstool comes pre-loaded with the basic elements that make up a form UI. You will find very basic CSS rules in your version of the Toadstool style guide. 
 
 ##Buttons
 
