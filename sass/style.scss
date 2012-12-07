@@ -28,6 +28,7 @@
 
 // Following sequence will load the necessary Stipe libraries
 // ------------------------------------------------------------------------------
+@import "compass/css3";                      // Including the Compass CSS3 mixins
 @import "stipe/manifest";
 @import "color/extends";
 
