@@ -4,18 +4,3 @@
 
 
 ///////// global //////////
-
-#logo {
-  @include hidpi-image (logo, 250, 188);
-  clear: both;
-}
-
-// #logo {
-//   border: 1px solid green;
-//   width: 100%;
-//   height: 200px;
-//   float: left;
-//   @include hidpi {
-//     border: 1px solid orange;
-//   }
-// }
