@@ -28,5 +28,13 @@ end
 # Heroku will run this task as part of the deployment process.
 desc "Compile the app's Sass"
 task "assets:precompile" do
-  system("bundle exec compass compile")
+  
+  # If we have executed `rake server production`, compile Sass, forcibly
+  # overwriting any existing CSS and overriding the output style in 
+  # config.rb with "compressed"
+  if environment == "production"
+    system("bundle exec compass compile --force -s compressed")
+  else
+    system("bundle exec compass compile")
+  end
 end
