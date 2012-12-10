@@ -7,9 +7,23 @@ Toadstool is a Style Guide framework. Concepts are simple, build in the abstract
 Toadstool is a Sinatra rack app. Simply clone the app into a new directory, `bundle install` and then `rake server`
 
 ##Sass / Compass
-The Compass config is included in toadstool.rb, no need to run as a separate process. 
+Processing your Sass to CSS can happen a few ways. 
 
-*Note:* Sinatra serves the rendered Sass from memory without generating actual CSS files. However, if you have CSS files in public/stylesheets, those will be served instead. If you edit your Sass, but don't see your changes in the browser, delete any CSS files in public/stylesheets. 
+By default Toadstool is set up to compile the Sass once via the following Rakefile command. This is the most efficient way to do this and ensures that a static version of the Sass is made available in production. 
+```ruby
+desc "Compile the app's Sass"
+task "assets:precompile" do
+  system("bundle exec compass compile")
+end
+```
+
+###Developing Sass
+Be sure to run the `compass watch` process in the background. This really is the best way to process edited Sass as in the terminal it will be easy to see the Sass error log if there are issues.
+
+###Running Sass in memory
+If you want run process Sass in memory, [uncomment these lines](http://goo.gl/HAKNR). Then comment out [this rake task](http://goo.gl/bvzEx).
+
+*Note:* Running Sass in memory will not generate actual CSS files. If you have CSS files in public/stylesheets, those will be served instead. If you edit your Sass, but don't see your changes in the browser, delete any CSS files in public/stylesheets. 
 
 ##What is a Style Guide Framework?
 While bootstrap frameworks are all the rage, I feel that there are some things that they do very well and then some things that they do very poorly. What they do well is give a team/developer a quick spring board to get a new app up and running. For a team/developer that is light on UI skillz, that is a good thing. But what I have heard time and time again from one developer to the next is that as the app continues to mature this 'bootstrap' UI is now a burden to bear.
