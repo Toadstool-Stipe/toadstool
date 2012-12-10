@@ -6,6 +6,8 @@ Toadstool is a Style Guide framework. Concepts are simple, build in the abstract
 ##To run the app
 Toadstool is a Sinatra rack app. Simply clone the app into a new directory, `bundle install` and then `rake server`
 
+To simulate "production" mode run `rake server production`. This task will compile your Sass with the compressed output style and closely simulates Heroku's environment. We use this mode to perform final QA prior to deployment to Heroku.
+
 ##Sass / Compass
 Processing your Sass to CSS can happen a few ways. 
 
@@ -16,6 +18,7 @@ task "assets:precompile" do
   system("bundle exec compass compile")
 end
 ```
+This task is automatically invoked when you run `rake server`; there should be no need to run it manually.
 
 ###Developing Sass
 Be sure to run the `compass watch` process in the background. This really is the best way to process edited Sass as in the terminal it will be easy to see the Sass error log if there are issues.
@@ -25,8 +28,10 @@ If you want run process Sass in memory, [uncomment these lines](http://goo.gl/HA
 
 *Note:* Running Sass in memory will not generate actual CSS files. If you have CSS files in public/stylesheets, those will be served instead. If you edit your Sass, but don't see your changes in the browser, delete any CSS files in public/stylesheets.
 
+Running Sass in memory can also be quite slow, especially as your Sass library grows in size and complexity. 
+
 ###Debug Sass
-By default your Sass will be run in [debug mode](http://goo.gl/a0UKV). By simply [changing your output](http://goo.gl/VN7g7) to `compressed`, this will over-ride the debugging and compress all your CSS for production.  
+By default your Sass will be run in [debug mode](http://goo.gl/a0UKV). By simply [changing your output](http://goo.gl/VN7g7) to `compressed`, this will over-ride the debugging and compress all your CSS for production.
 
 ##What is a Style Guide Framework?
 While bootstrap frameworks are all the rage, I feel that there are some things that they do very well and then some things that they do very poorly. What they do well is give a team/developer a quick spring board to get a new app up and running. For a team/developer that is light on UI skillz, that is a good thing. But what I have heard time and time again from one developer to the next is that as the app continues to mature this 'bootstrap' UI is now a burden to bear.
