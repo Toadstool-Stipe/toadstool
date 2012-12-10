@@ -23,7 +23,10 @@ Be sure to run the `compass watch` process in the background. This really is the
 ###Running Sass in memory
 If you want run process Sass in memory, [uncomment these lines](http://goo.gl/HAKNR). Then comment out [this rake task](http://goo.gl/bvzEx).
 
-*Note:* Running Sass in memory will not generate actual CSS files. If you have CSS files in public/stylesheets, those will be served instead. If you edit your Sass, but don't see your changes in the browser, delete any CSS files in public/stylesheets. 
+*Note:* Running Sass in memory will not generate actual CSS files. If you have CSS files in public/stylesheets, those will be served instead. If you edit your Sass, but don't see your changes in the browser, delete any CSS files in public/stylesheets.
+
+###Debug Sass
+By default your Sass will be run in [debug mode](http://goo.gl/a0UKV). By simply [changing your output](http://goo.gl/VN7g7) to `compressed`, this will over-ride the debugging and compress all your CSS for production.  
 
 ##What is a Style Guide Framework?
 While bootstrap frameworks are all the rage, I feel that there are some things that they do very well and then some things that they do very poorly. What they do well is give a team/developer a quick spring board to get a new app up and running. For a team/developer that is light on UI skillz, that is a good thing. But what I have heard time and time again from one developer to the next is that as the app continues to mature this 'bootstrap' UI is now a burden to bear.
