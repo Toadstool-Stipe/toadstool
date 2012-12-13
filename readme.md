@@ -3,7 +3,7 @@
 
 Toadstool is a Style Guide framework. Concepts are simple, build in the abstract and apply to the semantic. 
 
-##To run the app
+##Run the app
 Toadstool is a Sinatra rack app. Simply clone the app into a new directory, `bundle install` and then `rake server`
 
 To simulate "production" mode run `rake server production`. This task will compile your Sass with the compressed output style and closely simulates Heroku's environment. We use this mode to perform final QA prior to deployment to Heroku.
