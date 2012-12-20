@@ -33,7 +33,7 @@ Running Sass in memory can also be quite slow, especially as your Sass library g
 ###Debug Sass
 By default your Sass will be run in [debug mode](http://goo.gl/a0UKV). By simply [changing your output](http://goo.gl/VN7g7) to `compressed`, this will over-ride the debugging and compress all your CSS for production.
 
-##Glob-based import support
+###Glob-based import support
 A great feature supported in Rails 3.1+ projects is the ability to import files like so `@import "directory/*";`. In order to bring this capibility to other projects Toadstool requires the `sass-globbing` gem.
 
 If you are using this in a Rails 3.1+ project, the gem is not required.
