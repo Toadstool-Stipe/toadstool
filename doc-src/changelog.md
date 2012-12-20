@@ -1,4 +1,7 @@
 # Toadstool Changelog
+## Dec. 19 2012
+* While this hasn't been fully taken advantage of, we added support for [glob-based imports](http://goo.gl/pB8UJ) to Sass
+
 ## Nov. 29 2012
 * Updated a lot of the readme files
 * Continuing to improve the base installed form elements

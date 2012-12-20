@@ -33,10 +33,15 @@ Running Sass in memory can also be quite slow, especially as your Sass library g
 ###Debug Sass
 By default your Sass will be run in [debug mode](http://goo.gl/a0UKV). By simply [changing your output](http://goo.gl/VN7g7) to `compressed`, this will over-ride the debugging and compress all your CSS for production.
 
+##Glob-based import support
+A great feature supported in Rails 3.1+ projects is the ability to import files like so `@import "directory/*";`. In order to bring this capibility to other projects Toadstool requires the `sass-globbing` gem.
+
+If you are using this in a Rails 3.1+ project, the gem is not required.
+
 ##What is a Style Guide Framework?
 While bootstrap frameworks are all the rage, I feel that there are some things that they do very well and then some things that they do very poorly. What they do well is give a team/developer a quick spring board to get a new app up and running. For a team/developer that is light on UI skillz, that is a good thing. But what I have heard time and time again from one developer to the next is that as the app continues to mature this 'bootstrap' UI is now a burden to bear.
 
-After all, it is a 'bootstrap' framework, not a 'production' framework. This is where Toadstool comes in, a real life production framework, a framework, a guideline, a process to make really awesome production ready code.
+After all, it is a 'bootstrap' framework, not a 'production' framework. This is where Toadstool comes in, a real life production framework, a framework, a guideline, a process to make really awesome production ready code. 
 
 ##Stipe
 A core element of the Toadstool style guide framework is the [Stipe](https://github.com/Anotheruiguy/stipe) gem. A collection of commonly used Mixins and more-so a growing number of easily useable silent placeholder classes to make development quicker, easier and more flexible. [Stipe](https://github.com/Anotheruiguy/stipe) and Toadstool, when used correctly can quickly become the foundational framework for all your development projects. Making it more accessible to new developers on your teams and ensures that returning to a legacy project is not a daunting task of relearning the UI code.  
