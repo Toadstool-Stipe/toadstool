@@ -20,6 +20,9 @@ end
 ```
 This task is automatically invoked when you run `rake server`; there should be no need to run it manually.
 
+###Toadstool and Sass
+The Toadstool style guide framework makes heavy use of Sass as it's primary styling language [...](http://goo.gl/5ft0h)
+
 ###Developing Sass
 Be sure to run the `compass watch` process in the background. This really is the best way to process edited Sass as in the terminal it will be easy to see the Sass error log if there are issues.
 
