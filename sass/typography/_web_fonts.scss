@@ -1,13 +1,10 @@
-
-// -----------------------------------------------------------
 @import "stipe/typography/mixins"; // Do not edit, needed to pull in necessary mixin
 $webfont_directory: "/fonts/" !default; // edit this directory in the '_config.scss' file if needed.
-
+// -----------------------------------------------------------
 
 
 // Pre-loaded web fonts for your use, enjoy!
-// Fonts needed to be loaded in path specified above
-// in relation to the rendered CSS file
+// Fonts needed to be loaded in path specified above in relation to the rendered CSS file
 // -----------------------------------------------------------
 // To activate 'zocial' uncomment both lines
 // @import "stipe/typography/web_fonts/zocial";

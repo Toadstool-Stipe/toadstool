@@ -1,18 +1,36 @@
-input[type=text], input[type=password], input[type="date"], select {
-  @extend %input_fields;  // style comes from stipe/forms/_extends.scss 
-}
+// Classes in the `_forms.scss` file take advantage of silent placeholder selectors written in Stipe.
+// The variable UI parts of these placeholders are managed via your `_config.scss` file.
+// 
+// If you desire to not use these predefined CSS rules, simply remove the extended placeholder.
+// If you wish to add design elements to these base styles, simply add the desired rules to the selectors.
 
-input[type=text], input[type=password], input[type="date"] {
-  @media #{$mobile} {
-    -webkit-appearance: none;  // this is to remove the default inner shadow
-    -moz-appearance: none; // if this ever works, Moz bug for over a year
-  }
+
+// Custom form extends and mixins
+// -----------------------------------------------------------------------
+@import "forms/*";
+
+// Your styles
+// -----------------------------------------------------------------------
+input[type=email], input[type=password], input[type=text], input[type=number] {
+  @extend %input_fields; 
 }
 
 input[disabled], textarea[disabled], select[disabled], .disabled {
-  @extend %disabled_inputs; // style comes from stipe/forms/_extends.scss
+  @extend %disabled_inputs;
 }
 
 label {
-  @extend %form_labels; // style comes from stipe/forms/_extends.scss
+  @extend %form_labels;
+}
+
+.instructional {
+  @extend %instructional;
+}
+
+.fail {
+  @extend %fail;
+}
+
+.inline_alert {
+  @extend %inline_alert;
 }

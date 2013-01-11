@@ -10,7 +10,10 @@
 @import "buttons/cupid_config"; // Minimal config options
 @import "stipe/buttons/lib/cupid-green"; // Sass UI code
 
-
+// Custom button extends and mixins
+// -----------------------------------------------------------------------
+@import "buttons/mixins";
+@import "buttons/extends";
 
 // buttons
 // --------------------------------------------------------------------

@@ -18,20 +18,18 @@
 
 // Want web fonts? We got those too.
 // ------------------------------------------------------------------------------
-@import "web_fonts";
+@import "typography/web_fonts"; // edit this to add web font libraries
+
+// Toadstool supports FontCustom.scss (http://goo.gl/cNQ7D)
+// To run, `fontcustom complie icons/` from the command line
+// @import "typography/fontcustom"; // auto-generated file from fontcustom application
 
 
 
 // Following sequence will load the necessary Stipe libraries
 // ------------------------------------------------------------------------------
-@import "stipe/media";
-@import "stipe/stipe";
-@import "stipe/typography";
-@import "stipe/grid";
-@import "stipe/color";
-@import "stipe/gradients";
-@import "stipe/forms";
-@import "stipe/buttons";
+@import "compass/css3";                      // Including the Compass CSS3 mixins
+@import "stipe/manifest";
 @import "color/extends";
 
 
@@ -42,4 +40,6 @@
 @import "forms";
 @import "buttons";
 @import "design";
-@import "modules";
+@import "ui_patterns";    // manifest files
+@import "modules";        // manifest files
+@import "layouts";        // manifest files

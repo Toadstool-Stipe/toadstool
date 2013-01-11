@@ -1,4 +1,8 @@
 # Require any additional compass plugins here.
+# Comment this out if you are using Toadstool inside a Rails project
+# Gem to add glob-based imports to Sass
+require 'sass-globbing' 
+
 # require '../stipe/lib/stipe.rb' # locally as a Compass extension
 require 'stipe'
 
@@ -20,13 +24,13 @@ javascripts_dir = "javascripts"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
-output_style = :expanded
+output_style = :nested
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
-line_comments = true
+line_comments = false
 
 # http://www.mobify.com/dev/sass-sleuth-debugging-sass-in-webkit-browsers/
 # compass watch --debug-info
