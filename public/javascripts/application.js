@@ -25,6 +25,13 @@ $(document).ready(function() {
 		event.preventDefault();
 		$(this).parents("p").siblings(".prettyprint").slideToggle("slow");
 	});
+
+  // these toggles are for the styleguide color views
+  $(".colorcode a").click(function (event) {
+    event.preventDefault();
+    $(this).parents('.toadstool_subheader').next('.hidden').slideToggle('slow');
+  });
+  // these toggles are for the styleguide color views
 	
 	
 	showEms();
