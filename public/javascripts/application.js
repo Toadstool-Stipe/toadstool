@@ -29,7 +29,7 @@ $(document).ready(function() {
   // these toggles are for the styleguide color views
   $(".colorcode a").click(function (event) {
     event.preventDefault();
-    $(this).parents('.toadstool_subheader').next('.hidden').slideToggle('slow');
+    $(this).parents('.toadstool_subheader').siblings('.hidden').slideToggle('slow');
   });
   // these toggles are for the styleguide color views
 	
@@ -75,6 +75,10 @@ function rgb2hex(rgb) {
 
 $(document).ready(function() {
   $('article.colorcode').children('div').each(function(index, BlockColor){
+    var color = $(BlockColor).css("background-color"); 
+    $(BlockColor).children().append('<span>' + rgb2hex(color) + '</span>');
+  });
+  $('article.colorcode > section').children('div').each(function(index, BlockColor){
     var color = $(BlockColor).css("background-color"); 
     $(BlockColor).children().append('<span>' + rgb2hex(color) + '</span>');
   });
