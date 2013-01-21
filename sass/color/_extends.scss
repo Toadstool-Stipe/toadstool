@@ -296,3 +296,30 @@
 %standard_hr_color {
 	background: $standard_hr_color;
 }
+
+/////// Config defaults for forms /////// 
+// -----------------------------------------------------------------------------
+
+%alert_background_color {
+	background: $alert_background_color;
+}
+
+%input_disabled {
+	background: $input_disabled;
+}
+
+%input_disabled_bkg {
+	background: $input_disabled_bkg;
+}
+
+%input_disabled_border {
+	background: $input_disabled_border;
+}
+
+%input_disabled_text {
+	background: $input_disabled_text;
+}
+
+%form_field_background_color {
+	background: $form_field_background_color;
+}
