@@ -78,9 +78,6 @@
 // abstract 'white' value to easily applied to semantic class objects
 // $white:                                #fff;
 
-// default shadow colors
-// $shadow_color:                         fade-out($alpha_gray, 0.5);
-
 // primary header font color
 // $primary_header_color:                 $alpha_gray;
 
@@ -95,6 +92,19 @@
 // $href_color:                           $delta_color;
 // $href_color_alt:                       $delta_color_bravo;
 
+// default shadow colors
+// $shadow_color:                         fade-out($alpha_gray, 0.5);
+
+// default border color
+// $border_color:                         $charlie_gray;
+
+// standard hr color
+// $standard_hr_color:                    $charlie_gray;
+
+
+
+/////// HTML 5 feature colors ///////
+// -----------------------------------------------------------------------------
 // used with the `ins` tag
 // http://www.w3schools.com/tags/tag_ins.asp
 // $ins_color:                            $charlie_color;
@@ -110,8 +120,7 @@
 // $selection_color:                      $charlie_color;
 // $selection_text_color:                 $primary_text;
 
-// default border color
-// $border_color:                         $charlie_gray;
+
 
 /////// Config defaults for forms /////// 
 // -----------------------------------------------------------------------------
