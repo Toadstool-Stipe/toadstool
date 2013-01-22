@@ -61,8 +61,8 @@
 // setting default units of measurement for Toadstool grid solution
 // $grid_type:                  12;             // sets default column grid
 // $grid_uom:                   percent;        // use either ``em`` or ``percent``
-// $grid_padding_l:             0;      // sets default left/right padding inside grid block
-// $grid_padding_r:             0;      // sets default left/right padding inside grid block
+// $grid_padding_l:             0;              // sets default left/right padding inside grid block
+// $grid_padding_r:             0;              // sets default left/right padding inside grid block
 // $grid_padding_tb:            0;              // sets default top/bottom padding inside grid block
 // $grid_border:                0;              // sets default border width on all grid blocks
 // $grid_child:                 none;           // sets parent child relationship between grid blocks
@@ -97,9 +97,6 @@
 
 // default border color
 // $border_color:                         $charlie_gray;
-
-// standard hr color
-// $standard_hr_color:                    $charlie_gray;
 
 
 
@@ -138,30 +135,30 @@
 // $form_field_border:             $charlie_gray;
 // $form_field_border_fail:        $alpha_color_echo;
 // $form_field_focus_border_color: $charlie_gray;
-// $form_field_border_radius:      $standard_round_corner;
-                                
-// $form_field_text:               $primary_text;
+
 // $form_field_text_fail:          $alpha_color_echo;
-
-// $form_field_height:             35;
-// $form_field_padding:            6;
-
 // $form_label_color:              $alpha_gray;
-// $form_label_weight:             bold;
-// $form_label_lineheight:         20;
 // $optional_field_text_color:     $delta_gray;
-
 // $instructional_text:            $charlie_gray;
-
 // $placeholder_text:              $hotel_gray;
-
-// $inline_alert_weight:           bold;
-// $inline_alert_lineheight:       30;
-// $inline_alert_left_padding:     12;
 // $inline_alert_bkg_color:        $alpha_color_delta;
 // $inline_alert_text_color:       $white;
+
+// Non-color defaults (currently not represented in the SG view)
+// ---------------------------------------------------------
+// $form_field_border_radius:      $standard_round_corner;                                
+// $form_field_text:               $primary_text;
+// $form_field_height:             35;
+// $form_field_padding:            6;
+// $form_label_weight:             bold;
+// $form_label_lineheight:         20;
+// $inline_alert_lineheight:       30;
+// $inline_alert_left_padding:     12;
+// $inline_alert_weight:           bold;
 // $inline_alert_top_margin:       12;
 // $inline_alert_border_width:     1;
+
+
 
 /////// Config defaults for buttons /////// 
 // -----------------------------------------------------------------------------
@@ -208,8 +205,8 @@
 // $tablet_landscape:          "screen and (max-width: 50em) and (orientation: landscape)";
 // 
 // $mobile:                    "screen and (max-width: 30em)";
-// $mobile_portrait:	          "screen and (max-width: 30em) and (orientation : portrait)";
-// $mobile_landscape:	        "screen and (max-width: 30em) and (orientation : landscape)";
+// $mobile_portrait:	         "screen and (max-width: 30em) and (orientation : portrait)";
+// $mobile_landscape:	         "screen and (max-width: 30em) and (orientation : landscape)";
 
 /////// Vendor prefix defaults /////// 
 // -----------------------------------------------------------------------------
