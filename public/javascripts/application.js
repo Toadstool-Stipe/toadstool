@@ -76,10 +76,10 @@ function rgb2hex(rgb) {
 $(document).ready(function() {
   $('article.colorcode').children('div').each(function(index, BlockColor){
     var color = $(BlockColor).css("background-color"); 
-    $(BlockColor).children().append('<span>' + rgb2hex(color) + '</span>');
+    $(BlockColor).children().prepend('<span>' + rgb2hex(color) + '</span>');
   });
   $('article.colorcode > section').children('div').each(function(index, BlockColor){
     var color = $(BlockColor).css("background-color"); 
-    $(BlockColor).children().append('<span>' + rgb2hex(color) + '</span>');
+    $(BlockColor).children().prepend('<span>' + rgb2hex(color) + '</span>');
   });
 });
