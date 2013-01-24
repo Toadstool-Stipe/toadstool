@@ -28,7 +28,7 @@ label {
 }
 
 .instructional {
-  @extend %instructional;
+  @extend %stipe_instructional;
 }
 
 .fail {
@@ -36,5 +36,5 @@ label {
 }
 
 .inline_alert {
-  @extend %inline_alert;
+  @extend %stipe_inline_alert;
 }
