@@ -17,14 +17,20 @@
     <%= html_example 'ui_patterns/forms/text_input_error' %>
     <%= sass_example '_forms' %>
   </section>
+
+  <section id="primary_buttons">
+    <%= partial :'shared/_toadstool_subheader', :locals => { 
+      :header => 'Primary buttons', :text => 'Use defualt semantic HTML to create the following buttons.' 
+    } %>
+    <%= html_example 'ui_patterns/forms/primary_buttons' %>
+    <%= sass_example '_forms' %>
+  </section>
 	
 	
+  <%# all depricated partial calls %>
 	<%#= partial :"forms/username_input" %>
-	
 	<%#= partial :"forms/password_input" %>
-	
 	<%#= partial :"forms/primary_button" %>
-	
 	<%#= partial :"forms/disabled_button" %>
 	
 
