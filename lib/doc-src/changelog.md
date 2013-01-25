@@ -1,6 +1,7 @@
 # Toadstool Changelog
 
 ###0.1.2(roadmap)
+	toadstool branch: not created / stipe branch: not created
 * Remove all the IE7 support from the grid
 	* move all logic to suplimental gem for backwards compatibility
 
