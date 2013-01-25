@@ -1,5 +1,9 @@
 # Toadstool Changelog
 
+###0.1.2(roadmap)
+* Remove all the IE7 support from the grid
+	* move all logic to suplimental gem for backwards compatibility
+
 ###0.1.1(roadmap)
 	toadstool branch: custom_colors / stipe branch: not created
 * New process for adding custom colors to project/style guide
