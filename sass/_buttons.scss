@@ -1,14 +1,16 @@
 // Toadstool comes pre-loaded with a series of pre-developed buttons
-// Special thanks to Chad for the work (http://hellohappy.org/css3-buttons/)
-// To use, simply uncomment the buttons you want and extend the silent class
+// All style attributes are managed in the `_config.scss` file
+// -----------------------------------------------------------------------------
+// $button-color:  $delta-color;
+// $button-text-color: $white;
+// $button-line-height: 32;
+// $button-border-radius: 3;
+// $button-padding: 20;
+// $button-font-size: 18;
+// $button-weight: bold;
+// $button-text-shadow: true;
+// $button-box-shadow: true;
 // --------------------------------------------------------------------
-// Minimal
-@import "buttons/minimal_config"; // Minimal config options
-@import "stipe/buttons/lib/minimal"; // Sass UI code
-
-// Cupid-green
-@import "buttons/cupid_config"; // Minimal config options
-@import "stipe/buttons/lib/cupid-green"; // Sass UI code
 
 // Custom button extends and mixins
 // -----------------------------------------------------------------------
@@ -17,36 +19,19 @@
 
 // buttons
 // --------------------------------------------------------------------
-//* toadstool buttons */
-// button, a.button {
-// 	//@extend %stipe_buttons; // pre-loaded silent class, I know you want to nuke this!
-//   @include stipe-button;
-// }
-
-// Your actual CSS
 button, a.button {
-  @include stipe-button {
-    color: white;
-    line-height: em(32);
-    border-radius: em(5);
-    padding: 0 em(20);
-    font-size: 1.5em;
-    box-shadow: 0 em(5) em(10) 0 gray;
-    font-family: arial;
-    font-weight: bold;
-    &:hover {
-      @include stipe-button(darken($button-color, 20));
-      box-shadow: 0 em(2) em(10) 0 gray;
-    }
+  @include gloss-default;
+  &:nth-child(2) {
+    @include shiny-default;
+  }
+  &:nth-child(3) {
+    @include flat-default;
+  }
+  &:nth-child(4) {
+    @include three-dee;
+  }
+  margin-left: 1em;
+  &:nth-child(1) {
+    margin-left: 0;
   }
 }
-
-
-
-
-
-
-
-
-
-

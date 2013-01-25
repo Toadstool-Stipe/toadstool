@@ -163,10 +163,15 @@
 
 /////// Config defaults for buttons /////// 
 // -----------------------------------------------------------------------------
-// $button-color:                         $bravo-color;
-// $primary_button_border_color:          $bravo_color;
-// $secondary_button_border_color:        $bravo_gray;
-// $button_text:                          $white;
+// $button-color:  $delta-color;
+// $button-text-color: $white;
+// $button-line-height: 32;
+// $button-border-radius: 3;
+// $button-padding: 20;
+// $button-font-size: 18;
+// $button-weight: bold;
+// $button-text-shadow: true;
+// $button-box-shadow: true;
 
 /////// Config defaults for ``standard_rounded_border`` mixin /////// 
 // -----------------------------------------------------------------------------

@@ -76,10 +76,14 @@ $form_field_text:                     $primary_text;
 
 /////// Config defaults for buttons /////// 
 // -----------------------------------------------------------------------------
-$button-color:                        $bravo-color;
-$primary_button_border_color:         $bravo_color;
+$button-color:                        $delta-color;
 $secondary_button_border_color:       $bravo_gray;
 $button_text:                         $white;
+
+// Depricated variable
+$primary_button_border_color:         $bravo_color;
+
+
 
 /////// Config defaults for ``standard_rounded_border`` mixin /////// 
 // -----------------------------------------------------------------------------
