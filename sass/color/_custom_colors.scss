@@ -1,0 +1,37 @@
+
+// This mixin is only currently available in Stipe via the toadstool.scss
+@mixin extend_color_loop {
+  @each $name in $color_names {
+    $i: index($color_names, $name);
+    .#{$name} {
+      @extend %#{nth($color_names, $i)};
+    }
+  }
+}
+
+
+// This mixin is already in toadstool `/toadstool/sass/color/_stipe_extends.scss`
+// @mixin name_color_loop {
+//   @each $name in $color_names {
+//     $i: index($color_names, $name);
+//     %#{$name} {
+//       background: nth($color_var, $i);
+//     }
+//   }
+// }
+
+// This process will create the silent placeholder AND the OOCSS class
+// need to refactor so that silent placeholder is available in both style.scss and toadstool.scc
+// but the OOCSS class is generated in toadstool.scss
+
+// color vars
+$foo_color: green;
+$bar_color: orange;
+
+
+// color lists
+$color_names: foo_color bar_color;
+$color_var: $foo_color $bar_color; 
+
+@include name_color_loop;
+@include extend_color_loop;

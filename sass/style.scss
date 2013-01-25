@@ -30,7 +30,7 @@
 // ------------------------------------------------------------------------------
 @import "compass/css3";                      // Including the Compass CSS3 mixins
 @import "stipe/manifest";
-@import "color/extends";
+@import "color/stipe_extends";
 
 
 
@@ -40,6 +40,7 @@
 @import "forms";
 @import "buttons";
 @import "design";
+@import "color/custom_colors";
 @import "ui_patterns/**/*";    // manifest files
 @import "modules/**/*";        // manifest files
 @import "layouts/*";           // manifest files
