@@ -3,8 +3,8 @@
 # Gem to add glob-based imports to Sass
 require 'sass-globbing' 
 
-require '../stipe/lib/stipe.rb' # locally as a Compass extension
-# require 'stipe'
+# require '../stipe/lib/stipe.rb' # locally as a Compass extension
+require 'stipe'
 
 # Set this to the root of your project when deployed:
 http_path = "/"

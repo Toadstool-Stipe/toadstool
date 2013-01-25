@@ -5,7 +5,7 @@ gem 'sass'
 gem 'compass'
 gem 'sinatra-partial'
 gem 'rake'
-# gem 'stipe'
+gem 'stipe'
 gem 'fontcustomtoadstool'
 
 # Only to be used with non-rails projects
@@ -13,4 +13,4 @@ gem 'fontcustomtoadstool'
 gem 'sass-globbing'
 
 # Only use when doing gem development
-gem 'stipe', :path => '../stipe'
+# gem 'stipe', :path => '../stipe'
