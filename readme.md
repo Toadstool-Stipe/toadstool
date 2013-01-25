@@ -1,7 +1,7 @@
 #Welcome to Toadstool
 ![toadstool logo](/Anotheruiguy/toadstool/raw/master/public/images/toadstool-logo.png "toadstool - put that in your styleguide")
 
-	VERSION 0.1.0 / STIPE gem dependency 0.0.5.6
+	VERSION 0.1.0 / STIPE gem dependency 0.0.5.7
 
 Toadstool is a Style Guide framework. Concepts are simple, build in the abstract and apply to the semantic. 
 
