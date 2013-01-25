@@ -13,3 +13,7 @@
 * Added `contenteditable` support for code examples
 	* Users can now edit the code example in the view and then copy for use in other context of the application 
 	* UI Fail: You can't see the caret in the text. [Possible solution](http://jsbin.com/ehuki3/3/edit)
+* Updated button support
+	* Added new color swatch to colors view
+	* Deprecated `$primary_button_border_color` from the view
+	
