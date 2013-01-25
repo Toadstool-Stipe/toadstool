@@ -16,4 +16,5 @@
 * Updated button support
 	* Added new color swatch to colors view
 	* Deprecated `$primary_button_border_color` from the view
+* Deleted legacy button libraries, they all sucked anyway
 	
