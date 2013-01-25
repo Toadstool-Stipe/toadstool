@@ -18,6 +18,35 @@
 // buttons
 // --------------------------------------------------------------------
 //* toadstool buttons */
+// button, a.button {
+// 	//@extend %stipe_buttons; // pre-loaded silent class, I know you want to nuke this!
+//   @include stipe-button;
+// }
+
+// Your actual CSS
 button, a.button {
-	@extend %stipe_buttons; // pre-loaded silent class, I know you want to nuke this!
+  @include stipe-button {
+    color: white;
+    line-height: em(32);
+    border-radius: em(5);
+    padding: 0 em(20);
+    font-size: 1.5em;
+    box-shadow: 0 em(5) em(10) 0 gray;
+    font-family: arial;
+    font-weight: bold;
+    &:hover {
+      @include stipe-button(darken($button-color, 20));
+      box-shadow: 0 em(2) em(10) 0 gray;
+    }
+  }
 }
+
+
+
+
+
+
+
+
+
+

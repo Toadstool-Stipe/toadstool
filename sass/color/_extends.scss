@@ -93,8 +93,8 @@ $color_var: $alert_background_color $input_disabled $input_disabled_bkg $input_d
 /////// Config defaults for buttons /////// 
 // -----------------------------------------------------------------------------
 
-$color_names: primary_button_border_color secondary_button_border_color button_text;
-$color_var: $primary_button_border_color $secondary_button_border_color $button_text; 
+$color_names: button_color primary_button_border_color secondary_button_border_color button_text;
+$color_var: $button_color $primary_button_border_color $secondary_button_border_color $button_text; 
 
 @include name_color_loop;
 
