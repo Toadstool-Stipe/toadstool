@@ -1,36 +1,40 @@
-// Classes in the `_forms.scss` file take advantage of silent placeholder selectors written in Stipe.
+// Where does this code come from?
+
+// Placeholder extends with the `stipe_` prefix come from the Stipe gem. 
+// TO DO: link to github forms/extends
+// TO DO: link to github forms/mixins
+
+// TO DO: breakout list of config options
+
 // The variable UI parts of these placeholders are managed via your `_config.scss` file.
-// 
-// If you desire to not use these predefined CSS rules, simply remove the extended placeholder.
-// If you wish to add design elements to these base styles, simply add the desired rules to the selectors.
 
-
-// Custom form extends and mixins
+// Import custom extends and mixins
 // -----------------------------------------------------------------------
 @import "forms/*";
 
 // Your styles
 // -----------------------------------------------------------------------
 input[type=email], input[type=password], input[type=text], input[type=number] {
-  @extend %input_fields; 
+  @extend %stipe_input_fields; 
 }
 
+// not represented in the style guide view
 input[disabled], textarea[disabled], select[disabled], .disabled {
-  @extend %disabled_inputs;
+  @extend %stipe_disabled_inputs;
 }
 
 label {
-  @extend %form_labels;
+  @extend %stipe_form_labels;
 }
 
 .instructional {
-  @extend %instructional;
+  @extend %stipe_instructional;
 }
 
 .fail {
-  @extend %fail;
+  @extend %stipe_fail;
 }
 
 .inline_alert {
-  @extend %inline_alert;
+  @extend %stipe_inline_alert;
 }

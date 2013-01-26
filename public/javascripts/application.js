@@ -25,6 +25,13 @@ $(document).ready(function() {
 		event.preventDefault();
 		$(this).parents("p").siblings(".prettyprint").slideToggle("slow");
 	});
+
+  // these toggles are for the styleguide color views
+  $(".colorcode a").click(function (event) {
+    event.preventDefault();
+    $(this).parents('.toadstool_subheader').siblings('.hidden').slideToggle('slow');
+  });
+  // these toggles are for the styleguide color views
 	
 	
 	showEms();
@@ -69,6 +76,10 @@ function rgb2hex(rgb) {
 $(document).ready(function() {
   $('article.colorcode').children('div').each(function(index, BlockColor){
     var color = $(BlockColor).css("background-color"); 
-    $(BlockColor).children().append('<span>' + rgb2hex(color) + '</span>');
+    $(BlockColor).children().prepend('<span>' + rgb2hex(color) + '</span>');
+  });
+  $('article.colorcode > section').children('div').each(function(index, BlockColor){
+    var color = $(BlockColor).css("background-color"); 
+    $(BlockColor).children().prepend('<span>' + rgb2hex(color) + '</span>');
   });
 });

@@ -3,6 +3,17 @@
 
 @import "../config";
 
+
+// This mixin loops through a list of values to produce the necessary silent placeholders
+@mixin name_color_loop {
+	@each $name in $color_names {
+	  $i: index($color_names, $name);
+	  %#{$name} {
+	    background: nth($color_var, $i);
+	  }
+	}
+}
+
 /////// OOCSS color blocks ////////
 // ----------------------------------------------
 
@@ -12,283 +23,87 @@
 	background-color: $white;
 }
 
-%alpha_gray {
-	background-color: $alpha_gray;
+$color_names: alpha_gray bravo_gray charlie_gray delta_gray echo_gray fox_gray golf_gray hotel_gray india_gray;
+$color_var: $alpha_gray $bravo_gray $charlie_gray $delta_gray $echo_gray $fox_gray $golf_gray $hotel_gray $india_gray;
+@each $name in $color_names {
+  $i: index($color_names, $name);
+  %#{$name} {
+    background: nth($color_var, $i);
+  }
 }
 
-%bravo_gray {
-	background-color: $bravo_gray;
-}
-	
-%charlie_gray {
-	background-color: $charlie_gray;
-}
-
-%delta_gray {
-	background-color: $delta_gray;
-}
-	
-%echo_gray {
-	background-color: $echo_gray;
-}
-	
-%fox_gray {
-	background-color: $fox_gray;
-}
-
-%golf_gray {
-	background-color: $golf_gray;
-}
-
-%hotel_gray {
-	background-color: $hotel_gray;
-}
-
-%india_gray {
-	background-color: $india_gray;
-}
+@include name_color_loop;
 
 
+// Alpha and Bravo color objects
+// ----------------------------------------------
+$alpha_color_names: alpha_color alpha_color_bravo alpha_color_charlie alpha_color_delta alpha_color_echo alpha_color_fox alpha_color_golf alpha_color_hotel alpha_color_india alpha_color_juliet;
+$alpha_color_var: $alpha_color $alpha_color_bravo $alpha_color_charlie $alpha_color_delta $alpha_color_echo $alpha_color_fox $alpha_color_golf $alpha_color_hotel $alpha_color_india $alpha_color_juliet;
 
-//* Standard color objects */
-//* ---------------------- */
-%alpha_color {
-	background-color: $alpha_color;
-}
-%alpha_color_bravo {
-	background-color: $alpha_color_bravo;
-}
-%alpha_color_charlie {
-	background-color: $alpha_color_charlie;
-}
-%alpha_color_delta {
-	background-color: $alpha_color_delta;
-}
-%alpha_color_echo {
-	background-color: $alpha_color_echo;
-}
-%alpha_color_fox {
-	background-color: $alpha_color_fox;
-}
-%alpha_color_golf {
-	background-color: $alpha_color_golf;
-}
-%alpha_color_hotel {
-	background-color: $alpha_color_hotel;
-}
-%alpha_color_india {
-	background-color: $alpha_color_india;
-}
-%alpha_color_juliet {
-	background-color: $alpha_color_juliet;
-}
+$bravo_color_names: bravo_color bravo_color_bravo bravo_color_charlie bravo_color_delta bravo_color_echo bravo_color_fox bravo_color_golf bravo_color_hotel bravo_color_india bravo_color_juliet;
+$bravo_color_var: $bravo_color $bravo_color_bravo $bravo_color_charlie $bravo_color_delta $bravo_color_echo $bravo_color_fox $bravo_color_golf $bravo_color_hotel $bravo_color_india $bravo_color_juliet;
 
+// Sass' join function can only jpin two lists.
+// Until I get a better idea, this is what I get.
 
+$color_names: join($alpha_color_names, $bravo_color_names);
+$color_var: join($alpha_color_var, $bravo_color_var);
 
+@include name_color_loop;
 
+// Charlie and Delta color objects
+// ----------------------------------------------
+$charlie_color_names: charlie_color charlie_color_bravo charlie_color_charlie charlie_color_delta charlie_color_echo charlie_color_fox charlie_color_golf charlie_color_hotel charlie_color_india charlie_color_juliet;
+$charlie_color_var: $charlie_color $charlie_color_bravo $charlie_color_charlie $charlie_color_delta $charlie_color_echo $charlie_color_fox $charlie_color_golf $charlie_color_hotel $charlie_color_india $charlie_color_juliet;
 
-%bravo_color {
-	background-color: $bravo_color;
-}
-%bravo_color_bravo {
-	background-color: $bravo_color_bravo;
-}
-%bravo_color_charlie {
-	background-color: $bravo_color_charlie;
-}
-%bravo_color_delta {
-	background-color: $bravo_color_delta;
-}
-%bravo_color_echo {
-	background-color: $bravo_color_echo;
-}
-%bravo_color_fox {
-	background-color: $bravo_color_fox;
-}
-%bravo_color_golf {
-	background-color: $bravo_color_golf;
-}
-%bravo_color_hotel {
-	background-color: $bravo_color_hotel;
-}
-%bravo_color_india {
-	background-color: $bravo_color_india;
-}
-%bravo_color_juliet {
-	background-color: $bravo_color_juliet;
-}
+$delta_color_names: delta_color delta_color_bravo delta_color_charlie delta_color_delta delta_color_echo delta_color_fox delta_color_golf delta_color_hotel delta_color_india delta_color_juliet;
+$delta_color_var: $delta_color $delta_color_bravo $delta_color_charlie $delta_color_delta $delta_color_echo $delta_color_fox $delta_color_golf $delta_color_hotel $delta_color_india $delta_color_juliet;
 
+$color_names: join($charlie_color_names, $delta_color_names);
+$color_var: join($charlie_color_var, $delta_color_var);
 
+@include name_color_loop;
 
+// Echo color objects
+// ----------------------------------------------
+$color_names: echo_color echo_color_bravo echo_color_charlie echo_color_delta echo_color_echo echo_color_fox echo_color_golf echo_color_hotel echo_color_india echo_color_juliet;
+$color_var: $echo_color $echo_color_bravo $echo_color_charlie $echo_color_delta $echo_color_echo $echo_color_fox $echo_color_golf $echo_color_hotel $echo_color_india $echo_color_juliet;
 
-
-	
-%charlie_color {
-	background-color: $charlie_color;
-}
-%charlie_color_bravo {
-	background-color: $charlie_color_bravo;
-}
-%charlie_color_charlie {
-	background-color: $charlie_color_charlie;
-}
-%charlie_color_delta {
-	background-color: $charlie_color_delta;
-}
-%charlie_color_echo {
-	background-color: $charlie_color_echo;
-}
-%charlie_color_fox {
-	background-color: $charlie_color_fox;
-}
-%charlie_color_golf {
-	background-color: $charlie_color_golf;
-}
-%charlie_color_hotel {
-	background-color: $charlie_color_hotel;
-}
-%charlie_color_india {
-	background-color: $charlie_color_india;
-}
-%charlie_color_juliet {
-	background-color: $charlie_color_juliet;
-}
-
-
-
-
-
-	
-%delta_color {
-	background-color: $delta_color;
-}
-%delta_color_bravo {
-	background-color: $delta_color_bravo;
-}
-%delta_color_charlie {
-	background-color: $delta_color_charlie;
-}
-%delta_color_delta {
-	background-color: $delta_color_delta;
-}
-%delta_color_echo {
-	background-color: $delta_color_echo;
-}
-%delta_color_fox {
-	background-color: $delta_color_fox;
-}
-%delta_color_golf {
-	background-color: $delta_color_golf;
-}
-%delta_color_hotel {
-	background-color: $delta_color_hotel;
-}
-%delta_color_india {
-	background-color: $delta_color_india;
-}
-%delta_color_juliet {
-	background-color: $delta_color_juliet;
-}
-
-
-
-
-
-	
-%echo_color {
-	background-color: $echo_color;
-}
-%echo_color_bravo {
-	background-color: $echo_color_bravo;
-}
-%echo_color_charlie {
-	background-color: $echo_color_charlie;
-}
-%echo_color_delta {
-	background-color: $echo_color_delta;
-}
-%echo_color_echo {
-	background-color: $echo_color_echo;
-}
-%echo_color_fox {
-	background-color: $echo_color_fox;
-}
-%echo_color_golf {
-	background-color: $echo_color_golf;
-}
-%echo_color_hotel {
-	background-color: $echo_color_hotel;
-}
-%echo_color_india {
-	background-color: $echo_color_india;
-}
-%echo_color_juliet {
-	background-color: $echo_color_juliet;
-}
+@include name_color_loop;		
 
 
 /////// semantic color blocks ////////
 // ----------------------------------------------
-%white {
-	background: $white;
-}
+$color_names: white shadow_color primary_header_color heading_font_weight primary_text secondary_text href_color ins_color mark_color webkit_tap_hightlight selection_color selection_text_color border_color primary_button_border_color secondary_button_border_color button_text standard_hr_color standard_border_color;
+$color_var: $white $shadow_color $primary_header_color $heading_font_weight $primary_text $secondary_text $href_color $ins_color $mark_color $webkit_tap_hightlight $selection_color $selection_text_color $border_color $primary_button_border_color $secondary_button_border_color $button_text $standard_hr_color $standard_border_color; 
 
-%shadow_color {
-	background: $shadow_color;
-}
+@include name_color_loop;
 
-%primary_header_color {
-	background: $primary_header_color;
-}
 
-%heading_font_weight {
-	background: $heading_font_weight;
-}
+/////// Config defaults for forms /////// 
+// -----------------------------------------------------------------------------
 
-%primary_text {
-	background: $primary_text;
-}
+$color_names: alert_background_color input_disabled input_disabled_bkg input_disabled_border input_disabled_text form_field_background_color form_field_focus_color form_field_fail_bkg form_field_border form_field_border_fail form_field_focus_border_color form_field_text_fail form_label_color optional_field_text_color instructional_text placeholder_text inline_alert_bkg_color inline_alert_text_color;
+$color_var: $alert_background_color $input_disabled $input_disabled_bkg $input_disabled_border $input_disabled_text $form_field_background_color $form_field_focus_color $form_field_fail_bkg $form_field_border $form_field_border_fail $form_field_focus_border_color $form_field_text_fail $form_label_color $optional_field_text_color $instructional_text $placeholder_text $inline_alert_bkg_color $inline_alert_text_color; 
 
-%href_color {
-	background: $href_color;
-}
+@include name_color_loop;
 
-%ins_color {
-	background: $ins_color;
-}
 
-%mark_color {
-	background: $mark_color;
-}
 
-%webkit_tap_hightlight {
-	background: $webkit_tap_hightlight;
-}
+/////// Config defaults for buttons /////// 
+// -----------------------------------------------------------------------------
 
-%selection_color {
-	background: $selection_color;
-}
+$color_names: button_color primary_button_border_color secondary_button_border_color button_text;
+$color_var: $button_color $primary_button_border_color $secondary_button_border_color $button_text; 
 
-%selection_text_color {
-	background: $selection_text_color;
-}
+@include name_color_loop;
 
-%border_color {
-	background: $border_color;
-}
 
-%primary_button_border_color {
-	background: $primary_button_border_color;
-}
 
-%secondary_button_border_color {
-	background: $secondary_button_border_color;
-}
 
-%button_text {
-	background: $button_text;
-}
 
-%standard_hr_color {
-	background: $standard_hr_color;
-}
+
+
+
+
+

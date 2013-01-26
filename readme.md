@@ -1,6 +1,8 @@
 #Welcome to Toadstool
 ![toadstool logo](/Anotheruiguy/toadstool/raw/master/public/images/toadstool-logo.png "toadstool - put that in your styleguide")
 
+	VERSION 0.1.0 / STIPE gem dependency 0.0.5.7
+
 Toadstool is a Style Guide framework. Concepts are simple, build in the abstract and apply to the semantic. 
 
 ##Run the app
@@ -19,6 +21,9 @@ task "assets:precompile" do
 end
 ```
 This task is automatically invoked when you run `rake server`; there should be no need to run it manually.
+
+###Toadstool and Sass
+The Toadstool style guide framework makes heavy use of Sass as it's primary styling language [read more ...](http://goo.gl/72YhA)
 
 ###Developing Sass
 Be sure to run the `compass watch` process in the background. This really is the best way to process edited Sass as in the terminal it will be easy to see the Sass error log if there are issues.
@@ -70,26 +75,5 @@ Another common versioning issue is that there may be changes in the view that ar
 What if we were to bite this off into smaller chunks? What if at fist we we're to only decide things like color pallet, typography, forms and buttons? This is pretty cool and most will agree that this is a process that most designers go through. The breakdown is how to document these choices. Historically designers did this with the comp. Today I say do it with a style guide. 
 
 ##Element, module, view
-The process is simple, the ideas are basic and the process is tried and true. Toadstool is set up to support some basic concepts that help you build a solid UI foundation that will allow for greater team integration, promote quality code reuse and build solid consistency in your app.  
+The process is simple, the ideas are basic and the process is tried and true. Toadstool is set up to support some basic concepts that help you build a solid UI foundation that will allow for greater team integration, promote quality code reuse and build solid consistency in your app.  [Clean out your Sass Junk-Drawer](http://gist.io/4436524) is a post written that best details this process and Toadstool's file structure.
 
-###The Element
-The root most part of your UI is the elements of the design. Every design can be broken down to these basic elements, typography, colors, grid, forms and buttons. As the UI developer, by coding these first, you will remove the necessity to revisit these later. 
-
-[Stipe](https://github.com/Anotheruiguy/stipe) helps with much of the heavy lifting and provides a great foundation to get started with. You as the UI developer, you simply have to update the values of your style guide [_config.scss](http://goo.gl/PqQSK) file. Toadstool and [Stipe](https://github.com/Anotheruiguy/stipe) have been carefully engineered and updated with tender care with each project deployment to make this process as easy as possible to customize. 
-
-###The Module
-Once the elemental foundation is complete, it's time to get to work. Unlike 'bootstrap' frameworks, Toadstool comes with very little pre-written UI code. This is where you, the UI developer needs to get to work. What Toadstool provides is a good development structure in which to create your modules and document your code.
-
-Within the view structure of Toadstool there is a directory for Modules. As modules are developed, each module should be placed within it's own directory. Each module directory should consist of a `view.erb` file that provides the document view for the style guide as well as the `.erb` file(s) needed for the module itself. 
-
-The module itself needs to be written from an abstract perspective. This module bay be a partial that can be placed anywhere in the site in any view. That's the important part. Regardless of how you received the visual spec for this module, that is only one representation of that module. It's width, always 100% of it's container. It's height always directed by the content within. Think Responsive baby!
-
-The Sass is the skin for the module. Located in the Sass part of the style guide there is also a directory for modules and in there should be a Sass file named the same as the module .erb. This is the glue. This is the uniform structure that makes scaleability and modularity successful. 
-
-###Module versus pattern
-One can argue that any given module can be broken down into smaller repeatable UI patterns. This is a gray area and always subject to interpretation and the point of development. One easy distinction is that a UI pattern is more then an element, but less then a full blown module. Where those lines exist are up to your team. 
-
-###The view
-The last part of the puzzle is the assembly of the modules into a view template or layout file. The number of view templates will vary greatly depending on the size of the application. It is my best practice to namespace the view template with a class at the `html` or `body` tag. In the `views` directory will be a `layouts` directory. Correspondingly in the Sass directory will be a `layouts` directory as well. 
-
-For the purpose of the style guide, it is suggested that the layout ERB files contain no markup other then the structural containers needed to display the modules. The modules themselves would be pulled into the view via partials. This is necessary to reduce code duplication, increase maintainability and promote reusability of the engineered modules.
