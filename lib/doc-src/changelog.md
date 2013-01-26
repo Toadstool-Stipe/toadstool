@@ -11,6 +11,12 @@
 	* TO DO - update colors read me to illustrate process
 	* TO DO - Make `extend_color_loop` universally available 
 	* TO DO - Make silent placeholder classes available in both `style.scss` and `toadstool.scss`, but OOCSS classes are only generated in `toadstool.scss` and are available to `style.scss`
+* Breakapart `_config.scss` 
+	* New buttons illustrate the configurable options in the `_buttons.scss` file. 
+	* TO DO - Config options can be addressed at this level? 
+	* TO DO - test to see if these config options carry throughout all the code no matter where a button is created
+* BUG FIX
+	* nth-child buttons: need to remove the left margin for mobile breakpoint
 
 ###0.1.0
 * Setting up normal versioning
