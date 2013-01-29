@@ -5,6 +5,7 @@
 
 // Toadstool styleguide UI manifest
 // ------------------------------------------------------------------------------
+@import "config";  // Really, just need the typography congif stuff -- rafactor this
 @import "stipe/toadstool/ui_manifest";           // do not delete
 @import "color/stipe_extends";
 

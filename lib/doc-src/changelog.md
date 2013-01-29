@@ -16,7 +16,11 @@
 	* TO DO - Config options can be addressed at this level? 
 	* TO DO - test to see if these config options carry throughout all the code no matter where a button is created
 * BUG FIX
-	* nth-child buttons: need to remove the left margin for mobile breakpoint
+	* Calling `_confg` into `toadstool.scss`
+		* updating the `$font-size` resets the size for the prod css, but not toadstool
+		* adding the `_config.scss` to the `toadstool.scss` file will ensure that the custom values are persisted
+		* TO DO: refactor - break apart the typography configs
+	* TO DO nth-child buttons: need to remove the left margin for mobile breakpoint
 
 ###0.1.0
 * Setting up normal versioning
