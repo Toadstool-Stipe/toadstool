@@ -6,7 +6,7 @@
 	* move all logic to suplimental gem for backwards compatibility
 
 ###0.1.1(roadmap)
-`toadstool branch: custom_colors / stipe branch: custom_colors`
+`toadstool branch: 0_1_1 / stipe branch: 0_0_5_8`
 * New process for adding custom colors to project/style guide
 	* TO DO - update colors read me to illustrate process
 	* TO DO - Make `extend_color_loop` universally available 
