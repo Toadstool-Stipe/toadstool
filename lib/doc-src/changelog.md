@@ -39,4 +39,5 @@
 	* Added new color swatch to colors view
 	* Deprecated `$primary_button_border_color` from the view
 * Deleted legacy button libraries, they all sucked anyway
+* Updated commonly named color values with `' '` to keep Sass from converting names to hex values
 	
