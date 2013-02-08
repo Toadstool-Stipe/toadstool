@@ -11,6 +11,7 @@
 	* TO DO - update colors read me to illustrate process
 	* TO DO - Make `extend_color_loop` universally available 
 	* TO DO - Make silent placeholder classes available in both `style.scss` and `toadstool.scss`, but OOCSS classes are only generated in `toadstool.scss` and are available to `style.scss`
+* Added [Pow](http://pow.cx/) support
 * Breakapart `_config.scss` 
 	* New buttons illustrate the configurable options in the `_buttons.scss` file. 
 	* TO DO - Config options can be addressed at this level? 
