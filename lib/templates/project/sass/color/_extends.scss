@@ -1,0 +1,109 @@
+// OOCSS Color placeholders are necessary at the style guide level as to ensure that 
+// the colors are being generated from the proper context. 
+
+@import "../config";
+
+
+// This mixin loops through a list of values to produce the necessary silent placeholders
+@mixin name_color_loop {
+	@each $name in $color_names {
+	  $i: index($color_names, $name);
+	  %#{$name} {
+	    background: nth($color_var, $i);
+	  }
+	}
+}
+
+/////// OOCSS color blocks ////////
+// ----------------------------------------------
+
+//* Standard grayscale objects */
+//* -------------------------- */
+%white {
+	background-color: $white;
+}
+
+$color_names: alpha_gray bravo_gray charlie_gray delta_gray echo_gray fox_gray golf_gray hotel_gray india_gray;
+$color_var: $alpha_gray $bravo_gray $charlie_gray $delta_gray $echo_gray $fox_gray $golf_gray $hotel_gray $india_gray;
+@each $name in $color_names {
+  $i: index($color_names, $name);
+  %#{$name} {
+    background: nth($color_var, $i);
+  }
+}
+
+@include name_color_loop;
+
+
+// Alpha and Bravo color objects
+// ----------------------------------------------
+$alpha_color_names: alpha_color alpha_color_bravo alpha_color_charlie alpha_color_delta alpha_color_echo alpha_color_fox alpha_color_golf alpha_color_hotel alpha_color_india alpha_color_juliet;
+$alpha_color_var: $alpha_color $alpha_color_bravo $alpha_color_charlie $alpha_color_delta $alpha_color_echo $alpha_color_fox $alpha_color_golf $alpha_color_hotel $alpha_color_india $alpha_color_juliet;
+
+$bravo_color_names: bravo_color bravo_color_bravo bravo_color_charlie bravo_color_delta bravo_color_echo bravo_color_fox bravo_color_golf bravo_color_hotel bravo_color_india bravo_color_juliet;
+$bravo_color_var: $bravo_color $bravo_color_bravo $bravo_color_charlie $bravo_color_delta $bravo_color_echo $bravo_color_fox $bravo_color_golf $bravo_color_hotel $bravo_color_india $bravo_color_juliet;
+
+// Sass' join function can only jpin two lists.
+// Until I get a better idea, this is what I get.
+
+$color_names: join($alpha_color_names, $bravo_color_names);
+$color_var: join($alpha_color_var, $bravo_color_var);
+
+@include name_color_loop;
+
+// Charlie and Delta color objects
+// ----------------------------------------------
+$charlie_color_names: charlie_color charlie_color_bravo charlie_color_charlie charlie_color_delta charlie_color_echo charlie_color_fox charlie_color_golf charlie_color_hotel charlie_color_india charlie_color_juliet;
+$charlie_color_var: $charlie_color $charlie_color_bravo $charlie_color_charlie $charlie_color_delta $charlie_color_echo $charlie_color_fox $charlie_color_golf $charlie_color_hotel $charlie_color_india $charlie_color_juliet;
+
+$delta_color_names: delta_color delta_color_bravo delta_color_charlie delta_color_delta delta_color_echo delta_color_fox delta_color_golf delta_color_hotel delta_color_india delta_color_juliet;
+$delta_color_var: $delta_color $delta_color_bravo $delta_color_charlie $delta_color_delta $delta_color_echo $delta_color_fox $delta_color_golf $delta_color_hotel $delta_color_india $delta_color_juliet;
+
+$color_names: join($charlie_color_names, $delta_color_names);
+$color_var: join($charlie_color_var, $delta_color_var);
+
+@include name_color_loop;
+
+// Echo color objects
+// ----------------------------------------------
+$color_names: echo_color echo_color_bravo echo_color_charlie echo_color_delta echo_color_echo echo_color_fox echo_color_golf echo_color_hotel echo_color_india echo_color_juliet;
+$color_var: $echo_color $echo_color_bravo $echo_color_charlie $echo_color_delta $echo_color_echo $echo_color_fox $echo_color_golf $echo_color_hotel $echo_color_india $echo_color_juliet;
+
+@include name_color_loop;		
+
+
+/////// semantic color blocks ////////
+// ----------------------------------------------
+$color_names: 'white' shadow_color primary_header_color heading_font_weight primary_text secondary_text href_color ins_color mark_color webkit_tap_hightlight selection_color selection_text_color border_color primary_button_border_color secondary_button_border_color button_text standard_hr_color standard_border_color;
+$color_var: $white $shadow_color $primary_header_color $heading_font_weight $primary_text $secondary_text $href_color $ins_color $mark_color $webkit_tap_hightlight $selection_color $selection_text_color $border_color $primary_button_border_color $secondary_button_border_color $button_text $standard_hr_color $standard_border_color; 
+
+@include name_color_loop;
+
+
+/////// Config defaults for forms /////// 
+// -----------------------------------------------------------------------------
+
+$color_names: alert_background_color input_disabled input_disabled_bkg input_disabled_border input_disabled_text form_field_background_color form_field_focus_color form_field_fail_bkg form_field_border form_field_border_fail form_field_focus_border_color form_field_text_fail form_label_color optional_field_text_color instructional_text placeholder_text inline_alert_bkg_color inline_alert_text_color;
+$color_var: $alert_background_color $input_disabled $input_disabled_bkg $input_disabled_border $input_disabled_text $form_field_background_color $form_field_focus_color $form_field_fail_bkg $form_field_border $form_field_border_fail $form_field_focus_border_color $form_field_text_fail $form_label_color $optional_field_text_color $instructional_text $placeholder_text $inline_alert_bkg_color $inline_alert_text_color; 
+
+@include name_color_loop;
+
+
+
+/////// Config defaults for buttons /////// 
+// -----------------------------------------------------------------------------
+
+$color_names: button_color primary_button_border_color secondary_button_border_color button_text;
+$color_var: $button_color $primary_button_border_color $secondary_button_border_color $button_text; 
+
+@include name_color_loop;
+
+
+
+
+
+
+
+
+
+
