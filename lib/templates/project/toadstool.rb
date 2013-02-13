@@ -1,12 +1,7 @@
 # Those little ditties that Sinatra needs to make the magic happen
 # -----------------------------------------------------------------------
 require 'rubygems'
-require 'compass'
-require 'sass'
 require 'net/http'
-
-require 'stipe'               # installed as a gem
-# require '../stipe/lib/stipe.rb' # locally as a Compass extension
 
 # If you're using bundler, you will need to add this
 require 'bundler/setup'
