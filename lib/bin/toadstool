@@ -13,7 +13,7 @@ module Toadstool
     include Thor::Actions
 
     # Define arguments and options
-    argument :name
+    argument :name, {:default => './'}
     
     def self.source_root
       APP_PATH
