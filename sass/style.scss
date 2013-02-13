@@ -36,6 +36,6 @@
 @import "forms";
 @import "buttons";
 @import "design";
-@import "ui_patterns/**/*";    // manifest files
-@import "modules/**/*";        // manifest files
-@import "layouts/*";           // manifest files
+@import "ui_patterns/example_pattern/example_pattern";
+@import "modules/example_module/example_module";
+@import "layouts/example_layout";

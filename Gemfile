@@ -11,7 +11,7 @@ gem 'rake'
 
 # Only to be used with non-rails projects
 # https://github.com/chriseppstein/sass-globbing#use-with-ruby-on-rails
-gem 'sass-globbing'
+# gem 'sass-globbing'
 
 # Only use when doing gem development
 gem 'stipe', :path => '../stipe'

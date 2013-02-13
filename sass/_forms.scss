@@ -10,7 +10,8 @@
 
 // Import custom extends and mixins
 // -----------------------------------------------------------------------
-@import "forms/*";
+@import "forms/mixins";
+@import "forms/extends";
 
 // Your styles
 // -----------------------------------------------------------------------

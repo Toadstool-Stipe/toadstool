@@ -8,11 +8,12 @@ PATH
 PATH
   remote: ./
   specs:
-    toadstool (0.0.0.1)
+    toadstool (0.0.0.2)
       compass (>= 0.11)
       sass (>= 3.2.1)
       sinatra
       sinatra-partial
+      stipe (>= 0.0.5.7.4)
 
 GEM
   remote: http://rubygems.org/
@@ -28,8 +29,6 @@ GEM
       rack
     rake (10.0.3)
     sass (3.2.5)
-    sass-globbing (1.0.0)
-      sass (>= 3.1)
     sinatra (1.3.4)
       rack (~> 1.4)
       rack-protection (~> 1.3)
@@ -45,7 +44,6 @@ DEPENDENCIES
   compass
   rake
   sass
-  sass-globbing
   sinatra
   sinatra-partial
   stipe!
