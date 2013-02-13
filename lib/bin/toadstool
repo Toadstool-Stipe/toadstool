@@ -6,7 +6,7 @@ require "thor"
 require "thor/group"
 require 'pathname'
 
-APP_PATH = File.expand_path('../../..', __FILE__)
+APP_PATH = File.expand_path(File.join(__FILE__, '../../templates'))
 
 module Toadstool
   class Install < Thor::Group
@@ -20,17 +20,22 @@ module Toadstool
     end
 
     def install_app
-      directory "doc-src", "#{name}/doc-src"
-      directory "public", "#{name}/public"
-      directory "sass", "#{name}/sass"
-      directory "views", "#{name}/views"
+      # Per https://github.com/wycats/thor/pull/175#issuecomment-2250270
+      # If any empty directory is found, it's copied and all .empty_directory files are ignored. 
+      # If any file name is wrapped within % signs, the text within the % signs will be executed 
+      # as a method and replaced with the returned value.
       
-      copy_file "config.rb", "#{name}/config.rb"
-      copy_file "config.ru", "#{name}/config.ru"
-      copy_file "Gemfile", "#{name}/Gemfile"
-      copy_file "Rakefile", "#{name}/Rakefile"
-      copy_file "readme.md", "#{name}/readme.md"
-      copy_file "toadstool.rb", "#{name}/toadstool.rb"
+      directory "project/doc-src", "#{name}/doc-src"
+      directory "project/public", "#{name}/public"
+      directory "project/sass", "#{name}/sass"
+      directory "project/views", "#{name}/views"
+      
+      copy_file "project/config.rb", "#{name}/config.rb"
+      copy_file "project/config.ru", "#{name}/config.ru"
+      copy_file "project/Gemfile", "#{name}/Gemfile"
+      copy_file "project/Rakefile", "#{name}/Rakefile"
+      copy_file "project/readme.md", "#{name}/readme.md"
+      copy_file "project/toadstool.rb", "#{name}/toadstool.rb"
     end
   end
   
