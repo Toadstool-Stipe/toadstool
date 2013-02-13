@@ -88,19 +88,6 @@ If you prefer to use a Google Font, use the following as example:
 @import url(http://fonts.googleapis.com/css?family=Emblema+One);
 ```
 
-###FontCustom.sass
-Toadstool fully supports a custom build of [FontCustom.scss](https://github.com/blackfalcon/fontcustom.sass). 
-
-Just place your SVG or EPS icons in the `icons/` directory and run `fontcustom compile icons`. Your icon fonts will be placed in `public/fonts/` and `sass/typography/_fontcustom.scss` will be created or updated for you. 
-
-__NOTE:__ FontCustom is slow (really, really slow) with no indication that it is running. Be patient. 
-
-To include the generated Sass from FontCustom, simply comment these lines from the `style.scss` file
-
-```scss
-@import "typography/fontcustom"; // auto-generated file from fontcustom application
-```
-
 ###Using the Stipe gem
 The Stipe gem will be installed on your machine and the following line calles in the necessary libraries.
 ```scss

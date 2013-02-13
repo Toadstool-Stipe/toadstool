@@ -6,7 +6,7 @@ gem 'compass'
 gem 'sinatra-partial'
 gem 'rake'
 # gem 'stipe'
-gem 'fontcustomtoadstool'
+# gem 'fontcustomtoadstool'
 # gem 'compass-growl'
 
 # Only to be used with non-rails projects
