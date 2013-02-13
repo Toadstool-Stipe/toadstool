@@ -1,0 +1,125 @@
+// Twitter's 'Font-Awesome' is installed in Toadstool
+// see http://goo.gl/4JkBd for list of icon options
+// Stipe has all icon classes loaded as silent classes, to activate use the following example
+// -----------------------------------------------------------------------
+// .icon-glass {
+// 	@extend %icon-glass;
+// }
+
+
+
+// Zocial's icon font is installed in Toadstool
+// see http://goo.gl/t92t5 for list of icon options
+// Stipe has all icon classes loaded as silent classes, to activate use the following example
+// -----------------------------------------------------------------------
+// .zocial-amazon {
+// 	@extend %zocial-amazon;
+// }
+
+
+
+// Import of default text bootstrap settings
+// -----------------------------------------------------------------------
+// @import "stipe/typography/default"; // Comment out if unwanted
+
+
+
+// Customize the following to fit your specifications
+// Commented out styles represent Toadstool's default bootstrap styles
+// -----------------------------------------------------------------------
+html {
+	// font: #{$font_size / 16 * 1em}/$line_height $primary_font_family;
+	// color: $primary_text;
+}
+
+[class*="toadstool"] {
+	h1 {
+		@extend %headings_1;
+		font-weight: bold;
+	}
+	h2 {
+		@extend %headings_2;
+		color: $charlie_gray;
+		a {
+			font-size: 0.8em;
+			margin-left: em(5);
+		}
+	}
+	p, ul {
+		color: $charlie_gray;
+		@include text(14);
+	}
+}
+
+// This is used to keep heading examples from poorly wrapping in mobile
+.element_example {
+  @media #{$mobile} {
+    h1, h2, h3, h4, h5, h6 {
+    	width: auto;
+    	white-space: nowrap;
+    	overflow: hidden;
+    	text-overflow: ellipsis;
+    }
+  }
+}
+
+
+
+h3 {
+	// font-size:  1.17em;  // user agent default
+	// @extend %headings_3;
+}
+
+h4 {
+	// font-size:  1em;  // user agent default
+	// @extend %headings_4;
+}
+
+h5 {
+	// font-size:  0.83em;  // user agent default
+	// @extend %headings_5;
+}
+
+h6 {
+	 // font-size:  0.75em;  // user agent default
+	 // @extend %headings_6;
+}
+
+// Standard body text support
+// --------------------------------
+p {
+	// margin-bottom: 1em;
+	// text-indent: 0;
+	// &:last-child {
+	// 	margin-bottom: 0;
+	// }
+}
+
+b {
+	// &:after {
+	// 	content: " ";
+	// }
+}
+
+
+// :link Pseudo-class is totally not necessary as I can tell
+// code here to combat legacy code
+a {
+	// &:link {
+	// 	color: $href_color;
+	// 	text-decoration: none;
+	// }
+	// &:hover, &:active {
+	// 	text-decoration: underline;
+	// }
+	// &:visited {
+	// 	color: $href_color;
+	// }
+}
+
+// .toadstool_header {
+// 	h1 {
+// 		color: $bravo_primary;
+// 		font-size: em($heading_1);
+// 	}
+// }

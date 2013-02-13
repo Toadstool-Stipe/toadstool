@@ -1,0 +1,49 @@
+.toadstool_nav {
+  ol {
+    @include flexbox(100%, auto);
+    background: $bravo_gray;
+    font-weight: bold;
+    @media #{$mobile} {
+      @include flexbox(100%, auto, $orient: vertical);
+      @include linear_gradient_w3c ($bravo_gray, #{$bravo_gray 30%,$delta_gray 100%});
+    }
+  }
+  li {
+    @include flex(1);
+    text-align: center;
+    line-height: 3em;
+    background: $white;
+    color: $alpha_gray;
+    border-radius: em(5) em(5) 0 0;
+    @media #{$mobile} {
+      width: 100%;
+      border-radius: 0;
+      font-size: 1.2em;
+      background: transparent;
+      color: $echo_gray;
+      border-top: 1px solid $echo_gray;
+    }
+  }
+  a {
+    color: $white;
+    @include linear_gradient_w3c ($bravo_gray, #{$bravo_gray 50%,$delta_gray 100%}); 
+    .no-flexbox & {
+      padding: 0 em(10);
+    }
+    @media #{$mobile} {
+      background: transparent;
+    }
+    display: block;
+    &:hover {
+      text-decoration: none;
+      background: $white;
+      color: $alpha_gray;
+      border-radius: em(5) em(5) 0 0;
+      @media #{$mobile} {
+       border-radius: 0;
+       background: transparent;
+       color: $echo_gray;
+      }
+    }
+  }
+}

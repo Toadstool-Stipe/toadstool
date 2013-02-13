@@ -1,0 +1,16 @@
+// UI pattern to support the visual em value of the view
+
+.emBox {
+	position: fixed;
+	padding: em(5) em(10);
+	background: $bravo_gray; 
+	color: $white; 
+	font-weight: bold;
+	font-size: 1em;
+	bottom: 0;
+	left: 0;
+	border-radius: 0 em(5) 0 0;
+	.screen-width {
+		@extend %icon-fullscreen;
+	}
+}

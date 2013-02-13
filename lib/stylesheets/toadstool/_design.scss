@@ -1,0 +1,55 @@
+
+
+.styleguide_main_content {
+	@include full_width_block(12);
+	
+	.styleguide_article, .element_example {
+		@include grid(12.25, alphaomega, $grid_align: center, $grid_uom: em);
+		
+		@media #{$tablet_portrait} {
+		 @include grid(12.25, alphaomega, $grid_align: center);
+		}
+		
+		@media #{$mobile} {
+		 @include grid(12.25, alphaomega, $grid_align: center);
+		}
+		
+		.toadstool_header, .toadstool_subheader {
+			@include grid(12);
+			@media #{$mobile} {
+			 @include grid(4, $grid_context: 4);
+			}
+		}
+		
+		section {
+			clear: both;
+			&:nth-of-type(1n+2) {
+				border-top: 1px dotted;
+				padding-top: em(20);
+			}
+		}
+	}
+	.element_example {
+		margin-bottom: em(20);
+		float: left;
+		background-image: url(data:image/gif;base64,R0lGODlhUAABAIAAAP/////l5SwAAAAAUAABAAACC4SPocvtD6NsqIICADs=);
+		&.col_24_grid {
+  		background-image: url(data:image/gif;base64,R0lGODlhKAABAIAAAP/////l5SH5BAAAAAAALAAAAAAoAAEAAAIIhB2py+15TAEAOw==);
+		}
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+.mobi_hidden {
+	@media #{$mobile} {
+		display: none;
+	}
+}
+
+code {
+	padding: em(2) em(5);
+	background: $charlie_color_hotel;
+}

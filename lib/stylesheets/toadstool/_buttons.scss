@@ -1,0 +1,29 @@
+[class*="toadstool"] {
+	.nav_toggle {
+		@include linear_gradient_w3c ($alpha_gray, #{$delta_gray 0%, $alpha_gray 100%});
+		&:hover {
+			@include linear_gradient_w3c ($alpha_gray, #{$alpha_gray 0%, $delta_gray 100%});
+			border-color: $alpha_gray;
+			box-shadow: 0 0 0;
+		}
+		text-shadow: 0 0 0;
+		box-shadow: 0 0 0;
+		border-color: $alpha_gray;
+		float: right;
+		display: none;
+		color: $white;
+		@media #{$mobile} {
+			display: block;
+			width: auto;
+			padding: rem(15) rem(10) rem(10) rem(10);
+			font-weight: normal;
+			span {
+				&:after {
+					content: "\f00b"; 
+					font-family: $icon_font_alpha;
+					font-size: 2em;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,220 @@
+// Toadstool's view
+// ----------------------------------------------
+.colorcode {
+  margin-bottom: 1.5em;
+  @extend %clearfix;
+  @media #{$mobile} {
+    @include grid(4, $grid_context: 4);
+  }
+  .toadstool_subheader {
+    margin-bottom: 1em;
+  }
+  section {
+    padding: em(10) 0 0 em(10);
+    margin: em(-10) 0 0 em(-10);
+  }
+  div {
+    @include box_sizing; 
+    text-align: center;
+    float: left;
+    font-weight: bold;
+    width: em(75);
+    height: em(75);
+    border-radius: 50%;
+    margin: 0 em(50) em(70) em(50);
+    border: 1px solid $white;
+    box-shadow: 0 0 em(10) em(3) $shadow_color;
+    span {
+      display: block;
+      font-weight: normal;
+    }
+  }
+  p {
+    margin-bottom: 0;
+    margin-left: -25px;
+    width: 125px;
+    margin-top: 85px;
+  }
+  .border {
+    @include box_shadow (inset $alpha_gray, 0 0 1px);
+  }
+  @media #{$mobile} {
+    div {
+      width: 100%;
+      border-radius: 0;
+      margin-bottom: em(10);
+      box-shadow: 0 0 em(7) em(0) $shadow_color;
+      margin-left: 0;
+      text-align: left;
+      span {
+        margin: 0;
+      }
+    }
+    section {
+      position: relative;
+      top: em(-10);
+    }
+    p {
+      color: $white;
+      left: 0;
+      margin: em(10) 0 em(10) em(10);
+      line-height: 1.5em;
+      text-shadow: 2px 2px 4px black;
+    }
+  }
+}
+
+
+/////// OOCSS color blocks ////////
+// ----------------------------------------------
+@mixin extend_color_loop {
+  @each $name in $color_names {
+    $i: index($color_names, $name);
+    .#{$name} {
+      @extend %#{nth($color_names, $i)} !optional;
+    }
+  }
+}
+
+
+// To add new colors to the extended color loops below, simply add to the appropiate list
+
+// Standard grayscale objects - in color view
+// ----------------------------------------------
+$color_names: alpha_gray 
+bravo_gray 
+charlie_gray 
+delta_gray 
+echo_gray 
+fox_gray 
+golf_gray 
+hotel_gray 
+india_gray;
+@include extend_color_loop;
+
+
+// Standard color objects - in color view
+// ----------------------------------------------
+$color_names: 
+alpha_color
+alpha_color_bravo
+alpha_color_charlie
+alpha_color_delta
+alpha_color_echo
+alpha_color_fox
+alpha_color_golf
+alpha_color_hotel
+alpha_color_india
+alpha_color_juliet;
+@include extend_color_loop;
+
+$color_names:
+bravo_color
+bravo_color_bravo
+bravo_color_charlie 
+bravo_color_delta 
+bravo_color_echo
+bravo_color_fox
+bravo_color_golf
+bravo_color_hotel
+bravo_color_india
+bravo_color_juliet;
+@include extend_color_loop;
+
+$color_names:
+charlie_color
+charlie_color_bravo
+charlie_color_charlie 
+charlie_color_delta 
+charlie_color_echo
+charlie_color_fox
+charlie_color_golf
+charlie_color_hotel
+charlie_color_india
+charlie_color_juliet;
+@include extend_color_loop;
+
+$color_names:
+delta_color
+delta_color_bravo
+delta_color_charlie 
+delta_color_delta 
+delta_color_echo
+delta_color_fox
+delta_color_golf
+delta_color_hotel
+delta_color_india
+delta_color_juliet;
+@include extend_color_loop;
+
+$color_names:
+echo_color
+echo_color_bravo
+echo_color_charlie 
+echo_color_delta 
+echo_color_echo
+echo_color_fox
+echo_color_golf
+echo_color_hotel
+echo_color_india
+echo_color_juliet;
+@include extend_color_loop;
+
+
+/////// semantic color blocks ////////
+// ----------------------------------------------
+// Typography, borders, rules and shadows
+$color_names: 
+'white' 
+primary_header_color 
+primary_text 
+secondary_text href_color
+shadow_color border_color
+standard_hr_color 
+standard_border_color;
+@include extend_color_loop;
+
+
+/////// Config defaults for forms /////// 
+// ----------------------------------------------
+$color_names: 
+alert_background_color 
+primary_button_border_color 
+secondary_button_border_color 
+button_text 
+input_disabled 
+input_disabled_bkg 
+input_disabled_border 
+input_disabled_text 
+form_field_background_color 
+form_field_focus_color 
+form_field_fail_bkg 
+form_field_border 
+form_field_border_fail 
+form_field_focus_border_color 
+form_field_text_fail 
+form_label_color 
+optional_field_text_color 
+instructional_text 
+placeholder_text 
+inline_alert_bkg_color 
+inline_alert_text_color;
+@include extend_color_loop;
+
+/////// Config defaults for buttons /////// 
+// ----------------------------------------------
+$color_names: 
+button_color 
+primary_button_border_color 
+secondary_button_border_color 
+button_text;
+@include extend_color_loop;
+
+// HTML5 colors
+$color_names: 
+webkit_tap_hightlight 
+ins_color 
+selection_color 
+selection_text_color 
+mark_color;
+@include extend_color_loop;

@@ -1,0 +1,41 @@
+.toadstool_main_header {
+	@extend %clearfix;
+	h1 {
+		color: $white;
+		float: left;
+		margin-bottom: 0;
+	}
+	background: $bravo_gray;
+	padding: rem(10) rem(10) rem(15) rem(10);
+	form {
+		display: inline-block;
+		float: right;
+		select {
+			min-width: rem(100);
+		}
+		@media #{$mobile} {
+			margin-top: em(10);
+			margin-right: em(10);
+			margin-left: em(2);
+			width: 80%;
+			float: none;
+		}
+	}
+}
+
+.toadstool_header {
+	h1 {
+		margin-top: rem(24);
+	}
+}
+
+.toadstool_subheader {
+	h2 {
+		margin-bottom: 0;
+	}
+}
+
+
+
+
+

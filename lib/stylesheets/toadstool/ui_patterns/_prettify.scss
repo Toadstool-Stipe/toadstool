@@ -1,0 +1,136 @@
+///////////// prettify styles //////////////////
+// ----------------------------------------
+// *
+// * Derived from einaros's Sons of Obsidian theme at
+// * http://studiostyl.es/schemes/son-of-obsidian by
+// * Alex Ford of CodeTunnel:
+// * http://CodeTunnel.com/blog/post/71/google-code-prettify-obsidian-theme
+// *
+
+.str
+{
+    color: #EC7600;
+}
+.kwd
+{
+    color: #9763C7;
+}
+.com
+{
+    color: #93C763;
+}
+.typ
+{
+    color: #678CB1;
+}
+.lit
+{
+    color: #FACD22;
+}
+.pun
+{
+    color: #F1F2F3;
+}
+.pln
+{
+    color: #F1F2F3;
+}
+.tag
+{
+    color: #8AC763;
+}
+.atn
+{
+    color: #E0E2E4;
+}
+.atv
+{
+    color: #EC7600;
+}
+.dec
+{
+    color: purple;
+}
+
+pre.prettyprint
+{
+  font-size: em(14);
+  @media #{$mobile} {
+    font-size: em(14);
+  }
+}
+
+ol.linenums
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.example_code {
+  background: $bravo_gray;
+  @include border_radius(em(5));
+  padding: em(10) em(10) 0 em(10);
+  margin-bottom: em(20);
+  @include grid(12);
+  line-height: 1.5em;
+
+  @media #{$tablet_portrait} {
+    @include grid(10, $grid_context: 10);
+    padding-right: em(10);
+  }
+
+  @media #{$mobile} {
+    @include grid(4, $grid_context: 4);
+    padding-right: em(10);
+  }
+
+  p {
+    color: $fox_gray;
+    float: right;
+    margin: 0 em(10) em(10) 0;
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+    @media #{$mobile} {
+      margin-right: 0;
+      font-size: 1em;
+    }
+  }
+  .codeToggle {
+    margin-left: 0.5em;
+  }
+  .mtime {
+    display: block;
+    width: 100%;
+    font-size: 0.9em;
+    text-align: right;
+  }
+  [contenteditable] {
+    margin-bottom: em(10);
+    padding-left: em(10);
+    cursor: pointer;
+    &:focus {
+      outline: 1px solid green;
+    }
+    ::selection {
+      color: inherit;
+      background: transparentize(blue, 0.7);
+    }
+  }
+}
+
+.instructional_example {
+  @extend .example_code;
+  background: transparent;
+}
+
+li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8, li.L9
+{
+    list-style-type: decimal;
+    margin: 0 0 0 em(30);
+    color: white;
+    padding: em(3) 0;
+}
+
+li.L1, li.L3, li.L5, li.L7, li.L9 {
+    background: #3F3F3F;
+}

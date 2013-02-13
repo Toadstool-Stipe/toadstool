@@ -1,0 +1,48 @@
+
+.col_4_grid, .col_10_grid {
+	display: none;
+}
+
+@media #{$tablet_portrait} {
+	.col_10_grid {
+		display: block;
+	}
+	.col_12_grid {
+		display: none;
+	}
+}
+
+@media #{$mobile} {
+	.col_4_grid {
+		display: block;
+	}
+	.col_12_grid, .col_10_grid {
+		display: none;
+	}
+}
+
+
+
+// grid ----------------------
+@for $i from 1 through 12 {
+  .grid-#{$i} {
+    @extend %grid_#{$i};
+    @extend %grid_display;
+  }
+}
+
+.grid-full {
+	@include full_width_block(12, $main_grid_align: left);
+}
+
+.grid-full_center {
+	@include full_width_block(12);
+}
+
+
+@for $i from 1 through 24 {
+  .grid-#{$i}-24 {
+    @extend %grid_#{$i}_24;
+    @extend %grid_display;
+  }
+}

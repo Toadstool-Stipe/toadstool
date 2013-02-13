@@ -1,0 +1,7 @@
+.toadstool_main_footer {
+	padding: em(10) 0;
+	border-top: 1px solid $border_color;
+	@include grid(12, $grid_align: center);
+	clear: both;
+  text-align: center;
+}
