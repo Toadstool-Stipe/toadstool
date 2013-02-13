@@ -11,6 +11,6 @@
 	left: 0;
 	border-radius: 0 em(5) 0 0;
 	.screen-width {
-		@extend %icon-fullscreen;
+		@extend %icon-fullscreen !optional;
 	}
 }

@@ -17,13 +17,6 @@
 			width: auto;
 			padding: rem(15) rem(10) rem(10) rem(10);
 			font-weight: normal;
-			span {
-				&:after {
-					content: "\f00b"; 
-					font-family: $icon_font_alpha;
-					font-size: 2em;
-				}
-			}
 		}
 	}
 }
