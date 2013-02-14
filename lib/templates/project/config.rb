@@ -1,8 +1,8 @@
 # Require any additional compass plugins here.
 
-require '../stipe/lib/stipe.rb' # locally as a Compass extension
-require './lib/toadstool.rb' # locally as a Compass extension
-# require 'stipe'
+require 'stipe'
+require 'toadstool' # locally as a Compass extension
+
 
 # Set this to the root of your project when deployed:
 http_path = "/"
