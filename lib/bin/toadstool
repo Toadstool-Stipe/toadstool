@@ -14,22 +14,22 @@ module Toadstool
 
     # Define arguments and options
     argument :name, {:default => './'}
-    
+
     def self.source_root
       APP_PATH
     end
 
     def install_app
       # Per https://github.com/wycats/thor/pull/175#issuecomment-2250270
-      # If any empty directory is found, it's copied and all .empty_directory files are ignored. 
-      # If any file name is wrapped within % signs, the text within the % signs will be executed 
+      # If any empty directory is found, it's copied and all .empty_directory files are ignored.
+      # If any file name is wrapped within % signs, the text within the % signs will be executed
       # as a method and replaced with the returned value.
-      
+
       directory "project/doc-src", "#{name}/doc-src"
       directory "project/public", "#{name}/public"
       directory "project/sass", "#{name}/sass"
       directory "project/views", "#{name}/views"
-      
+
       copy_file "project/config.rb", "#{name}/config.rb"
       copy_file "project/config.ru", "#{name}/config.ru"
       copy_file "project/Gemfile", "#{name}/Gemfile"
@@ -38,33 +38,72 @@ module Toadstool
       copy_file "project/toadstool.rb", "#{name}/toadstool.rb"
     end
   end
+
+  class Server < Thor::Group
+    def exec_script_rails!
+      cwd = Dir.pwd
+      return unless in_rails_application? || in_rails_application_subdirectory?
+      exec 'rackup', *ARGV if in_rails_application?
+      Dir.chdir("..") do
+        # Recurse in a chdir block: if the search fails we want to be sure
+        # the application is generated in the original working directory.
+        exec_script_rails! unless cwd == Dir.pwd
+      end
+      rescue SystemCallError
+        # could not chdir, no problem just return
+    end
+  end
   
-  class Server < Thor::Group   
-   def exec_script_rails!
-     cwd = Dir.pwd
-     return unless in_rails_application? || in_rails_application_subdirectory?
-     exec 'rackup', *ARGV if in_rails_application?
-     Dir.chdir("..") do
-       # Recurse in a chdir block: if the search fails we want to be sure
-       # the application is generated in the original working directory.
-       exec_script_rails! unless cwd == Dir.pwd
-     end
-   rescue SystemCallError
-     # could not chdir, no problem just return
-   end
-   
-   no_tasks do
+   # no_tasks do
      def in_rails_application?
        File.exists?('config.ru')
      end
-   
-  
+
+
      def in_rails_application_subdirectory?(path = Pathname.new(Dir.pwd))
        File.exists?(File.join(path, 'config.ru')) || !path.root? && in_rails_application_subdirectory?(path.parent)
      end
-   end
-  end
+   # end
+
+# end
+# 
+# 
+# module Toadstool
+  class Generator < Thor
+    include Thor::Actions
+      argument :name
+      argument :state
+      
+      desc 'ts_module', "Generate a module"
+      def ts_module
+        create_file "views/modules/#{name}/_#{state}.erb"
+        create_file "views/modules/#{name}/readme.md"
+        create_file "sass/modules/#{name}/#{state}/_#{state}.sass", "@import 'mixins'\n@import 'extends'"
+        create_file "sass/modules/#{name}/#{state}/_extends.sass"
+        create_file "sass/modules/#{name}/#{state}/_mixins.scss"
+
+        create_file 'sass/_modules.sass' if !File.exist?('sass/_modules.sass')
+        
+        append_file 'sass/_modules.sass', "@import 'modules/#{name}/#{state}/#{state}'"
+      end
+
+      desc 'ts_pattern', "Generate a module"
+      def ts_pattern
+        create_file "views/ui_patterns/#{name}/_#{state}.erb"
+        create_file "views/ui_patterns/#{name}/readme.md"
+        create_file "sass/ui_patterns/#{name}/#{state}/_#{state}.sass", "@import 'mixins'\n@import 'extends'"
+        create_file "sass/ui_patterns/#{name}/#{state}/_extends.sass"
+        create_file "sass/ui_patterns/#{name}/#{state}/_mixins.scss"
+
+        create_file 'sass/_ui_patterns.sass' if !File.exist?('sass/_ui_patterns.sass')
+        
+        append_file 'sass/_ui_patterns.sass', "@import 'ui_patterns/#{name}/#{state}/#{state}'"
+      end
+    end
 end
+
+
+
 
 ARGV << '--help' if ARGV.empty?
 
@@ -94,6 +133,9 @@ when 'install'
   Toadstool::Install.start
 when 'server'
   Toadstool::Server.start
+  
+when 'generate'
+  Toadstool::Generator.start
 else
   puts "Error: Command '#{command}' not recognized"
   if %x{rake #{command} --dry-run 2>&1 } && $?.success?
