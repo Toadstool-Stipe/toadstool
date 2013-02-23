@@ -116,7 +116,8 @@ ARGV << '--help' if ARGV.empty?
 aliases = {
   "i"  => "install",
   "new"  => "install",
-  "s"  => "server"
+  "s"  => "server",
+  "g"  => "generate"
 }
 
 
@@ -139,7 +140,6 @@ when 'install'
   Toadstool::Install.start
 when 'server'
   Toadstool::Server.start
-
 when 'generate'
   Toadstool::Generator.start
 else
