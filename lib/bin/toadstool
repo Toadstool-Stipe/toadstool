@@ -71,33 +71,33 @@ module Toadstool
 # module Toadstool
   class Generator < Thor
     include Thor::Actions
-      argument :name
-      argument :state
-      
+      argument :dales
+      argument :balls
+
       desc 'ts_module', "Generate a module"
       def ts_module
-        create_file "views/modules/#{name}/_#{state}.erb"
-        create_file "views/modules/#{name}/readme.md"
-        create_file "sass/modules/#{name}/#{state}/_#{state}.sass", "@import 'mixins'\n@import 'extends'"
-        create_file "sass/modules/#{name}/#{state}/_extends.sass"
-        create_file "sass/modules/#{name}/#{state}/_mixins.scss"
+        create_file "views/modules/#{dales}/_#{balls}.erb"
+        create_file "views/modules/#{dales}/readme.md"
 
+        create_file "sass/modules/#{dales}/#{balls}/_#{balls}.sass", "@import 'mixins'\n@import 'extends'"
+        create_file "sass/modules/#{dales}/#{balls}/_extends.sass"
+        create_file "sass/modules/#{dales}/#{balls}/_mixins.scss"
         create_file 'sass/_modules.sass' if !File.exist?('sass/_modules.sass')
-        
-        append_file 'sass/_modules.sass', "@import 'modules/#{name}/#{state}/#{state}'"
+
+        append_file 'sass/_modules.sass', "@import 'modules/#{dales}/#{balls}/#{balls}'"
       end
 
       desc 'ts_pattern', "Generate a module"
       def ts_pattern
-        create_file "views/ui_patterns/#{name}/_#{state}.erb"
-        create_file "views/ui_patterns/#{name}/readme.md"
-        create_file "sass/ui_patterns/#{name}/#{state}/_#{state}.sass", "@import 'mixins'\n@import 'extends'"
-        create_file "sass/ui_patterns/#{name}/#{state}/_extends.sass"
-        create_file "sass/ui_patterns/#{name}/#{state}/_mixins.scss"
+        create_file "views/ui_patterns/#{dales}/_#{balls}.erb"
+        create_file "views/ui_patterns/#{dales}/readme.md"
 
+        create_file "sass/ui_patterns/#{dales}/#{balls}/_#{balls}.sass", "@import 'mixins'\n@import 'extends'"
+        create_file "sass/ui_patterns/#{dales}/#{balls}/_extends.sass"
+        create_file "sass/ui_patterns/#{dales}/#{balls}/_mixins.scss"
         create_file 'sass/_ui_patterns.sass' if !File.exist?('sass/_ui_patterns.sass')
-        
-        append_file 'sass/_ui_patterns.sass', "@import 'ui_patterns/#{name}/#{state}/#{state}'"
+
+        append_file 'sass/_ui_patterns.sass', "@import 'ui_patterns/#{dales}/#{balls}/#{balls}'"
       end
     end
 end
