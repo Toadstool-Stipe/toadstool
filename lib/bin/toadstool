@@ -88,8 +88,8 @@ module Toadstool
         append_file 'sass/_modules.sass', "@import 'modules/#{truffle}/#{oil}/#{oil}'"
       end
 
-      desc 'ts_pattern', "Generate a module"
-      def ts_pattern
+      desc 'pattern', "Generate a module"
+      def pattern
         directory "pattern/views", "views/ui_patterns/#{truffle}"
         directory "pattern/sass", "sass/ui_patterns/#{truffle}"
 
@@ -103,6 +103,8 @@ module Toadstool
           "#{oil}"
         end
       end
+
+      map 'module' => 'ts_module'
     end
 end
 
