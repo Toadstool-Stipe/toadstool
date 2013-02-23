@@ -14,28 +14,28 @@ module Toadstool
 
     # Define arguments and options
     argument :name, {:default => './'}
+    class_option :styleguide_directory, :type => :string, :default => "./styleguide/", :desc => 'The directory for the Toadstool app.'
 
     def self.source_root
       APP_PATH
     end
 
     def install_app
-      # Per https://github.com/wycats/thor/pull/175#issuecomment-2250270
-      # If any empty directory is found, it's copied and all .empty_directory files are ignored.
-      # If any file name is wrapped within % signs, the text within the % signs will be executed
-      # as a method and replaced with the returned value.
+      directory "project/doc-src", "#{install_directory}/doc-src"
+      directory "project/public", "#{install_directory}/public"
+      directory "project/sass", "#{install_directory}/sass"
+      directory "project/views", "#{install_directory}/views"
 
-      directory "project/doc-src", "#{name}/doc-src"
-      directory "project/public", "#{name}/public"
-      directory "project/sass", "#{name}/sass"
-      directory "project/views", "#{name}/views"
-
-      copy_file "project/config.rb", "#{name}/config.rb"
-      copy_file "project/config.ru", "#{name}/config.ru"
-      copy_file "project/Gemfile", "#{name}/Gemfile"
-      copy_file "project/Rakefile", "#{name}/Rakefile"
-      copy_file "project/readme.md", "#{name}/readme.md"
-      copy_file "project/toadstool.rb", "#{name}/toadstool.rb"
+      copy_file "project/config.rb", "#{install_directory}/config.rb"
+      copy_file "project/config.ru", "#{install_directory}/config.ru"
+      copy_file "project/Gemfile", "#{install_directory}/Gemfile"
+      copy_file "project/Rakefile", "#{install_directory}/Rakefile"
+      copy_file "project/readme.md", "#{install_directory}/readme.md"
+      copy_file "project/toadstool.rb", "#{install_directory}/toadstool.rb"
+    end
+    
+    def install_directory
+      File.join('./', name, options[:styleguide_directory])
     end
   end
 
