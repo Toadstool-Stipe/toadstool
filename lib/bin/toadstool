@@ -70,34 +70,38 @@ module Toadstool
 #
 # module Toadstool
   class Generator < Thor
+    def self.source_root
+      APP_PATH
+    end
+
     include Thor::Actions
-      argument :dales
-      argument :balls
+      argument :truffle
+      argument :oil
 
       desc 'ts_module', "Generate a module"
       def ts_module
-        create_file "views/modules/#{dales}/_#{balls}.erb"
-        create_file "views/modules/#{dales}/readme.md"
+        directory "module/views", "views/modules/#{truffle}"
+        directory "module/sass", "sass/modules/#{truffle}"
 
-        create_file "sass/modules/#{dales}/#{balls}/_#{balls}.sass", "@import 'mixins'\n@import 'extends'"
-        create_file "sass/modules/#{dales}/#{balls}/_extends.sass"
-        create_file "sass/modules/#{dales}/#{balls}/_mixins.scss"
         create_file 'sass/_modules.sass' if !File.exist?('sass/_modules.sass')
 
-        append_file 'sass/_modules.sass', "@import 'modules/#{dales}/#{balls}/#{balls}'"
+        append_file 'sass/_modules.sass', "@import 'modules/#{truffle}/#{oil}/#{oil}'"
       end
 
       desc 'ts_pattern', "Generate a module"
       def ts_pattern
-        create_file "views/ui_patterns/#{dales}/_#{balls}.erb"
-        create_file "views/ui_patterns/#{dales}/readme.md"
+        directory "pattern/views", "views/ui_patterns/#{truffle}"
+        directory "pattern/sass", "sass/ui_patterns/#{truffle}"
 
-        create_file "sass/ui_patterns/#{dales}/#{balls}/_#{balls}.sass", "@import 'mixins'\n@import 'extends'"
-        create_file "sass/ui_patterns/#{dales}/#{balls}/_extends.sass"
-        create_file "sass/ui_patterns/#{dales}/#{balls}/_mixins.scss"
         create_file 'sass/_ui_patterns.sass' if !File.exist?('sass/_ui_patterns.sass')
 
-        append_file 'sass/_ui_patterns.sass', "@import 'ui_patterns/#{dales}/#{balls}/#{balls}'"
+        append_file 'sass/_ui_patterns.sass', "@import 'ui_patterns/#{truffle}/#{oil}/#{oil}'"
+      end
+
+      no_tasks do
+        def shiitake
+          "#{oil}"
+        end
       end
     end
 end
