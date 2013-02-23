@@ -53,7 +53,7 @@ module Toadstool
         # could not chdir, no problem just return
     end
   end
-  
+
    # no_tasks do
      def in_rails_application?
        File.exists?('config.ru')
@@ -66,8 +66,8 @@ module Toadstool
    # end
 
 # end
-# 
-# 
+#
+#
 # module Toadstool
   class Generator < Thor
     include Thor::Actions
@@ -133,7 +133,7 @@ when 'install'
   Toadstool::Install.start
 when 'server'
   Toadstool::Server.start
-  
+
 when 'generate'
   Toadstool::Generator.start
 else
