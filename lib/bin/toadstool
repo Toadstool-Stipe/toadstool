@@ -40,35 +40,16 @@ module Toadstool
   end
 
   class Server < Thor::Group
-    def exec_script_rails!
+    def start # no desc
+      puts Dir.pwd
+      
       cwd = Dir.pwd
-      return unless in_rails_application? || in_rails_application_subdirectory?
-      exec 'rackup', *ARGV if in_rails_application?
-      Dir.chdir("..") do
-        # Recurse in a chdir block: if the search fails we want to be sure
-        # the application is generated in the original working directory.
-        exec_script_rails! unless cwd == Dir.pwd
-      end
-      rescue SystemCallError
-        # could not chdir, no problem just return
-    end
+      
+      `bundle exec compass compile`
+      `bundle exec rackup ./config.ru -p 9292 `
+    end    
   end
 
-   # no_tasks do
-     def in_rails_application?
-       File.exists?('config.ru')
-     end
-
-
-     def in_rails_application_subdirectory?(path = Pathname.new(Dir.pwd))
-       File.exists?(File.join(path, 'config.ru')) || !path.root? && in_rails_application_subdirectory?(path.parent)
-     end
-   # end
-
-# end
-#
-#
-# module Toadstool
   class Generator < Thor
     def self.source_root
       APP_PATH
