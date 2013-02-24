@@ -64,9 +64,7 @@ module Toadstool
       directory "module/views", "views/modules/#{truffle}"
       directory "module/sass", "sass/modules/#{truffle}"
 
-      create_file 'sass/_modules.sass' if !File.exist?('sass/_modules.sass')
-
-      append_file 'sass/_modules.sass', "@import 'modules/#{truffle}/#{oil}/#{oil}'"
+      append_file 'sass/_modules.scss', "@import 'modules/#{truffle}/#{oil}/#{oil}'"
     end
 
     desc 'pattern', "Generate a module"
@@ -74,9 +72,7 @@ module Toadstool
       directory "pattern/views", "views/ui_patterns/#{truffle}"
       directory "pattern/sass", "sass/ui_patterns/#{truffle}"
 
-      create_file 'sass/_ui_patterns.sass' if !File.exist?('sass/_ui_patterns.sass')
-
-      append_file 'sass/_ui_patterns.sass', "@import 'ui_patterns/#{truffle}/#{oil}/#{oil}'"
+      append_file 'sass/_ui_patterns.scss', "@import 'ui_patterns/#{truffle}/#{oil}/#{oil}'"
     end
 
     no_tasks do
