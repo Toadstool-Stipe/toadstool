@@ -1,7 +1,7 @@
 # Those little ditties that Sinatra needs to make the magic happen
 # -----------------------------------------------------------------------
 require 'rubygems'
-require 'net/http'
+
 
 # If you're using bundler, you will need to add this
 require 'bundler/setup'
