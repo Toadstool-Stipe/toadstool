@@ -33,7 +33,7 @@ module Toadstool
       copy_file "project/readme.md", "#{install_directory}/readme.md"
       copy_file "project/toadstool.rb", "#{install_directory}/toadstool.rb"
     end
-    
+
     def install_directory
       File.join('./', name, options[:styleguide_directory])
     end
@@ -41,13 +41,28 @@ module Toadstool
 
   class Server < Thor::Group
     def start # no desc
-      puts Dir.pwd
       
       cwd = Dir.pwd
-      
-      `bundle exec compass compile`
-      `bundle exec rackup ./config.ru -p 9292 `
-    end    
+      return unless in_toadstool_app? || in_app_subdirectory?
+      exec 'rackup', *ARGV if in_toadstool_app?
+      Dir.chdir("..") do
+        # Recurse in a chdir block: if the search fails we want to be sure
+        # the application is generated in the original working directory.
+        start! unless cwd == Dir.pwd
+      end
+      rescue SystemCallError
+        # could not chdir, no problem just return
+    end
+
+    no_tasks do
+      def in_toadstool_app?
+        File.exists?('toadstool.rb') && File.exists?('config.ru')
+      end
+
+      def in_app_subdirectory?(path = Pathname.new(Dir.pwd))
+        File.exists?(File.join(path, 'config.ru')) || !path.root? && in_app_subdirectory?(path.parent)
+      end
+    end
   end
 
   class Generator < Thor
