@@ -2,7 +2,6 @@
 # Comment this out if you are using Toadstool inside a Rails project
 # Gem to add glob-based imports to Sass
 require 'sass-globbing'
-require 'compass-growl'
 
 # require '../stipe/lib/stipe.rb' # locally as a Compass extension
 require 'stipe'
