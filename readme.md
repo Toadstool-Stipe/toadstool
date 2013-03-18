@@ -1,5 +1,5 @@
 #Welcome to Toadstool
-![toadstool logo](https://raw.github.com/Anotheruiguy/toadstool/master/public/images/toadstool-logo.png "toadstool - put that in your styleguide")
+![toadstool logo](https://raw.github.com/toadstool-stipe/toadstool/master/public/images/toadstool-logo.png "toadstool - put that in your styleguide")
 
 	VERSION 0.1.0 / STIPE gem dependency 0.0.5.7
 
