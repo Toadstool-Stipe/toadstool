@@ -1,8 +1,13 @@
 [class*="toadstool"] {
 	.nav_toggle {
-		@include linear_gradient_w3c ($alpha_gray, #{$delta_gray 0%, $alpha_gray 100%});
+	  $nav_toggle_gradient: $delta_gray 0%, $alpha_gray 100%;
+	  $nav_toggle_gradient_hover: $alpha_gray 0%, $delta_gray 100%;
+	  
+		@include linear_gradient_w3c ($alpha_gray, $nav_toggle_gradient);
+		
+		//@include linear_gradient_w3c (#e4e4e4, #{#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%});
 		&:hover {
-			@include linear_gradient_w3c ($alpha_gray, #{$alpha_gray 0%, $delta_gray 100%});
+			@include linear_gradient_w3c ($alpha_gray, $nav_toggle_gradient_hover);
 			border-color: $alpha_gray;
 			box-shadow: 0 0 0;
 		}

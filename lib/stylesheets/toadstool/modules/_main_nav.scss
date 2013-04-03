@@ -5,7 +5,9 @@
     font-weight: bold;
     @media #{$mobile} {
       @include flexbox(100%, auto, $orient: vertical);
-      @include linear_gradient_w3c ($bravo_gray, #{$bravo_gray 30%,$delta_gray 100%});
+      
+      $toadstool_nav_gradient: $bravo_gray 30%, $delta_gray 100%;      
+      @include linear_gradient_w3c ($bravo_gray, $toadstool_nav_gradient);
     }
   }
   li {
@@ -26,7 +28,9 @@
   }
   a {
     color: $white;
-    @include linear_gradient_w3c ($bravo_gray, #{$bravo_gray 50%,$delta_gray 100%}); 
+    
+    $toadstool_nav_gradient: $bravo_gray 50%,$delta_gray 100%;
+    @include linear_gradient_w3c ($bravo_gray, $toadstool_nav_gradient); 
     .no-flexbox & {
       padding: 0 em(10);
     }
