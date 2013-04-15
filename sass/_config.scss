@@ -3,22 +3,22 @@
 
 // For instruction, please see https://github.com/Anotheruiguy/toadstool/blob/master/sass/doc-src/config.md
 
-/////// Typography configuration/////// 
+/////// Typography configuration///////
 // -----------------------------------------------------------------------------
 // $font_size: 12;
-// 
+//
 // $heading_1: 46;
 // $heading_2: 32;
 // $heading_3: 28;
 // $heading_4: 18;
 // $heading_5: 18;
 // $heading_6: 18;
-// 
+//
 // $line: $font_size * 1.5;
-// 
+//
 // $small_point_size: 10;
 // $large_point_size: 14;
-// 
+//
 // $primary_font_family: #{"Helvetica Neue", Arial, sans-serif};
 // $secondary_font_family: #{"Helvetica Neue", Arial, sans-serif};
 // $heading_font_family: #{"Helvetica Neue", Arial, sans-serif};
@@ -26,17 +26,17 @@
 // $icon_font_alpha: #{'FontAwesome'};
 // $icon_font_bravo: #{'zocial'};
 
-/////// Default webfont directory/////// 
+/////// Default webfont directory///////
 // -----------------------------------------------------------------------------
 // $webfont_directory: "/fonts/";
 
-/////// default image directory /////// 
+/////// default image directory ///////
 // -----------------------------------------------------------------------------
 // In Sinatra, the images folder resides in the public directory.  This directory is not made publically accessible,
 // so simply referencing the images directory will be fine.
 // $imgDir: "/images/";
 
-/////// OOCSS generic base colors/////// 
+/////// OOCSS generic base colors///////
 // -----------------------------------------------------------------------------
 // Red, green, yellow, blue, accent and black is not law, but a common theme in most designs.
 // Using Toadstool, all you need to do is edit these 6 hex values and everything else is created
@@ -50,14 +50,14 @@
 
 // $alpha_gray:      #333;           //black
 
-/////// Toadstool color math /////// 
+/////// Toadstool color math ///////
 // -----------------------------------------------------------------------------
 // Local color functions to create default color palette
 @import "color/color_math";
 @import "color/grayscale_math";
 @import "color/color_defaults";
 
-/////// Grid configuration /////// 
+/////// Grid configuration ///////
 // -----------------------------------------------------------------------------
 // setting default units of measurement for Toadstool grid solution
 // $grid_type:                  12;             // sets default column grid
@@ -69,10 +69,10 @@
 // $grid_child:                 none;           // sets parent child relationship between grid blocks
 // $grid_align:                 default;        // by default grids float left. Optional argument is ``center``
 // $col_base:                   10;             // equal to 10px in the standard 960.gs
-// $col_gutter:                 $col_base * 2;  // sets default grid gutter width                            
+// $col_gutter:                 $col_base * 2;  // sets default grid gutter width
 // $grid_960:                   960 / 100%;     // grid math for percentages
 
-/////// Toadstool's semantic variables /////// 
+/////// Toadstool's semantic variables ///////
 // Semantic variables should always be matched up with abstract values, never semantic to semantic
 // -----------------------------------------------------------------------------
 
@@ -120,7 +120,7 @@
 
 
 
-/////// Config defaults for forms /////// 
+/////// Config defaults for forms ///////
 // -----------------------------------------------------------------------------
 // $alert_background_color:        $alpha_color;
 
@@ -128,11 +128,11 @@
 // $input_disabled_bkg:            lighten($input_disabled, 75%);
 // $input_disabled_border:         lighten($input_disabled, 50%);
 // $input_disabled_text:           lighten($input_disabled, 50%);
-//                                 
+//
 // $form_field_background_color:   $white;
 // $form_field_focus_color:        $white;
 // $form_field_fail_bkg:           $alpha_color_juliet;
-                                
+
 // $form_field_border:             $charlie_gray;
 // $form_field_border_fail:        $alpha_color_echo;
 // $form_field_focus_border_color: $charlie_gray;
@@ -147,7 +147,7 @@
 
 // Non-color defaults (currently not represented in the SG view)
 // ---------------------------------------------------------
-// $form_field_border_radius:      $standard_round_corner;                                
+// $form_field_border_radius:      $standard_round_corner;
 // $form_field_text:               $primary_text;
 // $form_field_height:             35;
 // $form_field_padding:            6;
@@ -161,7 +161,7 @@
 
 
 
-/////// Config defaults for buttons /////// 
+/////// Config defaults for buttons ///////
 // -----------------------------------------------------------------------------
 // $button-color:  $delta-color;
 // $button-text-color: $white;
@@ -173,54 +173,54 @@
 // $button-text-shadow: true;
 // $button-box-shadow: true;
 
-/////// Config defaults for ``standard_rounded_border`` mixin /////// 
+/////// Config defaults for ``standard_rounded_border`` mixin ///////
 // -----------------------------------------------------------------------------
 // $standard_round_corner:                3;                // sets default border radius
 // $standard_corner_width:                1px;              // sets default border width
 // $standard_border_color:                $border_color;    // sets default border color
 
-/////// Config defaults for ``standard_block_spacing`` mixin /////// 
+/////// Config defaults for ``standard_block_spacing`` mixin ///////
 // -----------------------------------------------------------------------------
 // $default_block_spacing:                20;               // sets margin-bottom
 
-/////// Config defaults for site border style /////// 
+/////// Config defaults for site border style ///////
 // -----------------------------------------------------------------------------
 // $standard_border_style:                solid;
 
-/////// Config defaults for ``standard_hr`` mixin /////// 
+/////// Config defaults for ``standard_hr`` mixin ///////
 // -----------------------------------------------------------------------------
 // $standard_hr_spacing:                  40;               // sets padding and margin bottom
 // $standard_hr_color:                    $delta_gray;
 // $standard_hr_width:                    1px;
 
-/////// Config values for all default shadows /////// 
+/////// Config values for all default shadows ///////
 // -----------------------------------------------------------------------------
 // $h-shadow:                             0;                // horizontal shadow settings
 // $v-shadow:                             2;                // vertical shaddow settings
 // $blur:                                 3;                // blur settings
-// 
+//
 // $inset_color:                          $shadow_color;    // for use with ``dual_box_shadow`` mixin
 // $ih-shadow:                            0;                // inset horizontal shadow settings
 // $iv-shadow:                            2;                // inset vertical shaddow settings
 // $is-shadow:                            2;                // inset spread shaddow settings
 // $iblur:                                3;                // inset blur settings
 
-/////// UI @media breakpoint defaults /////// 
+/////// UI @media breakpoint defaults ///////
 // -----------------------------------------------------------------------------
 // $tablet:                    "screen and (max-width: 64em)";
 // $tablet_portrait:           "screen and (max-width: 50em) and (orientation: portrait)";
 // $tablet_landscape:          "screen and (max-width: 50em) and (orientation: landscape)";
-// 
+//
 // $mobile:                    "screen and (max-width: 30em)";
 // $mobile_portrait:	         "screen and (max-width: 30em) and (orientation : portrait)";
 // $mobile_landscape:	         "screen and (max-width: 30em) and (orientation : landscape)";
 
-/////// Vendor prefix defaults /////// 
+/////// Vendor prefix defaults ///////
 // -----------------------------------------------------------------------------
 // $prefix_defaults: -moz- -webkit- -o- -ms- '';
 // $webkit_support: -webkit- '';
 // $moz_support: -moz- '';
-// $ms_support: -ms- ''; 
+// $ms_support: -ms- '';
 // $moz_webkit_support: -moz- -webkit- '';
 // $moz_ms_support: -moz- -ms- '';
 // $webkit_ms_support: -webkit- -ms- '';

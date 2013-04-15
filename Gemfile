@@ -13,4 +13,4 @@ gem 'fontcustomtoadstool'
 gem 'sass-globbing'
 
 # Only use when doing gem development
-# gem 'stipe', :path => '../stipe'
+#gem 'stipe', :path => '../stipe'
