@@ -1,10 +1,3 @@
-PATH
-  remote: ../stipe
-  specs:
-    stipe (0.0.5.7.7)
-      compass (>= 0.11)
-      sass (>= 3.2.1)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -21,20 +14,23 @@ GEM
     json (1.7.7)
     listen (0.7.3)
     rack (1.5.2)
-    rack-protection (1.4.0)
+    rack-protection (1.5.0)
       rack
-    rake (10.0.3)
+    rake (10.0.4)
     sass (3.2.7)
     sass-globbing (1.0.0)
       sass (>= 3.1)
-    sinatra (1.3.5)
-      rack (~> 1.4)
-      rack-protection (~> 1.3)
-      tilt (~> 1.3, >= 1.3.3)
+    sinatra (1.4.2)
+      rack (~> 1.5, >= 1.5.2)
+      rack-protection (~> 1.4)
+      tilt (~> 1.3, >= 1.3.4)
     sinatra-partial (0.4.0)
       sinatra
-    thor (0.17.0)
-    tilt (1.3.4)
+    stipe (0.0.5.7.9)
+      compass (>= 0.11)
+      sass (>= 3.2.1)
+    thor (0.18.1)
+    tilt (1.3.7)
 
 PLATFORMS
   ruby
@@ -47,4 +43,4 @@ DEPENDENCIES
   sass-globbing
   sinatra
   sinatra-partial
-  stipe!
+  stipe
