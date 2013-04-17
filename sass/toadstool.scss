@@ -12,3 +12,36 @@
 // ------------------------------------------------------------------------------
 
 
+[class^="icon"] {
+  @extend %grid_3of12;
+  margin-bottom: 0.5em;
+  font-size: em(36);
+  text-align: center;
+  background: #eeeeee;
+  line-height: 1em;
+  border-radius: 0.25em;
+  box-shadow: inset 0 0 0 1px lighten($india_gray, 50%), 0 0 0 1px $hotel_gray;
+  padding-top: 0.5em;
+  height: em(40);
+  &:after {
+    content: "%" attr(class);
+    display: block;
+    font-size: em(14, 36);
+  }
+  @media #{$mobile} {
+    @extend %grid_2of4;
+  }
+}
+
+// DO NOT EDIT - this is needed to get ico-font classes to appear in the style guide
+// ---------------------------------------------------
+@import "typography/extends";
+@import "typography/ico_fonts";
+
+@each $icon in $icons {
+  .icon-#{nth($icon, 1)}:before {
+    @extend %ico-font-base;
+    content: nth($icon, 2);
+    margin-right: 0.25em;
+  }
+}

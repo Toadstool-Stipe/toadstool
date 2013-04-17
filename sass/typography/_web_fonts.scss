@@ -9,6 +9,10 @@ $webfont_directory: "/fonts/" !default; // edit this directory in the '_config.s
 //}
 
 
+@font-face {
+  @include font-face ($font_family: 'ico-fonts', $font-file: 'ico-fonts');
+}
+
 
 // Install google fonts
 // -----------------------------------------------------------
