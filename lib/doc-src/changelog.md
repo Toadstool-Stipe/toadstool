@@ -2,6 +2,9 @@
 
 ### 0.1.1
 * Removed Growl
+* Added new `vendor` directory to Sass structure
+* Add new ico-font view to Typography
+* General bug fixes
 
 
 ### 0.1.0

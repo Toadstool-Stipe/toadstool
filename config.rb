@@ -30,7 +30,7 @@ output_style = :nested
 # relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
-line_comments = false
+line_comments = true
 
 # http://www.mobify.com/dev/sass-sleuth-debugging-sass-in-webkit-browsers/
 # compass watch --debug-info

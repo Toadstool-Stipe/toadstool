@@ -5,10 +5,13 @@
 
 // Toadstool styleguide UI manifest
 // ------------------------------------------------------------------------------
-@import "stipe/toadstool/ui_manifest";           // do not delete
+@import "stipe/toadstool/ui_manifest";
 @import "color/extends";
 
-// Toadstool styleguide UI custom styles
-// ------------------------------------------------------------------------------
 
 
+// This is needed to get ico-font classes to appear in the style guide
+// ------------------------------------------------
+@import "typography/ico_fonts";
+
+@import "stipe/toadstool/ui_patterns/ico_loop";

@@ -1,0 +1,18 @@
+// How-to: place ico-font BEFORE/AFTER block element
+// ---------------------------------------------------
+// .block {
+//   @extend %icon-cart;
+// }
+
+// .block {
+//   @extend %icon-cart-after;
+// }
+
+// To add a new icon fonts to the view, simply add the name of the new font to the `$icons` list
+// ---------------------------------------------------
+$icons: (expand '\e000') (menu '\e001') (twitter '\e002') (google-plus '\e003') (github '\e003');
+
+
+// DO NOT EDIT
+// ---------------------------------------------------
+@import "stipe/typography/_ico_font_loop";
