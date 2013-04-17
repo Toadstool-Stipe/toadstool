@@ -43,3 +43,7 @@
 @import "ui_patterns/**/*";    // manifest files
 @import "modules/**/*";        // manifest files
 @import "layouts/*";           // manifest files
+
+// Stipe grid extends need to load last
+// ------------------------------------------------------------------------------
+@import "stipe/grid/extends";
