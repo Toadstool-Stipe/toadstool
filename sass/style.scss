@@ -40,9 +40,10 @@
 @import "forms";
 @import "buttons";
 @import "design";
-@import "ui_patterns/**/*";    // manifest files
-@import "modules/**/*";        // manifest files
-@import "layouts/*";           // manifest files
+@import "ui_patterns/**/*";    // glob manifest files
+@import "modules/**/*";        // glob manifest files
+@import "vendor";              // manual manifest files
+@import "layouts/*";           // glob manifest files
 
 // Stipe grid extends need to load last
 // ------------------------------------------------------------------------------
