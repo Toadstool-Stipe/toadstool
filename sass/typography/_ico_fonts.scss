@@ -15,17 +15,4 @@ $icons: (expand '\e000') (menu '\e001') (twitter '\e002') (google-plus '\e003') 
 
 // DO NOT EDIT
 // ---------------------------------------------------
-@each $icon in $icons {              // <-- create listing of PUA pseudo selectors
-  %icon-#{nth($icon, 1)}:before {
-    @extend %ico-font-base;
-    content: nth($icon, 2);
-    margin-right: 0.25em
-  }
-}
-
-@each $icon in $icons {              // <-- create listing of PUA pseudo selectors
-  %icon-#{nth($icon, 1)}-after:after {
-    @extend %ico-font-base;
-    content: nth($icon, 2);
-  }
-}
+@import "stipe/typography/_ico_font_loop";

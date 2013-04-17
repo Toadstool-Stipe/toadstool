@@ -7,5 +7,4 @@
 
 block {
   @include grid(4, $col_gutter: 0);
-  @extend %icon-menu;
 }

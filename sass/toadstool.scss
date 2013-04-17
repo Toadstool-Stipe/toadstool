@@ -5,20 +5,13 @@
 
 // Toadstool styleguide UI manifest
 // ------------------------------------------------------------------------------
-@import "stipe/toadstool/ui_manifest";           // do not delete
+@import "stipe/toadstool/ui_manifest";
 @import "color/extends";
 
 
 
-// DO NOT EDIT - this is needed to get ico-font classes to appear in the style guide
-// ---------------------------------------------------
-@import "typography/extends";
+// This is needed to get ico-font classes to appear in the style guide
+// ------------------------------------------------
 @import "typography/ico_fonts";
 
-@each $icon in $icons {
-  .icon-#{nth($icon, 1)}:before {
-    @extend %ico-font-base;
-    content: nth($icon, 2);
-    margin-right: 0.25em;
-  }
-}
+@import "stipe/toadstool/ui_patterns/ico_loop";
