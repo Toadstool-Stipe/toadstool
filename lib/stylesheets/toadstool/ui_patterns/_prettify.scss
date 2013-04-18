@@ -67,12 +67,14 @@ ol.linenums
 }
 
 .example_code {
-  background: $bravo_gray;
+  @include grid(12);  
   @include border_radius(em(5));
-  padding: em(10) em(10) 0 em(10);
+
+  background: $bravo_gray;
+  padding: 2.75em em(10) 0 em(10);
   margin-bottom: em(20);
-  @include grid(12);
   line-height: 1.5em;
+  position: relative;
 
   @media #{$tablet_portrait} {
     @include grid(10, $grid_context: 10);
@@ -96,7 +98,9 @@ ol.linenums
     }
   }
   .codeToggle {
-    margin-left: 0.5em;
+    position: absolute;
+    top: 0.25em;
+    right: 0;
   }
   .mtime {
     display: block;
