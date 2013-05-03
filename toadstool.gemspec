@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "0.0.0.8"
-  s.date = "2013-04-18"
+  s.version = "0.0.0.9"
+  s.date = "2013-05-03"
 
   # Gem Details
   s.name = "toadstool"
@@ -24,6 +24,6 @@ Gem::Specification.new do |s|
   s.add_dependency("thor")
   s.add_dependency("compass", [">= 0.12"])
   s.add_dependency("sass", [">=3.2.1"])
-  s.add_dependency("stipe", [">=0.0.5.7.4"])
+  s.add_dependency("stipe", ["~> 0.0.5"])
   
 end
