@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "0.0.0.9"
-  s.date = "2013-05-03"
+  s.version = "0.0.0.10"
+  s.date = "2013-05-04"
 
   # Gem Details
   s.name = "toadstool"
