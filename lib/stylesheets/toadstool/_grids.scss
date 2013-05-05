@@ -26,8 +26,8 @@
 // grid ----------------------
 @for $i from 1 through 12 {
   .grid-#{$i} {
-    @extend %grid_#{$i};
-    @extend %grid_display;
+    @extend %grid_#{$i}of12;
+    //@extend %grid_display;
   }
 }
 
@@ -42,7 +42,7 @@
 
 @for $i from 1 through 24 {
   .grid-#{$i}-24 {
-    @extend %grid_#{$i}_24;
-    @extend %grid_display;
+    @extend %grid_#{$i}of24;
+    //@extend %grid_display;
   }
 }
