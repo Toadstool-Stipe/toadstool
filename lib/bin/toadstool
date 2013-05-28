@@ -71,28 +71,32 @@ module Toadstool
     end
 
     include Thor::Actions
-    argument :truffle
-    argument :oil
+    argument :category
+    argument :name
 
     desc 'ts_module', "Generate a module"
     def ts_module
-      directory "module/views", "views/modules/#{truffle}"
-      directory "module/sass", "sass/modules/#{truffle}"
+      directory "module/views", "views/modules/#{category}"
+      directory "module/sass", "sass/modules/#{category}"
 
-      append_file 'sass/_modules.scss', "@import 'modules/#{truffle}/#{oil}/#{oil}'"
+      append_file 'sass/_modules.scss', "@import 'modules/#{category}/#{name}/#{name}'"
     end
 
     desc 'pattern', "Generate a module"
     def pattern
-      directory "pattern/views", "views/ui_patterns/#{truffle}"
-      directory "pattern/sass", "sass/ui_patterns/#{truffle}"
+      directory "pattern/views", "views/ui_patterns/#{category}"
+      directory "pattern/sass", "sass/ui_patterns/#{category}"
 
-      append_file 'sass/_ui_patterns.scss', "@import 'ui_patterns/#{truffle}/#{oil}/#{oil}'"
+      append_file 'sass/_ui_patterns.scss', "@import 'ui_patterns/#{category}/#{name}/#{name}'"
     end
 
     no_tasks do
-      def shiitake
-        "#{oil}"
+      def module_name
+        "#{name}"
+      end
+
+      def pattern_name
+        "#{name}"
       end
     end
 
