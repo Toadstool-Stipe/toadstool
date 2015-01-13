@@ -1,5 +1,5 @@
 #How does Toadstool manage colors?
-The goal of Toadstool and Stipe are to use colors in an intelligent manor, versus CSS with hex values randomly applied throughout the code. 
+The goal of Toadstool and Stipe are to use colors in an intelligent manner, versus CSS with hex values randomly applied throughout the code. 
 
 Nested in the [config.scss](http://goo.gl/rmCQP) file of your Toadstool style guide will be options to change Stipe's default colors. Simply uncomment these lines and replace the hex values with the color palette you wish. 
 
